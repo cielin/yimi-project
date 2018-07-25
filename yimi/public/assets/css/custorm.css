@@ -37,7 +37,7 @@
 }
 .detais-content h1{
 	font-size:28px;
-	/*margin-top:80px;*/
+	margin-top:80px;
 	margin-bottom:10px;
 }
 .detais-content p{
@@ -155,6 +155,7 @@
 /*轮播*/
 .gallery-top{
 	margin-bottom:12px;
+	height:450px;
 }
 
 .gallery-top img{
@@ -171,6 +172,13 @@
 }
 .ico-wraps span:hover{
 	color:#c8a165;
+}
+#weixin2{
+	display: inline-block;
+}
+#weixin2 img{
+	width:130px;
+	margin:0 20px;
 }
 .weixin2 div{
 	margin-top:3px;
@@ -224,4 +232,5 @@
 }
 .d-detail-img div img{
 	width:100%;
+	cursor:pointer;
 }

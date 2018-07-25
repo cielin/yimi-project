@@ -6,7 +6,7 @@
     /* position: relative; */
     top: 1px;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
+    font-family: '微软雅黑';
     font-style: normal;
     font-weight: 400;
     line-height: 1;
@@ -55,7 +55,7 @@
 	width: 100%;
 	background: #181818;
 	overflow: hidden;
-	font-size: 12px;
+	font-size: 10px;
 	height: 30px;
 	line-height: 30px;
 	color:#595959;
@@ -65,12 +65,13 @@
 	cursor: pointer;
 }
 .nav-top-wrap .tip,.nav-top-wrap .email{
-	font-family: "Hiragino Sans GB";
-	font-size: 12px;
+	font-family: "微软雅黑";
+	font-size: 10px;
+	letter-spacing: 1px;
 }
 .nav-top-wrap .tel{
 	color: #c8a165;
-	font-size: 14px;
+	font-size: 12px;
 	margin-left: 4px;
 }
 .nav-top-wrap .tip:hover,
@@ -219,7 +220,7 @@ ul.nav{
 	padding-top:20px;
 	padding-left:20px;
 }
-.weixin img{width:200px;}
+.weixin img{width:130px;}
 .weixin2{
 	top: -14px;
     left: 39px;
@@ -253,7 +254,7 @@ ul.nav{
 /*侧边栏*/
 .sidebar{
 	border-right: 1px solid #e1e1e1;
-	font-family: "黑体";
+	font-family: "微软雅黑";
 	height:100%;
 	padding-bottom:9999px;
 	margin-bottom:-9999px;
@@ -291,7 +292,7 @@ ul.nav{
 	position: relative;
     top: 1px;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
+    font-family: '微软雅黑';
     font-style: normal;
     font-weight: 400;
     line-height: 1;
@@ -304,7 +305,7 @@ ul.nav{
 	position: relative;
 	top:2px;
 }
-.side-sub li.active > a{
+.side-sub li.active a{
 	color:#c8a165;
 }
 
