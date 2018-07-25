@@ -1,0 +1,227 @@
+
+.menus{
+	width:30%;
+}
+.menus h4{
+	background: #eee;
+	height:50px;
+}
+.menus h4 span{
+	display: block;
+	float:right;
+}
+.menus ul li{
+	margin-left:10px;
+}
+.menus ul li h5{
+
+}
+.menus ul li span{
+	margin-left:20px;
+	display: block;
+}
+/**商品详情页**/
+.back-tit{
+	border-bottom:solid 1px #e1e1e1;
+	padding-bottom:25px;
+	margin-bottom:-54px;
+}
+.details-tit{
+	
+}
+.detais-content{
+	line-height:28px;
+	font-size:14px;
+	color:#333;
+
+}
+.detais-content h1{
+	font-size:28px;
+	/*margin-top:80px;*/
+	margin-bottom:10px;
+}
+.detais-content p{
+	margin-bottom:20px;
+	font-weight:700;
+}
+.hui-tit{
+	font-size:14px;
+	color:#898989;
+	margin-bottom:35px;
+}
+.details-bord{
+	border-bottom:solid 1px #e1e1e1;
+	padding-bottom:50px;
+}
+
+.ico-wraps{
+	background: #fff;
+	width: 90%;
+	height: 60px;
+	border-radius: 30px;
+	margin:0px auto;
+	margin-top:60px;
+	position: relative;
+	color:#333333;
+	font-size: 18px;
+
+}
+.ico-wraps:before{
+	content: "|";
+	display: block;
+	width: 1px;
+	height: 30px;
+    position: absolute;
+    color:#dadada;
+    left:15%;
+    top:28%;
+}
+.ico-wraps span,.ico-wraps img{
+	line-height: 60px;
+	margin-right: 44px;
+    margin-left: 21px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.details-share{
+	margin:20px 0;
+	text-align: center;
+	padding:10px 0;
+	border-top:solid 1px #ccc;
+	border-bottom:solid 1px #ccc;
+}
+
+.details-tab li{
+	clear:both;
+	overflow: hidden;
+	padding:10px 0;
+	padding-left:15px;
+}
+.details-tab li.active a{
+	color:#c8a165;
+}
+.details-tab li.active{
+	color:#c8a165;
+	position: relative;
+
+}
+.details-tab li.active:before{
+	position: absolute;
+	content:'>';
+	width:30px;
+	height:1px;
+	color:#c8a165;
+	top:10px;
+	left:0%;
+}
+.ditails-tab-box{
+	border-left:solid 1px #ccc;
+	padding-left:44px;
+	min-height:400px;
+}
+/*swiper*/
+.swiperText{
+	position: relative;
+	margin-top:-70px;
+	padding-top:56px;
+}
+.details-arrow{
+	position: absolute;
+	top:23px;
+	right:0px;
+	width:68px;
+
+}
+.swiper-button-next.text-next{
+	background: none;
+}
+.swiper-button-prev.text-prev{
+	background: none;
+}
+.details-arrow div span.glyphicon{
+	padding:5px;
+	font-weight:100;
+	font-size:10px;
+}
+.other-goods{
+	padding:40px 0 40px 0;
+	border-top:solid 1px #ccc;
+	margin-top:40px;
+}
+.designer.swiperText dl{
+	width:100%;
+}
+
+/*轮播*/
+.gallery-top{
+	margin-bottom:12px;
+}
+
+.gallery-top img{
+	width:100%;
+	height:auto!important;
+}
+.details-share span.icon,.share span.icon{
+	display: inline-block;
+	margin:10px 10px;
+	color:#fff;
+}
+.details-share span.icon{
+	color:#000;
+}
+.ico-wraps span:hover{
+	color:#c8a165;
+}
+.weixin2 div{
+	margin-top:3px;
+	margin-left:-17px;
+}
+/*icon*/
+.icon-twitter:before { font-size:20px; }
+
+.icon-weixin:before { font-size:20px; }
+
+.icon-facebook:before { font-size:20px; }
+
+.icon-youjian:before { font-size:20px; }
+
+.icon-weibo:before { font-size:20px; }
+
+.icon-qq:before { font-size:20px; }
+
+.icon-question:before { font-size:20px; }
+
+/*bg-hui*/
+.bg-hui-f7{
+	background: #f7f7f7
+}
+.desiger img{
+	display: block;
+	margin:30px auto;
+}
+.desiger h2{
+	text-align: center;
+	padding:40px 0 20px 0;
+}
+.desiger p{
+	padding:5px 10% 50px 10%;
+	line-height: 30px;
+}
+.d-detail-img{
+	clear:both;
+	overflow: hidden;
+}
+.d-detail-img div{
+	width:22%;
+	float:left;
+	margin:15px 4% 15px 0;
+	max-height:270px;
+	overflow: hidden;
+}
+.d-detail-img div:nth-of-type(4n){
+	margin-left:0;
+	margin-right:0;
+}
+.d-detail-img div img{
+	width:100%;
+}
