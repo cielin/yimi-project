@@ -35,6 +35,7 @@
 .designer.buyer dl{
 	margin-bottom:90px;
 	position: relative;
+	height:382px;
 }
 .designer.buyer dl div{
 	position: absolute;
@@ -325,7 +326,16 @@ span.more{
 	height: 40px;
 }
 
-.address-btn,.address-btn:hover,.address-btn:active,.address-btn:visited,.address-btn:link{
+.address-btn,
+.address-btn:hover,
+.address-btn:active,
+.address-btn:visited,
+.address-btn:link,
+.submitText,
+.submitText:hover,
+.submitText:active,
+.submitText:visited,
+.submitText:link{
 	width: 166px;
 	height: 40px;
 	background-color:  #c9a164;
@@ -333,6 +343,21 @@ span.more{
 	border:none;
 	font-weight: bold;
 	font-size: 14px;
+	margin-top:8px;
+}
+.submitText,
+.submitText:hover,
+.submitText:active,
+.submitText:visited,
+.submitText:link,
+.cancelText{
+	width: 60px;
+	height: 30px;
+	font-size: 12px;
+}
+.cancelText{
+	background-color:#fff;
+	border: 1px solid #e0e0e0;
 	margin-top:8px;
 }
 .table-wrap .table-bordered{
@@ -466,4 +491,322 @@ span.more{
 	height: 40px;
 	line-height: 40px;
 	width: 89px;
+}
+.msg-box,.discuss-box{
+	margin-bottom: 300px;
+    width: 99%;
+    overflow: hidden;
+    float: right;
+}
+.msg-box .msg-item,.discuss-order{
+	background-color: #f7f7f7;
+	color: #bcbcbc;
+	padding:30px;
+	margin-bottom: 30px;
+}
+
+.msg-box .msg-item h5{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.msg-box .msg-item p{
+	color: #545454;
+	line-height: 30px;
+}
+.discuss-item{
+	margin-bottom: 30px;
+}
+.discuss-order{
+	color: #545454;
+	line-height: 30px;
+}
+.discuss-order .time{
+	color: #bcbcbc;
+}
+.order-code{
+	padding-left: 17px;
+    margin-bottom: 10px;
+}
+.order-code p{
+	display: inline-block;
+	color:#c2c2c2;
+}
+.order-code .option{
+ float: right;
+ color: #b39a4a;
+ padding-right: 15px;
+ cursor: pointer;
+}
+.order-code .option span{
+	margin-left: 15px;
+}
+.order-code .option span:hover{
+	text-decoration: underline;
+}
+.discuss-img-list{
+	margin-top: 20px;
+}
+.discuss-img-list li{
+	float: left;
+	width: 110px;
+	height: 77px;
+	margin-right: 20px;
+	overflow: hidden;
+}
+.discuss-order .pro-img{
+	width: 142px;
+	height: 190px;
+	overflow: hidden;
+}
+.discuss-order .pro-text{
+	font-weight: bold;
+	color:#2d2d2d;
+	margin-top: 10px;
+}
+.discuss-order .pro-img img{
+	width: 142px;
+	height: 190px;
+}
+.discuss-order .text{
+	height: 61px;
+	overflow: hidden;
+}
+.discuss-img-list li img{
+	width: 110px;
+	height: 77px;
+}
+.bind-account-box{
+	background-color:#f7f7f7;
+	padding:50px;
+	margin-bottom: 300px;
+}
+.bind-tip{
+	width: 80%;
+	margin-bottom: 100px;
+	line-height: 30px;
+}
+.bind-btn div{
+	position: relative;
+	font-size: 14px;
+	display: inline-block;
+	margin-right: 50px;
+	cursor: pointer;
+}
+.bind-btn div span:hover{
+	color: #c8a764;
+	text-decoration: underline;
+}
+.bind-btn div.active span:hover{
+	color: #202020;
+	text-decoration: none;
+}
+.bind-btn div:before{
+	position: absolute;
+	top: -66px;
+    font-size: 43px;
+}
+.bind-btn div.bindWeibo:before{
+	left:8px;
+}
+.bindWeixin.active.icon-weixin1:before{
+	color: #459d37;
+}
+.bindWeibo.active.icon-xinlangweibo2:before{
+	color: #e8343a;
+}
+
+.showInput{
+	width: 100%;
+	display: none;
+}
+.showInput .f-textarea{
+	position: relative;
+	
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+}
+.showInput textarea{
+	width: 100%;
+	height: 134px;
+    max-width: 100%;
+    max-height: 134px;
+    min-height: 134px;
+    line-height: 18px;
+    border: medium none;
+    color: #333;
+    resize: vertical;
+    resize: none;
+    font-size: 12px;
+    padding: 10px;
+}
+.f-textarea .textarea-ext{
+  position: absolute;
+  bottom:5px;
+  right: 10px;
+}
+.btns{
+	text-align: right;
+}
+.btns button{
+	margin-left: 10px;
+}
+.fileidImg{
+	border: 1px solid #e7e7e7;
+    width: 45px;
+    height: 43px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.fileidImg i{
+	font-size: 30px;
+	display: block;
+	margin-left:6px;
+}
+.fileidImg span{
+	font-size: 10px;
+    display: block;
+    position: relative;
+    top: -12px;
+}
+.fileidImg .uploadify-button{
+	position: absolute;
+	height: 40px;
+	width: 43px;
+	padding:0px;
+	margin:0px;
+	top:0px;
+	border-radius: 5px;
+	background: none;
+    border: none
+}
+.upload-img-wrap .img-wrap,
+.fileidImg,
+.upload-img-wrap .img-wrap .img-item{
+	float: left;
+	margin-right: 15px;
+}
+.upload-img-wrap .img-wrap{
+	margin-right: 0px;
+}
+.upload-img-wrap .img-wrap img{
+	width: 40px;
+	height: 43px;
+
+}
+.upload-img-wrap .img-wrap .img-item{
+	width: 40px;
+	height: 43px;
+	overflow: hidden;
+	position: relative;
+}
+.closeImg{
+	background: url("../img/close.png") no-repeat;
+	width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-size: 100%;
+    border:none;
+}
+.textarea-ext{
+	color:#c2c2c2;
+}
+
+/*chenyanhong*/
+.order-padd5{
+	padding:24px 20px 14px 20px;
+}
+.order-menu{
+	/*float:left;
+	width:50%;*/
+}
+.order-menu a{display: inline-block; margin:0 5% 0 0px;}
+.order-menu a.active{
+	color:#c2a77c;
+	text-decoration: underline;
+}
+.order-search{
+	/*float:right;
+	width:40%;*/
+	height:39px;
+	line-height: 34px;
+	background: #fff;
+}
+.order-search input{
+	border:none;
+	background: none;
+	width:84%;
+	height:100%;
+	padding-left:10px;
+	line-height: 20px;
+}
+.pr20{
+	padding-right:20px;
+}
+.gray-333{
+	color:#333;
+}
+.order-pt10{
+	padding-top:10px;
+	padding-left:50px;
+	padding-bottom:0;
+	margin-bottom:12px;
+}
+.order-bord-bd{
+	border-bottom:solid 1px #e1e1e1;
+	padding-bottom:12px;
+	color:#c2c2c2;
+	margin-left:-34px;
+	padding-left:30px;
+}
+.order-bord-r{
+	border-right:solid 1px #ccc;
+	padding-right:20px;
+	margin-left:-34px;
+}
+.pt20{
+	padding-top:20px;
+}
+.order-r-menu {
+	padding-right:0;
+	margin-right:0;
+
+}
+.order-r-menu a,.order-r-menu span{
+	font-size:13px;
+	color:#c8a165;
+	display: block;
+	line-height:26px;
+}
+.order-r-menu span{
+	color:#666;
+}
+.order-goods{
+	overflow: auto;
+	margin-bottom:30px;
+}
+.order-bord-bm-hui{
+	border-bottom:solid 1px #e1e1e1;
+	padding-left: 30px;
+    margin-bottom: 10px;
+    margin-left:-34px;
+}
+
+.order-r-menu{
+	position: relative;
+}
+.orderEvaluate{
+	position: absolute;
+    width: 390px;
+    right: 200px;
+    top: 1px;
+}
+.orderEvaluate .fileText{
+	font-size: 10px;
 }
