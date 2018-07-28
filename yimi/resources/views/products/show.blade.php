@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', '{{ $product->name }}_商品')
+@section('title', $product->name . '_商品')
 
 @section('css')
 

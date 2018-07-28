@@ -85,7 +85,7 @@
             </div>
         </div>
     </nav>
-    <div class="wrapper-page container">
+    <div class="@if ($active == 'home') wrapper @else wrapper-page container @endif">
         @yield('page-content')
     </div>
     <div class="footer">
