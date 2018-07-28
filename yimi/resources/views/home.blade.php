@@ -231,14 +231,18 @@
 	    <div class="water container" id="main">
 	    	@if (isset($waterfalled_products))
 	    	@foreach ($waterfalled_products as $waterfalled_product)
-	        <a href="goodsDetail.html">
 	            <div class="pin">
 	                <div class="box">
 	                	<img src="{{ asset('public/images/products/' . $waterfalled_product ->featured_image) }}">
 	                    <span>{{ $waterfalled_product->name }}</span>
+	                    <div class="showFavor">
+	                      <p class="ico-wrap site">
+	                      	<a href="goodsDetail.html"><span class="glyphicon glyphicon-heart-empty"></span></a>
+	                      	<a href="#"><span class="glyphicon glyphicon-eye-open"></span></a>
+	                      </p>
+	                    </div>
 	                </div>
 	            </div>
-	        </a>
 	        @endforeach
 	        @endif
 	    </div>
