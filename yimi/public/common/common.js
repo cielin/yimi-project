@@ -196,6 +196,7 @@ $(function(){
       })
        $(this).val('');
       $(this).css({"background-color":"rgba(89,89,89,1)"});
+      $(this).blur();
     });
 
 

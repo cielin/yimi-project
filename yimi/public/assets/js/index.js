@@ -143,8 +143,8 @@ $(function () {
           var maxH=Math.max.apply(null,imgH)
           
           var mainHeight = $('#main').height()
-          console.log('', maxH,mainHeight, mainHeight+maxH)
-          $('#main').css('height',mainHeight+maxH+'px')
+          console.log('maxH', maxH,mainHeight, mainHeight+maxH)
+          $('#main').css('height',mainHeight+'px')
       // };
   }
   //**********瀑布流end ***************
