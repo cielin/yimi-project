@@ -112,4 +112,7 @@ select option{
 .suspension .d-qrcode{width:158px;text-align:center;}
 .suspension .d-qrcode .inner-box{padding:20px 0;}
 .suspension .d-qrcode p{font-size:16px;color:#93959c; margin-bottom: 10px;}
+span.icon-yanjing{
+	font-size:22px;
+}
 

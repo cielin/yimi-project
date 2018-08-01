@@ -93,7 +93,7 @@
 	                    <dt>
 	                        <p class="ico-wrap">
 	                            <span class="glyphicon glyphicon-heart-empty"></span>
-	                            <span class="glyphicon glyphicon-eye-open"></span>
+	                            <span class="iconfont icon-yanjing"></span>
 	                        </p>
 	                    </dt>
 	                    <dd>
@@ -237,8 +237,8 @@
 	                    <span>{{ $waterfalled_product->name }}</span>
 	                    <div class="showFavor">
 	                      <p class="ico-wrap site">
-	                      	<a href="goodsDetail.html"><span class="glyphicon glyphicon-heart-empty"></span></a>
-	                      	<a href="#"><span class="glyphicon glyphicon-eye-open"></span></a>
+	                      	<span class="glyphicon glyphicon-heart-empty"></span>
+	                      	<a href="goodsDetail.html"><span class="iconfont icon-yanjing"></span></a>
 	                      </p>
 	                    </div>
 	                </div>
