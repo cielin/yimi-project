@@ -122,13 +122,13 @@
     <ul class="col-md-3 details-tab" role="tablist">
         <li role="presentation" class="active">
             <a href="#goodsDetails" aria-controls="home" role="tab" data-toggle="tab">
-商品介绍
-</a>
+            商品介绍
+            </a>
         </li>
         <li role="presentation">
             <a href="#goodsInfo" aria-controls="profile" role="tab" data-toggle="tab">
-商品规格
-</a>
+            商品规格
+            </a>
         </li>
     </ul>
     <div class="tab-content col-md-8 ditails-tab-box">

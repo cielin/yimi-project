@@ -238,12 +238,8 @@
                 <span>{{ $waterfalled_product->name }}</span>
                 <div class="showFavor">
                     <p class="ico-wrap site">
-                        <a href="#">
-                            <span class="glyphicon glyphicon-heart-empty"></span>
-                        </a>
-                        <a href="/products/{{ $waterfalled_product->slug }}">
-                            <span class="glyphicon glyphicon-eye-open"></span>
-                        </a>
+                        <span class="glyphicon glyphicon-heart-empty"></span>
+                        <a href="/products/{{ $waterfalled_product->slug }}"><span class="iconfont icon-yanjing"></span></a>
                     </p>
                 </div>
             </div>

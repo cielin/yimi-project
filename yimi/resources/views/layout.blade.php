@@ -74,12 +74,14 @@
                         <a href="#" title="如何选购">如何选购</a>
                     </li>
                     <li class="rightLine  @if ($active == 'articles') current @endif ">
-                        <a href="#" title="最近文章">最近文章</a>
+                        <a href="/articles" title="最近文章">最近文章</a>
                     </li>
                     <li style="position: relative; width: 50px;">
+                        {{ Form::open(array('route' => 'categories.search', 'role' => 'form')) }}
                         <div class="top-search-group">
-                            <input class="search-input" />
+                            <input class="search-input" name="query" />
                         </div>
+                        {{ Form::close() }}
                     </li>
                 </ul>
             </div>
@@ -102,7 +104,7 @@
                         <a href="http://v.t.sina.com.cn/share/share.php?url=http://www.jb51.net&title='分享内容'" target="_blank">
                             <span class="icon iconfont icon-weibo"></span>
                         </a>
-                        <a href="http://connect.qq.com/widget/shareqq/index.html?title=qqhaoyou&url=http://www.jb51.net&desc=还不错哦&pics=&site=优酷" target="_blank">
+                        <a href="http://connect.qq.com/widget/shareqq/index.html?title=qqhaoyou&url={{ htmlspecialchars('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) }}&desc=薏米家&pics=&site=薏米家" target="_blank">
                             <span class="icon iconfont icon-qq"></span>
                         </a>
                         <span id="weixin" class="icon iconfont icon-weixin"></span>
