@@ -74,20 +74,18 @@
                         <a href="#" title="如何选购">如何选购</a>
                     </li>
                     <li class="rightLine  @if ($active == 'articles') current @endif ">
-                        <a href="/articles" title="最近文章">最近文章</a>
+                        <a href="#" title="最近文章">最近文章</a>
                     </li>
                     <li style="position: relative; width: 50px;">
-                        {{ Form::open(array('route' => 'categories.search', 'role' => 'form')) }}
                         <div class="top-search-group">
-                            <input class="search-input" name="query" />
+                            <input class="search-input" />
                         </div>
-                        {{ Form::close() }}
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="@if ($active == 'home') wrapper @else wrapper-page container @endif">
+    <div class="wrapper-page container">
         @yield('page-content')
     </div>
     <div class="footer">
@@ -104,7 +102,7 @@
                         <a href="http://v.t.sina.com.cn/share/share.php?url=http://www.jb51.net&title='分享内容'" target="_blank">
                             <span class="icon iconfont icon-weibo"></span>
                         </a>
-                        <a href="http://connect.qq.com/widget/shareqq/index.html?title=qqhaoyou&url={{ htmlspecialchars('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) }}&desc=薏米家&pics=&site=薏米家" target="_blank">
+                        <a href="http://connect.qq.com/widget/shareqq/index.html?title=qqhaoyou&url=http://www.jb51.net&desc=还不错哦&pics=&site=优酷" target="_blank">
                             <span class="icon iconfont icon-qq"></span>
                         </a>
                         <span id="weixin" class="icon iconfont icon-weixin"></span>
@@ -166,23 +164,6 @@
                                 <span>Hotline：400 - 671 - 1878</span>
                                 <span>Open - Close： 09:00 - 21:00</span>
                                 <span>Mail： <a href="mailto:yimijia@163.com">yimijia@163.com</a></span>
-                            </dd>
-                            <dt class="pay">付款接受</dt>
-                            <dd class="row">
-                                <div class="col-md-6">
-                                    <img src="{{ URL::asset('assets/img/foot/paypal.jpg') }}" />
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="{{ URL::asset('assets/img/foot/american.jpg') }}" />
-                                </div>
-                            </dd>
-                            <dd class="row">
-                                <div class="col-md-6 col-xs-6">
-                                    <img src="{{ URL::asset('assets/img/foot/amazon.jpg') }}" />
-                                </div>
-                                <div class="col-md-6 col-xs-6">
-                                    <img src="{{ URL::asset('assets/img/foot/visa.jpg') }}" />
-                                </div>
                             </dd>
                         </dl>
                     </div>

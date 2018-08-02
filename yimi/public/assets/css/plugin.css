@@ -85,9 +85,12 @@
         margin-bottom:40px;
     }
 .pin{
-    padding: 15px 0 0 2%;
+    padding: 15px 2% 0 0;
     float:left;
-    width:24.5%;
+    width:25%;
+}
+.water a:nth-of-type(4n) div.pin{
+  padding-right:0;
 }
 .box{
     padding: 0px 0 14px 0;

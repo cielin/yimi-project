@@ -56,8 +56,8 @@ $(function () {
   //***************瀑布流****************
   window.onload=window.onresize = function(){
       waterfall('main','pin');
-      var dataInt={'data':[{'src':'1.jpg'},{'src':'2.jpg'},{'src':'3.jpg'},{'src':'4.jpg'}]};
-      maxH(dataInt)
+      var dataInt={'data':[{'src':'1.jpg','title': 'aaa'},{'src':'2.jpg','title': 'bbb'},{'src':'3.jpg', 'title': 'ccc'},{'src':'4.jpg', 'title': 'dddd'}]};
+      // maxH(dataInt)
       $('#loadMore').click(function(){
         maxH(dataInt)
       })
@@ -133,7 +133,7 @@ $(function () {
 
               //新增文字
               var oSpan=document.createElement('span');
-              oSpan.innerHTML = 'aaaa'
+              oSpan.innerHTML = dataInt.data[i].title
               oBox.appendChild(oSpan);
               // 新增文字end
               console.log(oImg.height)

@@ -19,6 +19,10 @@
     -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
 }
+/*.container,.container-fluid{
+    padding-left:0;
+    padding-right:0;
+}*/
 /**************/
 </style>
 
@@ -49,7 +53,7 @@
 <div class="swiper-button-prev"></div> -->
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid" style="padding-left:0; padding-right:0;">
     <article class="row litteBanner">
 
 
@@ -232,18 +236,20 @@
     <div class="water container" id="main">
     	@if (isset($waterfalled_products))
     	@foreach ($waterfalled_products as $waterfalled_product)
-        <div class="pin">
-            <div class="box">
-            	<img src="{{ asset('public/images/products/' . $waterfalled_product ->featured_image) }}">
-                <span>{{ $waterfalled_product->name }}</span>
-                <div class="showFavor">
-                    <p class="ico-wrap site">
-                        <span class="glyphicon glyphicon-heart-empty"></span>
-                        <a href="/products/{{ $waterfalled_product->slug }}"><span class="iconfont icon-yanjing"></span></a>
-                    </p>
+        <a href="/products/{{$waterfalled_product->name}}">
+            <div class="pin">
+                <div class="box">
+                	<img src="{{ asset('public/images/products/' . $waterfalled_product ->featured_image) }}">
+                    <span>{{ $waterfalled_product->name }}</span>
+                    <div class="showFavor">
+                        <p class="ico-wrap site">
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            <a href="/products/{{ $waterfalled_product->slug }}"><span class="iconfont icon-yanjing"></span></a>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
         @endforeach
         @endif
     </div>

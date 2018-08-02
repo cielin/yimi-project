@@ -23,8 +23,8 @@ $(function(){
 //***************瀑布流****************
 window.onload=window.onresize = function(){
     waterfall('main','pin');
-    var dataInt={'data':[{'src':'1.jpg'},{'src':'2.jpg'},{'src':'3.jpg'},{'src':'4.jpg'}]};
-    maxH(dataInt)
+    var dataInt={'data':[{'src':'1.jpg','title': 'aaa'},{'src':'2.jpg','title': 'bbb'},{'src':'3.jpg', 'title': 'ccc'},{'src':'4.jpg', 'title': 'dddd'}]};
+    // maxH(dataInt)
     $('#loadMore').click(function(){
       maxH(dataInt)
     })
@@ -98,7 +98,7 @@ function maxH(dataInt){
             //新增文字
             var oHref=document.createElement('a');
             oHref.href='#';
-            oHref.innerHTML = 'aaaa'
+            oHref.innerHTML = dataInt.data[i].title
             oBox.appendChild(oHref);
             // 新增文字end
             console.log(oImg.height)
@@ -109,7 +109,7 @@ function maxH(dataInt){
         
         var mainHeight = $('#main').height()
         console.log('', maxH,mainHeight, mainHeight+maxH)
-        $('#main').css('height',mainHeight+maxH+'px')
+        $('#main').css('height',mainHeight+'px')
     // };
 }
 //**********瀑布流end ***************
