@@ -57,8 +57,8 @@
     <article class="row litteBanner">
 
 
-        <div class="col-md-6 col-sm-6 col-xs-6">
-        	<img src="{{ URL::asset('assets/img/picture/img01.jpg') }}" width="100%">
+        <div class="litteBannerImg col-md-6 col-sm-6 col-xs-6">
+        	<img src="{{ URL::asset('assets/img/picture/img01.jpg') }}">
         </div>
         <ul class="col-md-6 col-sm-6 col-xs-6" style="list-style: none;padding: 0;">
             <li class="col-md-6 col-sm-6 col-xs-6">

@@ -260,30 +260,35 @@ ul.nav{
 	margin-bottom:-9999px;
 }
 .sidebar-title{
-	margin-bottom: 30px;
-
+	margin-bottom: 22px;
 }
 .side-one{
 	display: block;
 	color:#333;
 	font-size: 14px;
-	
 	font-weight: bold;
-	padding: 20px 0px;
 	
+}
+.s-content{
+	position: relative;
+	top: -10px;
+	margin-bottom: 25px;
 }
 .side-sub{
 	clear: both;
 	margin:0px;
 	padding:0px;
+	padding-left:20px;
+	margin-bottom: 14px;
+	margin-top: 10px;
 }
 .side-sub a{
 	color: #898989;
 	display: inline-block;
-	padding:10px 0px;
+	padding:2px 0px;
 }
-.side-sub li{
-	/*margin:10px 0px;*/
+.side-sub li ul li{
+	margin: 12px 0px;
 }
 .side-sub li a:hover{
 	color:#c8a165;
@@ -292,7 +297,7 @@ ul.nav{
 	position: relative;
     top: 1px;
     display: inline-block;
-    font-family: '微软雅黑';
+    font-family: 'Glyphicons Halflings';
     font-style: normal;
     font-weight: 400;
     line-height: 1;
@@ -302,8 +307,9 @@ ul.nav{
 .side-sub li.active:before{
 	content:"\e080";
 	color:#c8a165;
-	position: relative;
-	top:2px;
+	position: absolute;
+	top: 3px;
+    left: -24px;
 }
 .side-sub li.active a{
 	color:#c8a165;
@@ -312,6 +318,8 @@ ul.nav{
 .sidebar-box{
 	color: #989898;
 	border:1px solid #dfdfdf;
+	margin-bottom: 44px;
+	margin-right: 30px;
 }
 .sidebar-subtitle{
 	border-bottom: 1px solid #dfdfdf;

@@ -1,6 +1,15 @@
 
 /* 大屏幕（大桌面显示器，大于等于 1200px） */
 @media (min-width: 1200px) {
+	.litteBannerImg img{
+		width: 100.5%;
+	}
 
 }
 
+@media (min-width: 1106px) { 
+	.litteBannerImg img{
+		width: 100.5%;
+	}
+
+}

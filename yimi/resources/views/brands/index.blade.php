@@ -16,33 +16,34 @@
 </div>
 <!--面包屑-->
 <div class="row">
-    <div class="col-sm-4 col-md-3 sidebar">
-        <div class="sidebar-title">
-            <img src="{{ URL::asset('assets/img/title1.jpg') }}" />
+    <div class="col-sm-4 col-md-3 ">
+        <div class="sidebar">
+            <div class="sidebar-title">
+                <img src="{{ URL::asset('assets/img/title1.jpg') }}" />
+            </div>
+            <ul class="brandListText">
+                <li><a href="#">Acerbis</a>
+                </li>
+                <li><a href="#">Agape</a>
+                </li>
+                <li><a href="#">Alessi</a>
+                </li>
+                <li><a href="#">Alias</a>
+                </li>
+                <li><a href="#">Angelo Cappellini</a>
+                </li>
+                <li><a href="#">Antonangeli</a>
+                </li>
+                <li><a href="#">Antoniolupi</a>
+                </li>
+                <li><a href="#">Arflex</a>
+                </li>
+                <li><a href="#">Arketipo</a>
+                </li>
+                <li><a href="#">Armani</a>
+                </li>
+            </ul>
         </div>
-        <ul class="brandListText">
-            <li><a href="#">Acerbis</a>
-            </li>
-            <li><a href="#">Agape</a>
-            </li>
-            <li><a href="#">Alessi</a>
-            </li>
-            <li><a href="#">Alias</a>
-            </li>
-            <li><a href="#">Angelo Cappellini</a>
-            </li>
-            <li><a href="#">Antonangeli</a>
-            </li>
-            <li><a href="#">Antoniolupi</a>
-            </li>
-            <li><a href="#">Arflex</a>
-            </li>
-            <li><a href="#">Arketipo</a>
-            </li>
-            <li><a href="#">Armani</a>
-            </li>
-        </ul>
-
 
     </div>
     <div class="col-sm-8 col-md-9 main">

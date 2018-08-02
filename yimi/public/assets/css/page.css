@@ -173,7 +173,25 @@ span.more{
 	top:0px;
 }
 /*搜索结果页*/
-.searchText{
+.good-list-top{
+	width: 100%;
+}
+.good-list-top li{
+	width: 20%;
+	display: inline-block;
+}
+.good-list-top li a{
+	color: #181818;
+	padding: 0px 10%;
+}
+.good-list-top li.all a{
+	font-weight: bold;
+}
+.good-list-top li a:hover{
+	color: #d4b689;
+	text-decoration: underline;
+}
+.searchText,.good-list-top{
 	width: 100%;
     height: 70px;
     background: #f8f8f8;
@@ -182,6 +200,9 @@ span.more{
     line-height: 70px;
     padding-left: 30px;
     margin-bottom: 30px;
+}
+.good-list-top{
+	margin-top:-10px;
 }
 .searchText .sText{
 	color: #545454;
@@ -256,7 +277,7 @@ span.more{
 	display: inline-block;
 }
 .checkboxWrap label i{
-	width:190px;
+	width:178px;
 	height: 30px;
 	position: absolute;
     left: 20px;

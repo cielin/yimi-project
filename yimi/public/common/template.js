@@ -86,6 +86,45 @@ var AReturnHome = '<a id="jAReHome" class="a-return-home" href="javascript:void(
 
 var IcoOk = '<i class="icon i-ok"></i>';
 var icoFalse = '<i class="icon i-remove-sign-crude"></i>';
+var suspension ='<div class="suspension">'
+	+'<div class="suspension-box">'
+		+'<a href="javascript:;" class="a a-top"><i class="i"></i></a>'
+		+'<a href="javascript:;" class="a a-service-phone "><i class="i"></i></a>'
+		+'<a href="#" class="a a-service "><i class="i"></i></a>'
+		+'<a href="javascript:;" class="a a-qrcode"><i class="i"></i></a>'
+		
+		+'<div class="d d-service">'
+			+'<i class="arrow"></i>'
+			+'<div class="inner-box">'
+				+'<div class="d-service-item clearfix">'
+					+'<a target="_blank" href="http://wpa.qq.com/msgrd?v=1&uin=QQ号码&site=qq&menu=yes" class="clearfix"><span class="circle"><i class="i-qq"></i></span><h3>咨询在线客服</h3></a>'
+				+'</div>'
+			+'</div>'
+		+'</div>'
+		+'<div class="d d-service-phone">'
+			+'<i class="arrow"></i>'
+			+'<div class="inner-box">'
+				+'<div class="d-service-item clearfix">'
+					+'<span class="circle"><i class="i-tel"></i></span>'
+					+'<div class="text">'
+						+'<p>服务热线</p>'
+						+'<p class="number">4001-123-456</p>'
+					+'</div>'
+				+'</div>'
+				
+			+'</div>'
+		+'</div>'
+		+'<div class="d d-qrcode">'
+			+'<i class="arrow"></i>'
+			+'<div class="inner-box">'
+				+'<p>扫描二维码</p>'
+				+'<div class="qrcode-img"><img src="../assets/img/side_ewm.jpg" alt=""></div>'
+				
+			+'</div>'
+		+'</div>'
+
+	+'</div>'
++'</div>';
 
 
 /*
@@ -113,5 +152,7 @@ function geturl(url){
 
 //头部
 //document.write(headerHtml);
+//在线咨询
+document.write(suspension);
 
 

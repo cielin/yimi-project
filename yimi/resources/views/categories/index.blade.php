@@ -57,20 +57,21 @@
         </div>
         <div class="sidebar-box">
             <div class="sidebar-subtitle">选择材质</div>
-            <!--带样式的checkbox需要赋值不同的id start-->
-            <div class="checkboxWrap">
-               <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx1">
-              <label for="cx1">
-             <i style="position: absolute;left: 20px;font-size: 14px;">全部
-             </i>
-             </label>
-            </div>
-            <!--带样式的checkbox需要赋值不同的id end -->
+            
             <div class="sidebar-content">
                 <!--带样式的checkbox需要赋值不同的id start-->
                 <div class="checkboxWrap">
-                    <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx1">
-                    <label for="cx1">
+                   <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx1">
+                  <label for="cx1">
+                 <i style="position: absolute;left: 20px;font-size: 14px;">全部
+                 </i>
+                 </label>
+                </div>
+                <!--带样式的checkbox需要赋值不同的id end -->
+                <!--带样式的checkbox需要赋值不同的id start-->
+                <div class="checkboxWrap">
+                    <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx2">
+                    <label for="cx2">
                         <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
 	           	</i>
                     </label>
@@ -78,8 +79,8 @@
                 <!--带样式的checkbox需要赋值不同的id end -->
                 <!--带样式的checkbox需要赋值不同的id start-->
                 <div class="checkboxWrap">
-                    <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx2">
-                    <label for="cx2">
+                    <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx3">
+                    <label for="cx3">
                         <i>埃及棉
 	           	</i>
                     </label>
@@ -92,12 +93,21 @@
             <img src="{{ URL::asset('assets/img/title3.jpg') }}" />
         </div>
         <div class="sidebar-box">
-            <div class="sidebar-subtitle">选择材质</div>
+            <div class="sidebar-subtitle">选择产地</div>
             <div class="sidebar-content ">
                 <!--带样式的checkbox需要赋值不同的id start-->
                 <div class="checkboxWrap">
-                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx3">
-                    <label for="cx3">
+                   <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx4">
+                  <label for="cx4">
+                 <i style="position: absolute;left: 20px;font-size: 14px;">全部
+                 </i>
+                 </label>
+                </div>
+                <!--带样式的checkbox需要赋值不同的id end -->
+                <!--带样式的checkbox需要赋值不同的id start-->
+                <div class="checkboxWrap">
+                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx5">
+                    <label for="cx5">
                         <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
 	           	</i>
                     </label>
@@ -105,8 +115,8 @@
                 <!--带样式的checkbox需要赋值不同的id end -->
                 <!--带样式的checkbox需要赋值不同的id start-->
                 <div class="checkboxWrap">
-                    <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx4">
-                    <label for="cx4">
+                    <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx6">
+                    <label for="cx6">
                         <i>埃及棉
 	           	</i>
                     </label>
@@ -114,8 +124,8 @@
                 <!--带样式的checkbox需要赋值不同的id end -->
                 <!--带样式的checkbox需要赋值不同的id start-->
                 <div class="checkboxWrap">
-                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx3">
-                    <label for="cx3">
+                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx7">
+                    <label for="cx7">
                         <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
 	           	</i>
                     </label>
@@ -123,8 +133,8 @@
                 <!--带样式的checkbox需要赋值不同的id end -->
                 <!--带样式的checkbox需要赋值不同的id start-->
                 <div class="checkboxWrap">
-                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx3">
-                    <label for="cx3">
+                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx8">
+                    <label for="cx8">
                         <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
 	           	</i>
                     </label>
@@ -132,8 +142,8 @@
                 <!--带样式的checkbox需要赋值不同的id end -->
                 <!--带样式的checkbox需要赋值不同的id start-->
                 <div class="checkboxWrap">
-                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx3">
-                    <label for="cx3">
+                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx9">
+                    <label for="cx9">
                         <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
 	           	</i>
                     </label>
@@ -141,8 +151,8 @@
                 <!--带样式的checkbox需要赋值不同的id end -->
                 <!--带样式的checkbox需要赋值不同的id start-->
                 <div class="checkboxWrap">
-                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx3">
-                    <label for="cx3">
+                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx10">
+                    <label for="cx10">
                         <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
 	           	</i>
                     </label>
@@ -150,8 +160,8 @@
                 <!--带样式的checkbox需要赋值不同的id end -->
                 <!--带样式的checkbox需要赋值不同的id start-->
                 <div class="checkboxWrap">
-                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx3">
-                    <label for="cx3">
+                    <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx11">
+                    <label for="cx11">
                         <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
 	           	</i>
                     </label>

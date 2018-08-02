@@ -23,13 +23,15 @@
 </div>
 <!--面包屑-->
 <div class="row">
-    <div class="col-md-3 col-sm-3 col-xm-3 sidebar">
-        <div class="brandBigImg">
-            <a href="#"><img src="{{ asset('public/images/brands/' . $brand->logo) }}">
-            </a>
-        </div>
-        <div class="brandText">
-            {!! html_entity_decode($brand->description, ENT_QUOTES, 'UTF-8') !!}
+    <div class="col-md-3 col-sm-3 col-xm-3">
+        <div class=" sidebar">
+            <div class="brandBigImg">
+                <a href="#"><img src="{{ asset('public/images/brands/' . $brand->logo) }}">
+                </a>
+            </div>
+            <div class="brandText">
+                {!! html_entity_decode($brand->description, ENT_QUOTES, 'UTF-8') !!}
+            </div>
         </div>
     </div>
     <div class=" col-md-9 col-sm-8 col-xs-8  main">
