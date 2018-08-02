@@ -18,10 +18,12 @@
 </div>
 <!--面包屑-->
 <div class="row">
-    <div class="col-sm-4 col-md-3 sidebar">
+    <div class="col-sm-4 col-md-3">
+        <div class=" sidebar">
         <div class="sidebar-title">
         	<img src="{{ URL::asset('assets/img/title1.jpg') }}" />
         </div>
+        <div class="s-content">
         @if (isset($categories))
 		@foreach ($categories as $category)
 		<a class="side-one" href="/categories/{{ $category->slug }}">
@@ -49,12 +51,21 @@
         @endif
 		@endforeach
         @endif
-
-        <div class="sidebar-title mt20">
+        </div>
+        <div class="sidebar-title mt11">
             <img src="{{ URL::asset('assets/img/title2.jpg') }}" />
         </div>
         <div class="sidebar-box">
             <div class="sidebar-subtitle">选择材质</div>
+            <!--带样式的checkbox需要赋值不同的id start-->
+            <div class="checkboxWrap">
+               <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx1">
+              <label for="cx1">
+             <i style="position: absolute;left: 20px;font-size: 14px;">全部
+             </i>
+             </label>
+            </div>
+            <!--带样式的checkbox需要赋值不同的id end -->
             <div class="sidebar-content">
                 <!--带样式的checkbox需要赋值不同的id start-->
                 <div class="checkboxWrap">
@@ -77,7 +88,7 @@
 
             </div>
         </div>
-        <div class="sidebar-title mt20">
+        <div class="sidebar-title mt11">
             <img src="{{ URL::asset('assets/img/title3.jpg') }}" />
         </div>
         <div class="sidebar-box">
@@ -149,8 +160,15 @@
 
             </div>
         </div>
+        </div>
     </div>
     <div class="col-sm-8 col-md-9 main">
+        <ul class="good-list-top">
+                <li class="all"><a href="#">全部</a></li>
+                <li><a href="#">单人</a></li>
+                <li><a href="#">双人</a></li>
+                <li><a href="#">三人</a></li>
+            </ul>
         <div class="top-option clearfix">
             <i class="glyphicon glyphicon-th"></i>
             <div class="center-num">
@@ -179,6 +197,7 @@
         <div class="designer buyer goods clearfix">
             @if (isset($products) && sizeof($products) > 0)
             @foreach ($products as $product)
+
             <a href="/products/{{ $product->slug }}">
                 <dl>
                     <dt>

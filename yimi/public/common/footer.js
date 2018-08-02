@@ -78,23 +78,6 @@ var footerHtml = `<div class="footer">
                <span>Open - Close： 09:00 - 21:00</span>
                <span>Mail： <a href="mailto:yimijia@163.com">yimijia@163.com</a></span>
               </dd>
-              <dt class="pay">付款接受</dt>
-              <dd class="row">
-                <div  class="col-md-6"><img src="../assets/img/foot/paypal.jpg" /></div>
-                <div  class="col-md-6"><img src="../assets/img/foot/american.jpg" /></div>
-                
-                
-                
-              </dd>
-              <dd class="row">
-                <div  class="col-md-6 col-xs-6">
-                <img src="../assets/img/foot/amazon.jpg" />
-              </div>
-              <div  class="col-md-6 col-xs-6">
-                <img src="../assets/img/foot/visa.jpg" />
-              </div>
-                
-              </dd>
               
             </dl>
           </div>
