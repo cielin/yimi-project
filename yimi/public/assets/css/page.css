@@ -1,4 +1,7 @@
 /*************index*****************/
+.litteBannerImg img{
+		width: 100%;
+	}
 /*买手推荐*/
 .buyer a{
 	font-size: 12px;

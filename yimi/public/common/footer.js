@@ -37,14 +37,14 @@ var footerHtml = `<div class="footer">
     <div class="container-fluid bg-black-21">
       <div class="container footer-middle">
         <div class="row">
-          <div class="f-left col-md-4 col-sm-3">
+          <div class="f-left col-md-5 col-sm-5">
             <img src="../assets/img/foot/f-logo.jpg" />
             <h4>
               微信公众号
             </h4>
             <img src="../assets/img/foot/f-ma.jpg" />
           </div>
-          <div class="f-right col-md-8 col-sm-9">
+          <div class="f-right col-md-6 col-sm-5">
             <dl>
               <dt>会员服务</dt>
               <dd>

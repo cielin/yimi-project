@@ -100,12 +100,16 @@ ul.nav{
 	padding: 18px 0px 22px;
 }
 .litteBanner{
-	margin:30px auto;
+	/*margin:30px auto;*/
+	margin-top: 30px;
+    margin-bottom: 30px;
 }
 .litteBanner li{
 	margin-bottom: 32px;
 }
-
+.litteBannerImg img {
+    width: 102%;
+}
 /*footer*/
 .footer{
 	color:#fff;
@@ -160,7 +164,8 @@ ul.nav{
 /*f-right*/
 .f-right dl{
 	float:left;
-	width:25%;
+	width: 37%;
+    padding-left: 16px;
 }
 .f-right dl dt{
 	font-size:16px;
@@ -194,6 +199,7 @@ ul.nav{
 	border-top:solid 1px #333;
 	padding:15px 0 10px 0;
 	color:#898989;
+	margin-top: 100px;
 }
 .footer-bottom a{
 	display: inline-block;

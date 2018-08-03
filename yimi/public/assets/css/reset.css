@@ -1993,10 +1993,15 @@ Modules
 	background: #fff;
 	overflow: hidden;
 	margin: 0 auto;
-	max-width: 1360px;
-	min-width:768px;
+	/*max-width: 1360px;
+	min-width:768px;*/
+	width:100%;
 }
-
+.index-content{
+	max-width: 1360px;
+    min-width: 768px;
+    margin: 0px auto;
+}
 .module,
 .module-small {
 	padding: 70px 0;

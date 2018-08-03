@@ -85,9 +85,9 @@
             </div>
         </div>
     </nav>
-    <div class="wrapper-page container">
+    
         @yield('page-content')
-    </div>
+   
     <div class="footer">
         <div class="container-fluid bg-black-18">
             <div class="container footer-top">
@@ -188,7 +188,7 @@
     <script type="text/javascript" src="{{ URL::asset('plugin/jquery.validate.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/utils/tools.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/utils/layout.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('common/data.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('common/template.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/common.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/controller.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/plugin.js') }}"></script>
