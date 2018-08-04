@@ -72,7 +72,7 @@
 
 .ico-wrap{
 	background: #fff;
-	width: 90%;
+	width: 80%;
 	height: 60px;
 	border-radius: 30px;
 	margin:0px auto;
@@ -83,14 +83,15 @@
 
 }
 .ico-wrap:before{
-	content: "|";
-	display: block;
-	width: 1px;
-	height: 30px;
+	content: "";
+    display: block;
+    width: 1px;
+    height: 16px;
     position: absolute;
-    color:#dadada;
-    left:45%;
-    top:28%;
+    color: #dadada;
+    left: 46.5%;
+    top: 38%;
+    border-left: 1px solid #dadada;
 }
 .ico-wrap span{
 	line-height: 60px;
@@ -209,7 +210,11 @@ span.more{
 }
 .good-list-top li a{
 	color: #181818;
-	padding: 0px 10%;
+	margin: 0px 10%;
+}
+.good-list-top li a.active{
+	color: #d4b689;
+    border-bottom: 1px solid #d4b689;
 }
 .good-list-top li.all a{
 	font-weight: bold;

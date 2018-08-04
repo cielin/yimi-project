@@ -329,10 +329,10 @@ ul.nav{
 }
 .sidebar-subtitle{
 	border-bottom: 1px solid #dfdfdf;
-	padding:14px 19px;
+	padding:5px 19px;
 }
 .sidebar-content{
-	padding: 20px 18px;
+	padding: 10px 18px;
 	height: 158px;
 	overflow-y:scroll;
 }

@@ -62,7 +62,7 @@
                 <div class="sidebar-content">
                     <!--带样式的checkbox需要赋值不同的id start-->
                     <div class="checkboxWrap">
-                       <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx1">
+                       <input value="2" class="magic-checkbox allAndNotAll" type="checkbox" name="layout" id="cx1">
                       <label for="cx1">
                      <i style="position: absolute;left: 20px;font-size: 14px;">全部
                      </i>
@@ -98,7 +98,7 @@
                 <div class="sidebar-content ">
                     <!--带样式的checkbox需要赋值不同的id start-->
                     <div class="checkboxWrap">
-                       <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx4">
+                       <input value="2" class="magic-checkbox allAndNotAll" type="checkbox" name="layout" id="cx4">
                       <label for="cx4">
                      <i style="position: absolute;left: 20px;font-size: 14px;">全部
                      </i>
@@ -176,7 +176,7 @@
         <div class="col-sm-8 col-md-9 main">
             <ul class="good-list-top">
                     <li class="all"><a href="#">全部</a></li>
-                    <li><a href="#">单人</a></li>
+                    <li><a href="#" class="active">单人</a></li>
                     <li><a href="#">双人</a></li>
                     <li><a href="#">三人</a></li>
                 </ul>
