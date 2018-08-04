@@ -33,13 +33,13 @@
 	position: relative;
 }
 .leftLine:before,.rightLine:before{
-	content:"|";
-	position: absolute;
-	display: block;
-	width: 1px;
-	height: 36px;
-	top:10px;
-	color: #fff;
+	content: "|";
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 16px;
+    top: 9px;
+    color: #fff;
 }
 .rightLine:before{
 	right: 0px;
@@ -113,7 +113,7 @@ ul.nav{
 /*footer*/
 .footer{
 	color:#fff;
-	margin-top: 50px;
+	
 }
 .bg-black{
 	background: #000;

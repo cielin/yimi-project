@@ -41,7 +41,7 @@ var headerHtml = `<!-- LAYOUT-->
       <div class="pull-right nav-top-right">
         <span class="login" data-toggle="modal" data-target="#myModal">登录/注册</span> |
         <span class="myOrder">我的订单</span>
-        <i class="myCollect">我的收藏</i>
+        <span class="myCollect">我的收藏</span>
       </div>
     </div>
   </div>

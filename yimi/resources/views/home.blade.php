@@ -32,7 +32,7 @@
     padding-right:0;
 }
 .waterfalls{
-    margin-top:-10px;
+    margin-top:7px;
 }
 .waterfalls .titWater h3{
     margin-bottom: 0px;
@@ -41,6 +41,7 @@
 #fh5co-main{
     padding-top: 0px!important;
     margin-top: -2px;
+    padding-bottom: 50px;
 }
 /**************/
 </style>
@@ -73,8 +74,8 @@
         </div>
     </div>
     <div class="index-content">
-        <div class="container-fluid">
-            <article class="container litteBanner" style="padding-left:0; padding-right:0;">
+        <div class="container">
+            <article class="row litteBanner" style="padding-left:0; padding-right:0;">
 
 
                 <div class="litteBannerImg col-md-6 col-sm-6 col-xs-6">
@@ -246,14 +247,14 @@
         </div>
         <!--设计师 end-->
         <!--瀑布流开始 -->
-        <div class="container-fluid" style="padding-left:0; padding-right:0;">
+        <div class="container-fluid bg-hui-f1" style="padding-left:0; padding-right:0;">
          
-            <div class="waterfalls  bg-hui-f1">
+            <div class="waterfalls">
               <h3 class="titWater">
                 <img src="../assets/img/foot/tit-water.png" alt="">
               </h3>
             </div>
-            <div id="fh5co-main" class="bg-hui-f1">
+            <div id="fh5co-main">
                 <div class="container">
                   <div class="row">
                      <div id="fh5co-board" data-columns>
