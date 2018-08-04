@@ -253,14 +253,14 @@
                                 <img src="{{ asset('public/images/products/' . $waterfalled_product ->featured_image) }}" alt="{{ $waterfalled_product->name }}">
                                 <div class="fh5co-desc">
                                     {{ $waterfalled_product->name }}
-                                </div>
-                                <div class="itemHover">
+                                </div> 
+                            </div>
+                            <div class="itemHover">
                                     <p class="ico-wrap">
                                         <span class="glyphicon glyphicon-heart-empty"></span>
                                         <a href="/products/{{ $waterfalled_product->slug }}"><span class="glyphicon glyphicon-eye-open"></span></a>
                                     </p>
                                 </div>
-                            </div>
                         </div>
                         @endforeach
                 @endif
