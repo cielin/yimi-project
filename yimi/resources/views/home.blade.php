@@ -25,7 +25,15 @@
 }
 /**************/
 </style>
-
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('plugin/swiper/css/swiper.css') }}" />
+<!-- Animate.css -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/animate.css') }}">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/magnific-popup.css') }}">
+<!-- Salvattore -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/salvattore.css') }}">
+<!-- Theme Style -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/style.css') }}">
 @stop
 
 @section('page-content')
@@ -227,43 +235,36 @@
         </div>
         <!--设计师 end-->
         <!--瀑布流开始 -->
-        <div class="container-fluid bg-hui-f1">
-            <div class="container waterfalls">
-                <h3>
-                	<img src="{{ URL::asset('assets/img/foot/tit-water.png') }}">
-        		</h3>
+        <div class="container-fluid">
+          <div class="container">
+            <div class="waterfalls  bg-hui-f1">
+              <h3 style="margin-bottom: 0px;">
+                <img src="../assets/img/foot/tit-water.png" alt="">
+              </h3>
             </div>
-            <!--瀑布流-->
-            <div class="water container" id="main">
-            	@if (isset($waterfalled_products))
-            	@foreach ($waterfalled_products as $waterfalled_product)
-                <a href="/products/{{$waterfalled_product->name}}">
-                    <div class="pin">
-                        <div class="box">
-                        	<img src="{{ asset('public/images/products/' . $waterfalled_product ->featured_image) }}">
-                            <span>{{ $waterfalled_product->name }}</span>
-                            <div class="showFavor">
-                                <p class="ico-wrap site">
-                                    <span class="glyphicon glyphicon-heart-empty">
-                                        
-                                    </span>
-                                    <a href="/products/{{ $waterfalled_product->slug }}">
-                                        <span class="iconfont icon-yanjing"></span>
-                                    </a>
-                                </p>
+            <div id="fh5co-main" class="bg-hui-f1">
+                <div class="container">
+                  <div class="row">
+                     <div id="fh5co-board" data-columns>
+                        <div class="item">
+                            <div class="animate-box">
+                                <img src="{{ asset('public/images/products/' . $waterfalled_product ->featured_image) }}" alt="{{ $waterfalled_product->name }}">
+                                <div class="fh5co-desc">
+                                    {{ $waterfalled_product->name }}
+                                </div>
+                                <div class="itemHover">
+                                    <p class="ico-wrap">
+                                        <span class="glyphicon glyphicon-heart-empty"></span>
+                                        <a href="/products/{{ $waterfalled_product->slug }}"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                @endforeach
-                @endif
+                     </div>
+                  </div>
+                </div>
             </div>
-            <div id="loadMore">
-                <p>LOAD MORE</p>
-                <span class="glyphicon glyphicon-menu-down animate1"></span>
-                <span class="glyphicon glyphicon-menu-down animate2"></span>
-            </div>
-            <!--瀑布流end -->
+          </div>
         </div>
         <!--瀑布流end -->
     </div><!--index-contentend -->
@@ -279,5 +280,12 @@
 <script type="text/javascript" src="{{ URL::asset('assets/js/index.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('assets/js/custom.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('assets/js/global.js') }}"></script>
-
+<!-- Waypoints -->
+<script type="text/javascript" src="../plugin/jquery.waypoints.min.js"></script>
+<!-- Magnific Popup -->
+<script type="text/javascript" src="{{ URL::asset('plugin/jquery.magnific-popup.min.js') }}"></script>
+<!-- Salvattore -->
+<script type="text/javascript" src="{{ URL::asset('plugin/salvattore.min.js') }}"></script>
+<!-- Main JS -->
+<script type="text/javascript" src="{{ URL::asset('plugin/main.js') }}"></script>
 @stop
