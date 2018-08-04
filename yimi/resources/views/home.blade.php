@@ -3,7 +3,15 @@
 @section('title', '首页')
 
 @section('css')
-
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('plugin/swiper/css/swiper.css') }}" />
+<!-- Animate.css -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/animate.css') }}">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/magnific-popup.css') }}">
+<!-- Salvattore -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/salvattore.css') }}">
+<!-- Theme Style -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/style.css') }}">
 <style type="text/css">
 /* Navbar light 首页的头*/
 
@@ -23,17 +31,20 @@
     padding-left:0;
     padding-right:0;
 }
+.waterfalls{
+    margin-top:-10px;
+}
+.waterfalls .titWater h3{
+    margin-bottom: 0px;
+    padding-top:26px;
+}
+#fh5co-main{
+    padding-top: 0px!important;
+    margin-top: -2px;
+}
 /**************/
 </style>
-<link rel="stylesheet" type="text/css" href="{{ URL::asset('plugin/swiper/css/swiper.css') }}" />
-<!-- Animate.css -->
-<link rel="stylesheet" href="{{ URL::asset('plugin/css/animate.css') }}">
-<!-- Magnific Popup -->
-<link rel="stylesheet" href="{{ URL::asset('plugin/css/magnific-popup.css') }}">
-<!-- Salvattore -->
-<link rel="stylesheet" href="{{ URL::asset('plugin/css/salvattore.css') }}">
-<!-- Theme Style -->
-<link rel="stylesheet" href="{{ URL::asset('plugin/css/style.css') }}">
+
 @stop
 
 @section('page-content')
@@ -62,8 +73,8 @@
         </div>
     </div>
     <div class="index-content">
-        <div class="container-fluid" style="padding-left:0; padding-right:0;">
-            <article class="row litteBanner">
+        <div class="container-fluid">
+            <article class="container litteBanner" style="padding-left:0; padding-right:0;">
 
 
                 <div class="litteBannerImg col-md-6 col-sm-6 col-xs-6">
@@ -235,10 +246,10 @@
         </div>
         <!--设计师 end-->
         <!--瀑布流开始 -->
-        <div class="container-fluid">
-          <div class="container">
+        <div class="container-fluid" style="padding-left:0; padding-right:0;">
+         
             <div class="waterfalls  bg-hui-f1">
-              <h3 style="margin-bottom: 0px;">
+              <h3 class="titWater">
                 <img src="../assets/img/foot/tit-water.png" alt="">
               </h3>
             </div>
@@ -268,7 +279,7 @@
                   </div>
                 </div>
             </div>
-          </div>
+          
         </div>
         <!--瀑布流end -->
     </div><!--index-contentend -->

@@ -37,40 +37,24 @@ var footerHtml = `<div class="footer">
     <div class="container-fluid bg-black-21">
       <div class="container footer-middle">
         <div class="row">
-          <div class="f-left col-md-5 col-sm-5">
+          <div class="f-left col-md-4 col-sm-3">
             <img src="../assets/img/foot/f-logo.jpg" />
             <h4>
               微信公众号
             </h4>
             <img src="../assets/img/foot/f-ma.jpg" />
           </div>
-          <div class="f-right col-md-6 col-sm-5">
+          <div class="f-right col-md-8 col-sm-9">
             <dl>
               <dt>会员服务</dt>
               <dd>
                 <a href="#">联系我们</a>
-                <a href="#">退换服务</a>
-                <a href="#">网站地图</a>
+                <a href="#">我的订单</a>
+                
               </dd>
             </dl>
-            <dl>
-              <dt>其他</dt>
-              <dd>
-                <a href="#">品牌专区</a>
-                <a href="#">礼品券</a>
-                <a href="#">注册会员</a>
-                <a href="#">优惠商品</a>
-              </dd>
-            </dl>
-            <dl>
-              <dt>会员中心</dt>
-              <dd>
-                <a href="#">会员中心</a>
-                <a href="#">历史订单</a>
-                <a href="#">注册会员</a>
-                <a href="#">优惠商品</a>
-              </dd>
-            </dl>
+          
+            
             <dl class="help">
               <dt>帮助中心</dt>
               <dd>
@@ -78,6 +62,7 @@ var footerHtml = `<div class="footer">
                <span>Open - Close： 09:00 - 21:00</span>
                <span>Mail： <a href="mailto:yimijia@163.com">yimijia@163.com</a></span>
               </dd>
+              
               
             </dl>
           </div>
