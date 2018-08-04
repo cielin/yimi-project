@@ -251,7 +251,7 @@
          
             <div class="waterfalls">
               <h3 class="titWater">
-                <img src="../assets/img/foot/tit-water.png" alt="">
+                <img src="{{ URL::asset('assets/img/foot/tit-water.png') }}" alt="">
               </h3>
             </div>
             <div id="fh5co-main">
@@ -268,11 +268,11 @@
                                 </div> 
                             </div>
                             <div class="itemHover">
-                                    <p class="ico-wrap">
-                                        <span class="glyphicon glyphicon-heart-empty"></span>
-                                        <a href="/products/{{ $waterfalled_product->slug }}"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                    </p>
-                                </div>
+                                <p class="ico-wrap">
+                                    <span class="glyphicon glyphicon-heart-empty"></span>
+                                    <a href="/products/{{ $waterfalled_product->slug }}"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                </p>
+                            </div>
                         </div>
                         @endforeach
                 @endif
