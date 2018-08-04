@@ -246,6 +246,8 @@
                 <div class="container">
                   <div class="row">
                      <div id="fh5co-board" data-columns>
+                        @if (isset($waterfalled_products))
+                        @foreach ($waterfalled_products as $waterfalled_product)
                         <div class="item">
                             <div class="animate-box">
                                 <img src="{{ asset('public/images/products/' . $waterfalled_product ->featured_image) }}" alt="{{ $waterfalled_product->name }}">
@@ -260,6 +262,8 @@
                                 </div>
                             </div>
                         </div>
+                        @endforeach
+                @endif
                      </div>
                   </div>
                 </div>
