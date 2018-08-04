@@ -37,7 +37,7 @@
                 <div class="pull-right nav-top-right">
                     <span class="login" data-toggle="modal" data-target="#myModal">登录/注册</span> |
                     <span class="myOrder">我的订单</span>
-                    <i class="myCollect">我的收藏</i>
+                    <span class="myCollect">我的收藏</span>
                 </div>
             </div>
         </div>
@@ -133,38 +133,24 @@
                     </div>
                     <div class="f-right col-md-8 col-sm-9">
                         <dl>
-                            <dt>会员服务</dt>
-                            <dd>
-                                <a href="#">联系我们</a>
-                                <a href="#">退换服务</a>
-                                <a href="#">网站地图</a>
-                            </dd>
+                          <dt>会员服务</dt>
+                          <dd>
+                            <a href="#">联系我们</a>
+                            <a href="#">我的订单</a>
+                            
+                          </dd>
                         </dl>
-                        <dl>
-                            <dt>其他</dt>
-                            <dd>
-                                <a href="#">品牌专区</a>
-                                <a href="#">礼品券</a>
-                                <a href="#">注册会员</a>
-                                <a href="#">优惠商品</a>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>会员中心</dt>
-                            <dd>
-                                <a href="#">会员中心</a>
-                                <a href="#">历史订单</a>
-                                <a href="#">注册会员</a>
-                                <a href="#">优惠商品</a>
-                            </dd>
-                        </dl>
+                      
+                        
                         <dl class="help">
-                            <dt>帮助中心</dt>
-                            <dd>
-                                <span>Hotline：400 - 671 - 1878</span>
-                                <span>Open - Close： 09:00 - 21:00</span>
-                                <span>Mail： <a href="mailto:yimijia@163.com">yimijia@163.com</a></span>
-                            </dd>
+                          <dt>帮助中心</dt>
+                          <dd>
+                           <span>Hotline：400 - 671 - 1878</span>
+                           <span>Open - Close： 09:00 - 21:00</span>
+                           <span>Mail： <a href="mailto:yimijia@163.com">yimijia@163.com</a></span>
+                          </dd>
+                          
+                          
                         </dl>
                     </div>
                 </div>
