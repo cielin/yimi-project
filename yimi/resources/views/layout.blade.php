@@ -178,6 +178,7 @@
     <script type="text/javascript" src="{{ URL::asset('common/common.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/controller.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/plugin.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('common/pages.js') }}"></script>
     @yield('js')
 </body>
 </html>
