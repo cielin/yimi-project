@@ -74,7 +74,7 @@
                         <a href="#" title="如何选购">如何选购</a>
                     </li>
                     <li class="rightLine  @if ($active == 'articles') current @endif ">
-                        <a href="#" title="最近文章">最近文章</a>
+                        <a href="/articles" title="最近文章">最近文章</a>
                     </li>
                     <li style="position: relative; width: 50px;">
                         <div class="top-search-group">
