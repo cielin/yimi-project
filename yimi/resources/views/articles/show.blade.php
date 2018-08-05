@@ -9,31 +9,33 @@
 @stop
 
 @section('page-content')
-<!--面包屑-->
-<div class="breadcrumb">
-    <div class="breadcrumb_text">
-        <span>
-            <a href="{{ URL::to('/') }}" title="">
-            首页
-            </a>
-        </span>
+<div class="wrapper-page container">
+    <!--面包屑-->
+    <div class="breadcrumb">
+        <div class="breadcrumb_text">
+            <span>
+                <a href="{{ URL::to('/') }}" title="">
+                首页
+                </a>
+            </span>
 
-        <i>&nbsp; / &nbsp;</i>
-        <span>
-            <a href="{{ route('articles.index') }}" title="">
-            文章列表
-            </a>
-        </span>
-        <i>&nbsp; / &nbsp;</i> 正文
+            <i>&nbsp; / &nbsp;</i>
+            <span>
+                <a href="{{ route('articles.index') }}" title="">
+                文章列表
+                </a>
+            </span>
+            <i>&nbsp; / &nbsp;</i> 正文
+        </div>
     </div>
-</div>
-<!--面包屑-->
-<div class="bg-hui-f7 container">
-    <div class="desiger">
+    <!--面包屑-->
+    <div class="bg-hui-f7 container">
+        <div class="desiger">
 
-        <h2>{{ $article->title }}</h2>
-        <div>
-            {!! html_entity_decode($article->content, ENT_QUOTES, 'UTF-8') !!}
+            <h2>{{ $article->title }}</h2>
+            <div>
+                {!! html_entity_decode($article->content, ENT_QUOTES, 'UTF-8') !!}
+            </div>
         </div>
     </div>
 </div>
