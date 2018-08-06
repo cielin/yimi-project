@@ -335,6 +335,9 @@ ul.nav{
 	padding: 10px 18px;
 	height: 158px;
 	overflow-y:scroll;
+	margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 /*.sidebar-content label{
 	display: block;
