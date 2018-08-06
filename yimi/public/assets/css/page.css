@@ -863,3 +863,40 @@ span.more{
 .orderEvaluate .fileText{
 	font-size: 10px;
 }
+
+/*订单详情*/
+.order-detail{
+	background-color: #f7f7f7;
+	margin-bottom: 30px;
+}
+.order-detail .det-img{
+	overflow: hidden;
+}
+.order-detail .det-img img{
+	width: 100%;
+}
+.order-detail .order-bord-r{
+	margin-left:0px;
+	padding:30px 15px 0px;
+}
+.order-detail .order-bord-bd{
+	margin-left: 0px;
+	padding-top:20px;
+	padding-bottom: 20px;
+}
+.order-detail .showText{
+	padding-top: 20px;
+}
+.order-detail-text{
+	background-color: #f7f7f7;
+	padding:50px 30px;
+	margin-bottom: 30px;
+}
+.order-detail-text dt{
+	font-size: 16px;
+	margin-bottom: 30px;
+	font-weight: normal;
+}
+.order-detail-text dd{
+	margin-bottom: 10px;
+}
