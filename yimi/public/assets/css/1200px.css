@@ -2,20 +2,20 @@
 /* 大屏幕（大桌面显示器，大于等于 1200px） */
 @media (min-width: 1106px) { 
 	.litteBannerImg img{
-		width: 102.3%;
+		width: 101.3%;
 	}
 
 }
 @media (min-width: 1200px) {
 	.litteBannerImg img{
-		width: 101.5%;
+		width: 100.6%;
 	}
 
 }
 
 @media (min-width: 1300px) {
 	.litteBannerImg img{
-		width: 99.6%;
+		width: 100.5%;
 	}
 
 }
