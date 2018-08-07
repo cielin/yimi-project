@@ -92,7 +92,7 @@
         <div class="container-fluid bg-black-18">
             <div class="container footer-top">
                 <div class="row">
-                    <div class="share col-md-5">
+                    <div class="share col-md-5 col-sm-4">
                         <a href="javascript:window.open('http://twitter.com/home?status='+encodeURIComponent(document.location.href)+' '+encodeURIComponent(document.title));void(0)">
                             <span class="icon iconfont icon-twitter"></span>
                         </a>
@@ -115,7 +115,7 @@
                         </div>
                     </div>
 
-                    <div class="f-email col-md-7">
+                    <div class="f-email col-md-7 col-sm-8">
                         <span>SUBCRIBLE  NEWSLETTER</span>
                         <input type="text" name="" placeholder="Enter your email address" />
                         <span class="icon iconfont icon-youjian"></span>
@@ -126,12 +126,12 @@
         <div class="container-fluid bg-black-21">
             <div class="container footer-middle">
                 <div class="row">
-                    <div class="f-left col-md-4 col-sm-3">
+                    <div class="f-left col-md-5 col-sm-4">
                         <img src="{{ URL::asset('assets/img/foot/f-logo.jpg') }}" />
                         <h4>微信公众号</h4>
                         <img src="{{ URL::asset('assets/img/foot/f-ma.jpg') }}" />
                     </div>
-                    <div class="f-right col-md-8 col-sm-9">
+                    <div class="f-right col-md-6 col-sm-8">
                         <dl>
                           <dt>会员服务</dt>
                           <dd>
