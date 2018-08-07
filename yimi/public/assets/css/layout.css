@@ -248,6 +248,7 @@ ul.nav{
 /*内页主体*/
 .wrapper-page{
 	margin-top: 140px;
+	margin-bottom: 50px;
 	overflow: hidden;
 }
 /*面包屑*/
