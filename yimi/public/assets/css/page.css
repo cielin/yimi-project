@@ -266,8 +266,9 @@ span.more{
 	float: left;
 	padding: 12px 24px;
 }
-.brandList{
-
+.brandList li{
+	height:238px;
+	overflow: hidden;
 }
 .brandList li a,.brandBigImg{
 	display: block;
@@ -331,6 +332,10 @@ span.more{
 	width: 100%;
 	height: 100%;
 	border-radius: 98px;
+}
+.designer-img{
+	height:262px;
+	overflow: hidden;
 }
 .designer-img img{
 	width: 100%;
@@ -899,4 +904,7 @@ span.more{
 }
 .order-detail-text dd{
 	margin-bottom: 10px;
+}
+.main-min{
+	min-height:560px;
 }

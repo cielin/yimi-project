@@ -3,7 +3,7 @@
 @section('title', '品牌')
 
 @section('page-content')
-<div class="wrapper-page container">
+<div class="wrapper-page container" style="padding-bottom:50px;">
     <!--面包屑-->
     <div class="breadcrumb">
         <div class="breadcrumb_text">
@@ -47,7 +47,7 @@
             </div>
 
         </div>
-        <div class="col-sm-8 col-md-9 main">
+        <div class="col-sm-8 col-md-9 main main-min">
             <div class="gray-box">
                 <a id="checkAllBrand" class="checkAllBrand" href="{{ route('brands.index') }}">全部</a>
                 <ul class="check-words clearfix">

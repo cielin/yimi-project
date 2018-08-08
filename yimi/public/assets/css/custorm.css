@@ -37,7 +37,7 @@
 }
 .detais-content h1{
 	font-size:28px;
-	margin-top:80px;
+	margin-top:0px;
 	margin-bottom:10px;
 }
 .detais-content p{
@@ -53,7 +53,10 @@
 	border-bottom:solid 1px #e1e1e1;
 	padding-bottom:50px;
 }
-
+.detais-content-tit{
+	max-height:426px;
+	overflow: auto;
+}
 .ico-wraps{
 	background: #fff;
 	width: 90%;
@@ -82,6 +85,8 @@
     margin-left: 21px;
     vertical-align: middle;
     cursor: pointer;
+    margin-top:-4px;
+    font-size:20px;
 }
 .details-share{
 	margin:20px 0;

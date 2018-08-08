@@ -71,7 +71,7 @@
     </div>
     </h5> -->
                 <!--swiper-->
-                <div>
+                <div class="detais-content-tit">
                     <h1 class="details-tit">{{ $product->name }}</h1>
                     <div class="hui-tit">{{ $product->brand->name }}</div>
                     @foreach ($product->product_attributes as $product_attribute)

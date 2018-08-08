@@ -143,7 +143,7 @@
                 <span class="more"><a href="#">MORE >></a></span>
 
             </div>
-            <div class="container overHide">
+            <div class="container overHide" style="padding-bottom:14px;">
                 <div class="designer">
                     <a href="#">
                         <dl>
@@ -246,8 +246,13 @@
             </div>
         </div>
         <!--设计师 end-->
-        <!--瀑布流开始 -->
-        <div class="container-fluid bg-hui-f1" style="padding-left:0; padding-right:0;">
+
+    </div>
+    <!--index-contentend -->
+
+    <!--瀑布流开始 -->
+    <div class="wrap  bg-hui-f1">
+        <div class="container-fluid" style="padding-left:0; padding-right:0;">
          
             <div class="waterfalls">
               <h3 class="titWater">
@@ -282,10 +287,8 @@
             </div>
           
         </div>
-        <!--瀑布流end -->
-    </div><!--index-contentend -->
-
-
+    </div>
+    <!--瀑布流end -->
 </div>
 
 
