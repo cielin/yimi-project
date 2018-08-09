@@ -266,12 +266,17 @@ span.more{
 	float: left;
 	padding: 12px 24px;
 }
+.brandList{
+	margin-top:30px;
+}
 .brandList li{
 	height:238px;
 	overflow: hidden;
 }
 .brandList li a,.brandBigImg{
-	display: block;
+	display: table-cell;
+	vertical-align: middle;
+	height:206px;
 	border:20px solid #f6f6f6;
 	margin-top:30px;
 }
@@ -907,4 +912,7 @@ span.more{
 }
 .main-min{
 	min-height:560px;
+}
+.no-data{
+	padding:50px 0; color:#999; font-size:16px; text-align:center;
 }

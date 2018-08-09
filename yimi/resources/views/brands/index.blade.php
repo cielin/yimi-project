@@ -58,6 +58,7 @@
                     @endfor
                 </ul>
             </div>
+            <div class="no-data" style="display: none;">暂无数据</div>
             <ul class="brandList clearfix row">
                 @foreach ($brands as $brand)
                 <li class="col-md-4">
