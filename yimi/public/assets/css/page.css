@@ -80,7 +80,7 @@
 	position: relative;
 	color:#333333;
 	font-size: 18px;
-
+	padding-left:9px;
 }
 .ico-wrap:before{
 	content: "";
@@ -89,14 +89,14 @@
     height: 16px;
     position: absolute;
     color: #dadada;
-    left: 46.5%;
+    left: 48.5%;
     top: 38%;
     border-left: 1px solid #dadada;
 }
 .ico-wrap span{
 	line-height: 60px;
 	margin-right: 40px;
-    margin-left: 21px;
+    margin-left: 29px;
 }
 .ico-wrap span:hover{
 	color:#c8a165;

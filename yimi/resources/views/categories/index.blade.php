@@ -35,11 +35,13 @@
     		<ul class="side-sub collapse in" id="{{ $category->slug }}">
     			@foreach ($category->children as $s_category)
     			<li @if ((null !== $selected_category) && ($s_category->slug == $selected_category->slug)) class="active" @endif>
+                    <span class="icon iconfont  icon-arrow-right"></span>
                     <a href="/categories/{{ $s_category->slug }}">{{ $s_category->name }}</a>
                     @if (isset($s_category->children) && sizeof($s_category->children) > 0)
                     <ul class="side-sub collapse in" id="{{ $s_category->slug }}" style="padding-left: 20px">
                         @foreach ($s_category->children as $gs_category)
                             <li @if ((null !== $selected_category) && ($gs_category->slug == $selected_category->slug)) class="active" @endif>
+                                <span class="icon iconfont  icon-arrow-right"></span>
                                 <a href="/categories/{{ $gs_category->slug }}">{{ $gs_category->name }}</a>
                             </li>
                         @endforeach
@@ -214,7 +216,7 @@
                         <dt>
                             <p class="ico-wrap">
                                 <span class="glyphicon glyphicon-heart-empty"></span>
-                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="icon iconfont icon-yanjing1"></span>
                             </p>
                         </dt>
                         <dd>

@@ -68,7 +68,7 @@
                         <dt>
                             <p class="ico-wrap">
                                 <span class="glyphicon glyphicon-heart-empty"></span>
-                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="icon iconfont icon-yanjing1"></span>
                             </p>
                         </dt>
                         <dd>
