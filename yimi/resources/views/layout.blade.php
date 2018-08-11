@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')_薏米家</title>
-    <script type="text/javascript" src="{{ URL::asset('common/login.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('plugin/swiper/css/swiper.css') }}" />
     <link href="{{ URL::asset('plugin/bootstrap-3.3.7-dist/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('plugin/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}" type="text/css" rel="stylesheet">
@@ -35,9 +34,13 @@
                     <span class="email">yimijia@163.com</span>
                 </div>
                 <div class="pull-right nav-top-right">
-                    <span class="login" data-toggle="modal" data-target="#myModal">登录/注册</span> |
-                    <span class="myOrder">我的订单</span>
-                    <span class="myCollect">我的收藏</span>
+                    @if (Auth::check())
+                    <a class="user" href="{{ url('my/info') }}">{{ Auth::user()->nickname }}</a> |
+                    @else
+                    <a class="login" data-toggle="modal" data-target="#myAuthModal">登录/注册</a> |
+                    @endif
+                    <a class="myOrder">我的订单</a>
+                    <a class="myCollect">我的收藏</a>
                 </div>
             </div>
         </div>
@@ -55,25 +58,25 @@
             </div>
             <div class="navbar-collapse collapse " id="example-navbar-collapse">
                 <ul class="nav navbar-nav  pull-right">
-                    <li @if ($active == 'home') class="current" @endif >
+                    <li @if (isset($active) && $active == 'home') class="current" @endif >
                         <a href="/" title="首页">首页</a>
                     </li>
                     <li>
                         <a href="#" title="空间">空间</a>
                     </li>
-                    <li @if ($active == 'categories') class="current" @endif >
+                    <li @if (isset($active) && $active == 'categories') class="current" @endif >
                         <a href="/categories" title="商品">商品</a>
                     </li>
-                    <li @if ($active == 'brands') class="current" @endif >
+                    <li @if (isset($active) && $active == 'brands') class="current" @endif >
                         <a href="/brands" title="品牌">品牌</a>
                     </li>
-                    <li @if ($active == 'designers') class="current" @endif >
+                    <li @if (isset($active) && $active == 'designers') class="current" @endif >
                         <a href="/designers" title="设计师">设计师</a>
                     </li>
                     <li class="leftLine">
                         <a href="#" title="如何选购">如何选购</a>
                     </li>
-                    <li class="rightLine  @if ($active == 'articles') current @endif ">
+                    <li class="rightLine  @if (isset($active) && $active == 'articles') current @endif ">
                         <a href="/articles" title="最近文章">最近文章</a>
                     </li>
                     <li style="position: relative; width: 50px;">
@@ -161,6 +164,75 @@
                         <a href="#">如何选购</a>
                         <a href="#">配送信息</a>
                         <a href="#">关于我们</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade login" id="myAuthModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="login-tit" role="tablist">
+                        <li class="active" role="presentation">
+                            <a href="#login" aria-controls="home" role="tab" data-toggle="tab">登录</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#register" aria-controls="profile" role="tab" data-toggle="tab">注册</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content login-box">
+                        <!---登录-->
+                        <div role="tabpanel" class="tab-pane active" id="login">
+                            {{ Form::open(array('route' => 'signin.post', 'class' => 'form-signin', 'role' => 'form', 'id' => 'form1')) }}
+                                <input type="hidden" name="refer" value="{{ url()->current() }}">
+                                <label for="">
+                                    <p>用户名 <span class="red1">*</span>
+                                    </p>
+                                    <input name="email" type="text" placeholder="请输入用户名">
+                                </label>
+                                <label for="">
+                                    <p>密码 <span class="red1">*</span>
+                                    </p>
+                                    <input name="password" type="password" placeholder="请输入密码">
+                                </label>
+                                <label for="">
+                                    {{ Form::submit('登 录', array('class' => 'login-btn')) }}
+                                </label>
+                            {{ Form::close() }}
+                        </div>
+                        <!--注册-->
+                        <div role="tabpanel" class="tab-pane" id="register">
+                            <form action="" id="form2">
+                                <label for="">
+                                    <p>用户名 <span class="red1">*</span>
+                                    </p>
+                                    <input type="text" placeholder="请输入用户名">
+                                </label>
+                                <label for="">
+                                    <p>邮箱 <span class="red1">*</span>
+                                    </p>
+                                    <input type="text" placeholder="请输入邮箱">
+                                </label>
+                                <label for="">
+                                    <p>密码 <span class="red1">*</span>
+                                    </p>
+                                    <input type="text" placeholder="请输入密码">
+                                </label>
+                                <label for="">
+                                    <p>确认密码 <span class="red1">*</span>
+                                    </p>
+                                    <input type="text" placeholder="请输入确认密码">
+                                </label>
+                                <label for="">
+                                    <div class="login-btn">注 册</div>
+                                </label>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -28,4 +28,9 @@ class ProductsController extends Controller
     		->with('product', $product)
             ->with('featured_products', $featured_products);
     }
+
+    public function collect($id)
+    {
+        
+    }
 }

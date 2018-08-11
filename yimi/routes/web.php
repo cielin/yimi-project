@@ -20,8 +20,22 @@ Route::get('register', array('as' => 'register.get', 'uses' => 'CustomerControll
 Route::post('register', array('as' => 'register.post', 'uses' => 'CustomerController@doRegister'));
 
 Route::get('brands/f/{first}', 'BrandsController@getBrandsByFirst');
+Route::get('search', 'ProductCategoriesController@search');
+Route::post('search', array('as' => 'categories.search', 'uses' => 'ProductCategoriesController@search'));
 
 Route::resource('products', 'ProductsController');
 Route::resource('categories', 'ProductCategoriesController');
 Route::resource('brands', 'BrandsController');
 Route::resource('designers', 'DesignersController');
+Route::resource('articles', 'ArticlesController');
+
+Route::middleware(['auth'])->group(function() {
+	Route::get('my/info', 'MyController@showInfo');
+	Route::get('my/orders', 'MyController@showOrders');
+	Route::get('my/collections', 'MyController@showCollections');
+	Route::get('my/comments', 'MyController@showComments');
+	Route::get('my/messages', 'MyController@showMessages');
+	Route::get('my/addresses', 'MyController@showAddresses');
+	Route::get('my/password_reset', 'MyController@showPasswordReset');
+	Route::get('my/union', 'MyController@showUnion');
+});

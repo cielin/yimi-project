@@ -76,10 +76,14 @@
 }
 .nav-top-wrap .tip:hover,
 .nav-top-wrap .email:hover,
-.nav-top-wrap .nav-top-right span:hover,.nav-top-wrap .nav-top-right i:hover{
+.nav-top-wrap .nav-top-right span:hover,
+.nav-top-wrap .nav-top-right i:hover,
+.nav-top-wrap .nav-top-right a:hover{
 	color: #fff;
 }
-.nav-top-wrap .nav-top-right span{
+.nav-top-wrap .nav-top-right a{
+	text-decoration: none;
+	color: #595959;
 	display: inline-block;
 	font-size: 12px;
 	text-align: center;

@@ -22,7 +22,7 @@ var loginHtml = `<!-- Modal -->
               <div class="tab-content login-box">
                   <!---登录-->
                 <div role="tabpanel" class="tab-pane active" id="login">
-                  <form action="" id="form1">
+                  <form action="{{ route('signin.post') }}" id="form1">
                       <label for="">
                         <p>用户名 <span class="red1">*</span></p>
                         <input type="text" placeholder="请输入用户名">
@@ -71,5 +71,3 @@ var loginHtml = `<!-- Modal -->
 
 
 document.write(loginHtml);
-
-
