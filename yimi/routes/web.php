@@ -29,6 +29,8 @@ Route::resource('brands', 'BrandsController');
 Route::resource('designers', 'DesignersController');
 Route::resource('articles', 'ArticlesController');
 
+Route::get('login', 'HomeController@index')->name('login');
+
 Route::middleware(['auth'])->group(function() {
 	Route::get('my/info', 'MyController@showInfo');
 	Route::get('my/orders', 'MyController@showOrders');
