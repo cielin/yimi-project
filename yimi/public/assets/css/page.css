@@ -66,7 +66,7 @@
 }
 .designer.buyer dl div{
 	position: absolute;
-	bottom:-48px;
+	bottom:-46px;
 }
 /*买手推荐 end*/
 
@@ -157,6 +157,7 @@
 span.more{
 	float: right;
 	margin-top: 20px;
+	margin-right:20px;
 }
 .index-title-ul li.more a:hover,span.more a:hover{
 	color: #f3dab2;
@@ -302,6 +303,7 @@ span.more{
 }
 .brandText p{
 	text-indent:1em;
+	padding-right:20px;
 }
 .brandList li img{
 	width: 100%;
@@ -916,3 +918,4 @@ span.more{
 .no-data{
 	padding:50px 0; color:#999; font-size:16px; text-align:center;
 }
+.icon-shuangjiantou{vertical-align: middle;}

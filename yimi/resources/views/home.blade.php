@@ -106,7 +106,7 @@
                     </li>
                     <li><a href="#">椅子</a>
                     </li>
-                    <li class="more"><a href="#">MORE >></a>
+                    <li class="more"><a href="#">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
                     </li>
                 </ul>
             </div>
@@ -140,7 +140,7 @@
                 <span>
         			<img src="{{ URL::asset('assets/img/foot/designers.png') }}">
                 </span>
-                <span class="more"><a href="#">MORE >></a></span>
+                <span class="more"><a href="#">MORE <i class="icon iconfont icon-shuangjiantou"></i></a></span>
 
             </div>
             <div class="container overHide" style="padding-bottom:14px;">
@@ -251,7 +251,7 @@
     <!--index-contentend -->
 
     <!--瀑布流开始 -->
-    <div class="wrap  bg-hui-f1">
+    <div class="wrap  bg-hui-f1" style="margin-top:-9px;">
         <div class="container-fluid" style="padding-left:0; padding-right:0;">
          
             <div class="waterfalls">

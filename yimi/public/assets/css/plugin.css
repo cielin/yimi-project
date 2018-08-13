@@ -161,7 +161,9 @@
   transition: all 1s;
 }
 .designer dl{
-  width:25%;
+  width:24.2%;
+  margin-right:.8%;
+  margin-bottom:31px;
   height:282px;
   float:left;
   position: relative;

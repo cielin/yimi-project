@@ -2,9 +2,8 @@
 .top-search-group{
     position: absolute;
     right: 0px;
-    top: 0px;
     /* position: relative; */
-    top: 1px;
+    top: -5px;
     display: inline-block;
     font-family: '微软雅黑';
     font-style: normal;
@@ -38,7 +37,8 @@
     display: block;
     width: 1px;
     height: 16px;
-    top: 9px;
+    top: 1px;
+    right:112%;
     color: #fff;
 }
 .rightLine:before{
@@ -204,6 +204,9 @@ ul.nav{
 	padding:15px 0 10px 0;
 	color:#898989;
 	margin-top: 100px;
+}
+.footer-bottom p{
+	font-size:12px;
 }
 .footer-bottom a{
 	display: inline-block;
@@ -438,6 +441,24 @@ button.close-btn{
 	font-weight:200;
 	display: inline-block;
 }
+.nav-new-add{
+	width:70%;
+}
+.nav-new-add li{
+	width:13%;
+}
+.nav-new-add li a{
+	display: inline!important;
+}
+@media screen and (max-width:1000px){
+	.nav-new-add{
+		width:77%;
+	}
+	.nav-new-add li{
+		width:15%;
+	}
+}
+
 @media screen and (max-width:670px){
 	.nav-top-wrap{
 		height:40px!important;
@@ -445,4 +466,10 @@ button.close-btn{
 	.c-nav-top .nav-top-right{
 		margin-top:-16px;
 	}
+}
+.swiper1 .swiper-pagination-bullet{
+	background:#fff!important;
+}
+.swiper1 .swiper-pagination-bullet-active{
+	background:#c8a165!important;
 }

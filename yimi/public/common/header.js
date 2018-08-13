@@ -57,7 +57,7 @@ var headerHtml = `<!-- LAYOUT-->
       <a class="navbar-brand" href="/"><img src="../assets/img/logo.png" width="180" alt=""></a>
     </div>
     <div class="navbar-collapse collapse " id="example-navbar-collapse">
-      <ul class="nav navbar-nav  pull-right">
+      <ul class="nav navbar-nav  pull-right nav-new-add">
         <li  class="current">
           <a href="/" title="首页">首页</a>
         </li>
