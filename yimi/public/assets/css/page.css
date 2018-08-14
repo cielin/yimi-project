@@ -170,7 +170,7 @@ span.more{
 	margin-bottom: 180px;
 }
 .goods dl{
-	width: 33.334%;
+	width: 32.4%;
 }
 .goods .ico-wrap{
 
@@ -180,10 +180,12 @@ span.more{
 	height: 45px;
 	margin-bottom: 24px;
 	border-bottom: 1px solid #e1e1e1;
+	padding-bottom:62px;
 }
 .top-option i{
 	position: absolute;
-	left:0px;
+	left:1px;
+	top:8px;
 }
 .center-num{
 	width: 206px;
@@ -198,7 +200,7 @@ span.more{
 }
 .goods-order{
 	position: absolute;
-	right: 0px;
+	right: -8px;
 	top:0px;
 }
 /*搜索结果页*/
@@ -212,6 +214,7 @@ span.more{
 .good-list-top li a{
 	color: #181818;
 	margin: 0px 10%;
+	border-bottom:solid 1px #f8f8f8;
 }
 .good-list-top li a.active{
 	color: #d4b689;
@@ -222,7 +225,7 @@ span.more{
 }
 .good-list-top li a:hover{
 	color: #d4b689;
-	text-decoration: underline;
+	border-bottom:solid 1px #d4b689;
 }
 .searchText,.good-list-top{
 	width: 100%;
@@ -236,6 +239,7 @@ span.more{
 }
 .good-list-top{
 	margin-top:-10px;
+	padding-left:15px;
 }
 .searchText .sText{
 	color: #545454;
@@ -254,25 +258,29 @@ span.more{
 }
 .checkAllBrand{
 	position: absolute;
-    left: 20px;
+    left: 30px;
     top: 28px;
     background: none;
     border: none;
 }
 
 .check-words{
-	padding: 15px 40px 15px 60px;
+	padding: 16px 40px 20px 7%;
 }
 .check-words li{
 	float: left;
-	padding: 12px 24px;
+	padding: 13px 21px 2px 4%;
+	width:10%;
 }
 .brandList{
 	margin-top:30px;
 }
 .brandList li{
+	display: table-cell;
 	height:238px;
 	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
 }
 .brandList li a,.brandBigImg{
 	display: table-cell;
@@ -283,6 +291,9 @@ span.more{
 }
 .brandBigImg{
 	margin:0px -15px 0px;
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 .brandBigImg img{
 	width: 100%;
@@ -306,7 +317,7 @@ span.more{
 	padding-right:20px;
 }
 .brandList li img{
-	width: 100%;
+	width: 72%;
 }
 
 .checkboxWrap{

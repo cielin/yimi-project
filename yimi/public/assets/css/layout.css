@@ -203,7 +203,7 @@ ul.nav{
 	border-top:solid 1px #333;
 	padding:15px 0 10px 0;
 	color:#898989;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 .footer-bottom p{
 	font-size:12px;
@@ -263,6 +263,9 @@ ul.nav{
 	background: none;
 	color: #333333;
 	padding-left:0px;
+	padding-top:0;
+	margin-top:-1px;
+	margin-bottom:14px;
 }
 
 /*侧边栏*/

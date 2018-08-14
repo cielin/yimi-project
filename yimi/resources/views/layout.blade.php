@@ -57,7 +57,7 @@
                 </a>
             </div>
             <div class="navbar-collapse collapse " id="example-navbar-collapse">
-                <ul class="nav navbar-nav  pull-right">
+                <ul class="nav navbar-nav  pull-right nav-new-add">
                     <li @if (isset($active) && $active == 'home') class="current" @endif >
                         <a href="/" title="首页">首页</a>
                     </li>
@@ -130,7 +130,7 @@
             <div class="container footer-middle">
                 <div class="row">
                     <div class="f-left col-md-5 col-sm-4">
-                        <img src="{{ URL::asset('assets/img/foot/f-logo.jpg') }}" />
+                        <img src="{{ URL::asset('assets/img/foot/f-logo.png') }}" />
                         <h4>微信公众号</h4>
                         <img src="{{ URL::asset('assets/img/foot/f-ma.jpg') }}" />
                     </div>
