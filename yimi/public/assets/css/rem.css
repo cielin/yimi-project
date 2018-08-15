@@ -26,10 +26,21 @@ html{
 .litteBanner li{
 	margin-bottom: 0.257511rem;
 }
-.designer.buyer dl{
-	height: 3.253219rem;
+/*flex*/
+.designer,.designer.buyer{
+	display: -webkit-box;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;     /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;  /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: inline-flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
+    flex-wrap: wrap;
+  
+    justify-content: space-between;	
 }
 
+/*.designer.goods dl:first-child{
+	justify-content:space-between;
+}*/
 .designer dl,
 .designer dl dt,
 .designer dl dd,
@@ -54,6 +65,25 @@ html{
 .designer.buyer dl dd{
 	margin-bottom: 0.769231rem;
 }
+.designer.goods dl,
+.designer.goods dl dt,
+.designer.goods dl dd,
+.designer.goods dl dd img{	
+	width: 2.307692rem;
+	height: 3.239316rem;
+	margin: 0px;
+}
+.designer.goods{
+	display: block;
+	width: 104%;
+    position: relative;
+    left: -0.25641rem;
+}
+.designer.goods dl{
+	float: left;
+	margin-left: 0.25641rem;
+	margin-bottom: 0.666667rem;
+}
 
 #fh5co-board .item img{
 	width: 2.317597rem;
@@ -65,15 +95,52 @@ html{
 	width: auto;
 	margin-right:auto;
 }
-/*flex*/
-.designer,.designer.buyer{
-	display: -webkit-box;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
-    display: -moz-box;     /* 老版本语法: Firefox (buggy) */
-    display: -ms-flexbox;  /* 混合版本语法: IE 10 */
-    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
-    display: inline-flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
-    flex-wrap: wrap;
-    justify-content: space-between;	
+
+.ico-wrap{
+	height:0.512821rem;
+}
+.ico-wrap span{
+	line-height: 0.512821rem;
+    margin-right: 0.34188rem;
+    margin-left: 0.247863rem;
+}
+/*设计师详情*/
+.designer-bg{
+	padding-top:0.307692rem;
+	padding-bottom:0.307692rem;
+}
+.designer-user img{
+	width: 1.666667rem;
+	height: 1.666667rem;
+	border-radius: 0.837607rem;
+}
+.designer-text p{
+	max-height:0.940171rem;
+}
+.designer-bg{
+  height: 2.307692rem;	
+}
+.designer-img,.designer-img img{
+  width: 2.307692rem;
+  height: 2.307692rem;
+}
+
+@media (min-width: 320px){
+	html{
+		font-size: 32px;
+	}	
+}
+
+@media (min-width: 480px){
+	html{
+		font-size: 48px;
+	}	
+}
+
+@media (min-width: 780px){
+	html{
+		font-size: 78px;
+	}	
 }
 
 @media (min-width: 960px){

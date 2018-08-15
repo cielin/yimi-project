@@ -18,7 +18,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-md-3 col-sm-3 col-xm-3 sidebar">
+        <div class="col-sm-3 col-md-3 sidebar">
             <div class="sidebar-title"><img src="{{ URL::asset('assets/img/userCenterTitle.jpg') }}" />
             </div>
             <div class="user-center-left">
@@ -32,7 +32,7 @@
                 <a href="{{ url('my/addresses') }}">收货地址</a>
             </div>
         </div>
-        <div class=" col-md-9 col-sm-8 col-xs-8  main">
+        <div class=" col-md-9 col-sm-9  main">
 
             <div class="searchText">
                 <a href="#" id="seachAllPro">所有商品</a>

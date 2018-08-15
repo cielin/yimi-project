@@ -19,7 +19,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-4 col-md-3">
+        <div class="col-sm-3 col-md-3">
             <div class=" sidebar">
             <div class="sidebar-title">
             	<img src="{{ URL::asset('assets/img/title1.jpg') }}" />
@@ -175,7 +175,7 @@
             </div>
             </div>
         </div>
-        <div class="col-sm-8 col-md-9 main">
+        <div class="col-sm-9 col-md-9 main">
             <ul class="good-list-top">
                     <li class="all"><a href="#">全部</a></li>
                     <li><a href="#" class="active">单人</a></li>
