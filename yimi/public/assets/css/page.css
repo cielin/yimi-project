@@ -150,8 +150,8 @@
 .index-title-ul li.more a:before{
 	display: none;
 }
-.index-title-ul li.more a,span.more a,.more a{
-	color: #cca76f;
+.index-title-ul li.more a,span.more a,.more a,.designer-bg .designer-text .more a{
+	color: #cca76f!important;
 	font-weight: bold;
 }
 span.more{

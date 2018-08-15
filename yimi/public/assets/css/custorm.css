@@ -246,3 +246,12 @@
 	width:100%;
 	cursor:pointer;
 }
+.desiger div h3{
+	padding:10px 10%;
+}
+.mb50{
+	margin-bottom:50px;
+}
+.min-ht400{
+	min-height:400px;
+}
