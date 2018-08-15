@@ -38,7 +38,7 @@ var footerHtml = `<div class="footer">
       <div class="container footer-middle">
         <div class="row">
           <div class="f-left col-md-4 col-sm-3">
-            <img src="../assets/img/foot/f-logo.jpg" />
+            <img src="../assets/img/foot/f-logo.png" />
             <h4>
               微信公众号
             </h4>

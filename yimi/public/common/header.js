@@ -19,10 +19,10 @@ var headerHtml = `<!-- LAYOUT-->
         <a href="#" title="设计师">设计师</a>
       </li>
       <li>
-        <a href="#" title="如何选购">如何选购</a>
+        <a href="#" title="如何选购" class="hui-eee">如何选购</a>
       </li>
       <li>
-        <a href="#" title="最近文章">最近文章</a>
+        <a href="#" title="最近文章"  class="hui-eee">最近文章</a>
       </li>
       
     </ul>
@@ -57,7 +57,7 @@ var headerHtml = `<!-- LAYOUT-->
       <a class="navbar-brand" href="/"><img src="../assets/img/logo.png" width="180" alt=""></a>
     </div>
     <div class="navbar-collapse collapse " id="example-navbar-collapse">
-      <ul class="nav navbar-nav  pull-right">
+      <ul class="nav navbar-nav  pull-right nav-new-add">
         <li  class="current">
           <a href="/" title="首页">首页</a>
         </li>

@@ -2,9 +2,8 @@
 .top-search-group{
     position: absolute;
     right: 0px;
-    top: 0px;
     /* position: relative; */
-    top: 1px;
+    top: -5px;
     display: inline-block;
     font-family: '微软雅黑';
     font-style: normal;
@@ -38,7 +37,8 @@
     display: block;
     width: 1px;
     height: 16px;
-    top: 9px;
+    top: 1px;
+    right:112%;
     color: #fff;
 }
 .rightLine:before{
@@ -101,7 +101,10 @@
 }
 
 ul.nav{
-	padding: 18px 0px 22px;
+	padding: 25px 0px 15px;
+}
+.navbar-transparent .navbar-brand{
+	padding-top:10px!important;
 }
 .litteBanner{
 	/*margin:30px auto;*/
@@ -118,6 +121,9 @@ ul.nav{
 .footer{
 	color:#fff;
 	
+}
+.footer .container-fluid{
+	width:100%;
 }
 .bg-black{
 	background: #000;
@@ -162,7 +168,7 @@ ul.nav{
 	color:#fff;
 }
 .footer-middle{
-	padding-top:60px;
+	padding-top:60px!important;
 }
 
 /*f-right*/
@@ -203,7 +209,10 @@ ul.nav{
 	border-top:solid 1px #333;
 	padding:15px 0 10px 0;
 	color:#898989;
-	margin-top: 100px;
+	margin-top: 50px;
+}
+.footer-bottom p{
+	font-size:12px;
 }
 .footer-bottom a{
 	display: inline-block;
@@ -251,7 +260,7 @@ ul.nav{
 
 /*内页主体*/
 .wrapper-page{
-	margin-top: 140px;
+	margin-top: 130px;
 	margin-bottom: 50px;
 	overflow: hidden;
 }
@@ -260,6 +269,9 @@ ul.nav{
 	background: none;
 	color: #333333;
 	padding-left:0px;
+	padding-top:0;
+	margin-top:-1px;
+	margin-bottom:10px;
 }
 
 /*侧边栏*/
@@ -354,6 +366,7 @@ ul.nav{
 	margin-right: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
+    overflow-x:hidden;
 }
 /*.sidebar-content label{
 	display: block;
@@ -410,7 +423,7 @@ ul.nav{
 	display: block;
 	padding:0 28px 10px 28px;
 }
-.login-box label input[type="text"]{
+.login-box label input[type="text"],.login-box label input[type="password"]{
 	width:100%;
 	height:32px;
 	line-height: 32px;
@@ -438,6 +451,24 @@ button.close-btn{
 	font-weight:200;
 	display: inline-block;
 }
+.nav-new-add{
+	width:70%;
+}
+.nav-new-add li{
+	width:13%;
+}
+.nav-new-add li a{
+	display: inline!important;
+}
+@media screen and (max-width:1000px){
+	.nav-new-add{
+		width:77%;
+	}
+	.nav-new-add li{
+		width:15%;
+	}
+}
+
 @media screen and (max-width:670px){
 	.nav-top-wrap{
 		height:40px!important;
@@ -445,4 +476,13 @@ button.close-btn{
 	.c-nav-top .nav-top-right{
 		margin-top:-16px;
 	}
+}
+.swiper1 .swiper-pagination-bullet{
+	background:#fff!important;
+}
+.swiper1 .swiper-pagination-bullet-active{
+	background:#c8a165!important;
+}
+.navbar-custom .navbar-nav>li>a.hui-eee{
+	color:#ccc!important;
 }

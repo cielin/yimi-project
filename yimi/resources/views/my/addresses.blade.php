@@ -36,7 +36,7 @@
         <div class="col-sm-8 col-md-9 main">
             <div class="address-text">
                 <form id="commentForm" method="post" action="">
-                    <div class="form-group">
+                    <div class="form-group" style="width:70%;">
                         <label for="addressInfo" style="display: block;">地址信息<i>*</i>
                         </label>
                         <select name="province" id="province" class="citySelect" required>
