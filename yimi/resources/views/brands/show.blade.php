@@ -52,11 +52,9 @@
                 <div class="goods-order">
                     <span>排列方式</span>
                     <select class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option>默认</option>
+                        <option>名称A-Z</option>
+                        <option>名称Z-A</option>
                     </select>
                 </div>
             </div>

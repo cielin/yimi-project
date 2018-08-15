@@ -44,19 +44,24 @@
 	margin-bottom:20px;
 	font-weight:700;
 }
+.detais-content p.ico-wraps{
+	margin-bottom:0;
+	margin-top:10px;
+}
 .hui-tit{
 	font-size:14px;
 	color:#898989;
 	margin-bottom:35px;
 }
 .details-bord{
-	border-bottom:solid 1px #e1e1e1;
-	padding-bottom:50px;
+	/*border-bottom:solid 1px #e1e1e1;*/
+	padding-bottom:30px;
 }
 .detais-content-tit{
 	max-height:438px;
-	min-height:400px;
+	min-height:490px;
 	overflow: auto;
+	border-bottom:solid 1px #e1e1e1;
 }
 .ico-wraps{
 	background: #fff;
@@ -64,7 +69,7 @@
 	height: 60px;
 	border-radius: 30px;
 	margin:0px auto;
-	margin-top:60px;
+	margin-top:15px;
 	position: relative;
 	color:#333333;
 	font-size: 18px;
@@ -215,10 +220,10 @@
 }
 .desiger h2{
 	text-align: center;
-	padding:40px 0 20px 0;
+	padding:20px 0 20px 0;
 }
 .desiger p{
-	padding:5px 10% 50px 10%;
+	padding:5px 10% 100px 10%;
 	line-height: 30px;
 	text-indent: 2em;
 }
@@ -227,9 +232,9 @@
 	overflow: hidden;
 }
 .d-detail-img div{
-	width:22%;
+	width:22.7%;
 	float:left;
-	margin:15px 4% 15px 0;
+	margin:32px 3% 0px 0;
 	max-height:270px;
 	overflow: hidden;
 }

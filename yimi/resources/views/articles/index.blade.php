@@ -21,17 +21,21 @@
     <?php $i = 0; ?>
     @foreach ($articles as $article)
     @if ($i % 2 === 0)
-    <div class="row designer-item"> 
+    <div class="row designer-item articles-item"> 
     @endif
         <div class="col-md-6">
             <div class="designer-bg clearfix">
                 <div class="article-img col-md-5">
-                    <img src="{{ asset('public/images/articles/' . $article ->featured_image) }}">
+                    <a href="/articles/{{ $article->slug }}">
+                        <img src="{{ asset('public/images/articles/' . $article ->featured_image) }}">
+                    </a>
                 </div>
                 <div class="designer-text col-md-7">
-                    <h5><span>{{ $article->title }}</span></h5>
-                    <p>{{ substr(strip_tags(html_entity_decode($article->content, ENT_QUOTES, 'UTF-8')), 0, 180) }} ...</p>
-                    <div class="more"><a href="/articles/{{ $article->slug }}">MORE >></a>
+                   <h5><a href="/articles/{{ $article->slug }}"> <span>{{ $article->title }}</span></a></h5>
+                    <p><a href="/articles/{{ $article->slug }}"> {{ substr(strip_tags(html_entity_decode($article->content, ENT_QUOTES, 'UTF-8')), 0, 180) }} ...</a>
+                    </p>
+                    
+                    <div class="more"><a href="/articles/{{ $article->slug }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
                     </div>
                 </div>
             </div>
