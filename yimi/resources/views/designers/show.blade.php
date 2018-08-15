@@ -15,9 +15,9 @@
         height: 100%;
         border-radius: 100%;
     }
-    .d-detail-img div img {
+    /*.d-detail-img div img {
         border: solid 1px rgb(247, 247, 247);
-    }
+    }*/
 </style>
 
 @stop
