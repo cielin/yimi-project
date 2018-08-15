@@ -82,13 +82,13 @@
                 	<img src="{{ URL::asset('assets/img/picture/img01.jpg') }}">
                 </div>
                 <ul class="col-md-6 col-sm-6 col-xs-6" style="list-style: none;padding: 0;">
-                    <li class="col-md-6 col-sm-6 col-xs-6">
+                    <li class="col-md-6 col-sm-6 col-xs-6 img2018_01">
                     	<img src="{{ URL::asset('assets/img/picture/img02.jpg') }}" width="100%">
                     </li>
-                    <li class=" col-md-6 col-sm-6 col-xs-6">
+                    <li class=" col-md-6 col-sm-6 col-xs-6 img2018_02">
                     	<img src="{{ URL::asset('assets/img/picture/img03.jpg') }}" width="100%">
                     </li>
-                    <li class="col-md-12 col-sm-12 col-xs-12">
+                    <li class="col-md-12 col-sm-12 col-xs-12 img2018_03">
                     	<img src="{{ URL::asset('assets/img/picture/img06.jpg') }}" width="100%">
                     </li>
                 </ul>
