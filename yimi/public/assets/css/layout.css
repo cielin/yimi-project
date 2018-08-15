@@ -31,6 +31,10 @@
 .leftLine,.rightLine{
 	position: relative;
 }
+.navbar-nav>li.leftLine a,
+.navbar-nav>li.rightLine a{
+	color: #cecdcd;
+}
 .leftLine:before,.rightLine:before{
 	content: "|";
     position: absolute;
