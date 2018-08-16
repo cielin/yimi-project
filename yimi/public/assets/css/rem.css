@@ -117,14 +117,27 @@ html{
 .designer-text p{
 	max-height:0.940171rem;
 }
-.designer-bg{
+.designer-bg,.designer-img{
   height: 2.307692rem;	
 }
-.designer-img,.designer-img img{
+.designer-img img{
   width: 2.307692rem;
   height: 2.307692rem;
 }
-
+.desiger img{
+	width: 1.948718rem;
+	height: 1.74359rem;
+	border-radius: 0.837607rem;
+}
+.d-detail-img div{
+	width: 2.307692rem;
+	margin-right:0.25641rem;
+	margin-top: 0.25641rem;
+}
+.d-detail-img div img{
+	width: 2.307692rem;
+	height: 2.307692rem;
+}
 @media (min-width: 320px){
 	html{
 		font-size: 32px;
