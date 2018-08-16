@@ -31,10 +31,7 @@
 .leftLine,.rightLine{
 	position: relative;
 }
-.navbar-nav>li.leftLine a,
-.navbar-nav>li.rightLine a{
-	color: #cecdcd;
-}
+
 .leftLine:before,.rightLine:before{
 	content: "|";
     position: absolute;
@@ -54,6 +51,16 @@
 }
 .navbar-custom .navbar-nav>li>a:visited{
 	color: #fff;
+}
+.navbar-custom .navbar-nav>li.leftLine a,
+.navbar-custom .navbar-nav>li.leftLine a:visited,
+.navbar-custom .navbar-nav>li.leftLine.current a,
+.navbar-custom .navbar-nav>li.leftLine.current a:visited,
+.navbar-custom .navbar-nav>li.rightLine a,
+.navbar-custom .navbar-nav>li.rightLine a:visited,
+.navbar-custom .navbar-nav>li.rightLine.current a,
+.navbar-custom .navbar-nav>li.rightLine.current a:visite{
+	color: #cecdcd;
 }
 .nav-top-wrap{
 	width: 100%;
