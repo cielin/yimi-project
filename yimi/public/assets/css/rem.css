@@ -26,21 +26,7 @@ html{
 .litteBanner li{
 	margin-bottom: 0.257511rem;
 }
-/*flex*/
-.designer,.designer.buyer{
-	display: -webkit-box;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
-    display: -moz-box;     /* 老版本语法: Firefox (buggy) */
-    display: -ms-flexbox;  /* 混合版本语法: IE 10 */
-    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
-    display: inline-flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
-    flex-wrap: wrap;
-  
-    justify-content: space-between;	
-}
 
-/*.designer.goods dl:first-child{
-	justify-content:space-between;
-}*/
 .designer dl,
 .designer dl dt,
 .designer dl dd,
@@ -73,28 +59,42 @@ html{
 	height: 3.239316rem;
 	margin: 0px;
 }
+.designer,
+.designer.buyer,
 .designer.goods{
 	display: block;
 	width: 104%;
     position: relative;
     left: -0.25641rem;
 }
-.designer.goods dl{
+.designer.goods dl,
+.designer dl{
 	float: left;
 	margin-left: 0.25641rem;
 	margin-bottom: 0.666667rem;
 }
-
+.designer{
+	width: 106%;
+}
+.designer dl{
+	margin-left: 0.136752rem;
+}
+.designer.buyer{
+	width: 107%;
+}
+.designer.buyer dl{
+	margin-left:0.25641rem;
+}
 #fh5co-board .item img{
 	width: 2.317597rem;
 }
 .item{
 	width: 2.317597rem;
 }
-.designer{
+/*.designer{
 	width: auto;
 	margin-right:auto;
-}
+}*/
 
 .ico-wrap{
 	height:0.512821rem;

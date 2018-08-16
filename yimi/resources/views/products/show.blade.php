@@ -146,36 +146,24 @@
         <img src="../assets/img/index_title.jpg" alt="">
 
     </div>
-    <div class="designer buyer swiper-container swiperText">
-        <div class="swiper-wrapper">
-            @if (isset($featured_products))
-            @foreach ($featured_products as $featured_product)
-            <div class="swiper-slide">
-                <a href="/products/{{ $featured_product->slug }}">
-                    <dl>
-                        <dd>
-                            <img src="{{ asset('public/images/products/' . $featured_product ->featured_image) }}">
-                        </dd>
-                        <div class="buyer-text"><span>{{ $featured_product->name }}</span>
-                        </div>
-                    </dl>
-                </a>
-            </div>
-            @endforeach
-            @endif
-        </div>
-        <div class="details-arrow">
-            <!-- Add Pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
-            <!-- Add Arrows -->
-            <div class="swiper-button-next text-next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </div>
-            <div class="swiper-button-prev text-prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </div>
-        </div>
+
+    <div class="designer buyer">
+        @if (isset($featured_products))
+        @foreach ($featured_products as $featured_product)
+            <a href="/products/{{ $featured_product->slug }}">
+                <dl>
+                    <dd>
+                        <img src="{{ asset('public/images/products/' . $featured_product ->featured_image) }}">
+                    </dd>
+                    <div class="buyer-text"><span>{{ $featured_product->name }}</span>
+                    </div>
+                </dl>
+            </a>
+
+        @endforeach
+        @endif
     </div>
+
     <!--相关商品end-->
 
     </div>
