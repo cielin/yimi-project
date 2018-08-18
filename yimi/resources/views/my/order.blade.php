@@ -34,18 +34,16 @@
 
             </div>
             <div class="col-sm-8 col-md-9 main">
-                <div class="discuss-order clearfix order-padd5">
-                    <div class="order-menu col-md-7">
+                <div class="searchText">
+                    <div class="order-menu col-md-6">
                         <a href="#" class="active">所有订单</a>
                         <a href="#">待付款</a>
                         <a href="#">待发货</a>
                         <a href="#">待收货</a>
                         <a href="#">待评价</a>
                     </div>
-                    <div class="order-search col-md-5">
-                        <input type="text" placeholder="请输入商品名称">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </div>
+
+                    <input type="text" class="form-control cllectionSearch" id="cllectionSearch" placeholder="请输入商品名">
                 </div>
                 <div class="discuss-box">
                     <!--订单 start-->
@@ -56,7 +54,7 @@
 
                         </div>
                         <div class="discuss-order clearfix order-pt10">
-                            <div class="clearfix order-bord-bm-hui">
+                            <div class="clearfix order-layout">
                                 <div class="col-md-9  order-bord-r pt20">
                                     <div class="order-goods">
                                         <div class="col-md-4">
@@ -145,7 +143,7 @@
 
                         </div>
                         <div class="discuss-order clearfix order-pt10">
-                            <div class="clearfix order-bord-bm-hui">
+                            <div class="clearfix order-layout">
                                 <div class="order-bord-bd">
                                     <span class="pr20">2018-03-09 9:00</span>订单号:<span class="gray-333">18323423</span>
                                 </div>
@@ -211,7 +209,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="clearfix order-bord-bm-hui">
+                            <div class="clearfix order-bord-bm-hui order-layout">
                                 <div class="order-bord-bd">
                                     <span class="pr20">2018-03-09 9:00</span>订单号:<span class="gray-333">18323423</span>
                                 </div>
@@ -301,4 +299,5 @@
         </form>
         <!--删除评论 end-->
     </div>
+    <script type="text/javascript" src="{{ URL::asset('assets/js/order.js') }}"></script>
 @stop
