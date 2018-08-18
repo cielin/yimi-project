@@ -132,7 +132,7 @@
                 </a>
             </li>
         </ul>
-        <div class="tab-content col-md-8 ditails-tab-box">
+        <div class="tab-content col-md-9 ditails-tab-box">
             <div role="tabpanel" class="tab-pane active" id="goodsDetails">
                 {!! html_entity_decode($product->description, ENT_QUOTES, 'UTF-8') !!}
             </div>

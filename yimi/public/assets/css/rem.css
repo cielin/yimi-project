@@ -37,6 +37,7 @@ html{
 .designer dl,
 .designer dl dt,
 .designer dl dd{
+	margin-right:0px;
 	margin-bottom: 0.17094rem
 }
 .designer.buyer dl,
@@ -77,7 +78,8 @@ html{
 	width: 106%;
 }
 .designer dl{
-	margin-left: 0.136752rem;
+	margin:0px;
+	margin-left: 0.145299rem;
 }
 .designer.buyer{
 	width: 107%;
@@ -103,6 +105,9 @@ html{
 	line-height: 0.512821rem;
     margin-right: 0.34188rem;
     margin-left: 0.247863rem;
+}
+.ico-wrap{
+	margin-top: 0.512821rem;
 }
 /*设计师详情*/
 .designer-bg{
@@ -137,6 +142,36 @@ html{
 .d-detail-img div img{
 	width: 2.307692rem;
 	height: 2.307692rem;
+}
+/*文章详情*/
+.article-bg{
+	padding:0px;
+	height: 2.307692rem;
+}
+.article-img,.article-img img{
+	padding: 0px;
+	width: 2.307692rem;
+	height: 2.307692rem;
+}
+.designer-text.article-text{
+	padding: 0.34188rem;
+	padding-right: 0.196581rem;
+	padding-top: 0.316239rem
+}
+.article-text h5{
+	max-height: 49px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -moz-box;
+    -moz-line-clamp: 3;
+    -moz-box-orient: vertical;
+}
+/*商品详情*/
+.tab-pane img{
+	margin-bottom: 30px;
 }
 @media (min-width: 320px){
 	html{
