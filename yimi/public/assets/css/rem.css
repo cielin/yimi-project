@@ -72,7 +72,7 @@ html{
 .designer dl{
 	float: left;
 	margin-left: 0.25641rem;
-	margin-bottom: 0.666667rem;
+	margin-bottom: 0.8rem;
 }
 .designer{
 	width: 106%;
@@ -80,7 +80,6 @@ html{
 .designer dl{
 	margin:0px;
 	margin-left: 0.145299rem;
-	margin-bottom: 0.25641rem;
 }
 .designer.buyer{
 	width: 107%;
@@ -112,8 +111,8 @@ html{
 }
 /*设计师详情*/
 .designer-bg{
-	padding-top:0.307692rem;
-	padding-bottom:0.307692rem;
+	padding-top:0.29rem;
+	padding-bottom:0.28rem;
 }
 .designer-user img{
 	width: 1.666667rem;
@@ -148,7 +147,6 @@ html{
 .article-bg{
 	padding:0px;
 	height: 2.307692rem;
-	margin-bottom: 0.25641rem;
 }
 .article-img,.article-img img{
 	padding: 0px;
