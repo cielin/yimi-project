@@ -53,44 +53,42 @@
     <div class="sowingMap">
         <div class="swiper-container swiper1">
             <div class="swiper-wrapper">
+                @if (isset($top_banners))
+                @foreach ($top_banners as $top_banner)
                 <div class="swiper-slide">
-                	<img src="{{ URL::asset('assets/img/picture/sowingmap1.jpg') }}">
+                	<img src="{{ asset('public/images/banners/' . $top_banner->image) }}">
                 </div>
-                <div class="swiper-slide">
-                	<img src="{{ URL::asset('assets/img/picture/sowingmap2.jpg') }}">
-                </div>
-                <div class="swiper-slide">
-                	<img src="{{ URL::asset('assets/img/picture/sowingmap1.jpg') }}">
-                </div>
-                <div class="swiper-slide">
-                	<img src="{{ URL::asset('assets/img/picture/sowingmap2.jpg') }}">
-                </div>
+                @endforeach
+                @endif
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
             <!-- Add Arrows -->
             <!-- <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div> -->
+            <div class="swiper-button-prev"></div> -->
         </div>
     </div>
     <div class="index-content">
         <div class="container">
             <article class="row litteBanner" style="padding-left:0; padding-right:0;">
-
-
                 <div class="litteBannerImg col-md-6 col-sm-6 col-xs-6">
-                	<img src="{{ URL::asset('assets/img/picture/img01.jpg') }}">
+                    @if (isset($sl_banner))
+                    <img src="{{ asset('public/images/banners/' . $sl_banner->image) }}">
+                    @endif
                 </div>
                 <ul class="col-md-6 col-sm-6 col-xs-6" style="list-style: none;padding: 0;">
+                    @if (isset($srt_banners))
+                    @foreach ($srt_banners as $srt_banner)
                     <li class="col-md-6 col-sm-6 col-xs-6 img2018_01">
-                    	<img src="{{ URL::asset('assets/img/picture/img02.jpg') }}" width="100%">
+                    	<img src="{{ asset('public/images/banners/' . $srt_banner->image) }}" width="100%">
                     </li>
-                    <li class=" col-md-6 col-sm-6 col-xs-6 img2018_02">
-                    	<img src="{{ URL::asset('assets/img/picture/img03.jpg') }}" width="100%">
-                    </li>
+                    @endforeach
+                    @endif
+                    @if (isset($srb_banner))
                     <li class="col-md-12 col-sm-12 col-xs-12 img2018_03">
-                    	<img src="{{ URL::asset('assets/img/picture/img06.jpg') }}" width="100%">
+                    	<img src="{{ asset('public/images/banners/' . $srb_banner->image) }}" width="100%">
                     </li>
+                    @endif
                 </ul>
 
             </article>
@@ -123,7 +121,7 @@
                                 </p>
                             </dt>
                             <dd>
-                            	<img src="{{ asset('public/images/products/' . $featured_product ->featured_image) }}">
+                            	<img src="{{ asset('public/images/products/' . $featured_product->featured_image) }}">
                             </dd>
                             <div class="buyer-text"><span>{{ $featured_product->name }}</span>
                             </div>
@@ -134,6 +132,7 @@
                 </div>
             </div>
         </div>
+        @if (isset($designers))
         <!--设计师-->
         <div class="container">
             <div class="container overHide  mb40">
@@ -145,107 +144,24 @@
             </div>
             <div class="container overHide" style="padding-bottom:14px;">
                 <div class="designer">
-                    <a href="#">
+                    @foreach ($designers as $designer)
+                    <a href="{{ URL::to('/designers/' . $designer->slug) }}">
                         <dl>
                             <dt>
-                                <p>RM Aarchitects设计创始人</p>
-                                <p>RICCARDO Minervini</p>
-                                <p>RM Architect...</p>
+                                <p>{{ $designer->name }}</p>
+                                <p>{{ substr(strip_tags($designer->description), 0, 60) }} ...</p>
                             </dt>
                             <dd>
-                            	<img src="{{ URL::asset('assets/img/foot/pp.jpg') }}">
+                            	<img src="{{ asset('public/images/designers/' . $designer->avatar) }}">
                             </dd>
                         </dl>
                     </a>
-                    <a href="#">
-                        <dl>
-                            <dt>
-                                <p>RM Aarchitects设计创始人</p>
-                                <p>RICCARDO Minervini</p>
-                                <p>RM Architect...</p>
-                            </dt>
-                            <dd>
-                                <img src="{{ URL::asset('assets/img/foot/pp.jpg') }}">
-                            </dd>
-                        </dl>
-                    </a>
-                    <a href="#">
-                        <dl>
-                            <dt>
-                                <p>RM Aarchitects设计创始人</p>
-                                <p>RICCARDO Minervini</p>
-                                <p>RM Architect...</p>
-                            </dt>
-                            <dd>
-                                <img src="{{ URL::asset('assets/img/foot/pp.jpg') }}">
-                            </dd>
-                        </dl>
-                    </a>
-                    <a href="#">
-                        <dl>
-                            <dt>
-                                <p>RM Aarchitects设计创始人</p>
-                                <p>RICCARDO Minervini</p>
-                                <p>RM Architect...</p>
-                            </dt>
-                            <dd>
-                                <img src="{{ URL::asset('assets/img/foot/pp.jpg') }}">
-                            </dd>
-                        </dl>
-                    </a>
-                    <a href="#">
-                        <dl>
-                            <dt>
-                                <p>RM Aarchitects设计创始人</p>
-                                <p>RICCARDO Minervini</p>
-                                <p>RM Architect...</p>
-                            </dt>
-                            <dd>
-                                <img src="{{ URL::asset('assets/img/foot/pp.jpg') }}">
-                            </dd>
-                        </dl>
-                    </a>
-                    <a href="#">
-                        <dl>
-                            <dt>
-                                <p>RM Aarchitects设计创始人</p>
-                                <p>RICCARDO Minervini</p>
-                                <p>RM Architect...</p>
-                            </dt>
-                            <dd>
-                                <img src="{{ URL::asset('assets/img/foot/pp.jpg') }}">
-                            </dd>
-                        </dl>
-                    </a>
-                    <a href="#">
-                        <dl>
-                            <dt>
-                                <p>RM Aarchitects设计创始人</p>
-                                <p>RICCARDO Minervini</p>
-                                <p>RM Architect...</p>
-                            </dt>
-                            <dd>
-                                <img src="{{ URL::asset('assets/img/foot/pp.jpg') }}">
-                            </dd>
-                        </dl>
-                    </a>
-                    <a href="#">
-                        <dl>
-                            <dt>
-                                <p>RM Aarchitects设计创始人</p>
-                                <p>RICCARDO Minervini</p>
-                                <p>RM Architect...</p>
-                            </dt>
-                            <dd>
-                                <img src="{{ URL::asset('assets/img/foot/pp.jpg') }}">
-                            </dd>
-                        </dl>
-                    </a>
-
+                    @endforeach
                 </div>
             </div>
         </div>
         <!--设计师 end-->
+        @endif
 
     </div>
     <!--index-contentend -->
@@ -267,7 +183,7 @@
                         @foreach ($waterfalled_products as $waterfalled_product)
                         <div class="item">
                             <div class="animate-box">
-                                <img src="{{ asset('public/images/products/' . $waterfalled_product ->featured_image) }}" alt="{{ $waterfalled_product->name }}">
+                                <img src="{{ asset('public/images/products/' . $waterfalled_product->featured_image) }}" alt="{{ $waterfalled_product->name }}">
                                 <div class="fh5co-desc">
                                     {{ $waterfalled_product->name }}
                                 </div> 
