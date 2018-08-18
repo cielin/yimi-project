@@ -25,22 +25,25 @@
     @endif
         <div class="col-md-6">
             <div class="article-bg clearfix">
+                @if ($article->featured_image !== "")
+
                 <div class="article-img col-md-5">
                     <a href="/articles/{{ $article->slug }}">
-                        <img src="{{ asset('public/images/articles/' . $article ->featured_image) }}">
+                        <img src="{{ asset('public/images/articles/' . $article->featured_image) }}">
                     </a>
                 </div>
-                <div class="designer-text article-text col-md-6">
+                
+                @endif
+                <div class="designer-text article-text @if ($article->featured_image !== '') col-md-6 @else col-md @endif">
                    <h5><a href="/articles/{{ $article->slug }}"> <span>{{ $article->title }}</span></a></h5>
                     <p><a href="/articles/{{ $article->slug }}"> {{ substr(strip_tags(html_entity_decode($article->content, ENT_QUOTES, 'UTF-8')), 0, 180) }} ...</a>
                     </p>
-                    
                     <div class="more"><a href="/articles/{{ $article->slug }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    @if ($i % 2 === 0)
+    @if ($i % 2 !== 0)
     </div>
     @endif
     <?php $i++; ?>

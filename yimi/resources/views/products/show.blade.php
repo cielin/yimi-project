@@ -89,7 +89,7 @@
                     <p class="ico-wraps">
                         <span class="glyphicon glyphicon-heart-empty"></span>
 
-                        <span class="icon iconfont icon-question"></span>
+                        <a href="/articles/shopping-tips"><span class="icon iconfont icon-question"></span></a>
                     </p>
                 </div>
             </div>
