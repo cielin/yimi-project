@@ -380,10 +380,10 @@ span.more{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     display: -moz-box;
-    -moz-line-clamp: 3;
+    -moz-line-clamp: 4;
     -moz-box-orient: vertical;
     padding-bottom: 30px;
 }
