@@ -168,6 +168,10 @@ html{
     -moz-line-clamp: 3;
     -moz-box-orient: vertical;
 }
+/*商品详情*/
+.tab-pane img{
+	margin-bottom: 30px;
+}
 @media (min-width: 320px){
 	html{
 		font-size: 32px;
