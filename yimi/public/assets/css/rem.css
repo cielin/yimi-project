@@ -37,8 +37,8 @@ html{
 .designer dl,
 .designer dl dt,
 .designer dl dd{
-	margin-bottom: 0.17094rem
 	margin-right:0px;
+	margin-bottom: 0.17094rem
 }
 .designer.buyer dl,
 .designer.buyer dl dt,
@@ -78,6 +78,7 @@ html{
 	width: 106%;
 }
 .designer dl{
+	margin:0px;
 	margin-left: 0.145299rem;
 }
 .designer.buyer{
