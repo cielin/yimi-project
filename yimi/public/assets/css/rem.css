@@ -142,6 +142,32 @@ html{
 	width: 2.307692rem;
 	height: 2.307692rem;
 }
+/*文章详情*/
+.article-bg{
+	padding:0px;
+	height: 2.307692rem;
+}
+.article-img,.article-img img{
+	padding: 0px;
+	width: 2.307692rem;
+	height: 2.307692rem;
+}
+.designer-text.article-text{
+	padding: 0.34188rem;
+	padding-right: 0.196581rem;
+	padding-top: 0.316239rem
+}
+.article-text h5{
+	max-height: 49px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -moz-box;
+    -moz-line-clamp: 3;
+    -moz-box-orient: vertical;
+}
 @media (min-width: 320px){
 	html{
 		font-size: 32px;

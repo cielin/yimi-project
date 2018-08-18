@@ -341,7 +341,7 @@ span.more{
 .designer-item.articles-item{
 	min-height:500px;
 }
-.designer-bg{
+.designer-bg,.article-bg{
 	background: #f7f7f7;
 	height: 100%;
 	padding:36px 5%;
@@ -371,7 +371,8 @@ span.more{
     font-size: 13px;
     color: #333333;
 }
-.designer-text p a,.designer-text h5 a{
+.designer-text p a,
+.designer-text h5 a{
 	color:#333;
 }
 .designer-text p{

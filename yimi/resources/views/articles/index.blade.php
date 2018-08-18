@@ -24,13 +24,13 @@
     <div class="row designer-item articles-item"> 
     @endif
         <div class="col-md-6">
-            <div class="designer-bg clearfix">
+            <div class="article-bg clearfix">
                 <div class="article-img col-md-5">
                     <a href="/articles/{{ $article->slug }}">
                         <img src="{{ asset('public/images/articles/' . $article ->featured_image) }}">
                     </a>
                 </div>
-                <div class="designer-text col-md-7">
+                <div class="designer-text article-text col-md-6">
                    <h5><a href="/articles/{{ $article->slug }}"> <span>{{ $article->title }}</span></a></h5>
                     <p><a href="/articles/{{ $article->slug }}"> {{ substr(strip_tags(html_entity_decode($article->content, ENT_QUOTES, 'UTF-8')), 0, 180) }} ...</a>
                     </p>
