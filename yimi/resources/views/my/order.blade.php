@@ -299,5 +299,6 @@
         </form>
         <!--删除评论 end-->
     </div>
+    <script type="text/javascript" src="{{ URL::asset('plugin/jquery-3.3.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('assets/js/order.js') }}"></script>
 @stop
