@@ -146,7 +146,7 @@
                 <div class="designer">
                     @foreach ($designers as $designer)
                     <a href="{{ URL::to('/designers/' . $designer->slug) }}">
-                        <dl>
+                        <dl style="margin-left:.27rem">
                             <dt>
                                 <p>{{ $designer->name }}</p>
                                 <p>{{ substr(strip_tags($designer->description), 0, 60) }} ...</p>
@@ -167,7 +167,7 @@
     <!--index-contentend -->
 
     <!--瀑布流开始 -->
-    <div class="wrap  bg-hui-f1" style="margin-top:-9px;">
+    <div class="wrap  bg-hui-f1" style="margin-top:13px;">
         <div class="container-fluid" style="padding-left:0; padding-right:0;">
          
             <div class="waterfalls">
