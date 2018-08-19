@@ -41,154 +41,32 @@
                 <input type="text" class="form-control cllectionSearch" id="cllectionSearch" placeholder="请输入商品名">
 
             </div>
+            @if (isset($collection) && sizeof($collection) > 0)
             <div class="designer buyer goods clearfix">
-                <a href="goodsDetail.html">
+                @foreach ($collection as $collect)
+                <a href="/products/{{ $collect->product->slug }}">
                     <dl>
                         <dt>
                             <p class="ico-wrap">
-                                <span class="glyphicon glyphicon-heart-empty"></span>
+                                <span class="glyphicon glyphicon-heart-empty" data-id="{{ $collect->product_id }}"></span>
                                 <span class="icon iconfont icon-yanjing1"></span>
                             </p>
                         </dt>
                         <dd>
-                            <img src="../assets/img/picture/img04.jpg">
+                            <img src="{{ asset('public/images/products/' . $collect->product_featured_image) }}">
                         </dd>
-                        <div class="buyer-text"><span>BAILEY SAILEN CHAI</span>
+                        <div class="buyer-text"><span>{{ $collect->product_title }}</span>
                         </div>
                     </dl>
                 </a>
-                <a href="#">
-                    <dl>
-                        <dt>
-                            <p class="ico-wrap">
-                                <span class="glyphicon glyphicon-heart-empty"></span>
-                                <span class="icon iconfont icon-yanjing1"></span>
-                            </p>
-                        </dt>
-                        <dd>
-                            <img src="../assets/img/picture/img04.jpg">
-                        </dd>
-                        <div class="buyer-text"><span>BAILEY SAILEN CHAI</span>
-                        </div>
-                    </dl>
-                </a>
-                <a href="#">
-                    <dl>
-                        <dt>
-                            <p class="ico-wrap">
-                                <span class="glyphicon glyphicon-heart-empty"></span>
-                                <span class="icon iconfont icon-yanjing1"></span>
-                            </p>
-                        </dt>
-                        <dd>
-                            <img src="../assets/img/picture/img04.jpg">
-                        </dd>
-                        <div class="buyer-text"><span>BAILEY SAILEN CHAI</span>
-                        </div>
-                    </dl>
-                </a>
-                <a href="#">
-                    <dl>
-                        <dt>
-                            <p class="ico-wrap">
-                                <span class="glyphicon glyphicon-heart-empty"></span>
-                                <span class="icon iconfont icon-yanjing1"></span>
-                            </p>
-                        </dt>
-                        <dd>
-                            <img src="../assets/img/picture/img04.jpg">
-                        </dd>
-                        <div class="buyer-text"><span>BAILEY SAILEN CHAI</span>
-                        </div>
-                    </dl>
-                </a>
-                <a href="#">
-                    <dl>
-                        <dt>
-                            <p class="ico-wrap">
-                                <span class="glyphicon glyphicon-heart-empty"></span>
-                                <span class="icon iconfont icon-yanjing1"></span>
-                            </p>
-                        </dt>
-                        <dd>
-                            <img src="../assets/img/picture/img04.jpg">
-                        </dd>
-                        <div class="buyer-text"><span>BAILEY SAILEN CHAI</span>
-                        </div>
-                    </dl>
-                </a>
-                <a href="#">
-                    <dl>
-                        <dt>
-                            <p class="ico-wrap">
-                                <span class="glyphicon glyphicon-heart-empty"></span>
-                                <span class="icon iconfont icon-yanjing1"></span>
-                            </p>
-                        </dt>
-                        <dd>
-                            <img src="../assets/img/picture/img04.jpg">
-                        </dd>
-                        <div class="buyer-text"><span>BAILEY SAILEN CHAI</span>
-                        </div>
-                    </dl>
-                </a>
-                <a href="#">
-                    <dl>
-                        <dt>
-                            <p class="ico-wrap">
-                                <span class="glyphicon glyphicon-heart-empty"></span>
-                                <span class="icon iconfont icon-yanjing1"></span>
-                            </p>
-                        </dt>
-                        <dd>
-                            <img src="../assets/img/picture/img04.jpg">
-                        </dd>
-                        <div class="buyer-text"><span>BAILEY SAILEN CHAI</span>
-                        </div>
-                    </dl>
-                </a>
-                <a href="#">
-                    <dl>
-                        <dt>
-                            <p class="ico-wrap">
-                                <span class="glyphicon glyphicon-heart-empty"></span>
-                                <span class="icon iconfont icon-yanjing1"></span>
-                            </p>
-                        </dt>
-                        <dd>
-                            <img src="../assets/img/picture/img04.jpg">
-                        </dd>
-                        <div class="buyer-text"><span>BAILEY SAILEN CHAI</span>
-                        </div>
-                    </dl>
-
-                </a>
-
+                @endforeach
             </div>
             <nav class="clearfix" aria-label="page navigation">
-                <ul class="pagination">
-                    <li class="previous">
-                        <a href="#" aria-label="previous">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    <li class="active"><a href="#">1</a>
-                    </li>
-                    <li><a href="#">2</a>
-                    </li>
-                    <li><a href="#">3</a>
-                    </li>
-                    <li><a href="#">4</a>
-                    </li>
-                    <li><a href="#">5</a>
-                    </li>
-                    <li class="next">
-                        <a href="#" aria-label="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                </ul>
+                <?php echo $collection->links(); ?>
             </nav>
+            @else
+            <div class="no-data">暂无数据</div>
+            @endif
         </div>
     </div>
 </div>
