@@ -116,7 +116,7 @@
                         <dl>
                             <dt>
                                 <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
+                                    <span class="glyphicon glyphicon-heart-empty" data-id="{{ $featured_product->id }}"></span>
                                     <span class="icon iconfont icon-yanjing1"></span>
                                 </p>
                             </dt>
@@ -190,7 +190,7 @@
                             </div>
                             <div class="itemHover">
                                 <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
+                                    <span class="glyphicon glyphicon-heart-empty" data-id="{{ $waterfalled_product->id }}"></span>
                                     <a href="/products/{{ $waterfalled_product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
                                 </p>
                             </div>
