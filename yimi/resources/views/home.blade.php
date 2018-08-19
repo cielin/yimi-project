@@ -104,7 +104,7 @@
                     </li>
                     <li><a href="#">椅子</a>
                     </li>
-                    <li class="more"><a href="#">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
+                    <li class="more"><i style="padding-right: 30px;color: #999;font-weight: 100;font-size: 10px;">|</i><a href="#">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
                     </li>
                 </ul>
             </div>

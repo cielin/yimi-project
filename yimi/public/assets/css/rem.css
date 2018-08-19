@@ -120,7 +120,7 @@ html{
 	border-radius: 0.837607rem;
 }
 .designer-text p{
-	max-height:0.940171rem;
+	max-height:1rem;
 }
 .designer-bg,.designer-img{
   height: 2.307692rem;	
@@ -173,6 +173,13 @@ html{
 .tab-pane img{
 	margin-bottom: 30px;
 }
+.designer-bg .designer-text.col-md-7{
+	line-height:28px;
+}
+.designer-bg .designer-text.col-md-7 .more{
+	margin-top:19px;
+}
+
 @media (min-width: 320px){
 	html{
 		font-size: 32px;
