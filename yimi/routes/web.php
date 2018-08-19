@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('test', function(){
+	return view('test');
+});
+
 Route::get('/', 'HomeController@index');
 
 Route::get('signin', array('as' => 'signin.get', 'uses' => 'CustomerController@signin'));
