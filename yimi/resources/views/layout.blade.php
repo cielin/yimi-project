@@ -40,8 +40,8 @@
                     @else
                     <a class="login" data-toggle="modal" data-target="#myAuthModal">登录/注册</a> |
                     @endif
-                    <a class="myOrder">我的订单</a>
-                    <a class="myCollect">我的收藏</a>
+                    <a class="myOrder" href="{{ url('my/orders') }}">我的订单</a>
+                    <a class="myCollect" href="{{ url('my/collections') }}">我的收藏</a>
                 </div>
             </div>
         </div>
