@@ -58,7 +58,7 @@
                     @endfor
                 </ul>
             </div>
-            <div class="no-data" style="display: none;">暂无数据</div>
+            @if (isset($brands) && sizeof($brands) > 0)
             <ul class="brandList clearfix row">
                 @foreach ($brands as $brand)
                 <li class="col-md-4">
@@ -68,6 +68,9 @@
                 </li>
                 @endforeach
             </ul>
+            @else
+            <div class="no-data">暂无数据</div>
+            @endif
         </div>
     </div>
 

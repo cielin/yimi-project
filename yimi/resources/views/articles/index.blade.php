@@ -48,10 +48,12 @@
     @endif
     <?php $i++; ?>
     @endforeach
-    @endif
-
+    
     <nav class="clearfix" aria-label="page navigation">
         <?php echo $articles->links(); ?>
     </nav>
+    @else
+    <div class="no-data">暂无数据</div>
+    @endif
 </div>   
 @stop

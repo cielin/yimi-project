@@ -207,10 +207,9 @@
                 </div>
             </div>
 
+            @if (isset($products) && sizeof($products) > 0)
             <div class="designer buyer goods clearfix">
-                @if (isset($products) && sizeof($products) > 0)
                 @foreach ($products as $product)
-
                 <a href="/products/{{ $product->slug }}">
                     <dl>
                         <dt>
@@ -220,20 +219,21 @@
                             </p>
                         </dt>
                         <dd>
-                            <img src="{{ asset('public/images/products/' . $product ->featured_image) }}">
+                            <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
                         </dd>
                         <div class="buyer-text"><span>{{ $product->name }}</span>
                         </div>
                     </dl>
                 </a>
                 @endforeach
-                @endif
-
             </div>
 
             <nav class="clearfix" aria-label="page navigation">
                 <?php echo $products->links(); ?>
             </nav>
+            @else
+            <div class="no-data">暂无数据</div>
+            @endif
         </div>
     </div>
  </div> 
