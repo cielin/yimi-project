@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Product;
+use App\ProductCollection;
 
 class Customer extends Authenticatable
 {
@@ -32,6 +32,6 @@ class Customer extends Authenticatable
 
     public function collection()
     {
-        return $this->hasMany('App\Product', 'customer_id');
+        return $this->hasMany('App\ProductCollection', 'customer_id');
     }
 }

@@ -116,7 +116,11 @@
                         <dl>
                             <dt>
                                 <p class="ico-wrap">
+                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $featured_product->id))
+                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $featured_product->id }}"></span>
+                                    @else
                                     <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $featured_product->id }}"></span>
+                                    @endif
                                     <span class="icon iconfont icon-yanjing1"></span>
                                 </p>
                             </dt>
@@ -190,7 +194,11 @@
                             </div>
                             <div class="itemHover">
                                 <p class="ico-wrap">
+                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $waterfalled_product->id))
+                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $waterfalled_product->id }}"></span>
+                                    @else
                                     <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $waterfalled_product->id }}"></span>
+                                    @endif
                                     <a href="/products/{{ $waterfalled_product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
                                 </p>
                             </div>

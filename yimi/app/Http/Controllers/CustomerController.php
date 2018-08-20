@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Customer;
+use App\ProductCollection;
 
 class CustomerController extends Controller
 {
@@ -67,5 +68,20 @@ class CustomerController extends Controller
      //        'email' => $data['email'],
      //        'password' => Hash::make($data['password']),
      //    ]);
+    }
+
+    public static function isCollected($uid, $pid)
+    {
+        $collect = ProductCollection::where('customer_id', $uid)
+            ->where('product_id', $pid)
+            ->where('status', 1)
+            ->first();
+
+        if ($collect !== null) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

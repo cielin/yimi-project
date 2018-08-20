@@ -164,7 +164,7 @@
                         <a href="#">购物须知</a>
                         <a href="#">如何选购</a>
                         <a href="#">配送信息</a>
-                        <a href="#">关于我们</a>
+                        <a href="{{ url('articles/aboutus') }}">关于我们</a>
                     </div>
                 </div>
             </div>
