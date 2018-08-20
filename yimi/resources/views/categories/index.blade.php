@@ -185,25 +185,51 @@
             <div class="top-option clearfix">
                 <i class="glyphicon glyphicon-th"></i>
                 <div class="center-num">
-                    <span>展示</span>
-                    <select class="form-control">
+                    <span class="pull-left">展示</span>
+                    <!-- <select class="form-control">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5</option>
-                    </select>
-                    <span>/ 页</span>
+                    </select> -->
+                    <!--模拟select框 start-->
+                    <div class="model-select-box">
+                      <div class="model-select-text" data-value="">1</div>
+                      <!-- <i class="sanjiao glyphicon glyphicon-triangle-bottom"></i> -->
+                      <ul class="model-select-option">
+                        <li data-option="1">1</li>
+                        <li data-option="2">2</li>
+                        <li data-option="3">3</li>
+                        <li data-option="4">4</li>
+                        <li data-option="5">5</li>
+                        <li data-option="6">6</li>
+                        <li data-option="7">7</li>
+                      </ul>
+                    </div>
+                    <!--模拟select框 end-->
+                    <span class="pull-left">/ 页</span>
                 </div>
                 <div class="goods-order">
-                    <span>排列方式</span>
-                    <select class="form-control">
+                    <span class="pull-left">排列方式</span>
+                    <!-- <select class="form-control">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5</option>
-                    </select>
+                    </select> -->
+                    <!--模拟select框 start-->
+                    <div class="model-select-box">
+                      <div class="model-select-text" data-value="">1</div>
+                      <!-- <i class="sanjiao glyphicon glyphicon-triangle-bottom"></i> -->
+                      <ul class="model-select-option">
+                        <li data-option="a">默认排序</li>
+                        <li data-option="b">最新发布时间</li>
+                        <li data-option="c">倒序排序</li>
+                      </ul>
+                    </div>
+                    <!--模拟select框 end-->
                 </div>
             </div>
 

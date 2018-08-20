@@ -61,12 +61,12 @@
 
             <div class="designer buyer goods clearfix">
                 @foreach ($products as $product)
-                <a href="/products/{{ $product->slug }}">
+                
                     <dl>
                         <dt>
                             <p class="ico-wrap">
                                 <span class="glyphicon glyphicon-heart-empty" data-id="{{ $product->id }}"></span>
-                                <span class="icon iconfont icon-yanjing1"></span>
+                                <a href="/products/{{ $product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
                             </p>
                         </dt>
                         <dd>
@@ -75,7 +75,7 @@
                         <div class="buyer-text"><span>{{ $product->name }}</span>
                         </div>
                     </dl>
-                </a>
+               
                 @endforeach
             </div>
             <nav class="clearfix" aria-label="page navigation">

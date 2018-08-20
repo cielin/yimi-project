@@ -89,9 +89,9 @@ var icoFalse = '<i class="icon i-remove-sign-crude"></i>';
 var suspension ='<div class="suspension">'
 	+'<div class="suspension-box">'
 		+'<a href="javascript:;" class="a a-top"><i class="i"></i></a>'
-		+'<a href="javascript:;" class="a a-service-phone "><i class="i"></i></a>'
-		+'<a href="#" class="a a-service "><i class="i"></i></a>'
-		+'<a href="javascript:;" class="a a-qrcode"><i class="i"></i></a>'
+		+'<a href="javascript:;" class="a a-service-phone "><i class="icon iconfont icon-dianhua"></i></a>'
+		+'<a href="#" class="a a-service "><i class="icon iconfont icon-qq"></i></a>'
+		+'<a href="javascript:;" class="a a-qrcode"><i class="icon iconfont icon-weixin"></i></a>'
 		
 		+'<div class="d d-service">'
 			+'<i class="arrow"></i>'
