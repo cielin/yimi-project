@@ -76,9 +76,9 @@
                                             <em class="textarea-num">
 <b>0</b> / 500
 </em>
-                                            <span class="tips">
+                                            <!-- <span class="tips">
 （更多评价）
-</span>
+</span> -->
                                         </div>
                                     </div>
                                     <div class="upload-img-wrap">
