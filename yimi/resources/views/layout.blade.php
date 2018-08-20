@@ -317,6 +317,7 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
             'Authorization':'Bearer ' + token,
         },
         type : 'post',
+        context : this,
         success:function(message){
           if(JSON.parse(message).action == 'removed'){
              $(this).removeClass('glyphicon-heart').addClass('glyphicon-heart-empty')
