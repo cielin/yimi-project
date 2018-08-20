@@ -318,11 +318,15 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
         },
         type : 'post',
         success:function(message){
-          if(message.action == 'removed'){
+          if(JSON.parse(message).action == 'removed'){
              $(this).removeClass('glyphicon-heart').addClass('glyphicon-heart-empty')
           } else {
             $(this).removeClass('glyphicon-heart-empty').addClass('glyphicon-heart')
           }
+        },
+        error: function(){
+            $(this).attr('data-toggle','modal')
+            $(this).attr('data-target','#myModal')
         },
         async:false
       })

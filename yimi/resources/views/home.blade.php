@@ -112,7 +112,7 @@
                 <div class="designer buyer">
                 	@if (isset($featured_products))
                 	@foreach ($featured_products as $featured_product)
-                    <a href="/products/{{ $featured_product->slug }}">
+                    
                         <dl>
                             <dt>
                                 <p class="ico-wrap">
@@ -126,7 +126,7 @@
                             <div class="buyer-text"><span>{{ $featured_product->name }}</span>
                             </div>
                         </dl>
-                    </a>
+                    
                     @endforeach
                     @endif
                 </div>
