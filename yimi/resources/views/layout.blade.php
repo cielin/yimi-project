@@ -252,6 +252,8 @@
     <script type="text/javascript" src="{{ URL::asset('common/controller.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/plugin.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/pages.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('plugin/jsencrypt.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('plugin/md5.js') }}"></script>
     <script type="text/javascript">
  /*********************收藏变实心**********************************/
       /*
