@@ -85,3 +85,9 @@
     </div>
 </div>
 @stop
+
+@section('js')
+
+<script type="text/javascript" src="{{ URL::asset('assets/js/userinfo.js') }}"></script>
+
+@stop

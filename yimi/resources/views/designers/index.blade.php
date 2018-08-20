@@ -17,6 +17,7 @@
         </div>
     </div>
     <!--面包屑-->
+    @if (isset($designers) && sizeof($designers) > 0)
     @foreach ($designers as $designer)
     <div class="row designer-item">
         <div class="col-md-6">
@@ -45,6 +46,8 @@
         @endif
     </div>
     @endforeach
-    
-    </div>
-    @stop
+    @else
+    <div class="no-data">暂无数据</div>
+    @endif
+</div>
+@stop

@@ -58,8 +58,8 @@
 	padding-bottom:30px;
 }
 .detais-content-tit{
-	max-height:438px;
-	min-height:490px;
+	max-height:475px;
+	min-height:475px;
 	overflow: auto;
 	border-bottom:solid 1px #e1e1e1;
 }

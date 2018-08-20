@@ -104,7 +104,7 @@
                     </li>
                     <li><a href="#">椅子</a>
                     </li>
-                    <li class="more"><a href="#">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
+                    <li class="more"><i style="padding-right: 30px;color: #999;font-weight: 100;font-size: 10px;">|</i><a href="#">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
                     </li>
                 </ul>
             </div>
@@ -112,11 +112,11 @@
                 <div class="designer buyer">
                 	@if (isset($featured_products))
                 	@foreach ($featured_products as $featured_product)
-                    <a href="/products/{{ $featured_product->slug }}">
+                    
                         <dl>
                             <dt>
                                 <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty" data-id="{{ $featured_product->id }}"></span>
+                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $featured_product->id }}"></span>
                                     <span class="icon iconfont icon-yanjing1"></span>
                                 </p>
                             </dt>
@@ -126,7 +126,7 @@
                             <div class="buyer-text"><span>{{ $featured_product->name }}</span>
                             </div>
                         </dl>
-                    </a>
+                    
                     @endforeach
                     @endif
                 </div>
@@ -190,7 +190,7 @@
                             </div>
                             <div class="itemHover">
                                 <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty" data-id="{{ $waterfalled_product->id }}"></span>
+                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $waterfalled_product->id }}"></span>
                                     <a href="/products/{{ $waterfalled_product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
                                 </p>
                             </div>

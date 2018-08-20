@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
+use App\ProductCollection;
 
 class MyController extends Controller
 {
@@ -22,7 +23,12 @@ class MyController extends Controller
 
     public function showCollections()
     {
-    	return View::make('my.collection');
+        $user = Auth::user();
+        $collection = ProductCollection::where('customer_id', $user->id)
+            ->where('status', 1)
+            ->paginate(9);
+
+    	return View::make('my.collection')->with('collection', $collection);
     }
 
     public function showComments()

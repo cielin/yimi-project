@@ -185,32 +185,57 @@
             <div class="top-option clearfix">
                 <i class="glyphicon glyphicon-th"></i>
                 <div class="center-num">
-                    <span>展示</span>
-                    <select class="form-control">
+                    <span class="pull-left">展示</span>
+                    <!-- <select class="form-control">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5</option>
-                    </select>
-                    <span>/ 页</span>
+                    </select> -->
+                    <!--模拟select框 start-->
+                    <div class="model-select-box">
+                      <div class="model-select-text" data-value="">1</div>
+                      <!-- <i class="sanjiao glyphicon glyphicon-triangle-bottom"></i> -->
+                      <ul class="model-select-option">
+                        <li data-option="1">1</li>
+                        <li data-option="2">2</li>
+                        <li data-option="3">3</li>
+                        <li data-option="4">4</li>
+                        <li data-option="5">5</li>
+                        <li data-option="6">6</li>
+                        <li data-option="7">7</li>
+                      </ul>
+                    </div>
+                    <!--模拟select框 end-->
+                    <span class="pull-left">/ 页</span>
                 </div>
                 <div class="goods-order">
-                    <span>排列方式</span>
-                    <select class="form-control">
+                    <span class="pull-left">排列方式</span>
+                    <!-- <select class="form-control">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5</option>
-                    </select>
+                    </select> -->
+                    <!--模拟select框 start-->
+                    <div class="model-select-box">
+                      <div class="model-select-text" data-value="">1</div>
+                      <!-- <i class="sanjiao glyphicon glyphicon-triangle-bottom"></i> -->
+                      <ul class="model-select-option">
+                        <li data-option="a">默认排序</li>
+                        <li data-option="b">最新发布时间</li>
+                        <li data-option="c">倒序排序</li>
+                      </ul>
+                    </div>
+                    <!--模拟select框 end-->
                 </div>
             </div>
 
+            @if (isset($products) && sizeof($products) > 0)
             <div class="designer buyer goods clearfix">
-                @if (isset($products) && sizeof($products) > 0)
                 @foreach ($products as $product)
-
                 <a href="/products/{{ $product->slug }}">
                     <dl>
                         <dt>
@@ -220,20 +245,21 @@
                             </p>
                         </dt>
                         <dd>
-                            <img src="{{ asset('public/images/products/' . $product ->featured_image) }}">
+                            <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
                         </dd>
                         <div class="buyer-text"><span>{{ $product->name }}</span>
                         </div>
                     </dl>
                 </a>
                 @endforeach
-                @endif
-
             </div>
 
             <nav class="clearfix" aria-label="page navigation">
                 <?php echo $products->links(); ?>
             </nav>
+            @else
+            <div class="no-data">暂无数据</div>
+            @endif
         </div>
     </div>
  </div> 
