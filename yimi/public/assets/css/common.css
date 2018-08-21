@@ -136,3 +136,7 @@ span.icon-yanjing1{
 	color:#ccc;
 }
 .glyphicon-heart {color:#c8a165!important}
+.nav-top-right a.user{
+	width:auto;
+	padding:0 14px;
+}

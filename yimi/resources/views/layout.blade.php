@@ -36,7 +36,7 @@
                 </div>
                 <div class="pull-right nav-top-right">
                     @if (Auth::check())
-                    <a class="user" href="{{ url('my/info') }}">{{ Auth::user()->nickname }}</a> |
+                    <a class="user" href="{{ url('my/info') }}">{{ Auth::user()->nickname }}</a> <a href="#">退出</a>|
                     @else
                     <a class="login" data-toggle="modal" data-target="#myAuthModal">登录/注册</a> |
                     @endif
