@@ -975,7 +975,6 @@ span.more{
 	margin:10px 0px;
 }
 
-
 /*订单号*/
 .order-item{
 	width: 100%;
@@ -993,6 +992,7 @@ span.more{
 .order-item .table{
 	background-color: #f7f7f7;
 	color:#404040;
+	margin-bottom: 0px;
 }
 .order-item .table tr td{
 	padding:0.25641rem;

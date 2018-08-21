@@ -252,7 +252,77 @@
                             <!--循环体 end-->
                         </tbody>
                     </table>
-                    
+                                        <!--订单二-->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td colspan="6">
+                                    <span class="pr20">2018-03-09 9:00</span>订单号:<span class="gray-333">18323423</span>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="order-img">
+                                    <img src="../assets/img/discussPro.png">
+                                </td>
+                                <td class="order-text">
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                </td>
+                                <td class="order-price">
+                                    ￥9000.00
+                                </td>
+                                <td class="order-num">
+                                    1
+                                </td>
+                                <td class="order-total-price">
+                                    $70000.89
+                                </td>
+                                <td class="order-option">
+                                    <div class="order-status">已发货</div>
+                                    <a href="#" class="order-detial">订单详情</a>
+                                    <a href="#" class="check-logistics">查看物流</a>
+                                    <a href="javascript:void(0)" class="evaluate">评价</a>
+                                    <!--提交的表单 start-->
+                                    <div class="orderEvaluate showInput clearfix">
+                                        <div class="f-textarea">
+                                            <textarea name="" id="" placeholder="分享体验心得，给万千想买的人一个参考~"></textarea>
+                                            <div class="textarea-ext">
+                                                <em class="textarea-num">
+                                                    <b>0</b> / 500
+                                                </em>
+                                            </div>
+                                        </div>
+                                        <div class="upload-img-wrap">
+                                            <div class="img-wrap">
+                                                <div class="img-item">
+                                                    <img src="../assets/img/dd-2.jpg">
+                                                    <i class="closeImg"></i>
+                                                </div>
+                                                <div class="img-item">
+                                                    <img src="../assets/img/dd-2.jpg">
+                                                    <i class="closeImg"></i>
+                                                </div>
+                                            </div>
+                                            <div class="fileidImg">
+                                                <i class="icon iconfont icon-xiangji"></i>
+                                                <span class="fileText">上传照片</span>
+                                            </div>
+                                        </div>
+                                        <div class="btns">
+                                            <button type="submit" class="submitText">确定</button>
+                                            <button class="cancelText">取消</button>
+                                        </div>
+                                    </div>
+                                    <!--提交的表单 end-->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--订单二-->
                 </div>
                 
             </div>
