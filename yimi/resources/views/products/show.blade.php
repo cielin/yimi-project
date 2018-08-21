@@ -32,7 +32,7 @@
     <!--面包屑-->
     <!--商品轮播图-->
     <div class="row">
-        <div class="col-md-6  swiper-wraper">
+        <div class="swiper-wraper">
             <div class="swiper-container gallery-top">
                 <div class="swiper-wrapper">
                     @foreach ($product->images as $image)
@@ -61,7 +61,7 @@
 
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="goods-detail-text">
             <div class="detais-content">
     <!--                     <h5 class="back-tit">
     <div class="back-page"><a href="goodsList.html">< 返回上一页</div>
