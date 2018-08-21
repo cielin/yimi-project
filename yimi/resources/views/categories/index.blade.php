@@ -235,7 +235,7 @@
                         <option>5</option>
                     </select> -->
                     <!--模拟select框 start-->
-                    <div class="model-select-box" style="width:130px; margin-right:0;">
+                    <div class="model-select-box" style="width:130px; margin-right:10px;">
                       <div class="model-select-text" data-value="">1</div>
                       <i class="sanjiao glyphicon glyphicon-triangle-bottom" style="left:83%!important;"></i>
                       <ul class="model-select-option">
