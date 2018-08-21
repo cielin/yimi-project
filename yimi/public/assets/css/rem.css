@@ -181,6 +181,12 @@ html{
 }
 .swiper-wraper{
 	width: 3.649573rem;
+	float: left;
+}
+.goods-detail-text{
+	float: right;
+	width: 61%;
+	margin-left:0.25641rem;
 }
 .gallery-top{
 	height: 5.128205rem!important;
@@ -195,6 +201,9 @@ html{
 .swiper-container.gallery-thumbs img{
 	width: 0.760684rem;
 	height: 1.068376rem;
+}
+.detais-content{
+	padding-right: 0.068376rem;
 }
 
 @media (min-width: 320px){
