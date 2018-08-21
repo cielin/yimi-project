@@ -476,6 +476,7 @@ span.more{
 .user-center-left a{
 	display: block;
 	line-height: 40px;
+	font-weight: 400;
 }
 .user-center-left a.active{
 	position: relative;
