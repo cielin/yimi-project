@@ -164,7 +164,7 @@
                         <a href="#">购物须知</a>
                         <a href="#">如何选购</a>
                         <a href="#">配送信息</a>
-                        <a href="#">关于我们</a>
+                        <a href="{{ url('articles/aboutus') }}">关于我们</a>
                     </div>
                 </div>
             </div>
@@ -317,6 +317,7 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
             'Authorization':'Bearer ' + token,
         },
         type : 'post',
+        context : this,
         success:function(message){
           if(JSON.parse(message).action == 'removed'){
              $(this).removeClass('glyphicon-heart').addClass('glyphicon-heart-empty')

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\View;
 use App\Product;
 use App\Banner;
 use App\Designer;
+use App\ProductCategory;
 
 class HomeController extends Controller
 {
@@ -44,6 +45,11 @@ class HomeController extends Controller
             ->limit(8)
             ->get();
 
+        $categories = ProductCategory::where('depth', 0)
+            ->orderBy('name', 'asc')
+            ->limit(5)
+            ->get();
+
     	return View::make('home')
             ->with('active', 'home')
     		->with('featured_products', $featured_products)
@@ -52,6 +58,7 @@ class HomeController extends Controller
             ->with('sl_banner', $sl_banner)
             ->with('srt_banners', $srt_banners)
             ->with('srb_banner', $srb_banner)
-            ->with('designers', $designers);
+            ->with('designers', $designers)
+            ->with('categories', $categories);
     }
 }

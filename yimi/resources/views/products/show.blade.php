@@ -87,8 +87,11 @@
                 <div>
 
                     <p class="ico-wraps">
+                        @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id))
+                        <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}"></span>
+                        @else
                         <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}"></span>
-
+                        @endif
                         <a href="/articles/shopping-tips"><span class="icon iconfont icon-question"></span></a>
                     </p>
                 </div>

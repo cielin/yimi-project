@@ -48,7 +48,11 @@
                     <dl>
                         <dt>
                             <p class="ico-wrap">
-                                <span class="glyphicon glyphicon-heart-empty" data-id="{{ $collect->product_id }}"></span>
+                                @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $collect->product_id))
+                                <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $collect->product_id }}"></span>
+                                @else
+                                <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $collect->product_id }}"></span>
+                                @endif
                                 <span class="icon iconfont icon-yanjing1"></span>
                             </p>
                         </dt>
