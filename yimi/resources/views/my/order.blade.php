@@ -45,242 +45,218 @@
 
                     <input type="text" class="form-control cllectionSearch" id="cllectionSearch" placeholder="请输入商品名">
                 </div>
-                <div class="discuss-box">
-                    <!--订单 start-->
-                    <div class="row">
-                        <div class="order-code">
-                            <p><span class="pr20">2018-03-09 9:00</span>订单号:<span class="gray-333">18323423</span>
-                            </p>
-
-                        </div>
-                        <div class="discuss-order clearfix order-pt10">
-                            <div class="clearfix order-layout">
-                                <div class="col-md-9  order-bord-r pt20">
-                                    <div class="order-goods">
-                                        <div class="col-md-4">
-                                            <div class="pro-img">
-                                                <img src="{{ URL::asset('assets/img/discussPro.png') }}">
-                                            </div>
-
-                                        </div>
-                                        <div class="col-md-5">
-                                            <!--展示文本 start-->
-                                            <div class="showText">
-                                                <p class="text">
-                                                    Baily sailen chair
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            ￥9000.00
-                                        </div>
-                                        <div class="col-md-1">
-                                            1
-                                        </div>
-                                    </div>
-
-                                    <!--展示文本 end-->
-                                </div>
-
-                                <div class="col-md-3  pt20">
-                                    <div class="col-md-7">
-                                        $70000.89
-                                    </div>
-                                    <div class="col-md-5 order-r-menu">
-                                        <span>已发货</span>
-                                        <a href="#">订单详情</a>
-                                        <a href="#">查看物流</a>
-                                        <a href="javascript:void(0)" class="evaluate">评价</a>
-                                        <!--提交的表单 start-->
-                                        <div class="orderEvaluate showInput clearfix">
-
-                                            <div class="f-textarea">
-                                                <textarea name="" id="" placeholder="分享体验心得，给万千想买的人一个参考~"></textarea>
-                                                <div class="textarea-ext">
-                                                    <em class="textarea-num">
-<b>0</b> / 500
-</em>
-                                                   <!--  <span class="tips">
-（更多评价）
-</span> -->
-                                                </div>
-                                            </div>
-                                            <div class="upload-img-wrap">
-                                                <div class="img-wrap">
-                                                    <div class="img-item">
-                                                        <img src="../assets/img/dd-2.jpg">
-                                                        <i class="closeImg"></i>
-                                                    </div>
-                                                    <div class="img-item">
-                                                        <img src="../assets/img/dd-2.jpg">
-                                                        <i class="closeImg"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="fileidImg">
-                                                    <i class="icon iconfont icon-xiangji"></i>
-                                                    <span class="fileText">上传照片</span>
-                                                </div>
-                                            </div>
-                                            <div class="btns">
-                                                <button type="submit" class="submitText">确定</button>
-                                                <button class="cancelText">取消</button>
-                                            </div>
-
-                                        </div>
-                                        <!--提交的表单 end-->
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                <!--订单 start-->
+            <div class="discuss-box">
+                <div class="order-item">
+                    <div class="order-title">
+                        <span class="pr20">2018-03-09 9:00</span>订单号:<span class="gray-333">18323423</span>
                     </div>
-                    <div class="row">
-                        <div class="order-code">
-                            <p><span class="pr20">2018-03-09 9:00</span>订单号:<span class="gray-333">18323423</span>
-                            </p>
-
-                        </div>
-                        <div class="discuss-order clearfix order-pt10">
-                            <div class="clearfix order-layout">
-                                <div class="order-bord-bd">
-                                    <span class="pr20">2018-03-09 9:00</span>订单号:<span class="gray-333">18323423</span>
-                                </div>
-                                <div class="col-md-9  order-bord-r pt20">
-                                    <div class="order-goods">
-                                        <div class="col-md-4">
-                                            <div class="pro-img">
-                                                <img src="../assets/img/discussPro.png">
-                                            </div>
-
-                                        </div>
-                                        <div class="col-md-5">
-                                            <!--展示文本 start-->
-                                            <div class="showText">
-                                                <p class="text">
-                                                    Baily sailen chair
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            ￥9000.00
-                                        </div>
-                                        <div class="col-md-1">
-                                            1
-                                        </div>
-                                    </div>
-                                    <div class="order-goods">
-                                        <div class="col-md-4">
-                                            <div class="pro-img">
-                                                <img src="../assets/img/discussPro.png">
-                                            </div>
-
-                                        </div>
-                                        <div class="col-md-5">
-                                            <!--展示文本 start-->
-                                            <div class="showText">
-                                                <p class="text">
-                                                    Baily sailen chair
-                                                </p>
-
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="order-img">
+                                    <img src="../assets/img/discussPro.png">
+                                </td>
+                                <td class="order-text">
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                </td>
+                                <td class="order-price">
+                                    ￥9000.00
+                                </td>
+                                <td class="order-num">
+                                    1
+                                </td>
+                                <td class="order-total-price">
+                                    $70000.89
+                                </td>
+                                <td class="order-option">
+                                    <div class="order-status">已发货</div>
+                                    <a href="#" class="order-detial">订单详情</a>
+                                    <a href="#" class="check-logistics">查看物流</a>
+                                    <a href="javascript:void(0)" class="evaluate">评价</a>
+                                    <!--提交的表单 start-->
+                                    <div class="orderEvaluate showInput clearfix">
+                                        <div class="f-textarea">
+                                            <textarea name="" id="" placeholder="分享体验心得，给万千想买的人一个参考~"></textarea>
+                                            <div class="textarea-ext">
+                                                <em class="textarea-num">
+                                                    <b>0</b> / 500
+                                                </em>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
-                                            ￥9000.00
-                                        </div>
-                                        <div class="col-md-1">
-                                            1
-                                        </div>
-                                    </div>
-                                    <!--展示文本 end-->
-                                </div>
-
-                                <div class="col-md-3  pt20">
-                                    <div class="col-md-7">
-                                        $70000.89
-                                    </div>
-                                    <div class="col-md-5 order-r-menu">
-                                        <span>已发货</span>
-                                        <a href="#">订单详情</a>
-                                        <a href="#">查看物流</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix order-bord-bm-hui order-layout">
-                                <div class="order-bord-bd">
-                                    <span class="pr20">2018-03-09 9:00</span>订单号:<span class="gray-333">18323423</span>
-                                </div>
-                                <div class="col-md-9  order-bord-r pt20">
-                                    <div class="order-goods">
-                                        <div class="col-md-4">
-                                            <div class="pro-img">
-                                                <img src="../assets/img/discussPro.png">
+                                        <div class="upload-img-wrap">
+                                            <div class="img-wrap">
+                                                <div class="img-item">
+                                                    <img src="../assets/img/dd-2.jpg">
+                                                    <i class="closeImg"></i>
+                                                </div>
+                                                <div class="img-item">
+                                                    <img src="../assets/img/dd-2.jpg">
+                                                    <i class="closeImg"></i>
+                                                </div>
                                             </div>
-
-                                        </div>
-                                        <div class="col-md-5">
-                                            <!--展示文本 start-->
-                                            <div class="showText">
-                                                <p class="text">
-                                                    Baily sailen chair
-                                                </p>
-
+                                            <div class="fileidImg">
+                                                <i class="icon iconfont icon-xiangji"></i>
+                                                <span class="fileText">上传照片</span>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
-                                            ￥9000.00
-                                        </div>
-                                        <div class="col-md-1">
-                                            1
+                                        <div class="btns">
+                                            <button type="submit" class="submitText">确定</button>
+                                            <button class="cancelText">取消</button>
                                         </div>
                                     </div>
-                                    <div class="order-goods">
-                                        <div class="col-md-4">
-                                            <div class="pro-img">
-                                                <img src="../assets/img/discussPro.png">
-                                            </div>
-
-                                        </div>
-                                        <div class="col-md-5">
-                                            <!--展示文本 start-->
-                                            <div class="showText">
-                                                <p class="text">
-                                                    Baily sailen chair
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            ￥9000.00
-                                        </div>
-                                        <div class="col-md-1">
-                                            1
-                                        </div>
-                                    </div>
-                                    <!--展示文本 end-->
-                                </div>
-
-                                <div class="col-md-3  pt20">
-                                    <div class="col-md-7">
-                                        $70000.89
-                                    </div>
-                                    <div class="col-md-5 order-r-menu">
-                                        <a href="#">已发货</a>
-                                        <a href="#">订单详情</a>
-                                        <a href="#">查看物流</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--订单 end-->
-
-
+                                    <!--提交的表单 end-->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
                 </div>
+                <div class="order-item">
+                    <div class="order-title">
+                        <span class="pr20">2018-03-09 9:00</span>订单号:<span class="gray-333">18323423</span>
+                    </div>
+                    <!--单个订单与多个订单的区别在于 class table-btm-boder-->
+                    <table class="table table-btm-boder">
+                    <!--单个订单与多个订单的区别在于 class table-btm-boder-->
+                        <thead>
+                            <tr>
+                                <td colspan="6">
+                                    <span class="pr20">2018-03-09 9:00</span>订单号:<span class="gray-333">18323423</span>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--循环体 start-->
+                            <tr>
+                                <td class="order-img">
+                                    <img src="../assets/img/discussPro.png">
+                                </td>
+                                <td class="order-text">
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                </td>
+                                <td class="order-price">
+                                    ￥9000.00
+                                </td>
+                                <td class="order-num">
+                                    1
+                                </td>
+                                <td class="order-total-price">
+                                    $70000.89
+                                </td>
+                                <td class="order-option">
+                                    <div class="order-status">已发货</div>
+                                    <a href="#" class="order-detial">订单详情</a>
+                                    <a href="#" class="check-logistics">查看物流</a>
+                                    <a href="javascript:void(0)" class="evaluate">评价</a>
+                                    <!--提交的表单 start-->
+                                    <div class="orderEvaluate showInput clearfix">
+                                        <div class="f-textarea">
+                                            <textarea name="" id="" placeholder="分享体验心得，给万千想买的人一个参考~"></textarea>
+                                            <div class="textarea-ext">
+                                                <em class="textarea-num">
+                                                    <b>0</b> / 500
+                                                </em>
+                                            </div>
+                                        </div>
+                                        <div class="upload-img-wrap">
+                                            <div class="img-wrap">
+                                                <div class="img-item">
+                                                    <img src="../assets/img/dd-2.jpg">
+                                                    <i class="closeImg"></i>
+                                                </div>
+                                                <div class="img-item">
+                                                    <img src="../assets/img/dd-2.jpg">
+                                                    <i class="closeImg"></i>
+                                                </div>
+                                            </div>
+                                            <div class="fileidImg">
+                                                <i class="icon iconfont icon-xiangji"></i>
+                                                <span class="fileText">上传照片</span>
+                                            </div>
+                                        </div>
+                                        <div class="btns">
+                                            <button type="submit" class="submitText">确定</button>
+                                            <button class="cancelText">取消</button>
+                                        </div>
+                                    </div>
+                                    <!--提交的表单 end-->
+                                </td>
+                            </tr>
+                            <!--循环体 end-->
+                            <!--循环体 start-->
+                            <tr>
+                                <td class="order-img">
+                                    <img src="../assets/img/discussPro.png">
+                                </td>
+                                <td class="order-text">
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                    Baily sailen chair
+                                </td>
+                                <td class="order-price">
+                                    ￥9000.00
+                                </td>
+                                <td class="order-num">
+                                    1
+                                </td>
+                                <td class="order-total-price">
+                                    $70000.89
+                                </td>
+                                <td class="order-option">
+                                    <div class="order-status">已发货</div>
+                                    <a href="#" class="order-detial">订单详情</a>
+                                    <a href="#" class="check-logistics">查看物流</a>
+                                    <a href="javascript:void(0)" class="evaluate">评价</a>
+                                    <!--提交的表单 start-->
+                                    <div class="orderEvaluate showInput clearfix">
+                                        <div class="f-textarea">
+                                            <textarea name="" id="" placeholder="分享体验心得，给万千想买的人一个参考~"></textarea>
+                                            <div class="textarea-ext">
+                                                <em class="textarea-num">
+                                                    <b>0</b> / 500
+                                                </em>
+                                            </div>
+                                        </div>
+                                        <div class="upload-img-wrap">
+                                            <div class="img-wrap">
+                                                <div class="img-item">
+                                                    <img src="../assets/img/dd-2.jpg">
+                                                    <i class="closeImg"></i>
+                                                </div>
+                                                <div class="img-item">
+                                                    <img src="../assets/img/dd-2.jpg">
+                                                    <i class="closeImg"></i>
+                                                </div>
+                                            </div>
+                                            <div class="fileidImg">
+                                                <i class="icon iconfont icon-xiangji"></i>
+                                                <span class="fileText">上传照片</span>
+                                            </div>
+                                        </div>
+                                        <div class="btns">
+                                            <button type="submit" class="submitText">确定</button>
+                                            <button class="cancelText">取消</button>
+                                        </div>
+                                    </div>
+                                    <!--提交的表单 end-->
+                                </td>
+                            </tr>
+                            <!--循环体 end-->
+                        </tbody>
+                    </table>
+                    
+                </div>
+                
+            </div>
+            <!--订单 end-->
 
 
             </div>

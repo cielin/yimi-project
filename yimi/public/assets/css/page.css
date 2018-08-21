@@ -974,3 +974,88 @@ span.more{
 	line-height: 30px;
 	margin:10px 0px;
 }
+
+
+/*订单号*/
+.order-item{
+	width: 100%;
+}
+.order-title,
+.order-item .table thead td{
+	color: #c2c2c2;
+	line-height: 60px;
+}
+.order-item .table>thead>tr>td{
+	line-height: 0.17094rem;
+	padding-bottom: 0.128205rem;
+	padding-top: 0.128205rem;
+}
+.order-item .table{
+	background-color: #f7f7f7;
+	color:#404040;
+}
+.order-item .table tr td{
+	padding:0.25641rem;
+}
+.order-img,.order-img img{
+	width: 1.230769rem;
+	height: 1.623932rem;
+}
+.order-item .table tr td.order-text,
+.order-item .table tr td.order-price,
+.order-item .table tr td.order-num,
+.order-item .table tr td.order-total-price,
+.order-item .table tr td.order-option{
+	width: 1.025641rem;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0.42735rem;
+}
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th{
+	border-top:none;
+}
+.order-item .table tr td.order-text{
+	width: 1.367521rem;
+}
+.order-item .table tr td.order-price{
+	width: 1.068376rem;
+	text-align: center;
+}
+.order-item .table tr td.order-num{
+	width: 0.854701rem;
+	text-align: center;
+	border-right: 1px solid #e1e1e1;
+}
+.order-item .table tr td.order-total-price{
+	width: 1.230769rem;
+	text-align: center;
+}
+.order-item .table tr td.order-option{
+	line-height: 0.25641rem;
+	padding-right: 0.25641rem;
+	padding-left: 0.25641rem;
+	position: relative;
+}
+.order-item .table tr td.order-option a{
+	display: block;
+	margin-top: 0.068376rem;
+	color:#c8a165;
+}
+.order-item .table thead td,
+.table-btm-boder{
+	border-bottom: 1px solid #e1e1e1;
+}
+.orderEvaluate{
+	padding-top:0.25641rem;
+	width: 3.333333rem;
+	right: 2.418803rem;
+}
+.showInput textarea{
+	max-height: 1.111111rem;
+    min-height: 1.111111rem;
+}
