@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')_薏米家</title>
+    <link href="{{ URL::asset('assets/img/favicon.ico') }}" rel="icon">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('plugin/swiper/css/swiper.css') }}" />
     <link href="{{ URL::asset('plugin/bootstrap-3.3.7-dist/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('plugin/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}" type="text/css" rel="stylesheet">
