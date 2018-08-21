@@ -179,6 +179,23 @@ html{
 .designer-bg .designer-text.col-md-7 .more{
 	margin-top:19px;
 }
+.swiper-wraper{
+	width: 3.649573rem;
+}
+.gallery-top{
+	height: 5.128205rem!important;
+}
+.gallery-thumbs{
+	height: 1.282051rem;
+}
+.swiper-container.gallery-top img{
+	width: 3.649573rem;
+	height: 5.128205rem!important;
+}
+.swiper-container.gallery-thumbs img{
+	width: 0.760684rem;
+	height: 1.068376rem;
+}
 
 @media (min-width: 320px){
 	html{

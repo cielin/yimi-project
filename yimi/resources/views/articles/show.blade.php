@@ -30,10 +30,9 @@
     </div>
     <!--面包屑-->
     <div class="bg-hui-f7 container">
-        <div class="desiger">
-
-            <h2>{{ $article->title }}</h2>
-            <div>
+        <div class="articles-wrap">
+            <h2 class="articles-title">{{ $article->title }}</h2>
+            <div class="article-cont">
                 {!! html_entity_decode($article->content, ENT_QUOTES, 'UTF-8') !!}
             </div>
         </div>

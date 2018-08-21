@@ -955,3 +955,21 @@ span.more{
 }
 .icon-shuangjiantou{vertical-align: middle;}
 
+/*文章列表*/
+.articles-wrap{
+	background: #f7f7f7;
+	padding:48px 70px;
+}
+.articles-title{
+	font-size: 24px;
+	margin-bottom: 50px;
+	text-align:center
+}
+.article-cont img{
+	text-align: center;
+	margin:30px 0px;
+}
+.article-cont p{
+	line-height: 30px;
+	margin:10px 0px;
+}
