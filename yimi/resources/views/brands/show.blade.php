@@ -72,7 +72,7 @@
                         <option>名称Z-A</option>
                     </select> -->
                     <!--模拟select框 start-->
-                    <div class="model-select-box" style="margin-right:0;">
+                    <div class="model-select-box" style="margin-right:10px;">
                       <div class="model-select-text" data-value="">1</div>
                       <i class="sanjiao glyphicon glyphicon-triangle-bottom" style="left:83%;"></i>
                       <ul class="model-select-option">

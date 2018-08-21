@@ -124,7 +124,7 @@ span.icon-yanjing1{
 /*自定义select*/
 
 .model-select-box { width: 110px; height: 36px; line-height: 36px; border: 1px solid #ddd; float: left; margin-right: 20px; text-indent: 5px; position: relative; margin-left:15px; margin-top:-5px;}
-.model-select-text { height: 100%; padding-right: 27px; background: url(http://t43-2.yunpan.360.cn/p/800-600.e692334dad266bef653533e12fa291286932eb10.3619c0.jpg?t=64368e238226776012c7ea2a6ad4dcce&d=20140221) no-repeat right 0; cursor: pointer; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
+.model-select-text { height: 100%; padding-right: 27px; cursor: pointer; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
 .model-select-option { display: none; position: absolute; background: #fff; width: 102%; left: -1px; border: 1px solid #ddd; z-index:100;}
 .model-select-option li { height: 32px; line-height: 32px; color: #555; cursor: pointer; }
 .model-select-option li.seleced { background: #c8a165; color: #fff; }
