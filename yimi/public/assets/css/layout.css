@@ -128,10 +128,29 @@ ul.nav{
 .litteBannerImg img {
     width: 102%;
 }
+.myMsg{
+	position:relative;
+}
+.myMsg:before{
+	content:"";
+	width: 6px;
+	height: 6px;
+	background:#c90811;
+	position: absolute;
+	right: 7px;
+	top: 4px;
+	border-radius: 5px;
+}
+.myMsg:hover:before{
+	background:red;
+}
 /*footer*/
 .footer{
 	color:#fff;
 	
+}
+.f-email{
+	line-height: 78px;
 }
 .footer .container-fluid{
 	width:100%;

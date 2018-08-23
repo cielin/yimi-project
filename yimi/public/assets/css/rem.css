@@ -26,7 +26,10 @@ html{
 .litteBanner li{
 	margin-bottom: 0.257511rem;
 }
-
+.designer dl dt{
+	padding-left:30px;
+	padding-right:30px;
+}
 .designer dl,
 .designer dl dt,
 .designer dl dd,
@@ -201,6 +204,8 @@ html{
 .swiper-container.gallery-thumbs img{
 	width: 0.760684rem;
 	height: 1.068376rem;
+	position: relative;
+    right: -10px;
 }
 .detais-content{
 	padding-right: 0.068376rem;

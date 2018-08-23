@@ -27,7 +27,7 @@
                     </li>
                     <li><a href="#">Agape</a>
                     </li>
-                    <li><a href="#">Alessi</a>
+                    <li class="active"><a href="#">Alessi</a>
                     </li>
                     <li><a href="#">Alias</a>
                     </li>
@@ -53,7 +53,7 @@
                 <ul class="check-words clearfix">
                     @for ($i = 0; $i < 26; ++$i)
                     <li>
-                        <a href="{{ URL::to('/brands/f/' . strtolower(chr($i + 65))) }}">{{ chr($i + 65) }}</a>
+                        <a class="active" href="{{ URL::to('/brands/f/' . strtolower(chr($i + 65))) }}">{{ chr($i + 65) }}</a>
                     </li>
                     @endfor
                 </ul>

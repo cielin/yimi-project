@@ -42,6 +42,8 @@
                     <a class="login" data-toggle="modal" data-target="#myAuthModal">登录/注册</a> |
                     @endif
                     <a class="myOrder" href="{{ url('my/orders') }}">我的订单</a>
+                     |
+                    <a class="myMsg" href="{{ url('my/messages') }}">我的消息</a> |
                     <a class="myCollect" href="{{ url('my/collections') }}">我的收藏</a>
                 </div>
             </div>
@@ -142,7 +144,8 @@
                           <dd>
                             <a href="#">联系我们</a>
                             <a href="#">我的订单</a>
-                            
+                            <a href="#">关于我们</a>
+                            <a href="#">配送信息</a>
                           </dd>
                         </dl>
                       
