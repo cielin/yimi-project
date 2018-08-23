@@ -17,6 +17,7 @@
         </div>
     </div>
     <!--面包屑-->
+    <div class="min-h600">
     @if (isset($articles) && sizeof($articles) > 0)
     <?php $i = 0; ?>
     @foreach ($articles as $article)
