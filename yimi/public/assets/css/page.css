@@ -252,7 +252,7 @@ span.more{
 .check-words a{
 	color: #1b1b1b;
 }
-.check-words a:hover,.checkAllBrand:hover{
+.check-words a:hover,.checkAllBrand:hover,.check-words a.active{
 	color: #caa175;
 	text-decoration: underline;
 }
@@ -311,6 +311,9 @@ span.more{
 	color:#333333;
 	font-size: 14px;
 	font-weight: bold;
+}
+.brandListText li.active a{
+	color: #caa175;
 }
 .brandText p{
 	text-indent:1em;
