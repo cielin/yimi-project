@@ -34,4 +34,9 @@ class Customer extends Authenticatable
     {
         return $this->hasMany('App\ProductCollection', 'customer_id');
     }
+
+    public function addresses()
+    {
+        return $this->hasMany('App\CustomerAddress', 'customer_id');
+    }
 }

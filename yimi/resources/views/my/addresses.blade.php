@@ -35,7 +35,7 @@
         </div>
         <div class="col-sm-9 col-md-9 main">
             <div class="address-text">
-                <form id="commentForm" method="post" action="">
+                {{ Form::open(array('route' => 'addresses.save', 'id' => 'commentForm', 'role' => 'form')) }}
                     <div class="form-group" style="width:70%;">
                         <label for="addressInfo" style="display: block;">地址信息<i>*</i>
                         </label>
@@ -45,33 +45,33 @@
                         <select name="city" id="city" class="citySelect">
                             <option value="请选择">请选择</option>
                         </select>
-                        <select name="town" id="town" class="citySelect">
+                        <select name="district" id="town" class="citySelect">
                             <option value="请选择">请选择</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="adDetailInfo">详细地址<i>*</i>
                         </label>
-                        <input type="text" name="adDetailInfo" class="form-control" id="adDetailInfo" placeholder="请输入详细地址" required>
+                        <input type="text" name="address" class="form-control" id="adDetailInfo" placeholder="请输入详细地址" required>
                     </div>
 
                     <div class="form-group">
                         <label for="postalCode">邮政编码<i>*</i>
                         </label>
-                        <input type="text" name="zipCode" class="form-control" id="postalCode" placeholder="" required>
+                        <input type="text" name="postcode" class="form-control" id="postalCode" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label for="addressUserName">收货人姓名<i>*</i>
                         </label>
-                        <input type="text" name="addressUserName" class="form-control" id="addressUserName" placeholder="" required>
+                        <input type="text" name="consignee" class="form-control" id="addressUserName" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label for="telPhone">手机号<i>*</i>
                         </label>
-                        <input type="text" name="phone" class="form-control" id="telPhone" placeholder="" required>
+                        <input type="text" name="mobile" class="form-control" id="telPhone" placeholder="" required>
                     </div>
-                    <button type="submit" class="address-btn">保存</button>
-                </form>
+                    {{ Form::submit('保存', array('class' => 'address-btn')) }}
+                {{ Form::close() }}
             </div>
             <div class="table-wrap">
                 <table class="table table-bordered">
@@ -86,15 +86,27 @@
                         </tr>
                     </thead>
                     <tbody>
+                    @if (isset($addresses) && sizeof($addresses) > 0)
+                        @foreach ($addresses as $address)
                         <tr>
-                            <th>1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
+                            <th>{{ $address->consignee }}</th>
+                            <td>{{ $address->province . " " . $address->city . " " . $address->district}}</td>
+                            <td>{{ $address->address }}</td>
+                            <td>{{ $address->postcode }}</td>
+                            <td>{{ $address->mobile }}</td>
+                            <td>
+                                <a href="javascript:void(0);" class="btn btn-primary btn-sm addr-edit" role="button" data-id="{{ $address->id }}">编辑</a>
+                                {{ Form::open(array('route'=>array('addresses.destroy', $address), 'method'=>'delete', 'data-confirm'=>'确认删除该收货地址？', 'role'=>'form')) }}
+                                <button class="btn btn-danger btn-sm addr-del" type="submit">删除</a>
+                                {{ Form::close() }}
+                            </td>
                         </tr>
-
+                        @endforeach
+                    @else
+                        <tr>
+                            <td colspan="6">暂无数据</td>
+                        </tr>
+                    @endif
                     </tbody>
                 </table>
             </div>

@@ -1,0 +1,28 @@
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) { 
+	.litteBannerImg img{
+		width: 100%;
+	}
+
+}
+
+@media (min-width: 839px) { 
+	.litteBannerImg img{
+		width: 102.5%;
+	}
+
+}
+
+@media (min-width: 910px) { 
+	.litteBannerImg img{
+		width: 102.4%;
+	}
+
+}
+@media (min-width: 962px) { 
+	.litteBannerImg img{
+		width: 101.2%;
+	}
+
+}

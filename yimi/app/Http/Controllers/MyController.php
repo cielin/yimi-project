@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 use App\ProductCollection;
+use App\CustomerAddress;
+use App\Customer;
 
 class MyController extends Controller
 {
@@ -43,7 +47,12 @@ class MyController extends Controller
 
     public function showAddresses()
     {
-    	return View::make('my.addresses');
+        $user = Auth::user();
+        $addresses = CustomerAddress::where('customer_id', $user->id)
+            ->orderBy('updated_at', 'desc')
+            ->get();
+
+    	return View::make('my.addresses')->with('addresses', $addresses);
     }
 
     public function showPasswordReset()
@@ -54,5 +63,66 @@ class MyController extends Controller
     public function showUnion()
     {
     	return View::make('my.union');
+    }
+
+    public function saveAddress(Request $request)
+    {
+        if (Auth::check()) {
+            $validator = Validator::make($request->all(), [
+                'consignee' => 'required|string|max:255',
+                'mobile' => 'required|digits:11',
+                'province' => 'required',
+                'city' => 'required',
+                'district' => 'required',
+                'address' => 'required',
+                'postcode' => 'digits:6'
+            ]);
+
+            if ($validator->fails()) {
+                return Redirect::back()
+                    ->withErrors($validator)
+                    ->withInput();
+            }
+
+            try {
+                $item = new CustomerAddress();
+                $item->consignee = $request->input('consignee');
+                $item->mobile = $request->input('mobile');
+                $item->province = $request->input('province');
+                $item->city = $request->input('city');
+                $item->district = $request->input('district');
+                $item->address = $request->input('address');
+                $item->postcode = $request->input('postcode');
+
+                $customer = Customer::find(Auth::user()->id);
+                $customer->addresses()->save($item);
+                
+                return redirect('my/addresses');
+            }
+            catch (\Exception $e) {
+                return Redirect::back()
+                    ->withErrors($e->getMessage())
+                    ->withInput();
+            }
+        }
+        else {
+            return Redirect::back()
+                ->withErrors("Unauthorized")
+                ->withInput();
+        }
+    }
+
+    public function destroyAddress(CustomerAddress $address)
+    {
+        try {
+            $customer = Customer::find(Auth::user()->id);
+            $customer->addresses()->delete($address);
+        }
+        catch (\Exception $e) {
+            echo $e->getMessage();
+            return;
+        }
+
+        return redirect('my/addresses');
     }
 }

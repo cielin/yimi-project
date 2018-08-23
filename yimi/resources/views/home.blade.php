@@ -93,20 +93,18 @@
 
             </article>
             <div class="container overHide mb40">
-                <span>
-        			<img src="{{ URL::asset('assets/img/index_title.jpg') }}">
+        		<img src="{{ URL::asset('assets/img/index_title.jpg') }}">
+                @if (isset($categories) && sizeof($categories) > 0)
                 <ul class="index-title-ul">
-                    <li><a href="#">床品</a>
+                    @foreach ($categories as $category)
+                    <li>
+                        <a href="{{ url('/categories/' . $category->slug) }}">{{ $category->name }}</a>
                     </li>
-                    <li><a href="#">沙发</a>
-                    </li>
-                    <li><a href="#">床具</a>
-                    </li>
-                    <li><a href="#">椅子</a>
-                    </li>
-                    <li class="more"><i style="padding-right: 30px;color: #999;font-weight: 100;font-size: 10px;">|</i><a href="#">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
+                    @endforeach
+                    <li class="more"><i style="padding-right: 30px;color: #999;font-weight: 100;font-size: 10px;">|</i><a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
                     </li>
                 </ul>
+                @endif
             </div>
             <div class="container overHide">
                 <div class="designer buyer">

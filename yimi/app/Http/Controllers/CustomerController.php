@@ -25,11 +25,11 @@ class CustomerController extends Controller
 					return redirect()->to($refer);
 				}
 				else {
-					return redirect()->intended('home');
+					return redirect()->intended('/');
 				}
 			}
 
-			return redirect()->intended('welcome');
+			return redirect()->intended('/');
 			// return Redirect::route('admin.products.index');
 		}
 		catch (Exception $e) {
@@ -41,7 +41,7 @@ class CustomerController extends Controller
     {
     	Auth::logout();
 
-    	return redirect()->intended('home');
+    	return redirect()->intended('/');
     }
 
     public function doRegister(Request $request)

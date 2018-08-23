@@ -44,4 +44,6 @@ Route::middleware(['auth'])->group(function() {
 	Route::get('my/addresses', 'MyController@showAddresses');
 	Route::get('my/password_reset', 'MyController@showPasswordReset');
 	Route::get('my/union', 'MyController@showUnion');
+	Route::post('my/addresses/save', array('as' => 'addresses.save', 'uses' => 'MyController@saveAddress'));
+	Route::delete('my/addresses/delete', array('as' => 'addresses.destroy', 'uses' => 'MyController@destroyAddress'));
 });

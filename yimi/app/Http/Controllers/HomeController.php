@@ -47,7 +47,7 @@ class HomeController extends Controller
 
         $categories = ProductCategory::where('depth', 0)
             ->orderBy('name', 'asc')
-            ->limit(5)
+            ->limit(6)
             ->get();
 
     	return View::make('home')

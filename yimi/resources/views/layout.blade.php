@@ -196,14 +196,14 @@
                             {{ Form::open(array('route' => 'signin.post', 'class' => 'form-signin', 'role' => 'form', 'id' => 'form1')) }}
                                 <input type="hidden" name="refer" value="{{ url()->current() }}">
                                 <label for="">
-                                    <p>用户名 <span class="red1">*</span>
+                                    <p>电子邮箱 <span class="red1">*</span>
                                     </p>
-                                    <input name="username" type="text" required placeholder="请输入用户名">
+                                    <input name="email" type="text" required placeholder="请输入电子邮箱">
                                 </label>
                                 <label for="">
                                     <p>密码 <span class="red1">*</span>
                                     </p>
-                                   <input name="password" type="text" required placeholder="请输入密码">
+                                   <input name="password" type="password" required placeholder="请输入密码">
                                 </label>
                                 <label for="">
                                     {{ Form::submit('登 录', array('class' => 'login-btn')) }}
@@ -214,9 +214,9 @@
                         <div role="tabpanel" class="tab-pane" id="register">
                             <form action="" id="form2">
                                 <label for="">
-                                    <p>用户名 <span class="red1">*</span>
+                                    <p>昵称 <span class="red1">*</span>
                                     </p>
-                                    <input type="text" placeholder="请输入用户名" required>
+                                    <input type="text" name="nickname" placeholder="请输入昵称" required>
                                 </label>
                                 <label for="">
                                     <p>邮箱 <span class="red1">*</span>
@@ -226,12 +226,12 @@
                                 <label for="">
                                     <p>密码 <span class="red1">*</span>
                                     </p>
-                                    <input type="password" required placeholder="请输入密码">
+                                    <input type="password" required name="password" placeholder="请输入密码">
                                 </label>
                                 <label for="">
                                     <p>确认密码 <span class="red1">*</span>
                                     </p>
-                                    <input type="password" required name="password_again" placeholder="请输入确认密码">
+                                    <input type="password" required name="password_confirmation" placeholder="请输入确认密码">
                                 </label>
                                 <label for="">
                                     <div class="login-btn">注 册</div>
@@ -244,6 +244,7 @@
         </div>
     </div>
     <script type="text/javascript" src="{{ URL::asset('plugin/jquery-3.3.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('plugin/jquery-migrate-3.0.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('plugin/bootstrap-3.3.7-dist/js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('plugin/swiper/js/swiper.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('plugin/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
