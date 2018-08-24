@@ -67,7 +67,7 @@
                         <a href="/" title="首页">首页</a>
                     </li>
                     <li>
-                        <a href="#" title="空间">空间</a>
+                        <a href="/spaces" title="空间">空间</a>
                     </li>
                     <li @if (isset($active) && $active == 'categories') class="current" @endif >
                         <a href="/categories" title="商品">商品</a>
@@ -155,7 +155,7 @@
                           <dt>帮助中心</dt>
                           <dd>
                            <span>Hotline：400 - 671 - 1878</span>
-                           <span>Open - Close： 09:00 - 21:00</span>
+                           <span>Open/Close： 09:00/21:00</span>
                            <span>Mail： <a href="mailto:yimijia@163.com">yimijia@163.com</a></span>
                           </dd>
                           

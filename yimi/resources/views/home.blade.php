@@ -119,13 +119,14 @@
                                     @else
                                     <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $featured_product->id }}"></span>
                                     @endif
-                                    <span class="icon iconfont icon-yanjing1"></span>
+                                    <a href="/products/{{ $featured_product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
                                 </p>
                             </dt>
                             <dd>
                             	<img src="{{ asset('public/images/products/' . $featured_product->featured_image) }}">
                             </dd>
-                            <div class="buyer-text"><span>{{ $featured_product->name }}</span>
+                            <div class="buyer-text">
+                                <a href="/products/{{ $featured_product->slug }}"><span>{{ $featured_product->name }}</span></a>
                             </div>
                         </dl>
                     
@@ -141,13 +142,13 @@
                 <span>
         			<img src="{{ URL::asset('assets/img/foot/designers.png') }}">
                 </span>
-                <span class="more"><a href="#">MORE <i class="icon iconfont icon-shuangjiantou"></i></a></span>
+                <span class="more"><a href="{{ url('designers') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a></span>
 
             </div>
             <div class="container overHide" style="padding-bottom:14px;">
                 <div class="designer">
                     @foreach ($designers as $designer)
-                    <a href="{{ URL::to('/designers/' . $designer->slug) }}">
+                    <a href="{{ url('designers/' . $designer->slug) }}">
                         <dl style="margin-left:.27rem">
                             <dt>
                                 <p>{{ $designer->name }}</p>
@@ -202,7 +203,7 @@
                             </div>
                         </div>
                         @endforeach
-                @endif
+                        @endif
                      </div>
                   </div>
                 </div>
