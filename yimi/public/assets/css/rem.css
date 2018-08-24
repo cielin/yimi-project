@@ -26,7 +26,7 @@ html{
 .litteBanner li{
 	margin-bottom: 0.257511rem;
 }
-.designer dl dt{
+.designer-new-hover dl dt{
 	padding-left:30px;
 	padding-right:30px;
 }
@@ -121,9 +121,6 @@ html{
 	width: 1.666667rem;
 	height: 1.666667rem;
 	border-radius: 0.837607rem;
-}
-.designer-text p{
-	max-height:1rem;
 }
 .designer-bg,.designer-img{
   height: 2.307692rem;	
