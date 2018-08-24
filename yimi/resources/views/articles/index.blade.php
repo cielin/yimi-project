@@ -56,5 +56,6 @@
     @else
     <div class="no-data">暂无数据</div>
     @endif
+    </div><!--新增的结束符-->
 </div>   
 @stop
