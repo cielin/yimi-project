@@ -326,9 +326,10 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
             $(this).removeClass('glyphicon-heart-empty').addClass('glyphicon-heart')
           }
         },
-        error: function(){
-            $(this).attr('data-toggle','modal')
-            $(this).attr('data-target','#myModal')
+        error: function(error){
+            $(this).attr('data-toggle','modal');
+            $(this).attr('data-target','#myModal');
+            console.log("error",error);
         },
         async:false
       })
