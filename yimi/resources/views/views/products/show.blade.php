@@ -43,7 +43,7 @@
                 </div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next arrow-right"></div>
-                <div class="swiper-button-prev arrow-left"></div>
+                <div class="swiper-button-prev arrow-left" style="margin-left: 23px;"></div>
             </div>
             <div class="swiper-container gallery-thumbs">
                 <div class="swiper-wrapper">
