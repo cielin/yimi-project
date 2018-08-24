@@ -39,12 +39,13 @@
                     <div class="form-group">
                         <label for="userImg" style="display: block;">当前头像<i>*</i>
                         </label>
-                        <div class="userImgWrap" id="fileid">
-                            <!--图片上传按钮-->
-                            <img src="{{ URL::asset('assets/img/userImg.jpg') }}" id="imgid">
-                            <!--预览图片-->
+                        <div class="clearfix" style="margin-top: 20px;">
+                            <div class="infoImg">
+                                <img src="../assets/img/userNew.png" id="imgid"><!--预览图片-->
+                            </div>
+                            <div class="userImgWrap"  id="fileid"><!--图片上传按钮-->
+                            </div>
                         </div>
-                        <span class="glyphicon glyphicon-picture"></span>
                     </div>
 
                     <div class="form-group">
