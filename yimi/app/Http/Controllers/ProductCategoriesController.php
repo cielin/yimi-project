@@ -14,7 +14,7 @@ class ProductCategoriesController extends Controller
     	$categories = ProductCategory::where('depth', 0)
     		->get();
     	$products = Product::orderBy('updated_at', 'desc')
-    		->paginate(20);
+    		->paginate(15);
 
     	return View::make('categories.index')
             ->with('active', 'categories')
@@ -60,7 +60,7 @@ class ProductCategoriesController extends Controller
 
     		$products = Product::whereIn('category_id', $ids)
     			->orderBy('updated_at', 'desc')
-    			->paginate(20);
+    			->paginate(15);
 
     		return View::make('categories.index')
                 ->with('active', 'categories')
@@ -97,7 +97,7 @@ class ProductCategoriesController extends Controller
         else {
             $products = Product::where('name', 'LIKE', '%' . $query . '%')
                 ->orderBy('updated_at', 'desc')
-                ->paginate(20);
+                ->paginate(15);
 
             foreach ($products as $product) {
                 $selected_category = $product->category;

@@ -26,12 +26,14 @@ Route::post('register', array('as' => 'register.post', 'uses' => 'CustomerContro
 Route::get('brands/f/{first}', 'BrandsController@getBrandsByFirst');
 Route::get('search', 'ProductCategoriesController@search');
 Route::post('search', array('as' => 'categories.search', 'uses' => 'ProductCategoriesController@search'));
+Route::get('spaces/{space}', 'SpacesController@show');
 
 Route::resource('products', 'ProductsController');
 Route::resource('categories', 'ProductCategoriesController');
 Route::resource('brands', 'BrandsController');
 Route::resource('designers', 'DesignersController');
 Route::resource('articles', 'ArticlesController');
+Route::resource('spaces', 'SpacesController');
 
 Route::get('login', 'HomeController@index')->name('login');
 

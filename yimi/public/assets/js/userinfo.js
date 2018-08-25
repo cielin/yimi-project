@@ -36,7 +36,7 @@ function uploadInit(domName,domPic){
 		fileObjName:'Filedata',
 		fileSizeLimit:99999999999,
 		showUploadedPercent:false,
-		buttonText:'',
+		buttonText:'修改头像',
 		uploader:uploadurl,
 		onUploadSuccess:function(file,data){
 			var Data=JSON.parse(data);

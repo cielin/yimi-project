@@ -132,7 +132,7 @@
             <div class="container footer-middle">
                 <div class="row">
                     <div class="f-left col-md-5 col-sm-4">
-                        <img src="{{ URL::asset('assets/img/foot/f-logo.png') }}" />
+                        <img src="{{ URL::asset('assets/img/foot/f-logo.png') }}" style="width: 178px;"/>
                         <h4>微信公众号</h4>
                         <img src="{{ URL::asset('assets/img/foot/f-ma.jpg') }}" />
                     </div>
@@ -326,9 +326,10 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
             $(this).removeClass('glyphicon-heart-empty').addClass('glyphicon-heart')
           }
         },
-        error: function(){
-            $(this).attr('data-toggle','modal')
-            $(this).attr('data-target','#myModal')
+        error: function(error){
+            $(this).attr('data-toggle','modal');
+            $(this).attr('data-target','#myModal');
+            console.log("error",error);
         },
         async:false
       })
