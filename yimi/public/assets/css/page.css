@@ -252,8 +252,15 @@ span.more{
 	left:30px;
 	color:#c8a165;
 }
-.all a{
+
+.good-list-top-bg div.all a{
 	color:#c8a165;
+}
+.good-list-top-bg .uls{
+	margin-left:50px;
+	line-height: 36px;
+	padding-top:18px;
+	padding-bottom:18px;
 }
 .good-list-top{
 	margin-top:-10px;

@@ -193,7 +193,7 @@
             @if (isset($selected_category->parent->children) && sizeof($selected_category->parent->children) > 0)
             <div class="good-list-top-bg">
                  <div class="all"><a class="active" href="{{ url('categories/' . $selected_category->slug) }}">全部</a></div>
-                <ul class="good-list-top">
+                <ul class="good-list-top ml50">
                     <li class="all"><a href="{{ url('categories/' . $selected_category->parent->slug) }}">全部</a></li>
                     @foreach ($selected_category->parent->children as $category)
                     <li><a href="{{ url('categories/' . $category->slug) }}" @if ($category->id === $selected_category->id) class="active" @endif>{{ $category->name }}</a></li>

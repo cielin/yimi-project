@@ -44,7 +44,7 @@
             @if (isset($collection) && sizeof($collection) > 0)
             <div class="designer buyer goods clearfix">
                 @foreach ($collection as $collect)
-                <a href="/products/{{ $collect->product->slug }}">
+               
                     <dl>
                         <dt>
                             <p class="ico-wrap">
@@ -53,7 +53,7 @@
                                 @else
                                 <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $collect->product_id }}"></span>
                                 @endif
-                                <span class="icon iconfont icon-yanjing1"></span>
+                                 <a href="/products/{{ $collect->product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
                             </p>
                         </dt>
                         <dd>
@@ -62,7 +62,7 @@
                         <div class="buyer-text"><span>{{ $collect->product_title }}</span>
                         </div>
                     </dl>
-                </a>
+                
                 @endforeach
             </div>
             <nav class="clearfix" aria-label="page navigation">
