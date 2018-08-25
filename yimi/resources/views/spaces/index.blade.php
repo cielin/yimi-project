@@ -25,7 +25,7 @@
                 	<img src="{{ URL::asset('assets/img/title1.jpg') }}" />
                 </div>
                 <div class="s-content">
-                    <ul class="side-sub collapse in">
+                    <ul class="side-sub collapse in nav-new">
                         <li @if (!isset($sel_space)) class="active" @endif>
                             <span class="icon iconfont  icon-arrow-right"></span>
                             <a href="/spaces">全部</a>
@@ -97,7 +97,7 @@
             @if (isset($products) && sizeof($products) > 0)
             <div class="designer buyer goods clearfix">
                 @foreach ($products as $product)
-                <a href="/products/{{ $product->slug }}">
+                
                     <dl>
                         <dt>
                             <p class="ico-wrap">
@@ -115,7 +115,7 @@
                         <div class="buyer-text"><span>{{ $product->name }}</span>
                         </div>
                     </dl>
-                </a>
+               
                 @endforeach
             </div>
 

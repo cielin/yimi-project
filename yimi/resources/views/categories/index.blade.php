@@ -32,7 +32,7 @@
     		</a>
             @if (isset($selected_parent_category) && null !== $selected_parent_category && $category->slug == $selected_parent_category->slug)
     		@if (isset($category->children) && sizeof($category->children) > 0)
-    		<ul class="side-sub collapse in" id="{{ $category->slug }}">
+    		<ul class="side-sub collapse in nav-new" id="{{ $category->slug }}">
     			@foreach ($category->children as $s_category)
     			<li @if ((null !== $selected_category) && ($s_category->slug == $selected_category->slug)) class="active" @endif>
                     <span class="icon iconfont  icon-arrow-right"></span>
@@ -168,23 +168,29 @@
         <div class="col-sm-9 col-md-9 main">
             @if (isset($selected_category) && $selected_category->depth === 1)
             @if (isset($selected_category->children) && sizeof($selected_category->children) > 0)
-            <ul class="good-list-top">
-                <li class="all"><a class="active" href="{{ url('categories/' . $selected_category->slug) }}">全部</a></li>
-                @foreach ($selected_category->children as $category)
-                <li><a href="{{ url('categories/' . $category->slug) }}">{{ $category->name }}</a></li>
-                @endforeach
-            </ul>
+            <div class="good-list-top-bg">
+                 <div class="all"><a class="active" href="{{ url('categories/' . $selected_category->slug) }}">全部</a></div>
+                <ul class="good-list-top uls">
+                    
+                    @foreach ($selected_category->children as $category)
+                    <li><a href="{{ url('categories/' . $category->slug) }}">{{ $category->name }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
             @endif
             @endif
 
             @if (isset($selected_category) && $selected_category->depth === 2)
             @if (isset($selected_category->parent->children) && sizeof($selected_category->parent->children) > 0)
-            <ul class="good-list-top">
-                <li class="all"><a href="{{ url('categories/' . $selected_category->parent->slug) }}">全部</a></li>
-                @foreach ($selected_category->parent->children as $category)
-                <li><a href="{{ url('categories/' . $category->slug) }}" @if ($category->id === $selected_category->id) class="active" @endif>{{ $category->name }}</a></li>
-                @endforeach
-            </ul>
+            <div class="good-list-top-bg">
+                 <div class="all"><a class="active" href="{{ url('categories/' . $selected_category->slug) }}">全部</a></div>
+                <ul class="good-list-top uls">
+                    
+                    @foreach ($selected_category->parent->children as $category)
+                    <li><a href="{{ url('categories/' . $category->slug) }}" @if ($category->id === $selected_category->id) class="active" @endif>{{ $category->name }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
             @endif
             @endif
             <div class="top-option clearfix">
@@ -241,7 +247,7 @@
             @if (isset($products) && sizeof($products) > 0)
             <div class="designer buyer goods clearfix">
                 @foreach ($products as $product)
-                <a href="/products/{{ $product->slug }}">
+               
                     <dl>
                         <dt>
                             <p class="ico-wrap">
@@ -259,7 +265,7 @@
                         <div class="buyer-text"><span>{{ $product->name }}</span>
                         </div>
                     </dl>
-                </a>
+                
                 @endforeach
             </div>
 

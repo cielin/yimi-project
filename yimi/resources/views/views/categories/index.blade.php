@@ -32,7 +32,7 @@
     		</a>
             @if (isset($selected_parent_category) && null !== $selected_parent_category && $category->slug == $selected_parent_category->slug)
     		@if (isset($category->children) && sizeof($category->children) > 0)
-    		<ul class="side-sub collapse in" id="{{ $category->slug }}">
+    		<ul class="side-sub collapse in nav-new" id="{{ $category->slug }}">
     			@foreach ($category->children as $s_category)
     			<li @if ((null !== $selected_category) && ($s_category->slug == $selected_category->slug)) class="active" @endif>
                     <span class="icon iconfont  icon-arrow-right"></span>
@@ -193,8 +193,8 @@
             @if (isset($selected_category->parent->children) && sizeof($selected_category->parent->children) > 0)
             <div class="good-list-top-bg">
                  <div class="all"><a class="active" href="{{ url('categories/' . $selected_category->slug) }}">全部</a></div>
-                <ul class="good-list-top ml50">
-                    <li class="all"><a href="{{ url('categories/' . $selected_category->parent->slug) }}">全部</a></li>
+                <ul class="good-list-top uls">
+                    
                     @foreach ($selected_category->parent->children as $category)
                     <li><a href="{{ url('categories/' . $category->slug) }}" @if ($category->id === $selected_category->id) class="active" @endif>{{ $category->name }}</a></li>
                     @endforeach
@@ -256,7 +256,7 @@
             @if (isset($products) && sizeof($products) > 0)
             <div class="designer buyer goods clearfix">
                 @foreach ($products as $product)
-                <a href="/products/{{ $product->slug }}">
+                
                     <dl>
                         <dt>
                             <p class="ico-wrap">
@@ -265,7 +265,7 @@
                                 @else
                                 <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}"></span>
                                 @endif
-                                <span class="icon iconfont icon-yanjing1"></span>
+                               <a href="/products/{{ $product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
                             </p>
                         </dt>
                         <dd>
@@ -274,7 +274,7 @@
                         <div class="buyer-text"><span>{{ $product->name }}</span>
                         </div>
                     </dl>
-                </a>
+                
                 @endforeach
             </div>
 

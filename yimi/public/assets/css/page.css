@@ -616,7 +616,7 @@ span.more{
 	height: 40px;
 	border:none;
 	margin-right: 28px;
-	margin-top:17px;
+	/*margin-top:17px;*/
 	background: url("../img/userSearch.png") 276px center no-repeat #fff;
 }
 .searchText a{
@@ -1106,5 +1106,5 @@ span.more{
 	min-height:580px;
 }
 .datetimepicker{
-	top:675px!important;
+	top:617px!important;
 }
