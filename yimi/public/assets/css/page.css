@@ -208,7 +208,7 @@ span.more{
 	width: 100%;
 }
 .good-list-top li{
-	width: 20%;
+	width: 15%;
 	display: inline-block;
 }
 .good-list-top li a{
@@ -229,13 +229,31 @@ span.more{
 }
 .searchText,.good-list-top{
 	width: 100%;
-    height: 70px;
+    min-height: 70px;
+    line-height: 44px;
     background: #f8f8f8;
     margin-top: -24px;
     color: #b6b6b6;
-    line-height: 70px;
     padding-left: 30px;
     margin-bottom: 30px;
+    padding-top:16px;
+    padding-bottom:18px;
+}
+.good-list-top-bg{
+	background: #f8f8f8;
+	position: relative;
+}
+.good-list-top-bg .good-list-top{
+	margin-left:48px;
+}
+.good-list-top-bg div.all{
+	position: absolute;
+	top:23px;
+	left:30px;
+	color:#c8a165;
+}
+.all a{
+	color:#c8a165;
 }
 .good-list-top{
 	margin-top:-10px;
@@ -478,12 +496,13 @@ span.more{
 }
 .user-center-left a{
 	display: block;
-	line-height: 40px;
+	height: 38px;
+	line-height: 38px;
 	font-weight: 400;
 }
 .user-center-left a.active{
 	position: relative;
-    top: 1px;
+    top: 8px;
     display: inline-block;
     font-family: 'Glyphicons Halflings';
     font-style: normal;
@@ -1066,5 +1085,5 @@ span.more{
 	min-height:580px;
 }
 .datetimepicker{
-	top:798px!important;
+	top:675px!important;
 }

@@ -178,23 +178,28 @@
         <div class="col-sm-9 col-md-9 main">
             @if (isset($selected_category) && $selected_category->depth === 1)
             @if (isset($selected_category->children) && sizeof($selected_category->children) > 0)
-            <ul class="good-list-top">
-                <li class="all"><a class="active" href="{{ url('categories/' . $selected_category->slug) }}">全部</a></li>
-                @foreach ($selected_category->children as $category)
-                <li><a href="{{ url('categories/' . $category->slug) }}">{{ $category->name }}</a></li>
-                @endforeach
-            </ul>
+            <div class="good-list-top-bg">
+                <div class="all"><a class="active" href="{{ url('categories/' . $selected_category->slug) }}">全部</a></div>
+                <ul class="good-list-top">
+                    @foreach ($selected_category->children as $category)
+                    <li><a href="{{ url('categories/' . $category->slug) }}">{{ $category->name }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
             @endif
             @endif
 
             @if (isset($selected_category) && $selected_category->depth === 2)
             @if (isset($selected_category->parent->children) && sizeof($selected_category->parent->children) > 0)
-            <ul class="good-list-top">
-                <li class="all"><a href="{{ url('categories/' . $selected_category->parent->slug) }}">全部</a></li>
-                @foreach ($selected_category->parent->children as $category)
-                <li><a href="{{ url('categories/' . $category->slug) }}" @if ($category->id === $selected_category->id) class="active" @endif>{{ $category->name }}</a></li>
-                @endforeach
-            </ul>
+            <div class="good-list-top-bg">
+                 <div class="all"><a class="active" href="{{ url('categories/' . $selected_category->slug) }}">全部</a></div>
+                <ul class="good-list-top">
+                    <li class="all"><a href="{{ url('categories/' . $selected_category->parent->slug) }}">全部</a></li>
+                    @foreach ($selected_category->parent->children as $category)
+                    <li><a href="{{ url('categories/' . $category->slug) }}" @if ($category->id === $selected_category->id) class="active" @endif>{{ $category->name }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
             @endif
             @endif
             <div class="top-option clearfix">

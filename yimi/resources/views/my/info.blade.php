@@ -76,7 +76,7 @@
                         <label style="display: block;">生日<i>*</i>
                         </label>
                         <input type="text" class="form-control myDay" name="birthday" placeholder="" required value="{{ $user->birthday }}">
-                        <span class="glyphicon glyphicon-calendar"></span>
+                        
                     </div>
                     <button type="submit" class="address-btn">保存</button>
                 </form>

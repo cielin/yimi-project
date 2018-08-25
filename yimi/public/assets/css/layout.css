@@ -349,7 +349,7 @@ ul.nav{
 }
 .side-sub li.active{
 	position: relative;
-    top: 1px;
+    top: 6px;
     display: inline-block;
     font-family: 'Glyphicons Halflings';
     font-style: normal;
@@ -398,6 +398,10 @@ ul.nav{
     margin-top: 5px;
     margin-bottom: 5px;
     overflow-x:hidden;
+}
+.nav-new li{
+	height:32px;
+	line-height: 32px;
 }
 /*.sidebar-content label{
 	display: block;
