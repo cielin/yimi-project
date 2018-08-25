@@ -85,9 +85,11 @@
                         <a href="/articles" title="最近文章">最近文章</a>
                     </li>
                     <li style="position: relative; width: 50px;">
+                        {{ Form::open(array('route' => 'categories.search', 'role' => 'form')) }}
                         <div class="top-search-group">
-                            <input class="search-input" />
+                            <input class="search-input" name="query" />
                         </div>
+                        {{ Form::close() }}
                     </li>
                 </ul>
             </div>

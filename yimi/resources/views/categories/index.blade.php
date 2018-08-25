@@ -21,148 +21,89 @@
     <div class="row">
         <div class="col-sm-3 col-md-3">
             <div class=" sidebar">
-            <div class="sidebar-title">
-            	<img src="{{ URL::asset('assets/img/title1.jpg') }}" />
-            </div>
-            <div class="s-content">
-            @if (isset($categories))
-    		@foreach ($categories as $category)
-    		<a class="side-one" href="/categories/{{ $category->slug }}">
-    	  		{{ $category->name }}
-    		</a>
-            @if (isset($selected_parent_category) && null !== $selected_parent_category && $category->slug == $selected_parent_category->slug)
-    		@if (isset($category->children) && sizeof($category->children) > 0)
-    		<ul class="side-sub collapse in nav-new" id="{{ $category->slug }}">
-    			@foreach ($category->children as $s_category)
-    			<li @if ((null !== $selected_category) && ($s_category->slug == $selected_category->slug)) class="active" @endif>
-                    <span class="icon iconfont  icon-arrow-right"></span>
-                    <a href="/categories/{{ $s_category->slug }}">{{ $s_category->name }}</a>
-                </li>
-    			@endforeach
-    		</ul>
-    		@endif
-            @endif
-    		@endforeach
-            @endif
-            </div>
-            <div class="sidebar-title mt11">
-                <img src="{{ URL::asset('assets/img/title2.jpg') }}" />
-            </div>
-            <div class="sidebar-box">
-                <div class="sidebar-subtitle">选择材质</div>
-                
-                <div class="sidebar-content">
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                       <input value="2" class="magic-checkbox allAndNotAll" type="checkbox" name="layout" id="cx1">
-                      <label for="cx1">
-                     <i style="position: absolute;left: 20px;font-size: 14px;">全部
-                     </i>
-                     </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                        <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx2">
-                        <label for="cx2">
-                            <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
-    	           	</i>
-                        </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                        <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx3">
-                        <label for="cx3">
-                            <i>埃及棉
-    	           	</i>
-                        </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-
+                <div class="sidebar-title">
+                	<img src="{{ URL::asset('assets/img/title1.jpg') }}" />
                 </div>
-            </div>
-            <div class="sidebar-title mt11">
-                <img src="{{ URL::asset('assets/img/title3.jpg') }}" />
-            </div>
-            <div class="sidebar-box">
-                <div class="sidebar-subtitle">选择产地</div>
-                <div class="sidebar-content ">
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                       <input value="2" class="magic-checkbox allAndNotAll" type="checkbox" name="layout" id="cx4">
-                      <label for="cx4">
-                     <i style="position: absolute;left: 20px;font-size: 14px;">全部
-                     </i>
-                     </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                        <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx5">
-                        <label for="cx5">
-                            <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
-    	           	</i>
-                        </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                        <input value="2" class="magic-checkbox" type="checkbox" name="layout" id="cx6">
-                        <label for="cx6">
-                            <i>埃及棉
-    	           	</i>
-                        </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                        <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx7">
-                        <label for="cx7">
-                            <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
-    	           	</i>
-                        </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                        <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx8">
-                        <label for="cx8">
-                            <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
-    	           	</i>
-                        </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                        <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx9">
-                        <label for="cx9">
-                            <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
-    	           	</i>
-                        </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                        <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx10">
-                        <label for="cx10">
-                            <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
-    	           	</i>
-                        </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-                    <!--带样式的checkbox需要赋值不同的id start-->
-                    <div class="checkboxWrap">
-                        <input value="亚麻" class="magic-checkbox" type="checkbox" name="layout" id="cx11">
-                        <label for="cx11">
-                            <i style="position: absolute;left: 20px;font-size: 14px;">亚麻
-    	           	</i>
-                        </label>
-                    </div>
-                    <!--带样式的checkbox需要赋值不同的id end -->
-
+                <div class="s-content">
+                @if (isset($categories))
+        		@foreach ($categories as $category)
+        		<a class="side-one" href="/categories/{{ $category->slug }}">
+        	  		{{ $category->name }}
+        		</a>
+                @if (isset($selected_parent_category) && null !== $selected_parent_category && $category->slug == $selected_parent_category->slug)
+        		@if (isset($category->children) && sizeof($category->children) > 0)
+        		<ul class="side-sub collapse in nav-new" id="{{ $category->slug }}">
+        			@foreach ($category->children as $s_category)
+        			<li @if ((null !== $selected_category) && ($s_category->slug == $selected_category->slug)) class="active" @endif>
+                        <span class="icon iconfont  icon-arrow-right"></span>
+                        <a href="/categories/{{ $s_category->slug }}">{{ $s_category->name }}</a>
+                    </li>
+        			@endforeach
+        		</ul>
+        		@endif
+                @endif
+        		@endforeach
+                @endif
                 </div>
-            </div>
+
+                @if (isset($materials) && sizeof($materials) > 0)
+                <?php $count = 1; ?>
+                <div class="sidebar-title mt11">
+                    <img src="{{ URL::asset('assets/img/title2.jpg') }}" />
+                </div>
+                <div class="sidebar-box">
+                    <div class="sidebar-subtitle">选择材质</div>
+                    
+                    <div class="sidebar-content">
+                        <!--带样式的checkbox需要赋值不同的id start-->
+                        <div class="checkboxWrap">
+                            <input value="2" class="magic-checkbox allAndNotAll" type="checkbox" name="layout" id="m0">
+                            <label for="m0">
+                                <i style="position: absolute;left: 20px;font-size: 14px;">全部</i>
+                            </label>
+                        </div>
+                        <!--带样式的checkbox需要赋值不同的id end -->
+                        @foreach ($materials as $material)
+                        <div class="checkboxWrap">
+                            <input value="{{ $material }}" class="magic-checkbox" type="checkbox" name="layout" id="m{{ $count }}">
+                            <label for="m{{ $count }}">
+                                <a href="@if (url()->full() === url()->current()) {{ url()->full() . '?m[]=' . $material }} @else {{ url()->full() . '&m[]=' . $material }} @endif"><i>{{ $material }}</i></a>
+                            </label>
+                        </div>
+                        <?php $count ++ ?>
+                        @endforeach
+                    </div>
+                </div>
+                @endif
+
+                @if (isset($locations) && sizeof($locations) > 0)
+                <?php $count = 1; ?>
+                <div class="sidebar-title mt11">
+                    <img src="{{ URL::asset('assets/img/title3.jpg') }}" />
+                </div>
+                <div class="sidebar-box">
+                    <div class="sidebar-subtitle">选择产地</div>
+                    <div class="sidebar-content ">
+                        <!--带样式的checkbox需要赋值不同的id start-->
+                        <div class="checkboxWrap">
+                            <input value="2" class="magic-checkbox allAndNotAll" type="checkbox" name="layout" id="l0">
+                            <label for="l0">
+                                <i style="position: absolute;left: 20px;font-size: 14px;">全部</i>
+                            </label>
+                        </div>
+                        <!--带样式的checkbox需要赋值不同的id end -->
+                        @foreach ($locations as $location)
+                        <div class="checkboxWrap">
+                            <input value="{{ $location }}" class="magic-checkbox" type="checkbox" name="layout" id="l{{ $count }}">
+                            <label for="l{{ $count }}">
+                                <i style="position: absolute;left: 20px;font-size: 14px;">{{ $location }}</i>
+                            </label>
+                        </div>
+                        <?php $count ++ ?>
+                        @endforeach
+                    </div>
+                </div>
+                @endif
             </div>
         </div>
         <div class="col-sm-9 col-md-9 main">

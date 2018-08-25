@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
+use App\ProductAttrKey;
+use App\ProductAttrValue;
+use App\ProductAttribute;
 use App\Product;
 use App\ProductCategory;
-use Illuminate\Support\Facades\View;
 
 class ProductCategoriesController extends Controller
 {
@@ -15,10 +18,26 @@ class ProductCategoriesController extends Controller
     		->get();
     	$products = Product::orderBy('updated_at', 'desc')
     		->paginate(15);
+        $attr_material_key = ProductAttrKey::where('name', '材质')
+            ->where('status', 1)
+            ->first();
+        $attr_material_values = array();
+        foreach ($attr_material_key->attr_values as $attr_value) {
+            array_push($attr_material_values, $attr_value->value);
+        }
+        $attr_location_key = ProductAttrKey::where('name', '产地')
+            ->where('status', 1)
+            ->first();
+        $attr_location_values = array();
+        foreach ($attr_location_key->attr_values as $attr_value) {
+            array_push($attr_location_values, $attr_value->value);
+        }
 
     	return View::make('categories.index')
             ->with('active', 'categories')
     		->with('categories', $categories)
+            ->with('materials', array_unique($attr_material_values))
+            ->with('locations', array_unique($attr_location_values))
     		->with('products', $products);
     }
 
