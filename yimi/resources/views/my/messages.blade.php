@@ -18,18 +18,21 @@
         </div>
         <!--面包屑-->
         <div class="row">
-            <div class="col-sm-4 col-md-3 sidebar">
-                <div class="sidebar-title"><img src="../assets/img/userCenterTitle.jpg" />
-                </div>
-                <div class="user-center-left">
-                    <a href="{{ url('my/info') }}">个人资料</a>
-                    <a href="{{ url('my/orders') }}">我的订单</a>
-                    <a href="{{ url('my/collections') }}">我的收藏</a>
-                    <a href="{{ url('my/comments') }}">我的评论</a>
-                    <a href="{{ url('my/messages') }}" class="active">我的消息</a>
-                    <a href="{{ url('my/union') }}">账号绑定</a>
-                    <a href="{{ url('my/password_reset') }}">修改密码</a>
-                    <a href="{{ url('my/addresses') }}">收货地址</a>
+            <div class="col-sm-4 col-md-3">
+                <div class="sidebar">
+                    <div class="sidebar-title">
+                        <img src="{{ URL::asset('assets/img/userCenterTitle.jpg') }}" />
+                    </div>
+                    <div class="user-center-left">
+                        <a href="{{ url('my/info') }}">个人资料</a>
+                        <a href="{{ url('my/orders') }}">我的订单</a>
+                        <a href="{{ url('my/collections') }}">我的收藏</a>
+                        <a href="{{ url('my/comments') }}">我的评论</a>
+                        <a href="{{ url('my/messages') }}" class="active">我的消息</a>
+                        <a href="{{ url('my/union') }}">账号绑定</a>
+                        <a href="{{ url('my/password_reset') }}">修改密码</a>
+                        <a href="{{ url('my/addresses') }}">收货地址</a>
+                    </div>
                 </div>
 
             </div>

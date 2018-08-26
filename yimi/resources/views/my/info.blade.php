@@ -18,18 +18,21 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-4 col-md-3 sidebar">
-            <div class="sidebar-title"><img src="{{ URL::asset('assets/img/userCenterTitle.jpg') }}" />
-            </div>
-            <div class="user-center-left">
-                <a href="{{ url('my/info') }}" class="active">个人资料</a>
-                <a href="{{ url('my/orders') }}">我的订单</a>
-                <a href="{{ url('my/collections') }}">我的收藏</a>
-                <a href="{{ url('my/comments') }}">我的评论</a>
-                <a href="{{ url('my/messages') }}">我的消息</a>
-                <a href="{{ url('my/union') }}">账号绑定</a>
-                <a href="{{ url('my/password_reset') }}">修改密码</a>
-                <a href="{{ url('my/addresses') }}">收货地址</a>
+        <div class="col-sm-4 col-md-3">
+            <div class="sidebar">
+                <div class="sidebar-title">
+                    <img src="{{ URL::asset('assets/img/userCenterTitle.jpg') }}" />
+                </div>
+                <div class="user-center-left">
+                    <a href="{{ url('my/info') }}" class="active">个人资料</a>
+                    <a href="{{ url('my/orders') }}">我的订单</a>
+                    <a href="{{ url('my/collections') }}">我的收藏</a>
+                    <a href="{{ url('my/comments') }}">我的评论</a>
+                    <a href="{{ url('my/messages') }}">我的消息</a>
+                    <a href="{{ url('my/union') }}">账号绑定</a>
+                    <a href="{{ url('my/password_reset') }}">修改密码</a>
+                    <a href="{{ url('my/addresses') }}">收货地址</a>
+                </div>
             </div>
 
         </div>
@@ -39,12 +42,13 @@
                     <div class="form-group">
                         <label for="userImg" style="display: block;">当前头像<i>*</i>
                         </label>
-                        <div class="userImgWrap" id="fileid">
-                            <!--图片上传按钮-->
-                            <img src="{{ URL::asset('assets/img/userImg.jpg') }}" id="imgid">
-                            <!--预览图片-->
+                        <div class="clearfix" style="margin-top: 20px;">
+                            <div class="infoImg">
+                                <img src="{{ URL::asset('assets/img/userNew.png') }}" id="imgid"><!--预览图片-->
+                            </div>
+                            <div class="userImgWrap"  id="fileid"><!--图片上传按钮-->
+                            </div>
                         </div>
-                        <span class="glyphicon glyphicon-picture"></span>
                     </div>
 
                     <div class="form-group">
@@ -87,7 +91,5 @@
 @stop
 
 @section('js')
-
 <script type="text/javascript" src="{{ URL::asset('assets/js/userinfo.js') }}"></script>
-
 @stop

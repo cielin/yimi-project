@@ -146,7 +146,7 @@
 
             </div>
             <div class="container overHide" style="padding-bottom:14px;">
-                <div class="designer">
+                <div class="designer designer-new-hover">
                     @foreach ($designers as $designer)
                     <a href="{{ url('designers/' . $designer->slug) }}">
                         <dl style="margin-left:.27rem">
