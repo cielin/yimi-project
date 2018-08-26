@@ -247,7 +247,7 @@
         </div>
     </div>
 
-    <input type="hidden" id="userStatus" value="1"><!--判断是否登录的隐藏域,value的值来判断是否登录，标识1为已经登录，标识0为未登录-->
+    <input type="hidden" id="userStatus" value="<?php if (Auth::check()) { echo '1'; } else { echo '0'; } ?>"><!--判断是否登录的隐藏域,value的值来判断是否登录，标识1为已经登录，标识0为未登录-->
     
     <script type="text/javascript" src="{{ URL::asset('plugin/jquery-3.3.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('plugin/jquery-migrate-3.0.1.min.js') }}"></script>

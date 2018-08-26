@@ -151,7 +151,7 @@
                     <a href="{{ url('designers/' . $designer->slug) }}">
                         <dl style="margin-left:.27rem">
                             <dt>
-                                <p>{{ $designer->name }}</p>
+                                <p>{{ $designer->name }}</p><br/>
                                 <p>{{ substr(strip_tags($designer->description), 0, 60) }} ...</p>
                             </dt>
                             <dd>
