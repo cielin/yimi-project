@@ -222,9 +222,10 @@ $(function(){
        * 模拟下拉列表select 开始
        */
       function selectModel(){
+          var $boxi = $('div.model-select-box i');
           var $box = $('div.model-select-box');
           var $option = $('ul.model-select-option', $box);
-          var $txt = $('div.model-select-text', $box);
+          var $txt = $('div.model-select-text', $box, $boxi);
           var speed = 10;
           /*
            * 单击某个下拉列表时，显示当前下拉列表的下拉列表框

@@ -266,6 +266,12 @@ span.more{
 	margin-top:-10px;
 	padding-left:15px;
 }
+.col-sm-8.col-md-9.main .searchText{
+	margin-bottom:6px;
+	padding-top:14px;
+	padding-left:15px;
+	min-height:74px;
+}
 .searchText .sText{
 	color: #545454;
 }
@@ -866,7 +872,11 @@ span.more{
 	/*float:left;
 	width:50%;*/
 }
+
 .order-menu a{display: inline-block; margin:0 5% 0 0px;}
+.searchText .order-menu a{
+	margin:0 6% 0 0px;
+}
 .order-menu a.active{
 	color:#c2a77c;
 	text-decoration: underline;
@@ -1084,6 +1094,9 @@ span.more{
 	padding-left: 0.25641rem;
 	position: relative;
 }
+.order-item .table tr td.order-option .order-status{
+	margin-top:-4px;
+}
 .order-item .table tr td.order-option a{
 	display: block;
 	margin-top: 0.068376rem;
@@ -1106,5 +1119,5 @@ span.more{
 	min-height:580px;
 }
 .datetimepicker{
-	top:617px!important;
+	top:678px!important;
 }

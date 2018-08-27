@@ -169,6 +169,17 @@ html{
     -moz-line-clamp: 3;
     -moz-box-orient: vertical;
 }
+.article-bg .designer-text.article-text h5{
+	 overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -moz-box;
+    -moz-line-clamp: 1;
+    -moz-box-orient: vertical;
+    width:103%;
+}
 /*商品详情*/
 .tab-pane img{
 	margin-bottom: 30px;
