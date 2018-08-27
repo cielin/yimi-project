@@ -1121,3 +1121,7 @@ span.more{
 .datetimepicker{
 	top:678px!important;
 }
+#checkAllBrand .active{
+	color: #caa175;
+    text-decoration: underline;
+}

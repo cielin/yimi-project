@@ -279,5 +279,9 @@ $(function(){
       selectModel();
  /**自定义select end***/
 
+ $('.allA a').click(function(){
+  $('.allA a').removeClass('active')
+  $(this).addClass('active')
+ })
 
 })
