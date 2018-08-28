@@ -124,7 +124,7 @@
             @if (isset($selected_category) && $selected_category->depth === 2)
             @if (isset($selected_category->parent->children) && sizeof($selected_category->parent->children) > 0)
             <div class="good-list-top-bg">
-                 <div class="all"><a class="active" href="{{ url('categories/' . $selected_category->slug) }}">全部</a></div>
+                 <div class="all"><a href="{{ url('categories/' . $selected_category->slug) }}">全部</a></div>
                 <ul class="good-list-top uls">
                     
                     @foreach ($selected_category->parent->children as $category)
