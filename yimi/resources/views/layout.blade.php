@@ -345,8 +345,9 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
         error: function(jqXHR){
             if(jqXHR.status == 401) {
                 console.log('error 401')
+                
                 $(this).attr('data-toggle','modal')
-                $(this).attr('data-target','#myModal')
+                $(this).attr('data-target','#myAuthModal')
             } else {
                 console.log('其它')
             }
