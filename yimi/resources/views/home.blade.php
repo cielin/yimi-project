@@ -214,7 +214,7 @@
     </div>
     <!--瀑布流end -->
 </div>
-
+<!--展示瀑布流大图位置 start-->
 <div class="modal fade myModalImg" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -226,6 +226,7 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<!--展示瀑布流大图位置 end-->
     @stop
 
 @section('js')
