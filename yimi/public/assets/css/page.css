@@ -109,7 +109,9 @@
 	font-size:12px;
 	cursor: pointer;
 }
-
+.icon-sousuo{
+	font-size: 22px;
+}
 /*首页轮播图样式*/
 .sowingMap{
 	width: 100%;

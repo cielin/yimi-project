@@ -198,7 +198,8 @@
                                     @else
                                     <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $waterfalled_product->id }}"></span>
                                     @endif
-                                    <a href="/products/{{ $waterfalled_product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
+                                    <!-- <a href="/products/{{ $waterfalled_product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a> -->
+                                    <span class="icon iconfont icon-sousuo"  data-toggle="modal" data-target=".myModalImg"></span>
                                 </p>
                             </div>
                         </div>
@@ -214,7 +215,17 @@
     <!--瀑布流end -->
 </div>
 
-
+<div class="modal fade myModalImg" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/img/close.png"></button>
+      <div class="modal-body">
+        <img id="bigImg" src="">
+      </div>
+      
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
     @stop
 
 @section('js')
