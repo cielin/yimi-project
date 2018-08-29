@@ -250,12 +250,13 @@ span.more{
 }
 .good-list-top-bg div.all{
 	position: absolute;
-	top:23px;
+	top:25px;
 	left:30px;
 	color:#c8a165;
 }
-
-
+.good-list-top-bg div.all .active,.checkAllBrand.active{
+	color:#c8a165;
+}
 .good-list-top-bg .uls{
 	margin-left:60px;
 	line-height: 36px;

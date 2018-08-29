@@ -42,10 +42,10 @@
                     @else
                     <a class="login" data-toggle="modal" data-target="#myAuthModal">登录/注册</a> |
                     @endif
-                    <a class="myOrder" href="{{ url('my/orders') }}">我的订单</a>
+                    <a class="myOrder noLogin" href="{{ url('my/orders') }}">我的订单</a>
                      |
-                    <a class="myMsg" href="{{ url('my/messages') }}">我的消息</a> |
-                    <a class="myCollect" href="{{ url('my/collections') }}">我的收藏</a>
+                    <a class="myMsg noLogin" href="{{ url('my/messages') }}">我的消息</a> |
+                    <a class="myCollect noLogin" href="{{ url('my/collections') }}">我的收藏</a>
                 </div>
             </div>
         </div>
@@ -345,8 +345,9 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
         error: function(jqXHR){
             if(jqXHR.status == 401) {
                 console.log('error 401')
+
                 $(this).attr('data-toggle','modal')
-                $(this).attr('data-target','#myModal')
+                $(this).attr('data-target','#myAuthModal')
             } else {
                 console.log('其它')
             }
@@ -355,6 +356,18 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
       })
     })
 /*********************收藏变实心**********************************/
+
+/******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开******/
+    var str = window.location.href;
+    var index = str .lastIndexOf("\/");
+    str  = str .substring(index + 1, str .length);
+    $('.noLogin').click(function(){
+        if(str == 'login'){
+            $(this).attr('data-toggle','modal')
+            $(this).attr('data-target','#myAuthModal')
+        }
+    })
+/******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开end******/
     </script>
     @yield('js')
 </body>
