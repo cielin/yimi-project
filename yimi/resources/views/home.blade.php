@@ -220,7 +220,7 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/img/close.png"></button>
       <div class="modal-body">
-        <img id="bigImg" src="">
+        <img id="bigImg" src="{{ URL::asset('assets/img/bigImg.jpg')}}" alt="展示大图">
       </div>
       
     </div><!-- /.modal-content -->
