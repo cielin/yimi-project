@@ -118,7 +118,7 @@ var suspension ='<div class="suspension">'
 			+'<i class="arrow"></i>'
 			+'<div class="inner-box">'
 				+'<p>扫描二维码</p>'
-				+'<div class="qrcode-img"><img src="../assets/img/side_ewm.jpg" alt=""></div>'
+				+'<div class="qrcode-img"><img src="/assets/img/side_ewm.jpg" alt=""></div>'
 				
 			+'</div>'
 		+'</div>'

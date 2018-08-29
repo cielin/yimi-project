@@ -146,9 +146,9 @@
                           <dt>会员服务</dt>
                           <dd>
                             <a href="#">联系我们</a>
-                            <a href="#">我的订单</a>
-                            <a href="#">关于我们</a>
-                            <a href="#">配送信息</a>
+                            <a href="{{ url('my/orders') }}">我的订单</a>
+                            <a href="{{ url('articles/aboutus') }}">关于我们</a>
+                            <a href="{{ url('my/orders') }}">配送信息</a>
                           </dd>
                         </dl>
                       
@@ -170,7 +170,7 @@
                     <div class="col-md-6 col-xs-6 text-right">
                         <a href="#">购物须知</a>
                         <a href="#">如何选购</a>
-                        <a href="#">配送信息</a>
+                        <a href="{{ url('my/orders') }}">配送信息</a>
                         <a href="{{ url('articles/aboutus') }}">关于我们</a>
                     </div>
                 </div>
@@ -329,16 +329,27 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
         },
         type : 'post',
         context : this,
-        success:function(message){
-          if(JSON.parse(message).action == 'removed'){
-             $(this).removeClass('glyphicon-heart').addClass('glyphicon-heart-empty')
+        success:function(data){
+          if(JSON.parse(data).message == 'success'){
+            if(JSON.parse(data).action == 'removed'){
+                $(this).removeClass('glyphicon-heart').addClass('glyphicon-heart-empty')
+            } else {
+                $(this).removeClass('glyphicon-heart-empty').addClass('glyphicon-heart')
+            }
           } else {
-            $(this).removeClass('glyphicon-heart-empty').addClass('glyphicon-heart')
+             console.log('success 401')
+             $(this).attr('data-toggle','modal')
+             $(this).attr('data-target','#myModal')
           }
         },
-        error: function(){
-            $(this).attr('data-toggle','modal')
-            $(this).attr('data-target','#myModal')
+        error: function(jqXHR){
+            if(jqXHR.status == 401) {
+                console.log('error 401')
+                $(this).attr('data-toggle','modal')
+                $(this).attr('data-target','#myModal')
+            } else {
+                console.log('其它')
+            }
         },
         async:false
       })

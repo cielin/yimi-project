@@ -253,9 +253,7 @@ span.more{
 	color:#c8a165;
 }
 
-.good-list-top-bg div.all a{
-	color:#c8a165;
-}
+
 .good-list-top-bg .uls{
 	margin-left:60px;
 	line-height: 36px;
@@ -422,6 +420,9 @@ span.more{
     -moz-line-clamp: 4;
     -moz-box-orient: vertical;
     padding-bottom: 30px;
+}
+.designer-text.article-text p{
+	max-height: 132px;
 }
 .designer-text h5{
 	font-size: 14px;
