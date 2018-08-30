@@ -199,7 +199,7 @@
                                     <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $waterfalled_product->id }}"></span>
                                     @endif
                                     <!-- <a href="/products/{{ $waterfalled_product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a> -->
-                                    <span class="icon iconfont icon-sousuo"  data-toggle="modal" data-target=".myModalImg"  data-src="{{ asset('public/images/products/' . $waterfalled_product->featured_image) }}"></span>
+                                    <span class="icon iconfont icon-sousuo"  data-toggle="modal" data-target=".myModalImg"  data-src="{{ asset('public/images/products/' . $waterfalled_product->featured_image) }}" data-alt="{{ $waterfalled_product->name }}"></span>
                                 </p>
                             </div>
                         </div>
