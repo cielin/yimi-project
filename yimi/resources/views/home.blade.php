@@ -182,24 +182,32 @@
                 <div class="container">
                   <div class="row">
                      <div id="fh5co-board" data-columns>
-                        @if (isset($waterfalled_products))
-                        @foreach ($waterfalled_products as $waterfalled_product)
+                        @if (isset($spotlights))
+                        @foreach ($spotlights as $spotlight)
                         <div class="item">
                             <div class="animate-box">
-                                <img src="{{ asset('public/images/products/' . $waterfalled_product->featured_image) }}" alt="{{ $waterfalled_product->name }}">
+                                @if ($spotlight['type'] == 'product')
+                                <img src="{{ asset('public/images/products/' . $spotlight['image']) }}" alt="{{ $spotlight['title'] }}">
+                                @else
+                                <img src="{{ asset('public/images/spotlights/' . $spotlight['image']) }}" alt="{{ $spotlight['title'] }}">
+                                @endif
                                 <div class="fh5co-desc">
-                                    {{ $waterfalled_product->name }}
+                                    {{ $spotlight['title'] }}
                                 </div> 
                             </div>
                             <div class="itemHover">
                                 <p class="ico-wrap">
-                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $waterfalled_product->id))
-                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $waterfalled_product->id }}"></span>
+                                @if ($spotlight['type'] == 'product')
+                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $spotlight['id']))
+                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $spotlight['id'] }}"></span>
                                     @else
-                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $waterfalled_product->id }}"></span>
+                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $spotlight['id'] }}"></span>
                                     @endif
-                                    <!-- <a href="/products/{{ $waterfalled_product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a> -->
-                                    <span class="icon iconfont icon-sousuo clickico"  data-toggle="modal" data-target=".myModalImg"  data-src="{{ asset('public/images/products/' . $waterfalled_product->featured_image) }}" data-alt="{{ $waterfalled_product->name }}"></span>
+                                    <a href="/products/{{ $spotlight['link'] }}"><span class="icon iconfont icon-yanjing1"></span></a>
+                                @else
+                                    <span class="glyphicon glyphicon-heart-empty" data-id="{{ $spotlight['id'] }}"></span>
+                                    <span class="icon iconfont icon-sousuo clickico"  data-toggle="modal" data-target=".myModalImg"  data-src="{{ asset('public/images/spotlights/' . $spotlight['image']) }}" data-alt="{{ $spotlight['title'] }}"></span>
+                                @endif
                                 </p>
                             </div>
                         </div>
@@ -220,7 +228,7 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/img/close.png"></button>
       <div class="modal-body">
-        <img id="bigImg" src="{{ asset('public/images/products/' . $waterfalled_product->featured_image) }}" alt="{{ $waterfalled_product->name }}">
+        <img id="bigImg"/>
       </div>
       
     </div><!-- /.modal-content -->

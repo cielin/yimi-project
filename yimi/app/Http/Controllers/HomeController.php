@@ -8,6 +8,7 @@ use App\Product;
 use App\Banner;
 use App\Designer;
 use App\ProductCategory;
+use App\Spotlight;
 
 class HomeController extends Controller
 {
@@ -31,14 +32,16 @@ class HomeController extends Controller
             ->orderBy('updated_at', 'desc')
             ->first();
 
-    	$featured_products = Product::where('is_featured', 1)
+        $featured_products = Product::where('is_featured', 1)
+            ->where('state', 'active')
     		->orderBy('updated_at', 'desc')
     		->limit(8)
     		->get();
 
-    	$waterfalled_products = Product::where('is_waterfalled', 1)
+        $waterfalled_products = Product::where('is_waterfalled', 1)
+            ->where('state', 'active')
     		->orderBy('updated_at', 'desc')
-    		->limit(300)
+    		->limit(250)
     		->get();
 
         $designers = Designer::orderBy('updated_at', 'desc')
@@ -50,10 +53,39 @@ class HomeController extends Controller
             ->limit(6)
             ->get();
 
+        $spotlights = Spotlight::orderBy('updated_at', 'desc')
+            ->limit(250)
+            ->get();
+
+        $combind_spotlights = array();
+        $sort_key = array();
+        foreach ($waterfalled_products as $waterfalled_product) {
+            $combind_spotlight['id'] = $waterfalled_product->id;
+            $combind_spotlight['title'] = $waterfalled_product->name;
+            $combind_spotlight['image'] = $waterfalled_product->featured_image;
+            $combind_spotlight['link'] = $waterfalled_product->slug;
+            $combind_spotlight['type'] = 'product';
+            $combind_spotlight['updated_at'] = $waterfalled_product->updated_at->timestamp;
+            array_push($combind_spotlights, $combind_spotlight);
+        }
+        foreach ($spotlights as $spotlight) {
+            $combind_spotlight['id'] = 0;
+            $combind_spotlight['title'] = $spotlight->title;
+            $combind_spotlight['image'] = $spotlight->image;
+            $combind_spotlight['link'] = $spotlight->link;
+            $combind_spotlight['type'] = 'spot';
+            $combind_spotlight['updated_at'] = $spotlight->updated_at->timestamp;
+            array_push($combind_spotlights, $combind_spotlight);
+        }
+        foreach ($combind_spotlights as $key => $value) {
+            $sort_key[$key] = $value['updated_at'];
+        }
+        array_multisort($sort_key, SORT_DESC, $combind_spotlights);
+
     	return View::make('home')
             ->with('active', 'home')
     		->with('featured_products', $featured_products)
-    		->with('waterfalled_products', $waterfalled_products)
+    		->with('spotlights', $combind_spotlights)
             ->with('top_banners', $top_banners)
             ->with('sl_banner', $sl_banner)
             ->with('srt_banners', $srt_banners)

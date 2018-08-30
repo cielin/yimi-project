@@ -49,11 +49,11 @@
         </div>
         <div class="col-sm-8 col-md-9 main main-min">
             <div class="gray-box allA">
-                <a id="checkAllBrand" class="checkAllBrand active" href="{{ route('brands.index') }}">全部</a>
+                <a id="checkAllBrand" class="checkAllBrand @if (!isset($first)) active @endif" href="{{ route('brands.index') }}">全部</a>
                 <ul class="check-words clearfix">
                     @for ($i = 0; $i < 26; ++$i)
                     <li>
-                        <a href="{{ URL::to('/brands/f/' . strtolower(chr($i + 65))) }}">{{ chr($i + 65) }}</a>
+                        <a @if (isset($first) && $first === strtolower(chr($i + 65))) class="active" @endif href="{{ URL::to('/brands/f/' . strtolower(chr($i + 65))) }}">{{ chr($i + 65) }}</a>
                     </li>
                     @endfor
                 </ul>

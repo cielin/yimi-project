@@ -12,12 +12,10 @@ use App\ProductCategory;
 
 class ProductCategoriesController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
     	$categories = ProductCategory::where('depth', 0)
     		->get();
-    	$products = Product::orderBy('updated_at', 'desc')
-    		->paginate(15);
         $attr_material_key = ProductAttrKey::where('name', '材质')
             ->where('status', 1)
             ->first();
@@ -31,6 +29,33 @@ class ProductCategoriesController extends Controller
         $attr_location_values = array();
         foreach ($attr_location_key->attr_values as $attr_value) {
             array_push($attr_location_values, $attr_value->value);
+        }
+
+        if (!$request->has('m') && !$request->has('l')) {
+            $products = Product::where('state', 'active')
+                ->orderBy('updated_at', 'desc')
+                ->paginate(15);
+        }
+        else {
+            if ($request->has('m')) {
+                $materials = $request->query('m');
+                $ms = ProductAttrValue::where('product_attr_key_id', $attr_material_key->id)
+                    ->whereIn('value', $materials)
+                    ->get();
+                $ms_ids = array();
+                foreach ($ms as $m) {
+                    array_push($ms_ids, $m->id);
+                }
+
+                $pattrs = ProductAttribute::where('product_attr_key_id', $attr_material_key->id)
+                    ->whereIn('product_attr_value_id', $ms_ids)
+                    ->get();
+                return;
+            }
+            
+            if ($request->has('l')) {
+                $locations = $request->query('l');
+            }
         }
 
     	return View::make('categories.index')
@@ -77,7 +102,8 @@ class ProductCategoriesController extends Controller
     			}
     		}
 
-    		$products = Product::whereIn('category_id', $ids)
+            $products = Product::whereIn('category_id', $ids)
+                ->where('state', 'active')
     			->orderBy('updated_at', 'desc')
     			->paginate(15);
 
@@ -89,7 +115,9 @@ class ProductCategoriesController extends Controller
     			->with('categories', $categories);
     	}
     	else {
-    		$products = Product::orderBy('updated_at', 'desc')->paginate(20);
+            $products = Product::where('state', 'active')
+                ->orderBy('updated_at', 'desc')
+                ->paginate(20);
 
     		return View::make('categories.index')
                 ->with('active', 'categories')
@@ -115,6 +143,7 @@ class ProductCategoriesController extends Controller
         }
         else {
             $products = Product::where('name', 'LIKE', '%' . $query . '%')
+                ->where('state', 'active')
                 ->orderBy('updated_at', 'desc')
                 ->paginate(15);
 

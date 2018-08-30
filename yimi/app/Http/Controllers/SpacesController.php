@@ -22,7 +22,8 @@ class SpacesController extends Controller
 			array_push($attr_values, $attr_value->value);
 		}
 
-		$products = Product::orderBy('updated_at', 'desc')
+		$products = Product::where('state', 'active')
+			->orderBy('updated_at', 'desc')
 			->paginate(15);
 
 		return View::make('spaces.index')
@@ -58,6 +59,7 @@ class SpacesController extends Controller
 			}
 
 			$products = Product::whereIn('id', $product_ids)
+				->where('state', 'active')
 				->orderBy('updated_at', 'desc')
 				->paginate(15);
 

@@ -125,4 +125,31 @@ class MyController extends Controller
 
         return redirect('my/addresses');
     }
+
+    public function uploadAvatar(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'nickname' => 'required|string|max:8',
+            'avatar' => 'required',
+        ]);
+        if ($validator->fails()) {
+            return $this->responseForJson(ERR_ACCESS_DENID, $validator->errors());
+        }
+        $user_id = Auth::id();
+        $avatar = $request->file('avatar')->store('/public/'.date('Y-m-d').'/avatars');
+        $avatar = Storage::url($avatar);
+
+        $resource = Resource::insertGetId(['type'=>1, 'resource'=>$avatar]);
+        $Data=['user_id'=>$user_id,'avatar'=>$resource,'nickname'=>$request->nickname];
+        try {
+            $edit = UserProfile::where('user_id',$user_id)->update($Data);
+            if ($edit) {
+                return $this->responseForJson(ERR_OK, 'upload success');
+            }
+            return $this->responseForJson(ERR_CREATE, 'upload fail');
+        }
+        catch (\Exception $exception) {
+            return $this->responseForJson(ERR_ACCESS_DENID, $exception->getMessage());
+        }
+    }
 }
