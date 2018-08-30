@@ -357,11 +357,11 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
     })
 /*********************收藏变实心**********************************/
 
-/******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开******/
-    var str = window.location.href;
-    var index = str .lastIndexOf("\/");
-    str  = str .substring(index + 1, str .length);
+/******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开******/ 
     $('.noLogin').click(function(){
+        var str = window.location.href;
+        var index = str .lastIndexOf("\/");
+        str  = str .substring(index + 1, str .length);
         if(str == 'login'){
             $(this).attr('data-toggle','modal');
             $(this).attr('data-target','#myAuthModal');
