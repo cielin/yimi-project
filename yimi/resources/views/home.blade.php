@@ -220,7 +220,7 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/img/close.png"></button>
       <div class="modal-body">
-        <img src="{{ asset('public/images/products/' . $waterfalled_product->featured_image) }}" alt="{{ $waterfalled_product->name }}">
+        <img id="bigImg" src="{{ asset('public/images/products/' . $waterfalled_product->featured_image) }}" alt="{{ $waterfalled_product->name }}">
       </div>
       
     </div><!-- /.modal-content -->
