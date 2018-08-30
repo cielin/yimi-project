@@ -42,9 +42,9 @@
                     @else
                     <a class="login" data-toggle="modal" data-target="#myAuthModal">登录/注册</a> |
                     @endif
-                    <a class="myOrder noLogin" href="{{ url('my/orders') }}">我的订单</a>
+                    <a class="myOrder noLogin" href="javascript:void(0)" data-href="{{ url('my/orders') }}">我的订单</a>
                      |
-                    <a class="myMsg noLogin" href="{{ url('my/messages') }}">我的消息</a> |
+                    <a class="myMsg noLogin" href="javascript:void(0)" data-href="{{ url('my/messages') }}">我的消息</a> |
                     <a class="myCollect noLogin" href="{{ url('my/collections') }}">我的收藏</a>
                 </div>
             </div>
@@ -146,9 +146,9 @@
                           <dt>会员服务</dt>
                           <dd>
                             <a href="#">联系我们</a>
-                            <a href="{{ url('my/orders') }}">我的订单</a>
+                            <a class="noLogin" href="javascript:void(0)" data-href="{{ url('my/orders') }}">我的订单</a>
                             <a href="{{ url('articles/aboutus') }}">关于我们</a>
-                            <a href="{{ url('my/orders') }}">配送信息</a>
+                            <a class="noLogin" href="javascript:void(0)" data-href="{{ url('my/orders') }}">配送信息</a>
                           </dd>
                         </dl>
                       
@@ -363,8 +363,10 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
     str  = str .substring(index + 1, str .length);
     $('.noLogin').click(function(){
         if(str == 'login'){
-            $(this).attr('data-toggle','modal')
-            $(this).attr('data-target','#myAuthModal')
+            $(this).attr('data-toggle','modal');
+            $(this).attr('data-target','#myAuthModal');
+        }else{
+            window.location.href($(this).attr("data-href"));
         }
     })
 /******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开end******/
