@@ -149,7 +149,7 @@
                 <div class="designer designer-new-hover">
                     @foreach ($designers as $designer)
                     <a href="{{ url('designers/' . $designer->slug) }}">
-                        <dl style="margin-left:.27rem">
+                        <dl>
                             <dt>
                                 <p>{{ $designer->name }}</p><br/>
                                 <p>{{ substr(strip_tags($designer->description), 0, 60) }} ...</p>
@@ -170,7 +170,7 @@
     <!--index-contentend -->
 
     <!--瀑布流开始 -->
-    <div class="wrap  bg-hui-f1" style="margin-top:13px;">
+    <div class="wrap  bg-hui-f1" style="margin-top:-10px;">
         <div class="container-fluid" style="padding-left:0; padding-right:0;">
          
             <div class="waterfalls">
