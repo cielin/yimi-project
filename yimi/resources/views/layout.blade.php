@@ -360,11 +360,11 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
 /******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开******/ 
     $('.noLogin').click(function(){
         str = $("#userStatus").val();
-        if(str == '0'){
+        if(str == '0'){//未登录
             $(this).attr('data-toggle','modal');
             $(this).attr('data-target','#myAuthModal');
             $(this).attr("href","javascript:void(0)");
-        }else if(str == '1'){
+        }else if(str == '1'){//已登录
             window.location.href=$(this).attr("data-href");
             //$(this).attr("href",$(this).attr("data-href"));
         }

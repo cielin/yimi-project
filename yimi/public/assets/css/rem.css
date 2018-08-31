@@ -218,7 +218,9 @@ html{
 .detais-content{
 	padding-right: 0.068376rem;
 }
-
+.designer-new-hover dl{
+	margin-bottom: 20px;
+}
 @media (min-width: 320px){
 	html{
 		font-size: 32px;
