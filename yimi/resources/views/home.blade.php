@@ -152,7 +152,9 @@
                         <dl>
                             <dt>
                                 <p>{{ $designer->name }}</p><br/>
-                                <p>{{ substr(strip_tags($designer->description), 0, 60) }} ...</p>
+                                @if ($designer->description !== null || $designer->description !== '')
+                                <p>{{ mb_substr(strip_tags($designer->description), 0, 60) }} ...</p>
+                                @endif
                             </dt>
                             <dd>
                             	<img src="{{ asset('public/images/designers/' . $designer->avatar) }}">
