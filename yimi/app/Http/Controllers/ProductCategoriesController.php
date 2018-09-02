@@ -146,24 +146,29 @@ class ProductCategoriesController extends Controller
                 ->where('state', 'active')
                 ->orderBy('updated_at', 'desc')
                 ->paginate(15);
+            $selected_category = null;
+            $selected_parent_category = null;
 
-            foreach ($products as $product) {
-                $selected_category = $product->category;
 
-                if (null !== $selected_category) {
-                    switch ($selected_category->depth) {
-                        case 0:
-                            $selected_parent_category = $selected_category;
-                            break;
-                        case 1:
-                            $selected_parent_category = $selected_category->parent;
-                            break;
-                        case 2:
-                            $selected_parent_category = $selected_category->parent->parent;
-                            break;
-                        default:
-                            $selected_parent_category = null;
-                            break;
+            if (sizeof($products) > 0) {
+                foreach ($products as $product) {
+                    $selected_category = $product->category;
+
+                    if (null !== $selected_category) {
+                        switch ($selected_category->depth) {
+                            case 0:
+                                $selected_parent_category = $selected_category;
+                                break;
+                            case 1:
+                                $selected_parent_category = $selected_category->parent;
+                                break;
+                            case 2:
+                                $selected_parent_category = $selected_category->parent->parent;
+                                break;
+                            default:
+                                $selected_parent_category = null;
+                                break;
+                        }
                     }
                 }
             }

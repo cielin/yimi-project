@@ -27,7 +27,7 @@
                 </div>
                 <div class="designer-text col-md-7">
                     <h5><a href="{{ URL::to('/designers/' . $designer->slug) }}"><span>{{ $designer->name }}</span></a></h5>
-                    <p><a href="{{ URL::to('/designers/' . $designer->slug) }}">{{ substr(strip_tags($designer->description), 0, 90) }}</a></p>
+                    <p><a href="{{ URL::to('/designers/' . $designer->slug) }}">{{ mb_substr(strip_tags($designer->description), 0, 90) }}</a></p>
                     <div class="more"><a href="{{ URL::to('/designers/' . $designer->slug) }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
                     </div>
                 </div>

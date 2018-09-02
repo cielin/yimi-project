@@ -255,7 +255,7 @@
     <script type="text/javascript" src="{{ URL::asset('plugin/swiper/js/swiper.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('plugin/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('plugin/jquery.Huploadify.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('plugin/jquery.validate.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('plugin/jquery.validate.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/utils/tools.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/utils/layout.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('common/template.js') }}"></script>
