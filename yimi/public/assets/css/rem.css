@@ -222,6 +222,13 @@ html{
 .designer-new-hover dl{
 	margin-bottom: 20px;
 }
+/*tab页面*/
+.designer.buyer{
+	display: none;
+}
+.designer.buyer.active{
+	display: block;
+}
 @media (min-width: 320px){
 	html{
 		font-size: 32px;

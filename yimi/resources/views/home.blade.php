@@ -95,10 +95,10 @@
             <div class="container overHide mb40">
         		<img src="{{ URL::asset('assets/img/index_title.jpg') }}">
                 @if (isset($categories) && sizeof($categories) > 0)
-                <ul class="index-title-ul">
+                 <ul class="index-title-ul" role="tablist">
                     @foreach ($categories as $category)
-                    <li>
-                        <a href="{{ url('/categories/' . $category->slug) }}">{{ $category->name }}</a>
+                    <li role="presentation" class="active">
+                        <a href="{{ url('/categories/' . $category->slug) }}" aria-controls="home" role="tab" data-toggle="tab">{{ $category->name }}</a>
                     </li>
                     @endforeach
                     <li class="more"><i style="padding-right: 30px;color: #999;font-weight: 100;font-size: 10px;">|</i><a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
@@ -106,8 +106,8 @@
                 </ul>
                 @endif
             </div>
-            <div class="container overHide">
-                <div class="designer buyer">
+            <div class="container overHide tab-content">
+                <div  role="tabpanel" class="designer buyer tab-pane active" id="home">
                 	@if (isset($featured_products))
                 	@foreach ($featured_products as $featured_product)
                     
@@ -133,6 +133,11 @@
                     @endforeach
                     @endif
                 </div>
+                <div role="tabpanel" class="designer buyer tab-pane" id="profile">
+                222
+                </div>
+                <div role="tabpanel" class="designer buyer tab-pane" id="messages">333</div>
+                <div role="tabpanel" class="designer buyer tab-pane" id="settings">44</div>
             </div>
         </div>
         @if (isset($designers))
