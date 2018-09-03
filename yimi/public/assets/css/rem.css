@@ -27,8 +27,9 @@ html{
 	margin-bottom: 0.257511rem;
 }
 .designer-new-hover dl dt{
-	padding-left:30px;
-	padding-right:30px;
+	padding-left:0.25641rem;
+	padding-right:0.25641rem;
+	padding-top: 0.615385rem;
 }
 .designer dl,
 .designer dl dt,
