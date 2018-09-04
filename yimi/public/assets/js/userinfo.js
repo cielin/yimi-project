@@ -28,7 +28,7 @@ $(function(){
 	}
 
 function uploadInit(domName,domPic){
-	var uploadurl = "http://php/api";//后台的api
+	var uploadurl = "/api/upload_avatar";//后台的api
 	$("#"+domName).Huploadify({
 		auto:true,
 		fileTypeExts:'*.*',
@@ -38,14 +38,15 @@ function uploadInit(domName,domPic){
 		showUploadedPercent:false,
 		buttonText:'修改头像',
 		uploader:uploadurl,
-		onUploadSuccess:function(file,data){
+		onUploadSuccess:function(data){
 			var Data=JSON.parse(data);
-			if(Data.success==true){
-				 $("#"+domPic).attr("src",Data.result);
-					param.uploadsuccess(Data.result);
-				}else{
-				 jQuery.longhz.alert(Data.resultDes);
-				}
+			console.log("Data",Data);
+			// if(Data.success==true){
+			// 	 $("#"+domPic).attr("src",Data.result);
+			// 		param.uploadsuccess(Data.result);
+			// 	}else{
+			// 	 jQuery.longhz.alert(Data.resultDes);
+			// 	}
 		},
 		onUploadError:function(file,response){
 			alert("上传失败!");

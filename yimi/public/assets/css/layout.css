@@ -457,6 +457,42 @@ ul.nav{
 .login-box label{
 	display: block;
 	padding:0 28px 10px 28px;
+	position: relative;
+}
+.login-box label.error{
+    position: absolute;
+    color: #000000;
+    border: 1px solid #999;
+    padding: 5px 10px 5px 37px;
+    background: #fff;
+    z-index: 10000;
+    top: 65px;
+    left: 120px;
+    font-family: "iconfont" !important;
+    font-size: 14px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+.login-box label.error:before{
+    content: "\e682";
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    top: -1px;
+    color: #ffa300;
+}
+
+.login-box label.error:after{
+	content: "";
+    font-size: 20px;
+    color: #000;
+    position: absolute;
+    top: -9px;
+    left: 26px;
+    background: url(../img/jiao.jpg);
+    width: 18px;
+    height: 10px;
+    background-size: contain;
 }
 .login-box label input[type="text"],
 .login-box label input[type="email"],
