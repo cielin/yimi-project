@@ -201,7 +201,7 @@
                                 <label for="">
                                     <p>电子邮箱 <span class="red1">*</span>
                                     </p>
-                                    <input name="email" type="text" required placeholder="请输入电子邮箱">
+                                    <input name="email" type="email" required placeholder="请输入电子邮箱">
                                 </label>
                                 <label for="">
                                     <p>密码 <span class="red1">*</span>
@@ -216,31 +216,27 @@
                         <!--注册-->
                         <div role="tabpanel" class="tab-pane" id="register">
                             <form action="" id="form2">
-                                <label for="">
-                                    <p>昵称 <span class="red1">*</span>
-                                    </p>
-                                    <input type="text" name="nickname" placeholder="请输入昵称" required>
-                                </label>
-                                <label for="">
-                                    <p>邮箱 <span class="red1">*</span>
-                                    </p>
-                                    <input type="text" type="email" name="email" required placeholder="请输入邮箱">
-                                </label>
-                                <label for="">
-                                    <p>密码 <span class="red1">*</span>
-                                    </p>
-                                    <input type="password" required name="password" placeholder="请输入密码">
-                                </label>
-                                <label for="">
-                                    <p>确认密码 <span class="red1">*</span>
-                                    </p>
-                                    <input type="password" required name="password_confirmation" placeholder="请输入确认密码">
-                                </label>
-                                <label for="">
-                                    <div class="login-btn">注 册</div>
-                                </label>
+                              <label for="">
+                                <p>用户名 <span class="red1">*</span></p>
+                                <input type="text" name="username" required placeholder="请输入用户名">
+                              </label>
+                              <label for="">
+                                <p>邮箱 <span class="red1">*</span></p>
+                                <input id="" type="email" type="email" name="email" required placeholder="请输入邮箱">
+                              </label>
+                              <label for="">
+                                <p>密码 <span class="red1">*</span></p>
+                                 <input type="password" id="new_password" name="new_password" placeholder="输入新密码" required/>
+                              </label>
+                              <label for="">
+                                <p>确认密码 <span class="red1">*</span></p>
+                                 <input type="password" id="confirm_password" name="confirm_password" placeholder="确定新密码" required/>
+                              </label>
+                              <label for="">
+                                <button type="submit" class="login-btn">注  册</button>
+                              </label>
                             </form>
-                        </div>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -370,6 +366,62 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
         }
     })
 /******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开end******/
+
+//表单验证验证
+$().ready(function() {
+    $("#form1").validate({
+       rules:{
+          username:{
+             required:true,
+          },          
+          password:{
+            required:true,
+          }                  
+       },
+       messages:{
+          username:{
+            required: "请输入用户名",
+          },
+          password:{
+               required: "请输入密码",
+           }                                 
+       }  
+    });
+    $("#form2").validate({
+       rules:{
+          username:{
+               required:true,
+           },
+           email:{
+               required:true,
+               email:true
+           },            
+          new_password:{
+               required:true,
+           },
+          confirm_password:{
+               
+               equalTo:"#new_password"    //新密码的id选择器
+           }                    
+       },
+       messages:{
+          username:{
+               required: "请输入用户名",
+           },
+           email:{
+               required: "请输入邮箱地址",
+               email:"请输入正确的邮箱，例如:example@qq.com",
+           },
+          new_password:{
+               required: "请输入密码",
+           },
+          confirm_password:{
+               required: "请确认密码",
+               equalTo:"两次密码输入不一致"
+           }                                    
+       }  
+    });
+});
     </script>
     @yield('js')
 </body>
