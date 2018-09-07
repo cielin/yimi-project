@@ -173,7 +173,7 @@
                     </select> -->
                     <!--模拟select框 start-->
                     <div class="model-select-box" style="width:130px; margin-right:10px;">
-                      <div class="model-select-text" data-value="">1</div>
+                      <div class="model-select-text" data-value="">默认</div>
                       <i class="sanjiao glyphicon glyphicon-triangle-bottom" style="left:83%!important;"></i>
                       <ul class="model-select-option">
                         <li data-option="a">默认</li>

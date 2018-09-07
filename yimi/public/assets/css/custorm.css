@@ -255,3 +255,6 @@
 .min-ht400{
 	min-height:400px;
 }
+.ditails-tab-box .tab-pane.active{
+	padding-right:30px;
+}
