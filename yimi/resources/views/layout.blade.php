@@ -218,7 +218,7 @@
                             <form action="" id="form2">
                               <label for="">
                                 <p>用户名 <span class="red1">*</span></p>
-                                <input type="text" name="username" required placeholder="请输入用户名">
+                                <input type="text" name="nickname" required placeholder="请输入昵称">
                               </label>
                               <label for="">
                                 <p>邮箱 <span class="red1">*</span></p>
@@ -226,11 +226,11 @@
                               </label>
                               <label for="">
                                 <p>密码 <span class="red1">*</span></p>
-                                 <input type="password" id="new_password" name="new_password" placeholder="输入新密码" required/>
+                                 <input type="password" id="password" name="password" placeholder="输入新密码" required/>
                               </label>
                               <label for="">
                                 <p>确认密码 <span class="red1">*</span></p>
-                                 <input type="password" id="confirm_password" name="confirm_password" placeholder="确定新密码" required/>
+                                 <input type="password" id="password_confirmation" name="password_confirmation" placeholder="确定新密码" required/>
                               </label>
                               <label for="">
                                 <button type="submit" class="login-btn">注  册</button>
