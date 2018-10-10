@@ -22,7 +22,7 @@
                 <div class="sidebar-title">
                     <img src="{{ URL::asset('assets/img/title1.jpg') }}" />
                 </div>
-                <ul class="brandListText">
+                <ul class="brandListText y-auto">
                     <li><a href="#">Acerbis</a>
                     </li>
                     <li><a href="#">Agape</a>
