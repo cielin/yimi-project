@@ -37,4 +37,9 @@ class Product extends Model
 	{
 		return $this->belongsTo('App\Designer', 'designer_id');
 	}
+
+	public function reviews()
+	{
+		return $this->hasMany('App\CustomerComment', 'product_id');
+	}
 }

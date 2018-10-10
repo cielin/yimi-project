@@ -223,9 +223,9 @@ html{
 	margin-bottom: 20px;
 }
 /*tab页面*/
-.designer.buyer{
+/* .designer.buyer{
 	display: none;
-}
+} */
 .designer.buyer.active{
 	display: block;
 }

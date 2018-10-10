@@ -37,7 +37,7 @@
                 <div class="swiper-wrapper">
                     @foreach ($product->images as $image)
                     <div class="swiper-slide">
-                        <img src="{{ asset('public/images/products/' . $image ->path) }}">
+                        <img src="{{ asset('public/images/products/' . $image->path) }}">
                     </div>
                     @endforeach
                 </div>
@@ -49,7 +49,7 @@
                 <div class="swiper-wrapper">
                     @foreach ($product->images as $image)
                     <div class="swiper-slide">
-                        <img src="{{ asset('public/thumbs/products/thumb_' . $image ->path) }}">
+                        <img src="{{ asset('public/thumbs/products/thumb_' . $image->path) }}">
                     </div>
                     @endforeach
                 </div>
@@ -79,18 +79,16 @@
                     <p>{{ $product_attribute->product_attr_key->name }}：{{ $product_attribute->product_attr_value->value }}</p>
                     @endif
                     @endforeach
-                    <div class="details-bord">
-                        Fjords舒适椅，为挪威知名家具集团Hjellegjerde公司旗下之品牌，该集团自1941年成立以来，迄今已为挪威国内最大家具集团，并成为挪威 家具业发展的领导者。Hjellegjerde遍布全球的经销网络，使其确切地掌握全球市场脉动，了解不同地区顾客的需求，才能设计出最符合市场趋势，以及顾客们的在地化细微要求。拥有Hjellegjerde集团优势背景的Fjords舒适椅，为产品操刀设计的设计师皆获奖无数，设计师间的合作与创意激情，也常创作出非凡的产品。有些设计师本身为珠宝设计背景，使金属材质亦能柔软与坚硬并存。
-                    </div>
+                    <!-- <div class="details-bord"></div> -->
                 </div>
                 <!--swiper end -->
                 <div>
 
                     <p class="ico-wraps">
-                        @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id))
-                        <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}"></span>
+                        @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
+                        <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
                         @else
-                        <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}"></span>
+                        <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
                         @endif
                         <a href="/articles/shopping-tips"><span class="icon iconfont icon-question" style="margin-left:54px;"></span></a>
                     </p>
@@ -105,7 +103,7 @@
         <a class="fav_facebook" rel="nofollow" href="javascript:window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(document.location.href)+'&t='+encodeURIComponent(document.title));void(0)">
             <span class="icon iconfont icon-facebook"></span>
         </a>
-        <a href="http://v.t.sina.com.cn/share/share.php?url=http://www.jb51.net&title='分享内容'" target="_blank">
+        <a href="http://v.t.sina.com.cn/share/share.php?url={{ htmlspecialchars('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) }}&title='{{ $product->name }}'" target="_blank">
             <span class="icon iconfont icon-weibo"></span>
         </a>
         <a href="http://connect.qq.com/widget/shareqq/index.html?title=qqhaoyou&url={{ htmlspecialchars('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) }}&desc={{ $product->name }}&pics=&site=薏米家" target="_blank">
@@ -116,7 +114,7 @@
             <div class="weixin2">
                 <span class="close close2">X</span>
                 <div>
-                    <img src="{{ URL::asset('assets/img/foot/weixinCode.png') }}">
+                    {!! QrCode::size(160)->generate(Request::url()); !!}
                     <p>扫码分享</p>
                 </div>
             </div>
@@ -129,19 +127,17 @@
                 商品介绍
                 </a>
             </li>
-            <li role="presentation">
+            <!-- <li role="presentation">
                 <a href="#goodsInfo" aria-controls="profile" role="tab" data-toggle="tab">
                 商品规格
                 </a>
-            </li>
+            </li> -->
         </ul>
         <div class="tab-content col-md-9 ditails-tab-box">
             <div role="tabpanel" class="tab-pane active" id="goodsDetails">
                 {!! html_entity_decode($product->description, ENT_QUOTES, 'UTF-8') !!}
             </div>
-            <div role="tabpanel" class="tab-pane" id="goodsInfo">
-                fffff2
-            </div>
+            <!-- <div role="tabpanel" class="tab-pane" id="goodsInfo"></div> -->
         </div>
     </div>
     <!--相关商品-->

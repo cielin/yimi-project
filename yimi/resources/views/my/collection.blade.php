@@ -30,7 +30,7 @@
                     <a href="{{ url('my/comments') }}">我的评论</a>
                     <a href="{{ url('my/messages') }}">我的消息</a>
                     <a href="{{ url('my/union') }}">账号绑定</a>
-                    <a href="{{ url('my/password_reset') }}">修改密码</a>
+                    <a href="{{ url('my/changepassword') }}">修改密码</a>
                     <a href="{{ url('my/addresses') }}">收货地址</a>
                 </div>
             </div>
@@ -51,10 +51,10 @@
                     <dl>
                         <dt>
                             <p class="ico-wrap">
-                                @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $collect->product_id))
-                                <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $collect->product_id }}"></span>
+                                @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $collect->product_id, 1))
+                                <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $collect->product_id }}" data-type="1"></span>
                                 @else
-                                <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $collect->product_id }}"></span>
+                                <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $collect->product_id }}" data-type="1"></span>
                                 @endif
                                  <a href="/products/{{ $collect->product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
                             </p>

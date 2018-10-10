@@ -16,13 +16,13 @@ class ProductCategoriesController extends Controller
     {
     	$categories = ProductCategory::where('depth', 0)
     		->get();
-        $attr_material_key = ProductAttrKey::where('name', '材质')
-            ->where('status', 1)
-            ->first();
-        $attr_material_values = array();
-        foreach ($attr_material_key->attr_values as $attr_value) {
-            array_push($attr_material_values, $attr_value->value);
-        }
+        // $attr_material_key = ProductAttrKey::where('name', '材质')
+        //     ->where('status', 1)
+        //     ->first();
+        // $attr_material_values = array();
+        // foreach ($attr_material_key->attr_values as $attr_value) {
+        //     array_push($attr_material_values, $attr_value->value);
+        // }
         $attr_location_key = ProductAttrKey::where('name', '产地')
             ->where('status', 1)
             ->first();
@@ -31,37 +31,37 @@ class ProductCategoriesController extends Controller
             array_push($attr_location_values, $attr_value->value);
         }
 
-        if (!$request->has('m') && !$request->has('l')) {
+        if (!$request->has('l')) {
             $products = Product::where('state', 'active')
                 ->orderBy('updated_at', 'desc')
                 ->paginate(15);
         }
         else {
-            if ($request->has('m')) {
-                $materials = $request->query('m');
-                $ms = ProductAttrValue::where('product_attr_key_id', $attr_material_key->id)
-                    ->whereIn('value', $materials)
-                    ->get();
-                $ms_ids = array();
-                foreach ($ms as $m) {
-                    array_push($ms_ids, $m->id);
-                }
+            // if ($request->has('m')) {
+            //     $materials = $request->query('m');
+            //     $ms = ProductAttrValue::where('product_attr_key_id', $attr_material_key->id)
+            //         ->whereIn('value', $materials)
+            //         ->get();
+            //     $ms_ids = array();
+            //     foreach ($ms as $m) {
+            //         array_push($ms_ids, $m->id);
+            //     }
 
-                $pattrs = ProductAttribute::where('product_attr_key_id', $attr_material_key->id)
-                    ->whereIn('product_attr_value_id', $ms_ids)
-                    ->get();
-                return;
-            }
+            //     $pattrs = ProductAttribute::where('product_attr_key_id', $attr_material_key->id)
+            //         ->whereIn('product_attr_value_id', $ms_ids)
+            //         ->get();
+            //     return;
+            // }
             
-            if ($request->has('l')) {
-                $locations = $request->query('l');
-            }
+            // if ($request->has('l')) {
+            //     $locations = $request->query('l');
+            // }
+            $locations = $request->query('l');
         }
 
     	return View::make('categories.index')
             ->with('active', 'categories')
     		->with('categories', $categories)
-            ->with('materials', array_unique($attr_material_values))
             ->with('locations', array_unique($attr_location_values))
     		->with('products', $products);
     }

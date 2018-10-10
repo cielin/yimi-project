@@ -27,26 +27,26 @@ $(function(){
 
 	}
 
-function uploadInit(domName,domPic){
-	var uploadurl = "/api/upload_avatar";//后台的api
+function uploadInit(domName,domPic,domForm){
+	var uploadurl = "/api/upload_image";//后台的api
 	$("#"+domName).Huploadify({
 		auto:true,
-		fileTypeExts:'*.*',
+		fileTypeExts:'*.jpg;*.png;*.jpeg',
 		multi:false,
-		fileObjName:'Filedata',
+		fileObjName:'avatar',
 		fileSizeLimit:99999999999,
 		showUploadedPercent:false,
 		buttonText:'修改头像',
 		uploader:uploadurl,
-		onUploadSuccess:function(data){
-			var Data=JSON.parse(data);
-			console.log("Data",Data);
-			// if(Data.success==true){
-			// 	 $("#"+domPic).attr("src",Data.result);
-			// 		param.uploadsuccess(Data.result);
-			// 	}else{
-			// 	 jQuery.longhz.alert(Data.resultDes);
-			// 	}
+		onUploadSuccess: function (file, data, response){
+			var Data = JSON.parse(data);
+			if (Data.errcode == 0){
+				$("#" + domPic).attr("src", "/public/thumbs/avatars/thumb_" + Data.path);
+				$("#" + domForm).val(Data.path);
+				param.uploadsuccess(Data.path);
+			} else{
+				jQuery.longhz.alert(Data.message);
+			}
 		},
 		onUploadError:function(file,response){
 			alert("上传失败!");
@@ -56,7 +56,7 @@ function uploadInit(domName,domPic){
 }
 
 	//调用公共方法
-	uploadInit("fileid","imgid")
+	uploadInit("fileid","imgid","img_avatar");
 
 	defalutDate();
 })

@@ -40,12 +40,16 @@ Route::get('login', 'HomeController@index')->name('login');
 Route::middleware(['auth'])->group(function() {
 	Route::get('my/info', 'MyController@showInfo');
 	Route::get('my/orders', 'MyController@showOrders');
+	Route::get('my/orders/{code}', 'MyController@showOrderDetail');
 	Route::get('my/collections', 'MyController@showCollections');
 	Route::get('my/comments', 'MyController@showComments');
 	Route::get('my/messages', 'MyController@showMessages');
 	Route::get('my/addresses', 'MyController@showAddresses');
-	Route::get('my/password_reset', 'MyController@showPasswordReset');
+	Route::get('my/changepassword', 'MyController@showChangePassword');
+	Route::post('my/changepassword', array('as' => 'changepassword.save', 'uses' => 'MyController@changePassword'));
 	Route::get('my/union', 'MyController@showUnion');
 	Route::post('my/addresses/save', array('as' => 'addresses.save', 'uses' => 'MyController@saveAddress'));
 	Route::delete('my/addresses/delete', array('as' => 'addresses.destroy', 'uses' => 'MyController@destroyAddress'));
+	Route::post('my/orders/save_comment', array('as' => 'orders.savecomment', 'uses' => 'MyController@saveComment'));
+	Route::post('my/info/save', array('as' => 'info.save', 'uses' => 'MyController@saveInfo'));
 });

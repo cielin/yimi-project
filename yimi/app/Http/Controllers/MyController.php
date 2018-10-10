@@ -7,12 +7,45 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
 use App\ProductCollection;
 use App\CustomerAddress;
 use App\Customer;
+use App\CustomerComment;
+use App\Order;
+use Hash;
 
 class MyController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function changePassword(Request $request)
+    {
+        if (!(Hash::check($request->get('current-password'), Auth::user()->password))) {
+            return redirect()->back()->with("error", "当前密码错误，请重新输入。");
+        }
+        if (strcmp($request->get('current-password'), $request->get('new-password')) == 0) {
+            return redirect()->back()->with("error", "新密码不能与当前密码相同，请输出不同的新密码。");
+        }
+        $validatedData = $request->validate([
+            'current-password' => 'required',
+            'new-password' => 'required|string|min:6|confirmed',
+        ], [
+            'new-password.min' => '新密码至少6位。',
+            'new-password.confirmed' => '两次密码输入不一致。',
+        ]);
+
+        $user = Auth::user();
+        $user->password = bcrypt($request->get('new-password'));
+        $user->save();
+        return redirect()->back()->with("success", "密码修改成功。");
+    }
+
     public function showInfo()
     {
     	$user = Auth::user();
@@ -22,13 +55,24 @@ class MyController extends Controller
 
     public function showOrders()
     {
-    	return View::make('my.order');
+        $user = Auth::user();
+        $orders = $user->orders()->paginate(10);
+
+    	return View::make('my.order')->with('orders', $orders);
+    }
+
+    public function showOrderDetail($order_code)
+    {
+        $order = Order::where('order_code', $order_code)->first();
+
+        return View::make('my.order_detail')->with('order', $order);
     }
 
     public function showCollections()
     {
         $user = Auth::user();
         $collection = ProductCollection::where('customer_id', $user->id)
+            ->where('type', 1)
             ->where('status', 1)
             ->paginate(9);
 
@@ -55,9 +99,9 @@ class MyController extends Controller
     	return View::make('my.addresses')->with('addresses', $addresses);
     }
 
-    public function showPasswordReset()
+    public function showChangePassword()
     {
-    	return View::make('my.password_reset');
+    	return View::make('my.changepassword');
     }
 
     public function showUnion()
@@ -126,30 +170,139 @@ class MyController extends Controller
         return redirect('my/addresses');
     }
 
-    public function uploadAvatar(Request $request)
+    public function uploadImages(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'nickname' => 'required|string|max:8',
-            'avatar' => 'required',
-        ]);
-        if ($validator->fails()) {
-            return $this->responseForJson(ERR_ACCESS_DENID, $validator->errors());
-        }
-        $user_id = Auth::id();
-        $avatar = $request->file('avatar')->store('/public/'.date('Y-m-d').'/avatars');
-        $avatar = Storage::url($avatar);
+        $errcode = 0;
+        $message = "success";
+        $path = "";
 
-        $resource = Resource::insertGetId(['type'=>1, 'resource'=>$avatar]);
-        $Data=['user_id'=>$user_id,'avatar'=>$resource,'nickname'=>$request->nickname];
-        try {
-            $edit = UserProfile::where('user_id',$user_id)->update($Data);
-            if ($edit) {
-                return $this->responseForJson(ERR_OK, 'upload success');
+        if ($request->ajax()) {
+            $validator = Validator::make($request->all(), [
+                'avatar' => 'required'
+            ]);
+            if ($validator->fails()) {
+                $errcode = 1;
+                $message = $validator->errors()->first();
+            } else {
+                if ($request->hasFile('avatar')) {
+                    if ($request->file('avatar')->isValid()) {
+                        $avatar = $request->file('avatar');
+                        $filename = $avatar->getClientOriginalName();
+                        $filename = pathinfo($filename, PATHINFO_FILENAME);
+                        $len = Str::length($filename) > 5 ? 5 : Str::length($filename);
+                        $filename = Str::substr($filename, 0, $len);
+
+                        $fullname = Str::slug(Str::random(12) . '-' . $filename) . '.' . $avatar->getClientOriginalExtension();
+                        $uploaded_path = $avatar->storeAs('images/avatars', $fullname);
+
+                        $image_width = Image::make(storage_path('app/public/' . $uploaded_path))->width();
+                        $image_height = Image::make(storage_path('app/public/' . $uploaded_path))->height();
+
+                        if ($image_width > $image_height) {
+                            $image = Image::make(storage_path('app/public/' . $uploaded_path))
+                                ->resize(null, 64, function ($constraint) {
+                                    $constraint->aspectRatio();
+                                });
+                            Storage::put('thumbs/avatars/thumb_' . $fullname, $image->stream()->__toString());
+                        } else {
+                            $image = Image::make(storage_path('app/public/' . $uploaded_path))
+                                ->resize(64, null, function ($constraint) {
+                                    $constraint->aspectRatio();
+                                });
+                            Storage::put('thumbs/avatars/thumb_' . $fullname, $image->stream()->__toString());
+                        }
+
+                        if ($uploaded_path) {
+                            $path = $fullname;
+                        } else {
+                            $errcode = 4;
+                            $message = "文件上传失败。";
+                        }
+                    } else {
+                        $errcode = 3;
+                        $message = "无效的文件。";
+                    }
+                } else {
+                    $errcode = 2;
+                    $message = "请求参数中未找到图像文件。";
+                }
             }
-            return $this->responseForJson(ERR_CREATE, 'upload fail');
+        } else {
+            $errcode = 5;
+            $message = "错误的请求。";
         }
-        catch (\Exception $exception) {
-            return $this->responseForJson(ERR_ACCESS_DENID, $exception->getMessage());
+
+        return response()->json(array('errcode' => $errcode, 'message' => $message, 'path' => $path));
+    }
+
+    public function saveComment(Request $request)
+    {
+        $errcode = 0;
+        $msg = "success";
+
+        return response()->json([
+            'errcode' => 0,
+            'msg' => 'success'
+        ]);
+        
+        if (Auth::check()) {
+            $validator = Validator::make($request->all(), [
+                'content' => 'required|string|min:10|max:500'
+            ]);
+
+            if ($validator->fails()) {
+                return Redirect::back()
+                    ->withErrors($validator)
+                    ->withInput();
+            }
+
+            try {
+                $comment = new CustomerComment();
+                $comment->product_id = $product_id;
+                $comment->content = $content;
+
+                $customer = Customer::find(Auth::user()->id);
+                $customer->reviews()->save($comment);
+
+                return response()->json([
+                    'errcode' => 0,
+                    'msg' => 'success'
+                ]);
+            } catch (\Exception $e) {
+                return response()->json([
+                    'errcode' => 1,
+                    'msg' => $e->getMessage()
+                ]);
+            }
+        } else {
+            return response()->json([
+                'errcode' => 2,
+                'msg' => 'unauthorized'
+            ]);
         }
+    }
+
+    public function saveInfo(Request $request)
+    {
+        $uid = $request->input('uid');
+        $nickname = $request->input('nickname');
+        $sex = $request->input('gender');
+        $birthday = $request->input('birthday');
+        $avatar = $request->input('avatar');
+
+        if ($uid !== "") {
+            $customer = Customer::find($uid);
+            $customer->nickname = $nickname;
+            $customer->sex = $sex;
+            $customer->birthday = $birthday;
+            $customer->avatar = $avatar;
+
+            $customer->save();
+
+            return View::make('my.info')->with('user', $customer);
+        }
+        else {
+            return Redirect::back()->withInput();
+        } 
     }
 }

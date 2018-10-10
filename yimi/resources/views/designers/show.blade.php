@@ -53,10 +53,10 @@
         </div>
     </div>
     <div class="d-detail-img" id="littleImg">
-        @foreach ($designer->products as $product)
+        @foreach ($designer->portfolios as $portfolio)
         <div>
-            <img src="{{ asset('public/thumbs/products/thumb_' . $product->featured_image) }}" alt="" data-toggle="modal" data-target=".myModalImg">
-            <input type="hidden" name="field＿name" value="{{ asset('public/images/products/' . $product->featured_image) }}">
+            <img src="{{ asset('public/thumbs/portfolios/thumb_' . $portfolio->image) }}" alt="" data-toggle="modal" data-target=".myModalImg">
+            <input type="hidden" name="field＿name" value="{{ asset('public/images/portfolios/' . $portfolio->image) }}">
         </div>
         @endforeach
     </div>

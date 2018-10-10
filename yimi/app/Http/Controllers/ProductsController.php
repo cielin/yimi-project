@@ -7,6 +7,7 @@ use App\Product;
 use App\ProductCategory;
 use App\Customer;
 use App\ProductCollection;
+use App\Spotlight;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
 
@@ -74,6 +75,7 @@ class ProductsController extends Controller
         }
 
         $id = $request->input('id');
+        $type = $request->input('type');
         $client_t = $request->input('timestamp');
         $server_t = time();
         if (!$this->isValidTimeStamp($client_t) || (int)$server_t - (int)$client_t < 0 || (int)$server_t - (int)$client_t > 5000) {
@@ -81,54 +83,96 @@ class ProductsController extends Controller
             $message = "请求超时";
         }
 
-        $product = Product::where('id', $id)->first();
-        if ($product === null) {
-            $errcode = 3;
-            $message = "无法获取该ID对应的商品";
-        }
-
         $user = Auth::user();
         if ($user === null) {
-            $errcode = 4;
+            $errcode = 3;
             $message = "用户未登录";
         }
 
-        $product_collection = ProductCollection::where('product_id', $product->id)
-            ->where('customer_id', $user->id)
-            ->first();
-        if ($product_collection === null) {
-            try {
-                $product_collection = new ProductCollection();
-                $product_collection->product_id = $product->id;
-                $product_collection->customer_id = $user->id;
-                if ($product->state === "active") {
-                    $product_collection->is_active = 1;
-                } else {
-                    $product_collection->is_active = 0;
-                }
-                $product_collection->product_title = $product->name;
-                $product_collection->product_featured_image = $product->featured_image;
+        if ($type == 1) {
+            $product = Product::where('id', $id)->first();
+            if ($product === null) {
+                $errcode = 4;
+                $message = "无法获取该ID对应的商品";
+            }
 
-                $product_collection->save();
-            } catch (Exception $e) {
-                $errcode = 5;
-                $message = $e->message();
+            $product_collection = ProductCollection::where('product_id', $product->id)
+                ->where('customer_id', $user->id)
+                ->first();
+            if ($product_collection === null) {
+                try {
+                    $product_collection = new ProductCollection();
+                    $product_collection->product_id = $product->id;
+                    $product_collection->customer_id = $user->id;
+                    if ($product->state === "active") {
+                        $product_collection->is_active = 1;
+                    } else {
+                        $product_collection->is_active = 0;
+                    }
+                    $product_collection->product_title = $product->name;
+                    $product_collection->product_featured_image = $product->featured_image;
+                    $product_collection->type = 1;
+
+                    $product_collection->save();
+                } catch (Exception $e) {
+                    $errcode = 5;
+                    $message = $e->message();
+                }
+            } else {
+                try {
+                    if ($product_collection->status === 1) {
+                        $product_collection->status = 0;
+                        $action = "removed";
+                    } else {
+                        $product_collection->status = 1;
+                    }
+
+                    $product_collection->save();
+                } catch (Exception $e) {
+                    $errcode = 5;
+                    $message = $e->message();
+                }
             }
         }
         else {
-            try {
-                if ($product_collection->status === 1) {
-                    $product_collection->status = 0;
-                    $action = "removed";
-                }
-                else {
-                    $product_collection->status = 1;
-                }
+            $spot = Spotlight::where('id', $id)->first();
+            if ($spot === null) {
+                $errcode = 4;
+                $message = "无法获取该ID对应的好物";
+            }
 
-                $product_collection->save();
-            } catch (Exception $e) {
-                $errcode = 5;
-                $message = $e->message();
+            $product_collection = ProductCollection::where('product_id', $spot->id)
+                ->where('customer_id', $user->id)
+                ->first();
+            if ($product_collection === null) {
+                try {
+                    $product_collection = new ProductCollection();
+                    $product_collection->product_id = $spot->id;
+                    $product_collection->customer_id = $user->id;
+                    $product_collection->is_active = 1;
+                    $product_collection->product_title = $spot->title;
+                    $product_collection->product_featured_image = $spot->image;
+                    $product_collection->type = 2;
+
+                    $product_collection->save();
+                } catch (Exception $e) {
+                    $errcode = 5;
+                    $message = $e->message();
+                }
+            } else {
+                try {
+                    if ($product_collection->status === 1) {
+                        $product_collection->status = 0;
+                        $action = "removed";
+                    } else {
+                        $product_collection->status = 1;
+                    }
+
+                    $product_collection->save();
+                } catch (Exception $e) {
+                    $errcode = 5;
+                    $message = $e->message();
+                }
             }
         }
 

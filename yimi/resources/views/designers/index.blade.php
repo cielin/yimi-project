@@ -33,11 +33,11 @@
                 </div>
             </div>
         </div>
-        @if (count($designer->products) > 1)
+        @if (count($designer->portfolios) > 0)
         <?php $i = 0; ?>
-        @foreach ($designer->products as $product)
+        @foreach ($designer->portfolios as $portfolio)
         <div class="col-md-3 designer-img">
-            <img src="{{ asset('public/thumbs/products/thumb_' . $product->featured_image) }}">
+            <img src="{{ asset('public/thumbs/portfolios/thumb_' . $portfolio->image) }}">
         </div>
         @if ($i++ == 1)
             @break

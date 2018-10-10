@@ -114,7 +114,7 @@
                         <dl>
                             <dt>
                                 <p class="ico-wrap">
-                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $featured_product->id))
+                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $featured_product->id, 1))
                                     <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $featured_product->id }}"></span>
                                     @else
                                     <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $featured_product->id }}"></span>
@@ -133,11 +133,11 @@
                     @endforeach
                     @endif
                 </div>
-                <div role="tabpanel" class="designer buyer tab-pane" id="profile">
+                <!-- <div role="tabpanel" class="designer buyer tab-pane" id="profile">
                 222
                 </div>
                 <div role="tabpanel" class="designer buyer tab-pane" id="messages">333</div>
-                <div role="tabpanel" class="designer buyer tab-pane" id="settings">44</div>
+                <div role="tabpanel" class="designer buyer tab-pane" id="settings">44</div> -->
             </div>
         </div>
         @if (isset($designers))
@@ -193,7 +193,7 @@
                         @foreach ($spotlights as $spotlight)
                         <div class="item">
                             <div class="animate-box">
-                                @if ($spotlight['type'] == 'product')
+                                @if ($spotlight['type'] == 1)
                                 <img src="{{ asset('public/images/products/' . $spotlight['image']) }}" alt="{{ $spotlight['title'] }}">
                                 @else
                                 <img src="{{ asset('public/images/spotlights/' . $spotlight['image']) }}" alt="{{ $spotlight['title'] }}">
@@ -204,15 +204,19 @@
                             </div>
                             <div class="itemHover">
                                 <p class="ico-wrap">
-                                @if ($spotlight['type'] == 'product')
-                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $spotlight['id']))
-                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $spotlight['id'] }}"></span>
+                                @if ($spotlight['type'] == 1)
+                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $spotlight['id'], $spotlight['type']))
+                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $spotlight['id'] }}" data-type="1"></span>
                                     @else
-                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $spotlight['id'] }}"></span>
+                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $spotlight['id'] }}" data-type="1"></span>
                                     @endif
                                     <a href="/products/{{ $spotlight['link'] }}"><span class="icon iconfont icon-yanjing1"></span></a>
                                 @else
-                                    <span class="glyphicon glyphicon-heart-empty" data-id="{{ $spotlight['id'] }}"></span>
+                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $spotlight['id'], $spotlight['type']))
+                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $spotlight['id'] }}" data-type="2"></span>
+                                    @else
+                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $spotlight['id'] }}" data-type="2"></span>
+                                    @endif
                                     <span class="icon iconfont icon-sousuo clickico"  data-toggle="modal" data-target=".myModalImg"  data-src="{{ asset('public/images/spotlights/' . $spotlight['image']) }}" data-alt="{{ $spotlight['title'] }}"></span>
                                 @endif
                                 </p>
@@ -233,7 +237,7 @@
 <div class="modal fade myModalImg" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/img/close.png"></button>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="{{ URL::asset('assets/img/close.png') }}"></button>
       <div class="modal-body">
         <img id="bigImg"/>
       </div>
@@ -250,7 +254,7 @@
 <script type="text/javascript" src="{{ URL::asset('assets/js/custom.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('assets/js/global.js') }}"></script>
 <!-- Waypoints -->
-<script type="text/javascript" src="../plugin/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="{{ URL::asset('plugin/jquery.waypoints.min.js') }}"></script>
 <!-- Magnific Popup -->
 <script type="text/javascript" src="{{ URL::asset('plugin/jquery.magnific-popup.min.js') }}"></script>
 <!-- Salvattore -->
