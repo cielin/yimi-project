@@ -310,3 +310,136 @@
   color: #666;
 }
 
+/*购物流程*/
+.time-salse {
+  margin-left: 150px;
+}
+.time-salse .time-axis:before {
+  top: 6px;
+  width: 4px;
+  left:-1px;
+  height: 95%;
+}
+.time-salse .time-axis-item:first-child .time-axis-title,
+.time-salse .time-axis-item:first-child .time-axis-date{
+  font-weight: normal;
+}
+.time-salse .time-axis-item {
+  padding-left: 38px;
+}
+.time-salse .time-axis-date i{
+  position: absolute;
+  min-width: 132px;
+  display: block;
+  top: -16px;
+  left: -113px;
+}
+.time-salse .time-axis-title{
+  top: -13px;
+  position: relative;
+  margin-bottom: 24px;
+}
+.time-salse .time-axis-title p{
+  line-height: 35px;
+}
+.time-salse .time-axis-item:first-child .time-axis-date span{
+  background-color: rgba(89,89,89,0);
+  border-color: rgba(89,89,89,0);
+  width: 7px;
+  height: 7px;
+  left: -28px;
+}
+
+.time-salse .time-axis-item:first-child .time-axis-date span:after,
+.time-salse .time-axis-item .time-axis-date span:after{
+  background-color: #333;
+  border-color: #333;
+}
+.time-salse .time-axis-date span{
+  background-color: rgba(89,89,89,0);
+  border-color: rgba(89,89,89,0);
+  width: 7px;
+  height: 7px;
+  left: -28px;
+}
+.time-salse .time-axis-item .time-axis-title,
+.time-salse .time-axis-item .time-axis-date {
+  color: #333;
+}
+.order-detail-text.salesTop{
+  padding:50px 70px;
+}
+.salesTop ul{
+  width: 100%;
+  position: relative;
+}
+.salesTop ul:before{
+  content: "";
+  width: 83%;
+  /*border: 1px dashed #333;*/
+  background: url("../img/seleLine.png") repeat-x;
+  position: absolute;
+  top: 40px;
+  left: 94px;
+  height: 6px;
+}
+.salesTop ul li {
+  float: left;
+  width: 20%;
+}
+.salesTop ul li span{
+  display: block;
+  width: 82px;
+  height: 89px;
+  background: url("../img/seleBg.png");
+  position: relative;
+}
+.salesTop ul li span:before{
+    content: "";
+    width: 44px;
+    height: 61px;
+    background: url(../img/icons.png);
+    position: absolute;
+    top: 11px;
+    left: 18px;
+}
+.salesTop ul li span.icon1:before{
+  background-position: 0px 0px;
+}
+.salesTop ul li span.icon2:before{
+  background-position: -43px 0px;
+}
+.salesTop ul li span.icon3:before{
+  background-position: -98px 0px;
+  width: 53px;
+  left: 15px;
+}
+.salesTop ul li span.icon4:before{
+  background-position: -163px 0px;
+}
+.salesTop ul li span.icon5:before{
+  background-position: -215px 0px;
+  width: 50px;
+}
+.salesTop ul li i{
+  display: block;
+  width: 34px;
+  line-height: 20px;
+  color:#333;
+}
+.salesTop ul li span,
+.salesTop ul li i{
+  margin:0px auto;
+}
+.salesTop ul li span{
+  margin-bottom: 22px;
+}
+.order-detail-text,.time-salse{
+  font-family: "微软雅黑"
+}
+.order-detail-text{
+  margin-top: 20px;
+}
+.time-salse{
+  margin-bottom: 100px;
+}
