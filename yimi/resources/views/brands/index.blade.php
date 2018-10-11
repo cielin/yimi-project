@@ -22,28 +22,30 @@
                 <div class="sidebar-title">
                     <img src="{{ URL::asset('assets/img/title1.jpg') }}" />
                 </div>
-                <ul class="brandListText y-auto">
-                    <li><a href="#">Acerbis</a>
-                    </li>
-                    <li><a href="#">Agape</a>
-                    </li>
-                    <li class="active"><a href="#">Alessi</a>
-                    </li>
-                    <li><a href="#">Alias</a>
-                    </li>
-                    <li><a href="#">Angelo Cappellini</a>
-                    </li>
-                    <li><a href="#">Antonangeli</a>
-                    </li>
-                    <li><a href="#">Antoniolupi</a>
-                    </li>
-                    <li><a href="#">Arflex</a>
-                    </li>
-                    <li><a href="#">Arketipo</a>
-                    </li>
-                    <li><a href="#">Armani</a>
-                    </li>
-                </ul>
+                <div class="y-auto"> 
+                    <ul class="brandListText">
+                        <li><a href="#">Acerbis</a>
+                        </li>
+                        <li><a href="#">Agape</a>
+                        </li>
+                        <li class="active"><a href="#">Alessi</a>
+                        </li>
+                        <li><a href="#">Alias</a>
+                        </li>
+                        <li><a href="#">Angelo Cappellini</a>
+                        </li>
+                        <li><a href="#">Antonangeli</a>
+                        </li>
+                        <li><a href="#">Antoniolupi</a>
+                        </li>
+                        <li><a href="#">Arflex</a>
+                        </li>
+                        <li><a href="#">Arketipo</a>
+                        </li>
+                        <li><a href="#">Armani</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
         </div>
