@@ -18,7 +18,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-3 col-md-3">
+        <div class="col-sm-3 col-md-3 col-xs-3 sidebarWrap">
             <div class=" sidebar">
                 <div class="sidebar-title">
                     <img src="{{ URL::asset('assets/img/userCenterTitle.jpg') }}" />
@@ -36,7 +36,7 @@
             </div>
 
         </div>
-        <div class="col-sm-9 col-md-9 main">
+        <div class="col-sm-9 col-md-9 col-xs-9 main">
             <div class="address-text">
                 {{ Form::open(array('route' => 'addresses.save', 'id' => 'commentForm', 'role' => 'form')) }}
                     <div class="form-group" style="width:70%;">

@@ -19,7 +19,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-3 col-md-3">
+        <div class="col-sm-3 col-md-3 col-xs-3 sidebarWrap">
             <div class=" sidebar">
                 <div class="sidebar-title">
                 	<img src="{{ URL::asset('assets/img/title1.jpg') }}" />
@@ -106,7 +106,7 @@
                 @endif
             </div>
         </div>
-        <div class="col-sm-9 col-md-9 main">
+        <div class="col-sm-9 col-md-9 col-xs-9 main">
             @if (isset($selected_category) && $selected_category->depth === 1)
             @if (isset($selected_category->children) && sizeof($selected_category->children) > 0)
             <div class="good-list-top-bg">

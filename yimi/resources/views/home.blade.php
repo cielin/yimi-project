@@ -93,7 +93,7 @@
 
             </article>
             <div class="container overHide mb40">
-        		<img src="{{ URL::asset('assets/img/index_title.jpg') }}">
+        		<img  class="col-sm-2 col-xs-2" style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}">
                 @if (isset($categories) && sizeof($categories) > 0)
                  <ul class="index-title-ul" role="tablist">
                     @foreach ($categories as $category)
@@ -145,7 +145,7 @@
         <div class="container">
             <div class="container overHide  mb40">
                 <span>
-        			<img src="{{ URL::asset('assets/img/foot/designers.png') }}">
+        			<img  class="col-sm-4 col-xs-4" style="padding: 0px;" src="{{ URL::asset('assets/img/foot/designers.png') }}">
                 </span>
                 <span class="more"><a href="{{ url('designers') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a></span>
 

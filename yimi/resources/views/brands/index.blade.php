@@ -17,7 +17,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-4 col-md-3 ">
+        <div class="col-sm-4 col-md-3 col-xs-3 sidebarWrap">
             <div class="sidebar">
                 <div class="sidebar-title">
                     <img src="{{ URL::asset('assets/img/title1.jpg') }}" />
@@ -47,7 +47,7 @@
             </div>
 
         </div>
-        <div class="col-sm-8 col-md-9 main main-min">
+        <div class="col-sm-8 col-md-9 col-xs-9 main main-min">
             <div class="gray-box allA">
                 <a id="checkAllBrand" class="checkAllBrand @if (!isset($first)) active @endif" href="{{ route('brands.index') }}">全部</a>
                 <ul class="check-words clearfix">

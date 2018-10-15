@@ -18,7 +18,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-4 col-md-3">
+        <div class="col-sm-4 col-md-3 col-xs-3 sidebarWrap">
             <div class="sidebar">
                 <div class="sidebar-title">
                     <img src="{{ URL::asset('assets/img/userCenterTitle.jpg') }}" />
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-8 col-md-9 main">
+        <div class="col-sm-8 col-md-9 col-xs-9 main">
             <div class="bind-account-box">
                 <p class="bind-tip">
                     绑定第三方账号，可以直接登录网站，还可以将内容同步到以下平台， 与更多好友分享，如果当前账号在对应站点处于登录状态，需退出登录后，才能重新绑定；

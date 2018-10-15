@@ -24,7 +24,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-md-3 col-sm-3 col-xm-3">
+        <div class="col-md-3 col-sm-3 col-xs-3 sidebarWrap">
             <div class=" sidebar" style="padding-right:30px;">
                 <div class="brandBigImg">
                     <a href="#"><img src="{{ asset('public/images/brands/' . $brand->logo) }}">
