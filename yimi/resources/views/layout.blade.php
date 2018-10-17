@@ -27,7 +27,59 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-custom navbar-light navbar-fixed-top navbar-transparent">
+    <!-- LAYOUT-->
+<div class="topSearch">
+  <a class="logo" href="/"><img src="../assets/img/favicon.ico" alt=""></a>
+  <div class="top-search">
+    <input class="sinput"/>
+  </div>
+</div>
+<div class="layout footer-nav" id="layout">
+
+  <div class="overlay">
+    <ul class="">
+      <li @if (isset($active) && $active == 'home') class="current" @endif >
+            <a href="/" title="首页">首页</a>
+        </li>
+        <li>
+            <a href="/spaces" title="空间">空间</a>
+        </li>
+        <li @if (isset($active) && $active == 'categories') class="current" @endif >
+            <a href="/categories" title="商品">商品</a>
+        </li>
+        <li @if (isset($active) && $active == 'brands') class="current" @endif >
+            <a href="/brands" title="品牌">品牌</a>
+        </li>
+        <li @if (isset($active) && $active == 'designers') class="current" @endif >
+            <a href="/designers" title="设计师">设计师</a>
+        </li>
+  
+        @if (Auth::check())
+        <li>
+            <a class="user" href="{{ url('my/info') }}">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('signout') }}">
+                <span class="glyphicon glyphicon-eye-open"></span>
+                退出
+            </a>
+        </li>
+        @else
+        <li>
+        <a href="#" title="登录" class="hui-eee" data-toggle="modal" data-target="#myAuthModal">
+          <span class="glyphicon glyphicon-eye-open"></span>
+          登录
+        </a>
+      </li>
+        @endif
+    </ul>
+  </div>
+</div>
+<!-- WRAPPER -->
+<!-- NAVIGATION -->
+    <nav class="headerNav navbar navbar-custom navbar-light navbar-fixed-top navbar-transparent">
         <div class="nav-top-wrap">
             <div class="container">
                 <div class="pull-left">

@@ -24,6 +24,7 @@ var css = '<!--custom start-->' +
    '<link href="../assets/css/768px.css" type="text/css" rel="stylesheet">' +
    '<link href="../assets/css/992px.css" type="text/css" rel="stylesheet">' +
    '<link href="../assets/css/1200px.css" type="text/css" rel="stylesheet">' +
+      '<link href="../assets/css/mobile.css" type="text/css" rel="stylesheet">' +
    '<!--custom end-->';
 
 // var template = '<script type="text/javascript" src="../common/header.js"></script>'
