@@ -43,9 +43,19 @@
             @break
         @endif
         @endforeach
+        @else
+        <div class="col-md-3 designer-img" style="text-align: center; line-height: 2.307692rem;">
+            <span style="background-color: #f7f7f7; display: inline-block; width: 100%;">暂无作品</span>
+        </div>
+        <div class="col-md-3 designer-img" style="text-align: center; line-height: 2.307692rem;">
+            <span style="background-color: #f7f7f7; display: inline-block; width: 100%;">暂无作品</span>
+        </div>
         @endif
     </div>
     @endforeach
+    <nav class="clearfix" aria-label="page navigation">
+        <?php echo $designers->links(); ?>
+    </nav>
     @else
     <div class="no-data">暂无数据</div>
     @endif

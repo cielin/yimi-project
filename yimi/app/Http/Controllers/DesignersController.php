@@ -12,7 +12,7 @@ class DesignersController extends Controller
     public function index()
     {
     	$designers = Designer::orderBy('name', 'asc')
-    		->paginate(15);
+    		->paginate(10);
 
     	return View::make('designers.index')
     		->with('active', 'designers')

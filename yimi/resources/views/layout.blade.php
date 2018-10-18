@@ -79,7 +79,7 @@
                         <a href="/designers" title="设计师">设计师</a>
                     </li>
                     <li class="leftLine">
-                        <a href="#" title="如何选购">如何选购</a>
+                        <a href="/articles/shopping-tips" title="如何选购">如何选购</a>
                     </li>
                     <li class="rightLine  @if (isset($active) && $active == 'articles') current @endif ">
                         <a href="/articles" title="最近文章">最近文章</a>
@@ -168,8 +168,7 @@
                 <div class="row footer-bottom">
                     <p class="col-md-6 col-xs-6">沪ICP备18025160号-2 匠意国际贸易（上海）有限公司©2018</p>
                     <div class="col-md-6 col-xs-6 text-right">
-                        <a href="#">购物须知</a>
-                        <a href="#">如何选购</a>
+                        <a href="{{ url('articles/shopping-tips') }}">购物须知</a>
                         <a href="{{ url('my/orders') }}">配送信息</a>
                         <a href="{{ url('articles/aboutus') }}">关于我们</a>
                     </div>

@@ -22,28 +22,14 @@
                 <div class="sidebar-title">
                     <img src="{{ URL::asset('assets/img/title1.jpg') }}" />
                 </div>
+                @if (isset($all_brands) && sizeof($all_brands) > 0)
                 <ul class="brandListText y-auto">
-                    <li><a href="#">Acerbis</a>
+                    @foreach ($all_brands as $all_brand)
+                    <li><a href="{{ url('brands/' . $all_brand->slug) }}">{{ $all_brand->name }}</a>
                     </li>
-                    <li><a href="#">Agape</a>
-                    </li>
-                    <li class="active"><a href="#">Alessi</a>
-                    </li>
-                    <li><a href="#">Alias</a>
-                    </li>
-                    <li><a href="#">Angelo Cappellini</a>
-                    </li>
-                    <li><a href="#">Antonangeli</a>
-                    </li>
-                    <li><a href="#">Antoniolupi</a>
-                    </li>
-                    <li><a href="#">Arflex</a>
-                    </li>
-                    <li><a href="#">Arketipo</a>
-                    </li>
-                    <li><a href="#">Armani</a>
-                    </li>
+                    @endforeach
                 </ul>
+                @endif
             </div>
 
         </div>
@@ -68,6 +54,9 @@
                 </li>
                 @endforeach
             </ul>
+            <nav class="clearfix" aria-label="page navigation">
+                <?php echo $brands->links(); ?>
+            </nav>
             @else
             <div class="no-data">暂无数据</div>
             @endif
