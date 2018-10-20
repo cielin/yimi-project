@@ -19,7 +19,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-3 col-md-3">
+        <div class="col-sm-3 col-md-3 col-xs-3 sidebarWrap">
             <div class=" sidebar">
                 <div class="sidebar-title">
                 	<img src="{{ URL::asset('assets/img/title1.jpg') }}" />
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-9 col-md-9 main">
+        <div class="col-sm-9 col-md-9 col-xs-9 main">
             <div class="top-option clearfix">
                 <i class="glyphicon glyphicon-th"></i>
                 <div class="center-num">
