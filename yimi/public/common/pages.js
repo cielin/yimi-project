@@ -32,6 +32,14 @@ $(function(){
       }
   });
 
+  // 左侧添加滚动条
+  var winHeight = $(window).height() - 230
+  var yautoHeight = $('.y-auto').height()
+  if(yautoHeight > winHeight){
+    $('.y-auto').css({'height': winHeight, 'overflow-y': 'auto'})
+  }
+  
+
 })
 
 

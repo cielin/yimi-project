@@ -344,10 +344,7 @@ span.more{
 	font-size: 14px;
 	font-weight: bold;
 }
-.y-auto{
-	overflow-y: auto;
-	max-height:400px;
-}
+
 .brandListText li.active a{
 	color: #caa175;
 }
