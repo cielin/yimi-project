@@ -1129,3 +1129,7 @@ span.more{
 	color: #caa175;
     text-decoration: underline;
 }
+
+.waterfallNew #fh5co-board .item{
+	border-radius:0px;
+}
