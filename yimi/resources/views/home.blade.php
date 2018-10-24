@@ -70,7 +70,7 @@
     </div>
     <div class="index-content">
         <div class="container">
-            <article class="row litteBanner" style="padding-left:0; padding-right:0;">
+ <!--            <article class="row litteBanner" style="padding-left:0; padding-right:0;">
                 <div class="litteBannerImg col-md-6 col-sm-6 col-xs-6">
                     @if (isset($sl_banner))
                     <img src="{{ asset('public/images/banners/' . $sl_banner->image) }}">
@@ -91,9 +91,36 @@
                     @endif
                 </ul>
 
+            </article> -->
+
+            <article class="row litteBanner" style="padding-left:0; padding-right:0;">
+                
+                <div class="litteBigImg col-md-6 col-sm-6 col-xs-3">
+                    @if (isset($sl_banner))
+                        <img src="{{ asset('public/images/banners/' . $sl_banner->image) }}">
+                    @endif
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 img218" style="list-style: none;padding: 0;">
+                    <div class="clearfix">
+                    @if (isset($srt_banners))
+                        @foreach ($srt_banners as $srt_banner)
+                        <div class="col-md-6 col-sm-6 col-xs-6 img218_01">
+                            <img src="../assets/img/picture/img02.jpg">
+                        </div>
+                        @endforeach
+                    @endif
+                    </div>
+                    @if (isset($srb_banner))
+                    <div class="clearfix litteBtmImg">
+                        <div class="col-md-12 col-sm-12 col-xs-12 img218_03">
+                            <img src="../assets/img/picture/img06.jpg">
+                        </div>
+                    </div>
+                    @endif
+                </div>
             </article>
-            <div class="container overHide mb40">
-        		<img  class="col-sm-2 col-xs-2" style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}">
+            <div class="container overHide mb40 subTitles">
+        		<span><img style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}"></span>
                 @if (isset($categories) && sizeof($categories) > 0)
                  <ul class="index-title-ul" role="tablist">
                     @foreach ($categories as $category)
@@ -143,9 +170,9 @@
         @if (isset($designers))
         <!--设计师-->
         <div class="container">
-            <div class="container overHide  mb40">
+            <div class="container overHide mb40  subTitles">
                 <span>
-        			<img  class="col-sm-4 col-xs-4" style="padding: 0px;" src="{{ URL::asset('assets/img/foot/designers.png') }}">
+        			<img style="padding: 0px;" src="{{ URL::asset('assets/img/foot/designers.png') }}">
                 </span>
                 <span class="more"><a href="{{ url('designers') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a></span>
 

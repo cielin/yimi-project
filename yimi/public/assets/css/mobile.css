@@ -70,6 +70,9 @@
 	display: block;
 	margin-bottom: 0.125rem;
 }
+.litteBanner li img{
+	width: 100%;
+}
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
 	body,.navbar-light{
@@ -184,5 +187,77 @@
 	}
 	.designer.buyer dl{
 		margin-bottom: 9px;
+	}
+	.index-title-ul{
+		float: left;
+	}
+	.index-title-ul li{
+		width: 66px;
+		text-align: left;
+	}
+	.subTitles .more{
+		margin-right: 0px;
+		margin-top:0px;
+		float: right;
+	}
+	.subTitles span{
+		display: block;
+	}
+	.litteBanner li{
+		margin-bottom: 15px;
+	}
+
+	.litteBanner li.img2018_01,
+	.litteBanner li.img2018_02,
+	.litteBanner li.img2018_03{
+		padding-left: 0px;
+	}
+	.litteBanner li.img2018_03 img{
+		width: 74%;
+	}
+	.litteBanner li.img2018_01 img,
+	.litteBanner li.img2018_02 img{
+		width: 74%;
+		
+	}
+	.litteBanner li.img2018_01,
+	.litteBanner li.img2018_02{
+		padding: 0px;
+	}
+
+}
+
+@media (max-width: 500px) {
+	.litteBtmImg{
+		margin-top:15px;
+	}
+	.litteBanner .col-xs-3.litteBigImg{
+		width: 28.4%;
+	}
+	.litteBanner .col-xs-3{
+		width: 26%;
+	}
+	.img218,.img218_01,.img218_02,.img218_03{
+		padding-left: 0px;
+	}
+	.index-title-ul li {
+	    width: 60px;
+	    font-size: 13px;
+	}
+}
+@media (max-width: 425px) {
+	.litteBanner .col-xs-3.litteBigImg{
+		width: 25.4%;
+	}
+	.litteBanner .col-xs-3{
+		width: 23%;
+	}
+}
+@media (max-width: 375px) {
+	.litteBanner .col-xs-3.litteBigImg{
+		width: 22%;
+	}
+	.litteBanner .col-xs-3{
+		width: 19.5%;
 	}
 }

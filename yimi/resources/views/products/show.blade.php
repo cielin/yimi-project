@@ -5,7 +5,15 @@
 @section('css')
 
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/custorm.css') }}" />
-
+<!-- Animate.css -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/animate.css') }}">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/magnific-popup.css') }}">
+<!-- Salvattore -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/salvattore.css') }}">
+<!-- Theme Style -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/style.css') }}">
+<style type="text/css">
 @stop
 
 @section('page-content')
@@ -146,7 +154,7 @@
 
     </div>
 
-    <div class="designer buyer">
+<!--    <div class="designer buyer">
         @if (isset($featured_products))
         @foreach ($featured_products as $featured_product)
             <a href="/products/{{ $featured_product->slug }}">
@@ -161,7 +169,42 @@
 
         @endforeach
         @endif
-    </div>
+    </div>-->
+	
+<!--瀑布流开始 -->
+		<div class="container-fluid">
+		  <div class="container ">
+			  <div id="fh5co-main" class="waterfallNew">
+				<div class="container1">
+		         <div class="row">
+			        <div id="fh5co-board" data-columns>
+						@if (isset($featured_products))
+        				@foreach ($featured_products as $featured_product)
+			        	<div class="item">
+			        		<div class="animate-box">
+				        		<img src="{{ asset('public/images/products/' . $featured_product ->featured_image) }}">
+				        		<div class="fh5co-desc">
+									{{ $featured_product->name }}
+								</div>
+				        		<div class="itemHover">
+			        			<p class="ico-wrap">
+					            	<span class="glyphicon glyphicon-heart-empty"></span>
+					            	<span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
+					            </p>
+			        		</div>
+			        		</div>
+			        	</div>
+						 @endforeach
+        				@endif
+			        </div>
+		        </div>
+		       </div>
+			</div>
+		  </div>
+	    </div>
+</div>
+<!--瀑布流end -->
+
 
     <!--相关商品end-->
 
@@ -169,7 +212,12 @@
     @stop
 
     @section('js')
-
+	<!-- Waypoints -->
+	<script src="{{ URL::asset('plugin/jquery.waypoints.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="{{ URL::asset('plugin/jquery.magnific-popup.min.js"></script>
+	<!-- Salvattore -->
+	<script src="{{ URL::asset('plugin/salvattore.min.js"></script>
     <script src="{{ URL::asset('assets/js/goodsDetail.js') }}"></script>
 
     @stop
