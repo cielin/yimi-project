@@ -284,4 +284,6 @@
 <script type="text/javascript" src="{{ URL::asset('plugin/salvattore.min.js') }}"></script>
 <!-- Main JS -->
 <script type="text/javascript" src="{{ URL::asset('plugin/main.js') }}"></script>
+
+
 @stop
