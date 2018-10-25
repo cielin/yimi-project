@@ -47,32 +47,6 @@
         <div class=" col-md-9 col-sm-8 col-xs-8  main">
             <div class="top-option clearfix">
                 <i class="glyphicon glyphicon-th"></i>
-                <div class="center-num">
-                    <span class="pull-left">展示</span>
-                    <!-- <select class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select> -->
-                    <!--模拟select框 start-->
-                    <div class="model-select-box">
-                      <div class="model-select-text" data-value="">1</div>
-                      <i class="sanjiao glyphicon glyphicon-triangle-bottom"></i>
-                      <ul class="model-select-option">
-                        <li data-option="1">1</li>
-                        <li data-option="2">2</li>
-                        <li data-option="3">3</li>
-                        <li data-option="4">4</li>
-                        <li data-option="5">5</li>
-                        <li data-option="6">6</li>
-                        <li data-option="7">7</li>
-                      </ul>
-                    </div>
-                    <!--模拟select框 end-->
-                    <span class="pull-left">/ 页</span>
-                </div>
                 <div class="goods-order">
                     <span class="pull-left">排列方式</span>
                     <!-- <select class="form-control">
@@ -94,7 +68,7 @@
                 </div>
             </div>
 
-<!--            <div class="designer buyer goods clearfix">
+            <div class="designer buyer goods clearfix">
                 @foreach ($products as $product)
                 
                     <dl>
@@ -116,9 +90,9 @@
                     </dl>
                
                 @endforeach
-            </div>-->
+            </div>
             <!--瀑布流开始 -->
-		<div class="container-fluid">
+		<!-- <div class="container-fluid">
 		  <div class="container ">
 			  <div id="fh5co-main" class="waterfallNew">
 				<div class="container1">
@@ -149,7 +123,7 @@
 			</div>
 		  </div>
 	    </div>
-</div>
+</div> -->
 <!--瀑布流end -->
             <nav class="clearfix" aria-label="page navigation">
                 <?php echo $products->links(); ?>

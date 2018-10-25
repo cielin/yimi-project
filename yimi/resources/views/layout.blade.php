@@ -28,12 +28,12 @@
 
 <body>
     <!-- LAYOUT-->
-<div class="topSearch">
+<!-- <div class="topSearch">
   <a class="logo" href="/"><img src="../assets/img/favicon.ico" alt=""></a>
   <div class="top-search">
     <input class="sinput"/>
   </div>
-</div>
+</div> -->
 <div class="layout footer-nav" id="layout">
 
   <div class="overlay">
@@ -257,7 +257,7 @@
                                 <label for="">
                                     <p>密码 <span class="red1">*</span>
                                     </p>
-                                   <input name="password" type="password" required placeholder="请输入密码">
+                                   <input name="password" type="password" required placeholder="请输入密码" autocomplete="new-password">
                                 </label>
                                 <label for="">
                                     {{ Form::submit('登  录', array('class' => 'login-btn')) }}
@@ -278,11 +278,11 @@
                                 </label>
                                 <label for="">
                                     <p>密码 <span class="red1">*</span></p>
-                                    <input type="password" id="password" name="password" placeholder="输入新密码" required/>
+                                    <input type="password" id="password" name="password" placeholder="输入新密码" required autocomplete="new-password"/>
                                 </label>
                                 <label for="">
                                     <p>确认密码 <span class="red1">*</span></p>
-                                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="确定新密码" required/>
+                                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="确定新密码" required autocomplete="new-password"/>
                                 </label>
                                 <label for="">
                                     {{ Form::submit('注  册', array('class' => 'login-btn')) }}
