@@ -131,14 +131,10 @@
         </div>
     </div>
 </div>
-
+<!-- Waypoints -->
+<script src="{{ URL::asset('plugin/jquery.waypoints.min.js"></script>
+<!-- Magnific Popup -->
+<script src="{{ URL::asset('plugin/jquery.magnific-popup.min.js"></script>
+<!-- Salvattore -->
+<script src="{{ URL::asset('plugin/salvattore.min.js"></script>
 @stop
-
-    @section('js')
-	<!-- Waypoints -->
-	<script src="{{ URL::asset('plugin/jquery.waypoints.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="{{ URL::asset('plugin/jquery.magnific-popup.min.js"></script>
-	<!-- Salvattore -->
-	<script src="{{ URL::asset('plugin/salvattore.min.js"></script>
-    @stop
