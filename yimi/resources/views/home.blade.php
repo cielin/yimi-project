@@ -123,18 +123,18 @@
         		<span><img style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}"></span>
                 @if (isset($categories) && sizeof($categories) > 0)
                  <ul class="index-title-ul" role="tablist">
-                    <!-- @foreach ($categories as $category)
+                    @foreach ($categories as $category)
                     <li role="presentation" class="active">
                         <a href="{{ url('/categories/' . $category->slug) }}"  href="#home"  aria-controls="home" role="tab" data-toggle="tab">{{ $category->name }}</a>
 
                     </li>
-                    @endforeach -->
-                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                    @endforeach
+                    <!-- <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
                     <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
                     <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
                     <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
                     <li class="more"><i style="padding-right: 30px;color: #999;font-weight: 100;font-size: 10px;">|</i><a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
-                    </li>
+                    </li> -->
                 </ul>
                 @endif
             </div>
