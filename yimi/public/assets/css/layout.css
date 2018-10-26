@@ -125,8 +125,8 @@ ul.nav{
 .litteBanner li{
 	margin-bottom: 32px;
 }
-.litteBannerImg img {
-    width: 102%;
+.litteBanner img {
+    width: 12%;
 }
 .myMsg{
 	position:relative;
