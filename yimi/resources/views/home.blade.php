@@ -116,7 +116,7 @@
                 <div  role="tabpanel" class="designer buyer tab-pane active" id="home">
                 	@if (isset($featured_products))
                 	@foreach ($featured_products as $featured_product)
-                    
+                        
                         <dl>
                             <dt>
                                 <p class="ico-wrap">
@@ -140,10 +140,54 @@
                     @endif
                 </div>
                 <div role="tabpanel" class="designer buyer tab-pane" id="profile">
-                222
+                <a href="#">
+                    <dl>
+                      <dt>
+                        <p class="ico-wrap">
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </p>
+                      </dt>
+                      <dd>
+                       <img src="../assets/img/picture/img04.jpg">
+                      </dd>
+                      <div class="buyer-text"><span>dsdd</span></div>
+                    </dl>
+                  </a>
                 </div>
-                <div role="tabpanel" class="designer buyer tab-pane" id="messages">333</div>
-                <div role="tabpanel" class="designer buyer tab-pane" id="settings">44</div>
+                <div role="tabpanel" class="designer buyer tab-pane" id="messages">
+                  <a href="#">
+                    <dl>
+                      <dt>
+                        <p class="ico-wrap">
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </p>
+                      </dt>
+                      <dd>
+                       <img src="../assets/img/picture/img04.jpg">
+                      </dd>
+                      <div class="buyer-text"><span>dsdd</span></div>
+                    </dl>
+                  </a>
+
+                </div>
+                <div role="tabpanel" class="designer buyer tab-pane" id="settings">
+                    <a href="#">
+                    <dl>
+                      <dt>
+                        <p class="ico-wrap">
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </p>
+                      </dt>
+                      <dd>
+                       <img src="../assets/img/picture/img04.jpg">
+                      </dd>
+                      <div class="buyer-text"><span>dsdd</span></div>
+                    </dl>
+                  </a>
+                </div>
             </div>
         </div>
         @if (isset($designers))
