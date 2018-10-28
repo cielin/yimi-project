@@ -151,7 +151,7 @@
                       <dd>
                        <img src="../assets/img/picture/img04.jpg">
                       </dd>
-                      <div class="buyer-text"><span>dsdd</span></div>
+                      <div class="buyer-text"><span>profile</span></div>
                     </dl>
                   </a>
                 </div>
@@ -167,7 +167,7 @@
                       <dd>
                        <img src="../assets/img/picture/img04.jpg">
                       </dd>
-                      <div class="buyer-text"><span>dsdd</span></div>
+                      <div class="buyer-text"><span>messages</span></div>
                     </dl>
                   </a>
 
@@ -184,7 +184,7 @@
                       <dd>
                        <img src="../assets/img/picture/img04.jpg">
                       </dd>
-                      <div class="buyer-text"><span>dsdd</span></div>
+                      <div class="buyer-text"><span>settings</span></div>
                     </dl>
                   </a>
                 </div>
