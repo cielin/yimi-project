@@ -135,7 +135,7 @@
             <div class="no-data">暂无数据</div>
             @endif -->
         @if (isset($products) && sizeof($products) > 0)
-             <!--瀑布流开始 -->
+        <!--瀑布流开始 -->
         <div class="container-fluid">
           <div class="container ">
               <div id="fh5co-main" class="waterfallNew">
