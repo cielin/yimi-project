@@ -147,8 +147,7 @@
                             <div class="animate-box">
                                 <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
                                 <div class="fh5co-desc">
-                                    <!-- {{ $product->name }} -->
-                                    大方的说法
+                                    {{ $product->name }}
                                 </div>
                                 <div class="itemHover">
                                     <p class="ico-wrap">
