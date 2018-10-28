@@ -344,7 +344,6 @@ span.more{
 	font-size: 14px;
 	font-weight: bold;
 }
-
 .brandListText li.active a{
 	color: #caa175;
 }
@@ -1131,19 +1130,7 @@ span.more{
     text-decoration: underline;
 }
 
-.waterfallNew #fh5co-board .item{
-	border-radius:0px;
-}
-/*.ditails-tab-box img{
-	width: 100%;
-}*/
 /*首页2018图重构*/
-.litteBtmImg{
-	margin-top: 30px;
-}
-.litteBigImg img,.img218_01 img,.img218_02 img,.img218_03 img{
-	width: 100%;
-}
 .designerNew a{
 	float: left;
 	margin-bottom: 44px;
