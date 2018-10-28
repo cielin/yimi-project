@@ -256,12 +256,4 @@
     </div>
  </div> 
 @stop
-@section('js')
-<!-- Waypoints -->
-<script type="text/javascript" src="{{ URL::asset('../plugin/jquery.waypoints.min.js') }}"></script>
 
-<!-- Magnific Popup -->
-<script type="text/javascript" src="{{ URL::asset('../plugin/jquery.magnific-popup.min.js') }}"></script>
-<!-- Salvattore -->
-<script type="text/javascript" src="{{ URL::asset('../plugin/salvattore.min.js') }}"></script>
-@stop
