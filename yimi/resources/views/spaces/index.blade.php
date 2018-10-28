@@ -3,16 +3,7 @@
 @section('title', '空间')
 
 @section('active', 'spaces')
-@section('css')
-<!-- Animate.css -->
-<link rel="stylesheet" href="{{ URL::asset('plugin/css/animate.css') }}">
-<!-- Magnific Popup -->
-<link rel="stylesheet" href="{{ URL::asset('plugin/css/magnific-popup.css') }}">
-<!-- Salvattore -->
-<link rel="stylesheet" href="{{ URL::asset('plugin/css/salvattore.css') }}">
-<!-- Theme Style -->
-<link rel="stylesheet" href="{{ URL::asset('plugin/css/style.css') }}">
-@stop
+
 @section('page-content')
 <div class="wrapper-page container">
     <!--面包屑-->
@@ -256,4 +247,12 @@
     </div>
  </div> 
 @stop
+@section('js')
+<!-- Waypoints -->
+<script type="text/javascript" src="{{ URL::asset('../plugin/jquery.waypoints.min.js') }}"></script>
 
+<!-- Magnific Popup -->
+<script type="text/javascript" src="{{ URL::asset('../plugin/jquery.magnific-popup.min.js') }}"></script>
+<!-- Salvattore -->
+<script type="text/javascript" src="{{ URL::asset('../plugin/salvattore.min.js') }}"></script>
+@stop
