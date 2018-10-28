@@ -67,7 +67,7 @@ html{
 .designer,
 .designer.buyer,
 .designer.goods{
-	display: block;
+	/*display: block;*/
 	width: 104%;
     position: relative;
     left: -0.25641rem;
