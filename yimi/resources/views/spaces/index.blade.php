@@ -145,95 +145,12 @@
                             <div class="itemHover">
                                 <p class="ico-wrap">
                                     <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <a href="/products/{{ $waterfalled_product->slug }}"><span class="icon iconfont icon-sousuo clickico"  data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span></a>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
-                                <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_2.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.</div>
-                            <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
                                     <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg"  data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
                                 </p>
                             </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
-                                <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_2.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.</div>
-                            <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg"  data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
-                                <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg"  data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_2.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.</div>
-                            <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
-                                <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                </div>
