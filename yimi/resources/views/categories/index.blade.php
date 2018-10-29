@@ -222,34 +222,83 @@
             <nav class="clearfix" aria-label="page navigation">
                 <?php echo $products->links(); ?>
             </nav> -->
- <!-- @if (isset($products) && sizeof($products) > 0) -->
-        <!--瀑布流开始 -->
+            
+           <!--  @else
+            <div class="no-data">暂无数据</div>
+            @endif -->
+                      <!--瀑布流开始 -->
+
         <div class="container-fluid">
           <div class="container ">
-              <div id="fh5co-main" class="waterfallNew">
-                <div class="container1">
+           <div class="waterfalls  bg-hui-f1">
+              <h3 style="margin-bottom: 0px;">
+                <img src="../assets/img/foot/tit-water.png" alt="">
+              </h3>
+            </div>
+              <div id="fh5co-main" class="bg-hui-f1">
+                <div class="container">
                  <div class="row">
                     <div id="fh5co-board" data-columns>
-<!--                         @foreach ($products as $product)
                         <div class="item">
                             <div class="animate-box">
-                               <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
-                                <div class="fh5co-desc">
-                                    {{ $product->name }}
-                                </div>
+                                <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
+                                <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
                                 <div class="itemHover">
-                                    <p class="ico-wrap">
-                                        @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
-                                        <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
-                                        @else
-                                        <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
-                                        @endif
-                                        <a href="/products/{{ $product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
-                                    </p>
+                                <p class="ico-wrap">
+                                    <span class="glyphicon glyphicon-heart-empty"></span>
+                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
+                                </p>
                             </div>
                             </div>
                         </div>
-                         @endforeach -->
+                        <div class="item">
+                            <div class="animate-box">
+                                <img src="images/img_2.jpg" alt="Free HTML5 Bootstrap template">
+                                <div class="fh5co-desc">Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.</div>
+                            <div class="itemHover">
+                                <p class="ico-wrap">
+                                    <span class="glyphicon glyphicon-heart-empty"></span>
+                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg"  data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="animate-box">
+                                <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
+                                <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
+                                <div class="itemHover">
+                                <p class="ico-wrap">
+                                    <span class="glyphicon glyphicon-heart-empty"></span>
+                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg"  data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="animate-box">
+                                <img src="images/img_2.jpg" alt="Free HTML5 Bootstrap template">
+                                <div class="fh5co-desc">Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.</div>
+                            <div class="itemHover">
+                                <p class="ico-wrap">
+                                    <span class="glyphicon glyphicon-heart-empty"></span>
+                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="animate-box">
+                                <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
+                                <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
+                                <div class="itemHover">
+                                <p class="ico-wrap">
+                                    <span class="glyphicon glyphicon-heart-empty"></span>
+                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
+                                </p>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                </div>
@@ -257,10 +306,7 @@
           </div>
         </div>
     </div>
-    <!--瀑布流end -->
-            <!-- @else
-            <div class="no-data">暂无数据</div>
-            @endif -->
+      <!--瀑布流end -->
         </div>
     </div>
  </div>         
