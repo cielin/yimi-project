@@ -230,7 +230,7 @@
                 <div class="container1">
                  <div class="row">
                     <div id="fh5co-board" data-columns>
-                        @foreach ($products as $product)
+<!--                         @foreach ($products as $product)
                         <div class="item">
                             <div class="animate-box">
                                <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
@@ -249,7 +249,7 @@
                             </div>
                             </div>
                         </div>
-                         @endforeach
+                         @endforeach -->
                     </div>
                 </div>
                </div>
