@@ -233,10 +233,10 @@
                         @foreach ($products as $product)
                         <div class="item">
                             <div class="animate-box">
-                               <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
+                               <!-- <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
                                 <div class="fh5co-desc">
                                     {{ $product->name }}
-                                </div>
+                                </div> -->
                                 <div class="itemHover">
                                    <!--  <p class="ico-wrap">
                                         @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
