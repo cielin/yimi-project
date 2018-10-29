@@ -237,7 +237,7 @@
                         @foreach ($products as $product)
                         <div class="item">
                             <div class="animate-box">
-                                <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
+                                <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
                                 <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
                                 <div class="itemHover">
                                 <p class="ico-wrap">
