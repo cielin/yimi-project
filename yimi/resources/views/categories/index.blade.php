@@ -230,63 +230,10 @@
 
         <div class="container-fluid">
           <div class="container ">
-           <div class="waterfalls  bg-hui-f1">
-              <h3 style="margin-bottom: 0px;">
-                <img src="../assets/img/foot/tit-water.png" alt="">
-              </h3>
-            </div>
-              <div id="fh5co-main" class="bg-hui-f1">
+              <div id="fh5co-main" class="waterfallNew">
                 <div class="container">
                  <div class="row">
                     <div id="fh5co-board" data-columns>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
-                                <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_2.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.</div>
-                            <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg"  data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
-                                <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg"  data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="animate-box">
-                                <img src="images/img_2.jpg" alt="Free HTML5 Bootstrap template">
-                                <div class="fh5co-desc">Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.</div>
-                            <div class="itemHover">
-                                <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
                         <div class="item">
                             <div class="animate-box">
                                 <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
