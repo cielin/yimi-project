@@ -8,6 +8,7 @@ $(function(){
 	    var today = todayShowDate.getFullYear()+"-" + (todayShowDate.getMonth()+1) + "-" + todayShowDate.getDate();
 	    var afterDay = F.afterDate(today);
 	    var todayOption = {
+	    	format: 'yyyy-mm-dd',
 	        language:'zh-CN',
 	        weekStart: 1,
 	        todayBtn:  1,
@@ -16,6 +17,7 @@ $(function(){
 	        startView: 2,
 	        forceParse: 0,
 	        showMeridian: 1,
+	        yearStart：1000,     //设置最小年份
 	        startDate: today,
 	        minView: "month", //选择日期后，不会再跳转去选择时分秒
 	    }

@@ -85,7 +85,7 @@
                 <div class="form-group birthday">
                     <label style="display: block;">生日<i>*</i>
                     </label>
-                    <input type="text" class="form-control myDay" name="birthday" placeholder="" required value="{{ $user->birthday }}">
+                    <input type="text" class="form-control myDay" name="birthday" placeholder="" data-date-format="dd-mm-yyyy" required value="{{ $user->birthday }}">
                     
                 </div>
                 <button type="submit" class="address-btn">保存</button>
