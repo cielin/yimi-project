@@ -223,55 +223,45 @@
                 <?php echo $products->links(); ?>
             </nav> -->
     @if (isset($products) && sizeof($products) > 0)
-        <!--瀑布流开始 -->
-        <div class="container-fluid">
-          <div class="container ">
-              <div id="fh5co-main" class="waterfallNew">
-                <div class="container1">
-                 <div class="row">
-                    <div id="fh5co-board" data-columns>
-                       @foreach ($products as $product)
-                        <div class="item">
-                            <div class="animate-box">
-                               <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
-                                <div class="fh5co-desc">
-                                    {{ $product->name }}
+            <!--瀑布流开始 -->
+            <div class="container-fluid">
+              <div class="container ">
+                  <div id="fh5co-main" class="waterfallNew">
+                    <div class="container1">
+                     <div class="row">
+                        <div id="fh5co-board" data-columns>
+                           @foreach ($products as $product)
+                            <div class="item">
+                                <div class="animate-box">
+                                   <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
+                                    <div class="fh5co-desc">
+                                        {{ $product->name }}
+                                    </div>
+                                    <div class="itemHover">
+                                      <p class="ico-wrap">
+                                        @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
+                                        <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
+                                        @else
+                                        <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
+                                        @endif
+                                        <a href="/products/{{ $product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
+                                    </p>
                                 </div>
-                                <div class="itemHover">
-                                  <p class="ico-wrap">
-                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
-                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
-                                    @else
-                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
-                                    @endif
-                                    <a href="/products/{{ $product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
-                                </p>
+                                </div>
                             </div>
-                            </div>
+                             @endforeach
                         </div>
-                         @endforeach
                     </div>
+                   </div>
                 </div>
-               </div>
+              </div>
             </div>
-          </div>
         </div>
-    </div>
-    <!--瀑布流end -->
+        <!--瀑布流end -->
             @else
             <div class="no-data">暂无数据</div>
             @endif
         </div>
     </div>
  </div>         
-@stop
-
-@section('js')
-<!-- Waypoints -->
-<script type="text/javascript" src="{{ URL::asset('../plugin/jquery.waypoints.min.js') }}"></script>
-
-<!-- Magnific Popup -->
-<script type="text/javascript" src="{{ URL::asset('../plugin/jquery.magnific-popup.min.js') }}"></script>
-<!-- Salvattore -->
-<script type="text/javascript" src="{{ URL::asset('../plugin/salvattore.min.js') }}"></script>
 @stop
