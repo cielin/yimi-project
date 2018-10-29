@@ -7,21 +7,29 @@ $(function(){
 	    afterShowDate.setTime(afterShowDate.getTime()+24*60*60*1000);
 	    var today = todayShowDate.getFullYear()+"-" + (todayShowDate.getMonth()+1) + "-" + todayShowDate.getDate();
 	    var afterDay = F.afterDate(today);
+	    // var todayOption = {
+	    // 	format: 'yyyy-mm-dd',
+	    //     language:'zh-CN',
+	    //     timepicker:false,
+	    //     weekStart: 1,
+	    //     todayBtn:  1,
+	    //     autoclose: 1,
+	    //     todayHighlight: 1,
+	    //     startView: 2,
+	    //     forceParse: 0,
+	    //     showMeridian: 1,
+	    //     yearStart:1000,     //设置最小年份
+	    //     startDate: today,
+	    //     minView: "month", //选择日期后，不会再跳转去选择时分秒
+	    // }
 	    var todayOption = {
 	    	format: 'yyyy-mm-dd',
 	        language:'zh-CN',
-	        weekStart: 1,
-	        todayBtn:  1,
-	        autoclose: 1,
-	        todayHighlight: 1,
-	        startView: 2,
-	        forceParse: 0,
-	        showMeridian: 1,
-	        yearStart:1000,     //设置最小年份
-	        startDate: today,
-	        minView: "month", //选择日期后，不会再跳转去选择时分秒
+	        timepicker:false,    //关闭时间选项
+      		yearStart:1000,     //设置最小年份
+      		yearEnd:2050,        //设置最大年份
+      		todayButton:false    //关闭选择今天按钮
 	    }
-
 	     //日期控件
 	    // $('.myYear').datetimepicker(yearOption);
 	    // $('.myMonth').datetimepicker(monthOption);
