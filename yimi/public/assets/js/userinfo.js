@@ -17,7 +17,7 @@ $(function(){
 	        startView: 2,
 	        forceParse: 0,
 	        showMeridian: 1,
-	        yearStart：1000,     //设置最小年份
+	        yearStart:1000,     //设置最小年份
 	        startDate: today,
 	        minView: "month", //选择日期后，不会再跳转去选择时分秒
 	    }
