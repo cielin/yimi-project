@@ -234,6 +234,7 @@
                 <div class="container">
                  <div class="row">
                     <div id="fh5co-board" data-columns>
+                        @foreach ($products as $product)
                         <div class="item">
                             <div class="animate-box">
                                 <img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
@@ -246,6 +247,7 @@
                             </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
                </div>
