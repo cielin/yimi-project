@@ -194,7 +194,7 @@
                 </div>
             </div>
 
-<!--             @if (isset($products) && sizeof($products) > 0)
+            @if (isset($products) && sizeof($products) > 0)
             <div class="designer buyer goods clearfix">
                 @foreach ($products as $product)
                
@@ -221,13 +221,13 @@
 
             <nav class="clearfix" aria-label="page navigation">
                 <?php echo $products->links(); ?>
-            </nav> -->
+            </nav>
             
-           <!--  @else
+            @else
             <div class="no-data">暂无数据</div>
-            @endif -->
+            @endif
                       <!--瀑布流开始 -->
-
+<!--         @if (isset($products) && sizeof($products) > 0)
         <div class="container-fluid">
           <div class="container ">
               <div id="fh5co-main" class="waterfallNew">
@@ -253,7 +253,9 @@
           </div>
         </div>
     </div>
+    @endif -->
       <!--瀑布流end -->
+
         </div>
     </div>
  </div>         
