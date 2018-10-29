@@ -241,9 +241,13 @@
                                 <div class="fh5co-desc">{{ $product->name }}</div>
                                 <div class="itemHover">
                                 <p class="ico-wrap">
-                                    <span class="glyphicon glyphicon-heart-empty"></span>
-                                    <span class="icon iconfont icon-sousuo clickico" data-toggle="modal" data-target=".myModalImg" data-src="images/img_2.jpg" data-alt="Free HTML5 Bootstrap template"></span>
-                                </p>
+                                @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
+                                <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
+                                @else
+                                <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
+                                @endif
+                                <a href="/products/{{ $product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
+                            </p>
                             </div>
                             </div>
                         </div>
