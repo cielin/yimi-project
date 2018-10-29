@@ -193,7 +193,7 @@
                     <!--模拟select框 end-->
                 </div>
             </div>
-
+<!-- 
             @if (isset($products) && sizeof($products) > 0)
             <div class="designer buyer goods clearfix">
                 @foreach ($products as $product)
@@ -225,9 +225,9 @@
             
             @else
             <div class="no-data">暂无数据</div>
-            @endif
+            @endif -->
                       <!--瀑布流开始 -->
-<!--         @if (isset($products) && sizeof($products) > 0)
+        @if (isset($products) && sizeof($products) > 0)
         <div class="container-fluid">
           <div class="container ">
               <div id="fh5co-main" class="waterfallNew">
@@ -253,7 +253,7 @@
           </div>
         </div>
     </div>
-    @endif -->
+    @endif
       <!--瀑布流end -->
 
         </div>
