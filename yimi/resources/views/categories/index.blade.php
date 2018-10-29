@@ -222,7 +222,7 @@
             <nav class="clearfix" aria-label="page navigation">
                 <?php echo $products->links(); ?>
             </nav> -->
- @if (isset($products) && sizeof($products) > 0)
+ <!-- @if (isset($products) && sizeof($products) > 0) -->
         <!--瀑布流开始 -->
         <div class="container-fluid">
           <div class="container ">
@@ -230,7 +230,7 @@
                 <div class="container1">
                  <div class="row">
                     <div id="fh5co-board" data-columns>
-<!--                         @foreach ($products as $product)
+                        @foreach ($products as $product)
                         <div class="item">
                             <div class="animate-box">
                                <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
@@ -249,7 +249,7 @@
                             </div>
                             </div>
                         </div>
-                         @endforeach -->
+                         @endforeach
                     </div>
                 </div>
                </div>
@@ -258,9 +258,9 @@
         </div>
     </div>
     <!--瀑布流end -->
-            @else
+            <!-- @else
             <div class="no-data">暂无数据</div>
-            @endif
+            @endif -->
         </div>
     </div>
  </div>         
