@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="designer buyer goods clearfix">
+<!--             <div class="designer buyer goods clearfix">
                 @foreach ($products as $product)
                 
                     <dl>
@@ -90,9 +90,9 @@
                     </dl>
                
                 @endforeach
-            </div>
+            </div> -->
             <!--瀑布流开始 -->
-<!-- 		<div class="container-fluid">
+		<div class="container-fluid">
 		  <div class="container ">
 			  <div id="fh5co-main" class="waterfallNew">
 				<div class="container1">
@@ -123,7 +123,7 @@
 			</div>
 		  </div>
 	    </div>
-</div> -->
+</div>
 <!--瀑布流end -->
             <nav class="clearfix" aria-label="page navigation">
                 <?php echo $products->links(); ?>
