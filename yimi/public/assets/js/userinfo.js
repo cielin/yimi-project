@@ -28,7 +28,9 @@ $(function(){
 	        timepicker:false,    //关闭时间选项
       		yearStart:1000,     //设置最小年份
       		yearEnd:2050,        //设置最大年份
-      		todayButton:false    //关闭选择今天按钮
+      		todayButton:false,    //关闭选择今天按钮
+      		autoclose:true,
+      		minView: "month"
 	    }
 	     //日期控件
 	    // $('.myYear').datetimepicker(yearOption);

@@ -86,21 +86,13 @@
 	};
 
 	
-	var itemHover = function(){
-		$("#fh5co-board").find(".item").mouseover(function(){
-			$(this).find(".itemHover").show();
-		})
-		$("#fh5co-board").find(".item").mouseout(function(){
-			$(this).find(".itemHover").hide();
-		})
-	}
 	
 	$(function(){
 		//magnifPopup();
 		offCanvass();
 		mobileMenuOutsideClick();
 		animateBoxWayPoint();
-		itemHover();
+		// itemHover();
 	});
 
 
