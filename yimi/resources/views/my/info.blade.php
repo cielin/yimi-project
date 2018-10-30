@@ -88,8 +88,8 @@
                     <input type="text" class="form-control myDay" name="birthday" placeholder="" data-date-format="yyyy-mm-dd" required value="{{ $user->birthday }}">     
                     <?php
                     echo "今天是 " . date("Y-m-d") . "<br>";
-                    echo "今ss " . formatDate("Y-m-d","2012-11-03 00:46:22" , 1) . "<br>";
-                     echo e(formatDate("Y-m-d",$user->birthday, 1));
+                    echo "今ss " . formatDate("Y-m-d",e($user->birthday), 1) . "<br>";
+                     echo e($user->birthday);
                     ?>
                 </div>
                 <button type="submit" class="address-btn">保存</button>
