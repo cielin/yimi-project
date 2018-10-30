@@ -70,9 +70,8 @@
 	display: block;
 	margin-bottom: 0.125rem;
 }
-.litteBanner li img{
-	width: 100%;
-}
+
+
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
 	body,.navbar-light{
@@ -99,6 +98,10 @@
 		padding-left: 0px;
 	}
 	/*内页*/
+	.index-content{
+		min-width: 768px;
+	}
+	
 	.sidebar{
 		padding-bottom: 10921px;
 		margin-bottom: -10921px;
@@ -188,9 +191,7 @@
 	.designer.buyer dl{
 		margin-bottom: 9px;
 	}
-	.index-title-ul{
-		float: left;
-	}
+
 	.index-title-ul li{
 		width: 66px;
 		text-align: left;
@@ -200,64 +201,104 @@
 		margin-top:0px;
 		float: right;
 	}
-	.subTitles span{
-		display: block;
+	.overHide.mb40{
+		margin-bottom: 20px;
 	}
-	.litteBanner li{
-		margin-bottom: 15px;
+	.designerNew dl dt p.ico-wrap {
+	    position: relative;
+	    height: 22%;
 	}
-
-	.litteBanner li.img2018_01,
-	.litteBanner li.img2018_02,
-	.litteBanner li.img2018_03{
-		padding-left: 0px;
+	.ico-wrap span {
+	    font-size: 100%;
+	    position: absolute;
+	    top: -8%;
+	    left: -7%;
 	}
-	.litteBanner li.img2018_03 img{
-		width: 74%;
+	.ico-wrap span.glyphicon-eye-open {
+	    right: -12%;
+	    left: auto;
 	}
-	.litteBanner li.img2018_01 img,
-	.litteBanner li.img2018_02 img{
-		width: 74%;
-		
-	}
-	.litteBanner li.img2018_01,
-	.litteBanner li.img2018_02{
-		padding: 0px;
-	}
-
 }
 
 @media (max-width: 500px) {
+	.litteBanner li{
+		margin-bottom: 23px;
+	}
+	.index-content{
+		min-width: 100%;
+	}
+	
 	.litteBtmImg{
 		margin-top:15px;
 	}
-	.litteBanner .col-xs-3.litteBigImg{
-		width: 28.4%;
-	}
-	.litteBanner .col-xs-3{
-		width: 26%;
-	}
-	.img218,.img218_01,.img218_02,.img218_03{
-		padding-left: 0px;
-	}
+
 	.index-title-ul li {
 	    width: 60px;
 	    font-size: 13px;
 	}
+	.subTitles span{
+		display: block;
+	}
+	.index-title-ul{
+		float: left;
+	}
+	.designerNew a.col-xs-3:nth-child(2){
+		position: relative;
+		left:-11px;
+	}
+	.designerNew a.col-xs-3{
+		width: 28.3%;
+	}
+	.designerNew dl dt p.ico-wrap {
+	    position: relative;
+	    height: 22%;
+	}
+	.ico-wrap span {
+	    font-size: 100%;
+	    position: absolute;
+	    top: -1%;
+	    left: -7%;
+	}
+	.ico-wrap span.glyphicon-eye-open {
+	    right: -9%;
+	    left: auto;
+	}
 }
 @media (max-width: 425px) {
-	.litteBanner .col-xs-3.litteBigImg{
-		width: 25.4%;
+	.index-title-ul li {
+	    width: 53px;
+	    font-size: 12px;
 	}
-	.litteBanner .col-xs-3{
-		width: 23%;
+	.designerNew a.col-xs-3{
+		width: 25%;
+	}
+	.ico-wrap span {
+	    font-size: 100%;
+	    position: absolute;
+	    top: -9%;
+	    left: -7%;
+	}
+	.ico-wrap span.glyphicon-eye-open {
+	    right: -9%;
+	    left: auto;
 	}
 }
 @media (max-width: 375px) {
-	.litteBanner .col-xs-3.litteBigImg{
-		width: 22%;
+	.designerNew dl dt p.ico-wrap{
+		position: relative;
+		height: 22%;
 	}
-	.litteBanner .col-xs-3{
-		width: 19.5%;
+	.ico-wrap span{
+		font-size: 100%;
+    	position: absolute;
+    	top: -18%;
+    	left: -9%;
+	}
+	.ico-wrap span.glyphicon-eye-open{
+		right: -20%;
+    	left: auto;
+	}
+	.designerNew a.col-xs-3{
+		width: 21.4%;
 	}
 }
