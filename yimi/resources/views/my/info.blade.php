@@ -87,7 +87,7 @@
                     </label>
                     <input type="text" class="form-control myDay" name="birthday" placeholder="" data-date-format="yyyy-mm-dd" required value="{{ $user->birthday }}">     
                     <?php
-                    echo "今天是 " . date("Y-m-d","2012-11-03 00:46:22") . "<br>";
+                    echo "今天是 " . date("Y-m-d") . "<br>";
                      echo e($user->birthday);
                     ?>
                 </div>
