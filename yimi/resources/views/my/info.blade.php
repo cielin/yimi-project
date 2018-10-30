@@ -85,11 +85,7 @@
                 <div class="form-group birthday">
                     <label style="display: block;">生日<i>*</i>
                     </label>
-                    <input type="text" class="form-control myDay" name="birthday" placeholder="" data-date-format="yyyy-mm-dd" required value="{{ $user->birthday }}">     
-                    <?php
-                    echo "今天是 " . date("Y-m-d") . "<br>";
-                     echo e($user->birthday);
-                    ?>
+                    <input type="text" class="form-control myDay" name="birthday" placeholder="" data-date-format="yyyy-mm-dd" required value="{{ date(“Y-m-d”, $user->birthday) }}">
                 </div>
                 <button type="submit" class="address-btn">保存</button>
                 {{ Form::close() }}
