@@ -29,12 +29,13 @@
 
 <body>
     <!-- LAYOUT-->
-<!-- <div class="topSearch">
-  <a class="logo" href="/"><img src="../assets/img/favicon.ico" alt=""></a>
+<div class="topSearch">
+  <a class="logo" href="/"><img src="{{ URL::asset('assets/img/favicon.ico') }}" alt=""></a>
   <div class="top-search">
     <input class="sinput"/>
+    <!-- <button id="top-search-btn" class="glyphicon glyphicon-search"></button> -->
   </div>
-</div> -->
+</div>
 <div class="layout footer-nav" id="layout">
 
   <div class="overlay">
