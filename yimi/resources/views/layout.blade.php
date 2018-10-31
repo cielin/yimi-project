@@ -22,8 +22,9 @@
     <link href="{{ URL::asset('assets/css/768px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/992px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/1200px.css') }}" type="text/css" rel="stylesheet">
-    <link href="{{ URL::asset('assets/css/rem.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/mobile.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ URL::asset('assets/css/rem.css') }}" type="text/css" rel="stylesheet">
+
     @yield('css')
 </head>
 
@@ -41,19 +42,30 @@
   <div class="overlay">
     <ul class="">
       <li @if (isset($active) && $active == 'home') class="current" @endif >
-            <a href="/" title="首页">首页</a>
+            <a href="/" title="首页"><span class="glyphicon glyphicon-eye-open"></span>
+                首页
+            </a>
         </li>
         <li>
-            <a href="/spaces" title="空间">空间</a>
+            <a href="/spaces" title="空间"><span class="glyphicon glyphicon-eye-open"></span>
+                空间
+            </a>
         </li>
         <li @if (isset($active) && $active == 'categories') class="current" @endif >
-            <a href="/categories" title="商品">商品</a>
+            <a href="/categories" title="商品"><span class="glyphicon glyphicon-eye-open"></span>
+                商品
+            </a>
         </li>
         <li @if (isset($active) && $active == 'brands') class="current" @endif >
-            <a href="/brands" title="品牌">品牌</a>
+            <a href="/brands" title="品牌"><span class="glyphicon glyphicon-eye-open"></span>
+                品牌
+            </a>
         </li>
         <li @if (isset($active) && $active == 'designers') class="current" @endif >
-            <a href="/designers" title="设计师">设计师</a>
+            <a href="/designers" title="设计师">
+                <span class="glyphicon glyphicon-eye-open"></span>
+                设计师
+            </a>
         </li>
   
         @if (Auth::check())
