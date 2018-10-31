@@ -5,14 +5,14 @@
     display: none;
     width: 100%;
     padding: 0px 15px;
-    padding-top: 5px;
-    height: 40px;
-    top: 0px;
+    padding-top: 0.65rem;
+    height: 3.75rem;
+    top:0px;
     background: #fff;
 }
 .topSearch .logo img{
-	width: 32px;
-	height: 32px;
+	width: 1.6rem;
+	height: 1.3rem;
 }
 .topSearch .top-search,
 .topSearch .logo{
@@ -20,19 +20,19 @@
 }
 .topSearch .top-search,
 .topSearch .top-search input{
-    height: 30px;
-    color: #fff;
-    background-color: rgba(89,89,89,0.1);
-    border: none;
-    width: 100%;
-    border-radius: 15px;
+	height: 2.45rem; /*98px*/
+	color: #fff;
+	background-color:rgba(89,89,89,0.1);
+	border: none;
+	width: 100%;
+	border-radius: 15px;
 }
 .topSearch .top-search input{
 	padding: 0px 15px 0px 40px;
 	background: url("../img/searchW.png") no-repeat 12px 7px;
 }
 .topSearch .top-search{
-	width: 85%;
+	width: 90%;
     float: right;
 }
 .footer-nav{
@@ -42,7 +42,7 @@
 	width: 100%;
 	color: #2d2d2d;
 	margin:0px;
-	height: 50px;
+	height: 5.0rem;
     bottom: 0px;
 }
 .footer-nav .overlay li a,
@@ -75,7 +75,7 @@
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
 	body,.navbar-light{
-		padding-top: 44px; /*頂部搜索條高度 150px;*/
+		padding-top: 3.75rem; /*頂部搜索條高度 150px;*/
 	}
 	.layout,.footer-nav .overlay{
 		display: block;
