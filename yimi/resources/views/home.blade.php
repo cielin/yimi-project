@@ -70,29 +70,6 @@
     </div>
     <div class="index-content">
         <div class="container">
-<!--             <article class="row litteBanner" style="padding-left:0; padding-right:0;">
-                <div class="litteBannerImg col-md-6 col-sm-6 col-xs-6">
-                    @if (isset($sl_banner))
-                    <img src="{{ asset('public/images/banners/' . $sl_banner->image) }}">
-                    @endif
-                </div>
-                <ul class="col-md-6 col-sm-6 col-xs-6" style="list-style: none;padding: 0;">
-                    @if (isset($srt_banners))
-                    @foreach ($srt_banners as $srt_banner)
-                    <li class="col-md-6 col-sm-6 col-xs-6 img2018_01">
-                    	<img src="{{ asset('public/images/banners/' . $srt_banner->image) }}" width="100%">
-                    </li>
-                    @endforeach
-                    @endif
-                    @if (isset($srb_banner))
-                    <li class="col-md-12 col-sm-12 col-xs-12 img2018_03">
-                    	<img src="{{ asset('public/images/banners/' . $srb_banner->image) }}" width="100%">
-                    </li>
-                    @endif
-                </ul>
-
-            </article> -->
-
             <article class="row litteBanner">
                 <div class="litteBannerImg col-md-6 col-sm-6 col-xs-6">
                     @if (isset($sl_banner))
@@ -134,7 +111,7 @@
                 	@if (isset($featured_products))
                 	@foreach ($featured_products as $featured_product)
                         
-                        <dl>
+                        <dl class="col-md-3 col-sm-3 col-xs-6">
                             <dt>
                                 <p class="ico-wrap">
                                     @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $featured_product->id))
