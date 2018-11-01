@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
     <title>@yield('title')_薏米家</title>
     <link href="{{ URL::asset('assets/img/favicon.ico') }}" rel="icon">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('plugin/swiper/css/swiper.css') }}" />
@@ -22,7 +25,7 @@
     <link href="{{ URL::asset('assets/css/768px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/992px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/1200px.css') }}" type="text/css" rel="stylesheet">
-    <link href="{{ URL::asset('assets/css/mobile.css') }}" type="text/css" rel="stylesheet">
+    <!-- <link href="{{ URL::asset('assets/css/mobile.css') }}" type="text/css" rel="stylesheet"> -->
   <!--   <link href="{{ URL::asset('assets/css/rem.css') }}" type="text/css" rel="stylesheet"> -->
 
     @yield('css')
