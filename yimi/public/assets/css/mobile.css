@@ -29,7 +29,7 @@
 }
 .topSearch .top-search input{
 	padding: 0px 15px 0px 40px;
-	background: url("../img/searchW.png") no-repeat 0.102564rem 0.08547rem;
+	background: url("../img/searchW.png") no-repeat 0.196581rem 0.196581rem;
 }
 .topSearch .top-search{
 	width: 90%;
@@ -191,7 +191,9 @@
 	.designer.buyer dl{
 		margin-bottom: 9px;
 	}
-
+	.index-title-ul{
+		float: left;
+	}
 	.index-title-ul li{
 		width: 66px;
 		text-align: left;
@@ -233,7 +235,7 @@
 	}
 
 	.index-title-ul li {
-	    width: 60px;
+	    width: 0.837607rem;
 	    font-size: 13px;
 	}
 	.subTitles span{
