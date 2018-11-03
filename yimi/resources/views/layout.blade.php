@@ -25,7 +25,7 @@
     <link href="{{ URL::asset('assets/css/768px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/992px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/1200px.css') }}" type="text/css" rel="stylesheet">
-    <!-- <link href="{{ URL::asset('assets/css/mobile.css') }}" type="text/css" rel="stylesheet"> -->
+    <link href="{{ URL::asset('assets/css/mobile.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/rem.css') }}" type="text/css" rel="stylesheet">
 
     @yield('css')
