@@ -1130,9 +1130,58 @@ span.more{
     text-decoration: underline;
 }
 
+/*首页2018图重构*/
+.designerNew a{
+	float: left;
+	margin-bottom: 44px;
+}
+.designerNew img{
+	width: 100%;
+}
+.designerNew dl{
+	position: relative;
+}
+.designerNew dl dt.showEdate{
+  background: rgba(0,0,0,0.5);
+  opacity: 1;
+  transition: all 1s;
+}
+.designerNew dl dt p{
+	/*display: none;*/
+	background: rgba(255,255,255,0);
+	color: rgba(0,0,0,0);
+	opacity: 1;
+  	transition: all 1s;
+}
+.designerNew dl dt.showEdate p{
+	/*display: block;*/
+	background: rgba(255,255,255,1);
+	color: rgba(0,0,0,1);
+	opacity: 1;
+  	transition: all 1s;
+}
+.designerNew dl dt{
+	position: absolute;
+	width: 100%;
+    height: 100%;
+}
+.designerNew dl .buyer-text{
+	position: absolute;
+	bottom: -32px;
+}
+.designerNew dl dt p.ico-wrap{
+	margin-top:50%;
+}
+.designerNew dl dt p.ico-wrap:before{
+	color: rgba(218,218,218,0);
+	border-left: rgba(218,218,218,0);
+}
+.designerNew dl dt.showEdate p.ico-wrap:before{
+	color: rgba(218,218,218,1);
+	border-left: 1px solid rgba(218,218,218,1);
+}
+/*10-21*/
+
 .waterfallNew #fh5co-board .item{
 	border-radius:0px;
 }
-/*.ditails-tab-box img{
-	width: 100%;
-}*/
