@@ -210,12 +210,13 @@
 		margin-right: 0px;
 		margin-top:0px;
 		float: right;
+		width: 100px;
 	}
-	.subTitles .more a{
+/*	.subTitles .more a{
 		font-size: 10px;
 	    position: relative;
 	    left: -0.162393rem;
-	}
+	}*/
 	.overHide.mb40{
 		margin-bottom: 20px;
 	}
