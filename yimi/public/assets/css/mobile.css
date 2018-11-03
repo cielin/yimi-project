@@ -11,8 +11,8 @@
     background: #fff;
 }
 .topSearch .logo img{
-	width: 0.273504rem;
-	height: 0.273504rem;
+	width: 0.752137rem;
+	height: 0.752137rem;
 }
 .topSearch .top-search,
 .topSearch .logo{
@@ -29,7 +29,7 @@
 }
 .topSearch .top-search input{
 	padding: 0px 15px 0px 40px;
-	background: url("../img/searchW.png") no-repeat 12px 7px;
+	background: url("../img/searchW.png") no-repeat 0.102564rem 0.08547rem;
 }
 .topSearch .top-search{
 	width: 90%;
@@ -75,7 +75,7 @@
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
 	body,.navbar-light{
-		padding-top: 3.75rem; /*頂部搜索條高度 150px;*/
+		padding-top: 1.196581rem; /*頂部搜索條高度 150px;*/
 	}
 	.layout,.footer-nav .overlay{
 		display: block;
