@@ -195,15 +195,23 @@
 		float: left;
 	}
 	.index-title-ul li{
-		width: 0.803419rem;
+		width: 1.803419rem;
 		text-align: left;
 	}
+/*	.subTitles{
+		display: table;
+		content: "";
+		clear:both;
+	}*/
+/*	.subTitles img{
+		float: left;
+	}*/
 	.subTitles .more{
 		margin-right: 0px;
 		margin-top:0px;
 		float: right;
 	}
-	.subTitles .more img{
+	.subTitles .more a{
 		font-size: 10px;
 	    position: relative;
 	    left: -0.162393rem;
