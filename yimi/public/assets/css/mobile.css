@@ -11,8 +11,8 @@
     background: #fff;
 }
 .topSearch .logo img{
-	width: 1.6rem;
-	height: 1.3rem;
+	width: 0.273504rem;
+	height: 0.273504rem;
 }
 .topSearch .top-search,
 .topSearch .logo{
@@ -20,7 +20,7 @@
 }
 .topSearch .top-search,
 .topSearch .top-search input{
-	height: 2.45rem; /*98px*/
+	height: 0.752137rem; /*98px*/
 	color: #fff;
 	background-color:rgba(89,89,89,0.1);
 	border: none;
