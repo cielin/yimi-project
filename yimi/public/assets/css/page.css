@@ -1193,3 +1193,6 @@ span.more{
 .goods-detail-text .heart-detail{
 	font-size: 18px;
 }
+.topSearch{
+	display: none
+}

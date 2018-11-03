@@ -56,7 +56,7 @@
                 @if (isset($top_banners))
                 @foreach ($top_banners as $top_banner)
                 <div class="swiper-slide">
-                    <img src="{{ asset('public/images/banners/' . $top_banner->image) }}">
+                	<img src="{{ asset('public/images/banners/' . $top_banner->image) }}">
                 </div>
                 @endforeach
                 @endif
@@ -273,6 +273,21 @@
     </div>
     <!--瀑布流end -->
 </div>
+<!--展示瀑布流大图位置 start-->
+<div class="modal fade myModalImg" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/img/close.png"></button>
+      <div class="modal-body">
+        <img id="bigImg"/>
+      </div>
+      
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--展示瀑布流大图位置 end-->
+    @stop
+
 @section('js')
 
 <script type="text/javascript" src="{{ URL::asset('assets/js/index.js') }}"></script>
