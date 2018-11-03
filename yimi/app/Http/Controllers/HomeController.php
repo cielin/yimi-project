@@ -64,16 +64,16 @@ class HomeController extends Controller
             $combind_spotlight['title'] = $waterfalled_product->name;
             $combind_spotlight['image'] = $waterfalled_product->featured_image;
             $combind_spotlight['link'] = $waterfalled_product->slug;
-            $combind_spotlight['type'] = 'product';
+            $combind_spotlight['type'] = '1';
             $combind_spotlight['updated_at'] = $waterfalled_product->updated_at->timestamp;
             array_push($combind_spotlights, $combind_spotlight);
         }
         foreach ($spotlights as $spotlight) {
-            $combind_spotlight['id'] = 0;
+            $combind_spotlight['id'] = $spotlight->id;
             $combind_spotlight['title'] = $spotlight->title;
             $combind_spotlight['image'] = $spotlight->image;
             $combind_spotlight['link'] = $spotlight->link;
-            $combind_spotlight['type'] = 'spot';
+            $combind_spotlight['type'] = '2';
             $combind_spotlight['updated_at'] = $spotlight->updated_at->timestamp;
             array_push($combind_spotlights, $combind_spotlight);
         }

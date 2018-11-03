@@ -1,5 +1,8 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Authorization, Content-Type');
+header('Access-Control-Allow-Methods', '*');
 use Illuminate\Http\Request;
 
 /*
@@ -18,5 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => ['auth:api']], function () {
-	Route::post('collect_product', 'ProductsController@collect');
+    Route::post('collect_product', 'ProductsController@collect');
 });
+
+Route::any('upload_image', 'MyController@uploadImages');

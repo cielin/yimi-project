@@ -295,17 +295,17 @@
   /* background-color: #ccc; */
 }
 
-.time-axis-item:first-child .time-axis-date span{
+.time-axis-item:last-child .time-axis-date span{
   background-color: #fac6ca;
   border-color: #48BEB2;
 }
 
-.time-axis-item:first-child .time-axis-date span:after{
+.time-axis-item:last-child .time-axis-date span:after{
   background-color: #fa471e;
   border-color: #48BEB2;
 }
-.time-axis-item:first-child .time-axis-title,
-.time-axis-item:first-child .time-axis-date{
+.time-axis-item:last-child .time-axis-title,
+.time-axis-item:last-child .time-axis-date{
   font-weight: bold;
   color: #666;
 }

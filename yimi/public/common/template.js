@@ -108,7 +108,7 @@ var suspension ='<div class="suspension">'
 					+'<span class="circle"><i class="i-tel"></i></span>'
 					+'<div class="text">'
 						+'<p>服务热线</p>'
-						+'<p class="number">4001-123-456</p>'
+						+'<p class="number">400-632-1878</p>'
 					+'</div>'
 				+'</div>'
 				

@@ -30,7 +30,7 @@
                     <a href="{{ url('my/comments') }}">我的评论</a>
                     <a href="{{ url('my/messages') }}">我的消息</a>
                     <a href="{{ url('my/union') }}" class="active">账号绑定</a>
-                    <a href="{{ url('my/password_reset') }}">修改密码</a>
+                    <a href="{{ url('my/changepassword') }}">修改密码</a>
                     <a href="{{ url('my/addresses') }}">收货地址</a>
                 </div>
             </div>

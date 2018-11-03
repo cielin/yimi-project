@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
     <title>@yield('title')_薏米家</title>
     <link href="{{ URL::asset('assets/img/favicon.ico') }}" rel="icon">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('plugin/swiper/css/swiper.css') }}" />
@@ -22,16 +25,19 @@
     <link href="{{ URL::asset('assets/css/768px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/992px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/1200px.css') }}" type="text/css" rel="stylesheet">
+    <!-- <link href="{{ URL::asset('assets/css/mobile.css') }}" type="text/css" rel="stylesheet"> -->
     <link href="{{ URL::asset('assets/css/rem.css') }}" type="text/css" rel="stylesheet">
+
     @yield('css')
 </head>
 
 <body>
     <!-- LAYOUT-->
 <div class="topSearch">
-  <a class="logo" href="/"><img src="../assets/img/favicon.ico" alt=""></a>
+  <a class="logo" href="/"><img src="{{ URL::asset('assets/img/favicon.ico') }}" alt=""></a>
   <div class="top-search">
     <input class="sinput"/>
+    <!-- <button id="top-search-btn" class="glyphicon glyphicon-search"></button> -->
   </div>
 </div>
 <div class="layout footer-nav" id="layout">
@@ -39,19 +45,30 @@
   <div class="overlay">
     <ul class="">
       <li @if (isset($active) && $active == 'home') class="current" @endif >
-            <a href="/" title="首页">首页</a>
+            <a href="/" title="首页"><span class="glyphicon glyphicon-eye-open"></span>
+                首页
+            </a>
         </li>
         <li>
-            <a href="/spaces" title="空间">空间</a>
+            <a href="/spaces" title="空间"><span class="glyphicon glyphicon-eye-open"></span>
+                空间
+            </a>
         </li>
         <li @if (isset($active) && $active == 'categories') class="current" @endif >
-            <a href="/categories" title="商品">商品</a>
+            <a href="/categories" title="商品"><span class="glyphicon glyphicon-eye-open"></span>
+                商品
+            </a>
         </li>
         <li @if (isset($active) && $active == 'brands') class="current" @endif >
-            <a href="/brands" title="品牌">品牌</a>
+            <a href="/brands" title="品牌"><span class="glyphicon glyphicon-eye-open"></span>
+                品牌
+            </a>
         </li>
         <li @if (isset($active) && $active == 'designers') class="current" @endif >
-            <a href="/designers" title="设计师">设计师</a>
+            <a href="/designers" title="设计师">
+                <span class="glyphicon glyphicon-eye-open"></span>
+                设计师
+            </a>
         </li>
   
         @if (Auth::check())
@@ -84,8 +101,8 @@
             <div class="container">
                 <div class="pull-left">
                     <span class="tip">Call us for free</span>
-                    <span class="tel">400-671-1871</span>
-                    <span class="email">yimijia@163.com</span>
+                    <span class="tel">400-632-1878</span>
+                    <span class="email">sales@homeyimi.com</span>
                 </div>
                 <div class="pull-right nav-top-right">
                     @if (Auth::check())
@@ -131,7 +148,7 @@
                         <a href="/designers" title="设计师">设计师</a>
                     </li>
                     <li class="leftLine">
-                        <a href="#" title="如何选购">如何选购</a>
+                        <a href="/articles/shopping-tips" title="如何选购">如何选购</a>
                     </li>
                     <li class="rightLine  @if (isset($active) && $active == 'articles') current @endif ">
                         <a href="/articles" title="最近文章">最近文章</a>
@@ -208,9 +225,9 @@
                         <dl class="help">
                           <dt>帮助中心</dt>
                           <dd>
-                           <span>Hotline：400 - 671 - 1878</span>
+                           <span>Hotline：400-632-1878</span>
                            <span>Open/Close： 09:00/21:00</span>
-                           <span>Mail： <a href="mailto:yimijia@163.com">yimijia@163.com</a></span>
+                           <span>Mail： <a href="mailto:sales@homeyimi.com">sales@homeyimi.com</a></span>
                           </dd>
                           
                           
@@ -218,10 +235,9 @@
                     </div>
                 </div>
                 <div class="row footer-bottom">
-                    <p class="col-md-6 col-xs-6">津ICP备15003667号 快递查询 天津尚柏电子商务有限公司©2016</p>
+                    <p class="col-md-6 col-xs-6">沪ICP备18025160号-2 匠意国际贸易（上海）有限公司©2018</p>
                     <div class="col-md-6 col-xs-6 text-right">
-                        <a href="#">购物须知</a>
-                        <a href="#">如何选购</a>
+                        <a href="{{ url('articles/shopping-tips') }}">购物须知</a>
                         <a href="{{ url('my/orders') }}">配送信息</a>
                         <a href="{{ url('articles/aboutus') }}">关于我们</a>
                     </div>
@@ -258,37 +274,38 @@
                                 <label for="">
                                     <p>密码 <span class="red1">*</span>
                                     </p>
-                                   <input name="password" type="password" required placeholder="请输入密码">
+                                   <input name="password" type="password" required placeholder="请输入密码" autocomplete="new-password">
                                 </label>
                                 <label for="">
-                                    {{ Form::submit('登 录', array('class' => 'login-btn')) }}
+                                    {{ Form::submit('登  录', array('class' => 'login-btn')) }}
                                 </label>
                             {{ Form::close() }}
                         </div>
                         <!--注册-->
                         <div role="tabpanel" class="tab-pane" id="register">
-                            <form action="" id="form2">
-                              <label for="">
-                                <p>用户名 <span class="red1">*</span></p>
-                                <input type="text" name="nickname" required placeholder="请输入昵称">
-                              </label>
-                              <label for="">
-                                <p>邮箱 <span class="red1">*</span></p>
-                                <input id="" type="email" type="email" name="email" required placeholder="请输入邮箱">
-                              </label>
-                              <label for="">
-                                <p>密码 <span class="red1">*</span></p>
-                                 <input type="password" id="password" name="password" placeholder="输入新密码" required/>
-                              </label>
-                              <label for="">
-                                <p>确认密码 <span class="red1">*</span></p>
-                                 <input type="password" id="password_confirmation" name="password_confirmation" placeholder="确定新密码" required/>
-                              </label>
-                              <label for="">
-                                <button type="submit" class="login-btn">注  册</button>
-                              </label>
-                            </form>
-                          </div>
+                            {{ Form::open(array('route' => 'register.post', 'class' => 'form-signup', 'role' => 'form', 'id' => 'form2')) }}
+                                <input type="hidden" name="refer" value="{{ url()->current() }}">
+                                <label for="">
+                                    <p>昵称 <span class="red1">*</span></p>
+                                    <input type="text" name="nickname" required placeholder="请输入昵称">
+                                </label>
+                                <label for="">
+                                    <p>邮箱 <span class="red1">*</span></p>
+                                    <input id="" type="email" type="email" name="email" required placeholder="请输入邮箱">
+                                </label>
+                                <label for="">
+                                    <p>密码 <span class="red1">*</span></p>
+                                    <input type="password" id="password" name="password" placeholder="输入新密码" required autocomplete="new-password"/>
+                                </label>
+                                <label for="">
+                                    <p>确认密码 <span class="red1">*</span></p>
+                                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="确定新密码" required autocomplete="new-password"/>
+                                </label>
+                                <label for="">
+                                    {{ Form::submit('注  册', array('class' => 'login-btn')) }}
+                                </label>
+                            {{ Form::close() }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -363,6 +380,7 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
    $('.heart-detail').click(function(){
     var params = {};
     params.id = $(this).data('id');
+    params.type = $(this).data('type');
     params.timestamp = get_time();
     params.sign = makeSign(params, secret);
     var token = "";
@@ -370,7 +388,7 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
     token = "{{ Auth::user()->api_token }}";
     @endif
     $.ajax({
-        url : "http://www.cyrial.com/api/collect_product",
+        url : "http://127.0.0.1:8000/api/collect_product",
         data : params,
         headers: {
             'Authorization':'Bearer ' + token,
@@ -423,7 +441,7 @@ var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
 $().ready(function() {
     $("#form1").validate({
        rules:{
-          username:{
+          email:{
              required:true,
           },          
           password:{
@@ -431,8 +449,8 @@ $().ready(function() {
           }                  
        },
        messages:{
-          username:{
-            required: "请输入用户名",
+          email:{
+            required: "请输入邮箱地址",
           },
           password:{
                required: "请输入密码",
@@ -441,33 +459,32 @@ $().ready(function() {
     });
     $("#form2").validate({
        rules:{
-          username:{
+          nickname:{
                required:true,
            },
            email:{
                required:true,
                email:true
            },            
-          new_password:{
+          password:{
                required:true,
            },
-          confirm_password:{
-               
-               equalTo:"#new_password"    //新密码的id选择器
+          password_confirmation:{
+               equalTo:"#password"    //新密码的id选择器
            }                    
        },
        messages:{
-          username:{
-               required: "请输入用户名",
+          nickname:{
+               required: "请输入昵称",
            },
            email:{
                required: "请输入邮箱地址",
                email:"请输入正确的邮箱，例如:example@qq.com",
            },
-          new_password:{
+          password:{
                required: "请输入密码",
            },
-          confirm_password:{
+          password_confirmation:{
                required: "请确认密码",
                equalTo:"两次密码输入不一致"
            }                                    

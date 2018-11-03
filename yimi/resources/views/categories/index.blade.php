@@ -3,7 +3,16 @@
 @section('title', '商品')
 
 @section('active', 'categories')
-
+@section('css')
+<!-- Animate.css -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/animate.css') }}">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/magnific-popup.css') }}">
+<!-- Salvattore -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/salvattore.css') }}">
+<!-- Theme Style -->
+<link rel="stylesheet" href="{{ URL::asset('plugin/css/style.css') }}">
+@stop
 @section('page-content')
 <div class="wrapper-page container">
     <!--面包屑-->
@@ -184,7 +193,7 @@
                     <!--模拟select框 end-->
                 </div>
             </div>
-
+<!-- 
             @if (isset($products) && sizeof($products) > 0)
             <div class="designer buyer goods clearfix">
                 @foreach ($products as $product)
@@ -192,10 +201,10 @@
                     <dl>
                         <dt>
                             <p class="ico-wrap">
-                                @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id))
-                                <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}"></span>
+                                @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
+                                <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
                                 @else
-                                <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}"></span>
+                                <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
                                 @endif
                                 <a href="/products/{{ $product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
                             </p>
@@ -213,11 +222,57 @@
             <nav class="clearfix" aria-label="page navigation">
                 <?php echo $products->links(); ?>
             </nav>
+            
             @else
             <div class="no-data">暂无数据</div>
-            @endif
+            @endif -->
+                      <!--瀑布流开始 -->
+        @if (isset($products) && sizeof($products) > 0)
+        <div class="container-fluid">
+          <div class="container ">
+              <div id="fh5co-main" class="waterfallNew">
+                <div class="container">
+                 <div class="row">
+                    <div id="fh5co-board" data-columns>
+                        @foreach ($products as $product)
+                        <div class="item">
+                            <div class="animate-box">
+                                <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
+                                <div class="fh5co-desc">{{ $product->name }}</div>
+                                <div class="itemHover">
+                                <p class="ico-wrap">
+                                @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
+                                <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
+                                @else
+                                <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
+                                @endif
+                                <a href="/products/{{ $product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
+                            </p>
+                            </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+               </div>
+            </div>
+          </div>
         </div>
     </div>
- </div> 
-           
-    @stop
+    @endif
+      <!--瀑布流end -->
+
+        </div>
+    </div>
+ </div>         
+@stop
+
+@section('js')
+<!-- Waypoints -->
+<script type="text/javascript" src="{{ URL::asset('../plugin/jquery.waypoints.min.js') }}"></script>
+
+<!-- Magnific Popup -->
+<script type="text/javascript" src="{{ URL::asset('../plugin/jquery.magnific-popup.min.js') }}"></script>
+<!-- Salvattore -->
+<script type="text/javascript" src="{{ URL::asset('../plugin/salvattore.min.js') }}"></script>
+@stop

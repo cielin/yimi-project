@@ -46,10 +46,10 @@ class CustomerController extends Controller
 
     public function doRegister(Request $request)
     {
-    	$nickname = $request->input('nickname');
-    	$email = $request->input('email');
-    	$password = $request->input('password');
-    	$password_confirmation = $request->input('password_confirmation');
+        $refer = $request->input('refer');
+        if (!isset($refer) || $refer == '') {
+            $refer = env('SITE_BASE_URL');
+        }
 
     	$validator = Validator::make($request->all(), [
             'email' => 'required|string|email|max:255|unique:customers',
@@ -62,18 +62,20 @@ class CustomerController extends Controller
             }
         }
 
-        return;
-        
-    	// return Customer::create([
-     //        'email' => $data['email'],
-     //        'password' => Hash::make($data['password']),
-     //    ]);
+        $customer = Customer::create(request(['nickname', 'email', 'password']));
+        $customer->setToken();
+        $customer->save();
+
+        auth()->login($customer);
+
+        return redirect()->to($refer);
     }
 
-    public static function isCollected($uid, $pid)
+    public static function isCollected($uid, $pid, $type)
     {
         $collect = ProductCollection::where('customer_id', $uid)
             ->where('product_id', $pid)
+            ->where('type', $type)
             ->where('status', 1)
             ->first();
 

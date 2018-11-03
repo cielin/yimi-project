@@ -16,5 +16,10 @@ class Designer extends Model
     public function products()
     {
     	return $this->hasMany('App\Product', 'designer_id');
-    }
+	}
+	
+	public function portfolios()
+	{
+		return $this->hasMany('App\Portfolio', 'designer_id');
+	}
 }

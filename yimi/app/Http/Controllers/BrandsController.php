@@ -12,11 +12,14 @@ class BrandsController extends Controller
     public function index()
     {
     	$brands = Brand::orderBy('name', 'asc')
-    		->paginate(15);
+			->paginate(15);
+			
+		$all_brands = Brand::orderBy('name', 'asc')->get();
 
     	return View::make('brands.index')
     		->with('active', 'brands')
-    		->with('brands', $brands);
+			->with('brands', $brands)
+			->with('all_brands', $all_brands);
     }
 
     public function show($slug)

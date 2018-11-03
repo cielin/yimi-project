@@ -33,19 +33,29 @@
                 </div>
             </div>
         </div>
-        @if (count($designer->products) > 1)
+        @if (count($designer->portfolios) > 0)
         <?php $i = 0; ?>
-        @foreach ($designer->products as $product)
+        @foreach ($designer->portfolios as $portfolio)
         <div class="col-md-3 designer-img">
-            <img src="{{ asset('public/thumbs/products/thumb_' . $product->featured_image) }}">
+            <img src="{{ asset('public/thumbs/portfolios/thumb_' . $portfolio->image) }}">
         </div>
         @if ($i++ == 1)
             @break
         @endif
         @endforeach
+        @else
+        <div class="col-md-3 designer-img" style="text-align: center; line-height: 2.307692rem;">
+            <span style="background-color: #f7f7f7; display: inline-block; width: 100%;">暂无作品</span>
+        </div>
+        <div class="col-md-3 designer-img" style="text-align: center; line-height: 2.307692rem;">
+            <span style="background-color: #f7f7f7; display: inline-block; width: 100%;">暂无作品</span>
+        </div>
         @endif
     </div>
     @endforeach
+    <nav class="clearfix" aria-label="page navigation">
+        <?php echo $designers->links(); ?>
+    </nav>
     @else
     <div class="no-data">暂无数据</div>
     @endif

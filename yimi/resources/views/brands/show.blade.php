@@ -47,32 +47,6 @@
         <div class=" col-md-9 col-sm-8 col-xs-8  main">
             <div class="top-option clearfix">
                 <i class="glyphicon glyphicon-th"></i>
-                <div class="center-num">
-                    <span class="pull-left">展示</span>
-                    <!-- <select class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select> -->
-                    <!--模拟select框 start-->
-                    <div class="model-select-box">
-                      <div class="model-select-text" data-value="">1</div>
-                      <i class="sanjiao glyphicon glyphicon-triangle-bottom"></i>
-                      <ul class="model-select-option">
-                        <li data-option="1">1</li>
-                        <li data-option="2">2</li>
-                        <li data-option="3">3</li>
-                        <li data-option="4">4</li>
-                        <li data-option="5">5</li>
-                        <li data-option="6">6</li>
-                        <li data-option="7">7</li>
-                      </ul>
-                    </div>
-                    <!--模拟select框 end-->
-                    <span class="pull-left">/ 页</span>
-                </div>
                 <div class="goods-order">
                     <span class="pull-left">排列方式</span>
                     <!-- <select class="form-control">
@@ -94,16 +68,16 @@
                 </div>
             </div>
 
-<!--            <div class="designer buyer goods clearfix">
+<!--             <div class="designer buyer goods clearfix">
                 @foreach ($products as $product)
                 
                     <dl>
                         <dt>
                             <p class="ico-wrap">
-                                @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id))
-                                <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}"></span>
+                                @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
+                                <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
                                 @else
-                                <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}"></span>
+                                <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
                                 @endif
                                 <a href="/products/{{ $product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
                             </p>
@@ -116,7 +90,7 @@
                     </dl>
                
                 @endforeach
-            </div>-->
+            </div> -->
             <!--瀑布流开始 -->
 		<div class="container-fluid">
 		  <div class="container ">
@@ -160,11 +134,12 @@
 
 @stop
 
-    @section('js')
-	<!-- Waypoints -->
-	<script src="{{ URL::asset('plugin/jquery.waypoints.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="{{ URL::asset('plugin/jquery.magnific-popup.min.js"></script>
-	<!-- Salvattore -->
-	<script src="{{ URL::asset('plugin/salvattore.min.js"></script>
-    @stop
+@section('js')
+<!-- Waypoints -->
+<script type="text/javascript" src="{{ URL::asset('../plugin/jquery.waypoints.min.js') }}"></script>
+
+<!-- Magnific Popup -->
+<script type="text/javascript" src="{{ URL::asset('../plugin/jquery.magnific-popup.min.js') }}"></script>
+<!-- Salvattore -->
+<script type="text/javascript" src="{{ URL::asset('../plugin/salvattore.min.js') }}"></script>
+@stop
