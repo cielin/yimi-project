@@ -254,7 +254,7 @@
 		margin-right: 0px;
 	    margin-top: 0px;
 	    float: right;
-	    width: 58px;
+	    width: 62px;
 	}
 	.topSearch .top-search input{
 		background-size: 0.196581rem 0.025641rem;
@@ -331,10 +331,6 @@
 	}
 }
 @media (max-width: 425px) {
-	.index-title-ul li {
-	    width: 53px;
-	    font-size: 12px;
-	}
 	.designerNew a.col-xs-3{
 		width: 25%;
 	}
