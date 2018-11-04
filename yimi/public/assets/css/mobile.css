@@ -244,9 +244,6 @@
 }
 
 @media (max-width: 500px) {
-	body{
-		padding-bottom: 0.401709rem
-	}
 	.index-title-ul li {
 	    width: 62px;
 	}
@@ -300,9 +297,6 @@
 	.designer.buyer dl{
 		height: 129px;
 	}
-	.footer-nav{
-		height: 0.401709rem;
-	}
 	.designer.buyer dl{
 		
     	height: 129px;
@@ -338,12 +332,19 @@
 	}
 	.container-fluid, .container{
 		overflow: hidden;
+		width: 90%;
 	}
 	.f-right{
 		margin-top: 15px;
 	}
 	.f-right dl{
 		padding-left: 0px;
+	}
+	body{
+		padding-bottom: 0.42735rem;
+	}
+	.footer-nav{
+		height: 0.42735rem;
 	}
 }
 @media (max-width: 425px) {
