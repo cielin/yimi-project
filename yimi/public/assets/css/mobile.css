@@ -313,6 +313,9 @@
 	.designers-mobile{
 		margin-top: 0.145299rem;
 	}
+	.designer{
+		margin-right: auto;
+	}
 }
 @media (max-width: 425px) {
 	.index-title-ul li {

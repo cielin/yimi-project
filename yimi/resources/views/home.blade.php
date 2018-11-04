@@ -107,7 +107,7 @@
                 @endif
             </div>
             <div class="container overHide tab-content">
-                <div  role="tabpanel" class="designer buyer tab-pane active" id="home">
+                <div  role="tabpanel" class="designer buyer tab-pane active row" id="home">
                 	@if (isset($featured_products))
                 	@foreach ($featured_products as $featured_product)
                         
