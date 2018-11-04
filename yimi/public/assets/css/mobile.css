@@ -333,6 +333,9 @@
 	.designer.buyer dl, .designer.buyer dl dt, .designer.buyer dl dd{
 		width: 50%;
 	}
+	.item,#fh5co-board .item img{
+		width: 100%;
+	}
 }
 @media (max-width: 425px) {
 	.designerNew a.col-xs-3{
