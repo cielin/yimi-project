@@ -327,6 +327,7 @@
 	}
 	.designer dl{
 		width: 50%;
+		margin: 0px;
 	}
 }
 @media (max-width: 425px) {
