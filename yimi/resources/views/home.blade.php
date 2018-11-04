@@ -101,7 +101,7 @@
                     <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
                     <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
                     <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-                    <li class="more"><i style="padding-right: 30px;color: #999;font-weight: 100;font-size: 10px;">|</i><a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
+                    <li class="more"><i>|</i><a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
                     </li> 
                 </ul>
                 @endif

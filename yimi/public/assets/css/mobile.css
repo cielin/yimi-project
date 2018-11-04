@@ -103,7 +103,9 @@
 	.index-content{
 		min-width: 100%;
 	}
-	
+	/*.container {
+	    width: 750px;
+	}*/
 	.sidebar{
 		padding-bottom: 10921px;
 		margin-bottom: -10921px;
@@ -191,7 +193,7 @@
 		/*height: 12.125rem;*/
 	}
 	.designer.buyer dl{
-		margin-bottom: 9px;
+		margin-bottom: 52px;
 	}
 	.index-title-ul{
 		float: left;
@@ -199,6 +201,9 @@
 	.index-title-ul li{
 		width: 1.803419rem;
 		text-align: left;
+	}
+	.designer.buyer dl div{
+		bottom: -29px;
 	}
 /*	.subTitles{
 		display: table;
@@ -239,6 +244,18 @@
 }
 
 @media (max-width: 500px) {
+	.index-title-ul li {
+	    width: 64px;
+	}
+	.subTitles .more{
+		margin-right: 0px;
+	    margin-top: 0px;
+	    float: right;
+	    width: 58px;
+	}
+	.topSearch .top-search input{
+		background-size: 0.196581rem 0.025641rem;
+	}
 	.litteBanner li{
 		margin-bottom: 23px;
 	}
