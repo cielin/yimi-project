@@ -134,7 +134,7 @@
                     @endif
                 </div>
                 <div role="tabpanel" class="designer buyer tab-pane" id="profile">
-                <a href="#">
+                <a href="#" class="col-md-3 col-sm-3 col-xs-6">
                     <dl>
                       <dt>
                         <p class="ico-wrap">
