@@ -254,7 +254,7 @@
 		margin-right: 0px;
 	    margin-top: 0px;
 	    float: right;
-	    width: 62px;
+	    width: 65px;
 	}
 	.topSearch .top-search input{
 		background-size: 0.196581rem 0.025641rem;
@@ -270,10 +270,6 @@
 		margin-top:15px;
 	}
 
-	.index-title-ul li {
-	    width: 0.837607rem;
-	    font-size: 13px;
-	}
 	.subTitles span{
 		display: block;
 	}
