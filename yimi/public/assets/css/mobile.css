@@ -325,6 +325,9 @@
 	.designer.buyer dl div{
 		bottom: -2px;
 	}
+	.designer dl{
+		width: 50%;
+	}
 }
 @media (max-width: 425px) {
 	.designerNew a.col-xs-3{
