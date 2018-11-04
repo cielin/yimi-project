@@ -326,6 +326,9 @@
 	.designer.goods dl, .designer dl{
 		margin-bottom: 0px;
 	}
+	.designer.buyer dl div{
+		bottom: -2px;
+	}
 }
 @media (max-width: 425px) {
 	.index-title-ul li {
