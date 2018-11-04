@@ -71,7 +71,9 @@
 	margin-bottom: 0.125rem;
 }
 
-
+.img2018_03 img{
+	width: 106%;
+}
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
 	body,.navbar-light{
@@ -99,7 +101,7 @@
 	}
 	/*内页*/
 	.index-content{
-		min-width: 768px;
+		min-width: 100%;
 	}
 	
 	.sidebar{
