@@ -329,6 +329,9 @@
 		width: 50%;
 		margin: 0px;
 	}
+	.designer.buyer dl{
+		margin-left:0px;
+	}
 }
 @media (max-width: 425px) {
 	.designerNew a.col-xs-3{
