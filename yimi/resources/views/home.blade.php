@@ -186,7 +186,7 @@
         </div>
         @if (isset($designers))
         <!--设计师-->
-        <div class="container">
+        <div class="container designers-mobile">
             <div class="container overHide mb40  subTitles">
                 <span>
         			<img style="padding: 0px;" src="{{ URL::asset('assets/img/foot/designers.png') }}">

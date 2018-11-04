@@ -244,6 +244,9 @@
 }
 
 @media (max-width: 500px) {
+	body{
+		padding-bottom: 0.401709rem
+	}
 	.index-title-ul li {
 	    width: 64px;
 	}
@@ -297,6 +300,18 @@
 	.ico-wrap span.glyphicon-eye-open {
 	    right: -9%;
 	    left: auto;
+	}
+	.designer.buyer dl{
+		height: 1.051282rem;
+	}
+	.footer-nav{
+		height: 0.401709rem;
+	}
+	.designer.buyer dl{
+		margin-bottom: 0.059829rem;
+	}
+	.designers-mobile{
+		margin-top: 0.145299rem;
 	}
 }
 @media (max-width: 425px) {
