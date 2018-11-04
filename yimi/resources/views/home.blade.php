@@ -134,7 +134,7 @@
                     @endif
                 </div>
                 <div role="tabpanel" class="designer buyer tab-pane" id="profile">
-                <a href="#" class="col-md-3 col-sm-3 col-xs-6">
+                <a href="#">
                     <dl>
                       <dt>
                         <p class="ico-wrap">
@@ -197,7 +197,7 @@
             <div class="container overHide" style="padding-bottom:14px;">
                 <div class="designer designer-new-hover">
                     @foreach ($designers as $designer)
-                    <a href="{{ url('designers/' . $designer->slug) }}">
+                    <a href="{{ url('designers/' . $designer->slug) }}"  class="col-md-3 col-sm-3 col-xs-6">
                         <dl>
                             <dt>
                                 <p>{{ $designer->name }}</p><br/>
