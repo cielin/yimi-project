@@ -308,6 +308,7 @@
 		height: 0.401709rem;
 	}
 	.designer.buyer dl{
+		width: 50%;
 		margin-bottom: 0.059829rem;
 	}
 	.designers-mobile{
@@ -315,6 +316,15 @@
 	}
 	.designer{
 		margin-right: auto;
+	}
+	.designer.buyer dl,
+	.designer.buyer dl dt,
+	.designer.buyer dl dd,
+	.designer.buyer dl dd img{
+		width: auto;
+	}
+	.designer.goods dl, .designer dl{
+		margin-bottom: 0px;
 	}
 }
 @media (max-width: 425px) {
