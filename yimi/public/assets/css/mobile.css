@@ -336,6 +336,15 @@
 	.item,#fh5co-board .item img{
 		width: 100%;
 	}
+	.container-fluid, .container{
+		overflow: hidden;
+	}
+	.f-right{
+		margin-top: 15px;
+	}
+	.f-right dl{
+		padding-left: 0px;
+	}
 }
 @media (max-width: 425px) {
 	.designerNew a.col-xs-3{
