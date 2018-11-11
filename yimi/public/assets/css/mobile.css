@@ -428,6 +428,21 @@
 	.footer-nav li a span{
 		font-size: 20px;
 	}
+	.designer-bg .designer-text.col-xs-10 .more{
+		margin-top: 3px;
+	}
+	.designer-text h5{
+		font-size: 10px;
+	}
+	.designer-text p{
+		padding-bottom: 3px;
+	    line-height: 18px;
+	    height: 20px;
+	}
+	.designer-bg .designer-text.col-md-7 .more{
+		margin-top: -9px;
+		font-size: 10px;
+	}
 }
 @media (max-width: 425px) {
 	.designerNew a.col-xs-3{
