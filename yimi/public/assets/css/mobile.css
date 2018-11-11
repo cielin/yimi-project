@@ -310,6 +310,11 @@
 	.wrapper-page{
 		margin-bottom: 0px;
 	}
+	.designer-text h5 span{
+		max-height: 28px;
+	    display: block;
+	    overflow: hidden;
+	}
 }
 
 @media (max-width: 500px) {
