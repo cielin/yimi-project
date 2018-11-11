@@ -205,6 +205,10 @@ span.more{
 	right: -8px;
 	top:0px;
 }
+.model-select-box{
+	width:130px;
+	margin-right:10px;
+}
 /*搜索结果页*/
 .good-list-top{
 	width: 100%;
