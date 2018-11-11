@@ -491,4 +491,8 @@
 	    margin-left: -15px;
 	    margin-top: 15px;
 	}
+	.d-detail-img div img{
+		width: 100%;
+		height: 100%;
+	}
 }
