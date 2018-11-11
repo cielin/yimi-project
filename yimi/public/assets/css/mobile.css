@@ -106,9 +106,9 @@
 	}
 	/*内页*/
 	.index-content{
-		min-width: 100%;
+		width: 100%;
 	}
-	.container-fluid, .container{
+	.container-fluid,.container{
 		width: 100%;
 	}
 	.sidebar{
