@@ -294,9 +294,9 @@
 		text-align: right;
 	}
 	.designer_list{
-	    padding: 15px;
 	    clear: both;
 	    display: table;
+	    margin-top:30px;
 	}
 	.designer_list .designer-img{
 		height: 100%;
