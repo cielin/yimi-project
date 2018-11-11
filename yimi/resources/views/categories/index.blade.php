@@ -145,8 +145,8 @@
             @endif
             <div class="top-option clearfix">
                 <i class="glyphicon glyphicon-th"></i>
-                <div class="center-num">
-                    <span class="pull-left">展示</span>
+               <!--  <div class="center-num">
+                    <span class="pull-left">展示</span> -->
                     <!-- <select class="form-control">
                         <option>1</option>
                         <option>2</option>
@@ -155,7 +155,7 @@
                         <option>5</option>
                     </select> -->
                     <!--模拟select框 start-->
-                    <div class="model-select-box">
+                    <!-- <div class="model-select-box">
                       <div class="model-select-text" data-value="">1</div>
                       <i class="sanjiao glyphicon glyphicon-triangle-bottom"></i>
                       <ul class="model-select-option">
@@ -167,10 +167,10 @@
                         <li data-option="6">6</li>
                         <li data-option="7">7</li>
                       </ul>
-                    </div>
+                    </div> -->
                     <!--模拟select框 end-->
-                    <span class="pull-left">/ 页</span>
-                </div>
+                   <!--  <span class="pull-left">/ 页</span>
+                </div> -->
                 <div class="goods-order">
                     <span class="pull-left">排列方式</span>
                     <!-- <select class="form-control">
