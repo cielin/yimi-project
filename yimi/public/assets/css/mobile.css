@@ -272,6 +272,26 @@
 		padding-bottom: 34px;
     	clear: both;
 	}
+	.modal-dialog{
+		top:11%;
+	}
+	.designer-bg{
+		overflow: hidden;
+	}
+	.designer-bg, .article-bg{
+		padding: 36px 2%;
+	}
+	.designer-text h5{
+		font-size: 14px;
+    	margin-bottom: -3px;
+	}
+	.designer-text p{
+		padding-bottom: 3px;
+    	line-height: 24px;
+	}
+	.designer-bg .designer-text.col-md-7 .more{
+		margin-top: -8px;
+	}
 }
 
 @media (max-width: 500px) {
