@@ -44,28 +44,28 @@
   <div class="overlay">
     <ul class="">
       <li @if (isset($active) && $active == 'home') class="current" @endif >
-            <a href="/" title="首页"><span class="glyphicon glyphicon-eye-open"></span>
+            <a href="/" title="首页"><span class="icon iconfont icon-shouye"></span>
                 首页
             </a>
         </li>
         <li>
-            <a href="/spaces" title="空间"><span class="glyphicon glyphicon-eye-open"></span>
+            <a href="/spaces" title="空间"><span class="icon iconfont icon-jiajushenghuo"></span>
                 空间
             </a>
         </li>
         <li @if (isset($active) && $active == 'categories') class="current" @endif >
-            <a href="/categories" title="商品"><span class="glyphicon glyphicon-eye-open"></span>
+            <a href="/categories" title="商品"><span class="icon iconfont icon-shafa"></span>
                 商品
             </a>
         </li>
         <li @if (isset($active) && $active == 'brands') class="current" @endif >
-            <a href="/brands" title="品牌"><span class="glyphicon glyphicon-eye-open"></span>
+            <a href="/brands" title="品牌"><span class="icon iconfont icon-pinpai"></span>
                 品牌
             </a>
         </li>
         <li @if (isset($active) && $active == 'designers') class="current" @endif >
             <a href="/designers" title="设计师">
-                <span class="glyphicon glyphicon-eye-open"></span>
+                <span class="icon iconfont icon-shejishi1"></span>
                 设计师
             </a>
         </li>
@@ -85,8 +85,8 @@
         @else
         <li>
         <a href="#" title="登录" class="hui-eee" data-toggle="modal" data-target="#myAuthModal">
-          <span class="glyphicon glyphicon-eye-open"></span>
-          登录
+          <span class="icon iconfont icon-weibiaoti2fuzhi12"></span>
+          我的
         </a>
       </li>
         @endif
