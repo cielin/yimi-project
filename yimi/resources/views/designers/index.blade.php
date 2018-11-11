@@ -3,7 +3,7 @@
 @section('title', '设计师')
 
 @section('page-content')
-<div class="wrapper-page container" style="margin-bottom: 100px;">
+<div class="wrapper-page container">
     <!--面包屑-->
     <div class="breadcrumb">
         <div class="breadcrumb_text">
