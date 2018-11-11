@@ -98,6 +98,9 @@
 		font-size: 30px;
     	margin-bottom: -6px;
 	}
+	.footer-nav .overlay ul li a{
+		padding: 0px;
+	}
 	.layout,.footer-nav .overlay{
 		display: block;
 	}
@@ -372,7 +375,13 @@
 		padding-bottom: 0.42735rem;
 	}
 	.footer-nav{
-		height: 0.42735rem;
+		height: 50px;
+	}
+	.footer-nav li, .footer-nav .overlay ul li a{
+		font-size: 12px;
+	}
+	.footer-nav li a span{
+		font-size: 20px;
 	}
 }
 @media (max-width: 425px) {
