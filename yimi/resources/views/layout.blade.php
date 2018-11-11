@@ -44,7 +44,7 @@
   <div class="overlay">
     <ul class="">
       <li @if (isset($active) && $active == 'home') class="current" @endif >
-            <a href="/" title="首页"><span class="icon iconfont icon-shouye"></span>
+            <a href="/" title="首页" class="active"><span class="icon iconfont icon-shouye"></span>
                 首页
             </a>
         </li>
