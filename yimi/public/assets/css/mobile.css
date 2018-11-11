@@ -94,6 +94,9 @@
 	.footer-nav li, .footer-nav .overlay ul li a{
 		font-size: 18px;
 	}
+	.footer-nav .overlay ul li a.active{
+		color: red;
+	}
 	.footer-nav li a span{
 		font-size: 30px;
     	margin-bottom: -6px;
