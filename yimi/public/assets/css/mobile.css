@@ -254,6 +254,9 @@
 }
 
 @media (max-width: 500px) {
+	.topLarge{
+		top:0px;
+	}
 	.index-title-ul li {
 	    width: 62px;
 	}
