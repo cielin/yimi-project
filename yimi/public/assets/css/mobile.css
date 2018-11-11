@@ -315,6 +315,9 @@
 	    display: block;
 	    overflow: hidden;
 	}
+	.d-detail-img{
+		margin-bottom: 20px;
+	}
 }
 
 @media (max-width: 500px) {
@@ -481,5 +484,11 @@
 	}
 	.designerNew a.col-xs-3{
 		width: 21.4%;
+	}
+	.d-detail-img div{
+		width: 115%;
+	    margin: 0px;
+	    margin-left: -15px;
+	    margin-top: 15px;
 	}
 }
