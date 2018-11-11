@@ -74,6 +74,9 @@
 .img2018_03 img{
 	width: 106%;
 }
+.topLarge{
+	top:12px;
+}
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
 	.topSearch .top-search{
@@ -264,9 +267,6 @@
 	}
 	.topSearch .top-search input{
 		background-size: 0.196581rem 0.025641rem;
-	}
-	.topSearch.topLarge{
-		top:12px;
 	}
 	.litteBanner li{
 		margin-bottom: 23px;

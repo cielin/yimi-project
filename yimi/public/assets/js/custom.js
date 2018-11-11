@@ -151,12 +151,13 @@
 				if (topScroll >= 5) {
 					zoomLogo(false);
 					navbar.removeClass('navbar-transparent');
-					$(".topSearch").removeClass('topLarge');
+					$(".topSearch").addClass('topLarge');
 
 				} else {
 					zoomLogo(true);
 					navbar.addClass('navbar-transparent');
-					$(".topSearch").addClass('topLarge');
+					
+					$(".topSearch").removeClass('topLarge');
 				}
 			}
 		}
