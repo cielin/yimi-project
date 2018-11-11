@@ -318,9 +318,16 @@
 	.d-detail-img{
 		margin-bottom: 20px;
 	}
+	.checkAllBrand{
+		left: 13px;
+	}
 }
 
 @media (max-width: 500px) {
+	.checkAllBrand{
+		left: 27px;
+    	top: 3px;
+	}
 	.topLarge{
 		top:0px;
 	}
@@ -460,6 +467,9 @@
 	}
 }
 @media (max-width: 425px) {
+	.checkAllBrand{
+		left: 19px;
+	}
 	.designerNew a.col-xs-3{
 		width: 25%;
 	}
