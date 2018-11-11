@@ -280,6 +280,8 @@
 	}
 	.designer-bg, .article-bg{
 		padding: 14px 2%;
+		margin-left: 15px;
+    	margin-right: 15px;
 	}
 	.designer-text h5{
 		font-size: 14px;
