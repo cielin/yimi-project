@@ -87,6 +87,17 @@
 	body,.navbar-light{
 		padding-top: 1.196581rem; /*頂部搜索條高度 150px;*/
 	}
+	.footer-nav{
+		height: 83px;
+		bottom: -1px;
+	}
+	.footer-nav li, .footer-nav .overlay ul li a{
+		font-size: 18px;
+	}
+	.footer-nav li a span{
+		font-size: 30px;
+    	margin-bottom: -6px;
+	}
 	.layout,.footer-nav .overlay{
 		display: block;
 	}
