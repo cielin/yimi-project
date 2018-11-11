@@ -76,6 +76,11 @@
 }
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
+	.topSearch .top-search{
+		width: 89%;
+		float: right;
+		margin-right: 3%;
+	}
 	body,.navbar-light{
 		padding-top: 1.196581rem; /*頂部搜索條高度 150px;*/
 	}
@@ -103,9 +108,9 @@
 	.index-content{
 		min-width: 100%;
 	}
-	/*.container {
-	    width: 750px;
-	}*/
+	.container-fluid, .container{
+		width: 100%;
+	}
 	.sidebar{
 		padding-bottom: 10921px;
 		margin-bottom: -10921px;
@@ -253,8 +258,15 @@
 	    float: right;
 	    width: 69px;
 	}
+	.topSearch .top-search{
+		width: 90%;
+		margin-right: 1%;
+	}
 	.topSearch .top-search input{
 		background-size: 0.196581rem 0.025641rem;
+	}
+	.topSearch.topLarge{
+		top:12px;
 	}
 	.litteBanner li{
 		margin-bottom: 23px;
