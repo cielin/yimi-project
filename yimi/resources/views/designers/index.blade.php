@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div  class="col-md-6 col-sm-12">
+        <div  class="col-md-6 col-sm-12 designer_list">
             @if (count($designer->portfolios) > 0)
             <?php $i = 0; ?>
             @foreach ($designer->portfolios as $portfolio)
