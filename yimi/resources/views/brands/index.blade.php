@@ -47,7 +47,7 @@
             @if (isset($brands) && sizeof($brands) > 0)
             <ul class="brandList clearfix row">
                 @foreach ($brands as $brand)
-                <li class="col-md-4">
+                <li class="col-md-4 col-sm-6 col-xs-12">
                     <a href="/brands/{{ $brand->slug }}">
                         <img src="{{ asset('public/thumbs/brands/thumb_' . $brand->logo) }}" />
                     </a>
