@@ -156,7 +156,7 @@
 				} else {
 					zoomLogo(true);
 					navbar.addClass('navbar-transparent');
-					$(".topSearch").removeClass('topLarge');
+					$(".topSearch").addClass('topLarge');
 				}
 			}
 		}
