@@ -33,11 +33,23 @@
                 </div>
             </div>
         </div>
+        @if (count($designer->portfolios) > 0)
         <div class="col-md-6 col-sm-12 designer_list">
             图
         </div>
+        @else
+        <div class="col-md-3 designer-img" style="text-align: center; line-height: 2.307692rem;">
+            <span style="background-color: #f7f7f7; display: inline-block; width: 100%;">暂无作品</span>
+        </div>
+        <div class="col-md-3 designer-img" style="text-align: center; line-height: 2.307692rem;">
+            <span style="background-color: #f7f7f7; display: inline-block; width: 100%;">暂无作品</span>
+        </div>
+        @endif
     </div>
     @endforeach
+
+
+
     <nav class="clearfix" aria-label="page navigation">
         <?php echo $designers->links(); ?>
     </nav>
