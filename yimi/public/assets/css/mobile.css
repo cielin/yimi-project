@@ -279,7 +279,7 @@
 		overflow: hidden;
 	}
 	.designer-bg, .article-bg{
-		padding: 36px 2%;
+		padding: 14px 2%;
 	}
 	.designer-text h5{
 		font-size: 14px;
@@ -291,6 +291,7 @@
 	}
 	.designer-bg .designer-text.col-md-7 .more{
 		margin-top: -8px;
+		text-align: right;
 	}
 }
 

@@ -37,7 +37,7 @@
             @if (count($designer->portfolios) > 0)
             <?php $i = 0; ?>
             @foreach ($designer->portfolios as $portfolio)
-            <div class="col-md-3 designer-img">
+            <div class="col-md-6 col-sm-6 designer-img">
                 <img src="{{ asset('public/thumbs/portfolios/thumb_' . $portfolio->image) }}">
             </div>
             @if ($i++ == 1)
