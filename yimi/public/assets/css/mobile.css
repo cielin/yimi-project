@@ -425,6 +425,9 @@
 	    padding: 0px!important;
 	    padding-right: 7px!important;
 	}
+	.main .container{
+		padding-right: 0px!important;
+	}
 	.f-right{
 		margin-top: 15px;
 	}
