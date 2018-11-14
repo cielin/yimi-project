@@ -4,21 +4,21 @@
     z-index: 100000000;
     display: none;
     width: 100%;
-    padding:0.08547rem;
+    padding:0.25641rem;
     top:0px;
     background: #fff;
 }
 .topSearch .logo img{
-	width: 0.752137rem;
-	height: 0.752137rem;
+	width: 0.78125rem;
+	height: 0.78125rem;
 }
-.topSearch .top-search,
+/*.topSearch .top-search,
 .topSearch .logo{
 	float: left;
-}
+}*/
 .topSearch .top-search,
 .topSearch .top-search input{
-	height: 0.752137rem; /*98px*/
+	height: 0.78125rem; /*98px*/
 	color: #fff;
 	background-color:rgba(89,89,89,0.1);
 	border: none;
@@ -26,12 +26,13 @@
 	border-radius: 15px;
 }
 .topSearch .top-search input{
-	padding: 0px 15px 0px 40px;
+	padding: 0px 0.128205rem 0px 0.34188rem;
 	background: url("../img/searchW.png") no-repeat 0.196581rem 0.196581rem;
 }
 .topSearch .top-search{
-	width: 93%;
-    float: right;
+	display: inline-block;
+	width: 8.28125rem;
+	margin-left: 0.3125rem;
 }
 .footer-nav{
 	position: fixed;
@@ -77,11 +78,11 @@
 }
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
-	.topSearch .top-search{
+/*	.topSearch .top-search{
 		width: 89%;
 		float: right;
 		margin-right: 3%;
-	}
+	}*/
 	body,.navbar-light{
 		padding-top: 1.196581rem; /*頂部搜索條高度 150px;*/
 	}
@@ -338,10 +339,10 @@
 	    float: right;
 	    width: 69px;
 	}
-	.topSearch .top-search{
+/*	.topSearch .top-search{
 		width: 90%;
 		margin-right: 1%;
-	}
+	}*/
 	.topSearch .top-search input{
 		background-size: 0.196581rem 0.025641rem;
 	}
