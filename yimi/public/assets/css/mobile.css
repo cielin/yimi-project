@@ -90,6 +90,10 @@
 	body,.navbar-light{
 		padding-top: 1.196581rem; /*頂部搜索條高度 150px;*/
 	}
+	.litteBanner{
+		margin-bottom: 0.3125rem;
+		margin-top:0.3125rem;
+	}
 	.footer-nav{
 		height: 83px;
 		bottom: -1px;
@@ -126,6 +130,10 @@
 	}
 	.container.overHide{
 		padding-left: 0px;
+	}
+	.swiper-pagination-bullet{
+		width: 0.15625rem;
+		height: 0.15625rem;
 	}
 	/*内页*/
 	.index-content{
@@ -231,27 +239,16 @@
 	.designer.buyer dl div{
 		bottom: -29px;
 	}
-/*	.subTitles{
-		display: table;
-		content: "";
-		clear:both;
-	}*/
-/*	.subTitles img{
-		float: left;
-	}*/
 	.subTitles .more{
 		margin-right: 0px;
 		margin-top:0px;
 		float: right;
 		width: 100px;
 	}
-/*	.subTitles .more a{
-		font-size: 10px;
-	    position: relative;
-	    left: -0.162393rem;
-	}*/
-	.overHide.mb40{
-		margin-bottom: 20px;
+
+	.overHide.subTitles{
+		padding-right: 0px!important;
+    	padding-left: 0px!important;
 	}
 	.designerNew dl dt p.ico-wrap {
 	    position: relative;
