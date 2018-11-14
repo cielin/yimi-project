@@ -4,7 +4,7 @@
     z-index: 100000000;
     display: none;
     width: 100%;
-    padding:0.25641rem;
+    padding:0.3125rem;
     top:0px;
     background: #fff;
 }
@@ -31,7 +31,7 @@
 }
 .topSearch .top-search{
 	display: inline-block;
-	width: 8.28125rem;
+	width: 8.25rem;
 	margin-left: 0.3125rem;
 }
 .footer-nav{
