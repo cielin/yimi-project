@@ -483,6 +483,13 @@
 	.footer-nav li a span{
 		font-size: 20px;
 	}
+	.designer-new-hover{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.desWrap.container{
+		padding: 0px!important;
+	}
 	.designer-bg .designer-text.col-xs-10 .more{
 		margin-top: 3px;
 	}
