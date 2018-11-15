@@ -278,16 +278,7 @@
 	    position: relative;
 	    height: 22%;
 	}
-	.ico-wrap span {
-	    font-size: 100%;
-	    position: absolute;
-	    top: -8%;
-	    left: -7%;
-	}
-	.ico-wrap span.glyphicon-eye-open {
-	    right: -12%;
-	    left: auto;
-	}
+
 	.footer{
 		padding-bottom: 34px;
     	clear: both;
@@ -341,6 +332,13 @@
 	.checkAllBrand{
 		left: 13px;
 	}
+	.ico-wrap{
+		margin-top:0px;
+		height: 38px;
+	}
+	#fh5co-board .item{
+		margin:10px 0px 27px 0px;
+	}
 }
 
 @media (max-width: 500px) {
@@ -391,16 +389,7 @@
 	    position: relative;
 	    height: 22%;
 	}
-	.ico-wrap span {
-	    font-size: 100%;
-	    position: absolute;
-	    top: -1%;
-	    left: -7%;
-	}
-	.ico-wrap span.glyphicon-eye-open {
-	    right: -9%;
-	    left: auto;
-	}
+
 	.designer.buyer dl{
 		height: auto;
 	}
@@ -499,9 +488,10 @@
 	.designer dl, .designer dl dt, .designer dl dd{
 		height: 100%;
 	}
-	#fh5co-board .item{
-		margin:10px 10px 27px 0px;
+	.designer dl dt{
+		padding-top: 1.34375rem;
 	}
+
 }
 @media (max-width: 425px) {
 	.checkAllBrand{
@@ -510,32 +500,14 @@
 	.designerNew a.col-xs-3{
 		width: 25%;
 	}
-	.ico-wrap span {
-	    font-size: 100%;
-	    position: absolute;
-	    top: -9%;
-	    left: -7%;
-	}
-	.ico-wrap span.glyphicon-eye-open {
-	    right: -9%;
-	    left: auto;
-	}
+
 }
 @media (max-width: 375px) {
 	.designerNew dl dt p.ico-wrap{
 		position: relative;
 		height: 22%;
 	}
-	.ico-wrap span{
-		font-size: 100%;
-    	position: absolute;
-    	top: -18%;
-    	left: -9%;
-	}
-	.ico-wrap span.glyphicon-eye-open{
-		right: -20%;
-    	left: auto;
-	}
+
 	.designerNew a.col-xs-3{
 		width: 21.4%;
 	}
