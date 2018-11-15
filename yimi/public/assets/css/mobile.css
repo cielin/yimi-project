@@ -441,6 +441,18 @@
 		width: 100%;
 		height: auto;
 	}
+	.designer.buyer.active{
+		width: 100%;
+		padding:0px!important;
+	}
+	.designer.buyer dl:nth-child(n+1){
+    	padding-left: 0!important;
+    	padding-right: 5px!important;
+	}
+	.designer.buyer dl:nth-child(n){
+    	padding-left: 5px!important;
+        padding-right: 0px!important;
+	}
 	.item,#fh5co-board .item img{
 		width: 100%;
 	}
