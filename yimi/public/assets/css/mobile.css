@@ -108,7 +108,7 @@
 		overflow: hidden;
 	}
 	.indexTitle img{
-	  width: 4.866953rem;
+	  width: 4.6875rem;
 	}
 	.footer-nav{
 		height: 83px;
@@ -255,16 +255,23 @@
 	.designer.buyer dl div{
 		bottom: -29px;
 	}
-	.subTitles .more{
-		margin-right: 0px;
-		margin-top:0px;
-		float: right;
-		width: 100px;
+	.index-title-ul{
+		position: relative;
 	}
-
+	.subTitles .more{
+		position: absolute;
+		top:-20px;
+		width: 2.15625rem;
+		top: -62px;
+    	right: 0px;
+	}
+	.designers-mobile .overHide.subTitles .more{
+		top:-2px;
+	}
 	.overHide.subTitles{
 		padding-right: 0px!important;
     	padding-left: 0px!important;
+    	position: relative;
 	}
 	.designerNew dl dt p.ico-wrap {
 	    position: relative;
