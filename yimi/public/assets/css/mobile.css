@@ -70,9 +70,6 @@
 	margin-bottom: 0.125rem;
 }
 
-.img2018_03 img{
-	width: 106%;
-}
 .topLarge{
 	top:12px;
 }
@@ -95,9 +92,19 @@
 	body,.navbar-light{
 		padding-top: 1.196581rem; /*頂部搜索條高度 150px;*/
 	}
+	.litteBannerImg{
+		overflow: hidden;
+	}
+	.litteBannerUl{
+		margin-left: -0.3125rem;
+		margin-right: -0.3125rem;
+	}
 	.litteBanner{
 		margin-bottom: 0.3125rem;
 		margin-top:0.3125rem;
+	}
+	.litteBanner li{
+		overflow: hidden;
 	}
 	.footer-nav{
 		height: 83px;
@@ -348,9 +355,7 @@
 	.topSearch .top-search input{
 		background-size: 0.196581rem 0.025641rem;
 	}
-	.litteBanner li{
-		/*margin-bottom: 23px;*/
-	}
+
 	.index-content{
 		min-width: 100%;
 	}
