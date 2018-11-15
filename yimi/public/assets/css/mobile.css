@@ -245,9 +245,7 @@
 	.designer.buyer dl{
 		margin-bottom: 52px;
 	}
-	.index-title-ul{
-		float: left;
-	}
+
 	.index-title-ul li{
 		width: 1.803419rem;
 		text-align: left;
@@ -256,6 +254,7 @@
 		bottom: -29px;
 	}
 	.index-title-ul{
+		width: 100%;
 		position: relative;
 	}
 	.subTitles .more{
@@ -378,9 +377,7 @@
 	.subTitles span{
 		display: block;
 	}
-	.index-title-ul{
-		float: left;
-	}
+
 	.designerNew a.col-xs-3:nth-child(2){
 		position: relative;
 		left:-11px;
