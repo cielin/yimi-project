@@ -444,12 +444,13 @@
 	.designer.buyer.active{
 		width: 100%;
 		padding:0px!important;
+		margin:0px!important;
 	}
-	.designer.buyer dl:nth-child(n+1){
+	.designer.buyer dl:nth-child(n){
     	padding-left: 0!important;
     	padding-right: 5px!important;
 	}
-	.designer.buyer dl:nth-child(n){
+	.designer.buyer dl:nth-child(2n){
     	padding-left: 5px!important;
         padding-right: 0px!important;
 	}
