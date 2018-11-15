@@ -194,7 +194,7 @@
                 <span class="more"><a href="{{ url('designers') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a></span>
 
             </div>
-            <div class="container overHide" style="padding-bottom:14px;">
+            <div class="container overHide desWrap" style="padding-bottom:14px;">
                 <div class="designer designer-new-hover">
                     @foreach ($designers as $designer)
                     <a href="{{ url('designers/' . $designer->slug) }}"  class="col-md-3 col-sm-3 col-xs-6">
