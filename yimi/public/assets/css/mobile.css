@@ -511,6 +511,12 @@
 	.designer dl dt{
 		padding-top: 1.34375rem;
 	}
+	.sidebar-box{
+		display: none;
+	}
+	.sidebar .sidebar-title{
+		display: none;
+	}
 
 }
 @media (max-width: 425px) {
