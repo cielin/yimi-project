@@ -198,11 +198,11 @@
                         </div>
                     </div>
 
-                    <div class="f-email col-md-7 col-sm-8">
+                    <!-- <div class="f-email col-md-7 col-sm-8">
                         <span style="border:none;">SUBCRIBLE  NEWSLETTER</span>
                         <input type="text" name="" placeholder="Enter your email address" />
                         <span class="icon iconfont icon-youjian"></span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
