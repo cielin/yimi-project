@@ -98,6 +98,7 @@
 	.litteBannerUl{
 		margin-left: -0.3125rem;
 		margin-right: -0.3125rem;
+		padding-right:0px!important;
 	}
 	.litteBanner{
 		margin-bottom: 0.3125rem;
