@@ -146,6 +146,7 @@
 	}
 	.container.overHide{
 		padding-left: 0px;
+		margin-bottom: 0.3125rem;
 	}
 	.swiper-pagination-bullet{
 		width: 0.15625rem!important;
@@ -256,12 +257,13 @@
 	.index-title-ul{
 		width: 100%;
 		position: relative;
+		margin-top: 0.3125rem;
 	}
 	.subTitles .more{
 		position: absolute;
 		top:-20px;
 		width: 2.15625rem;
-		top: -62px;
+		top: -51px;
     	right: 0px;
 	}
 	.designers-mobile .overHide.subTitles .more{
