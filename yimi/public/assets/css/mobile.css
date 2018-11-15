@@ -335,6 +335,18 @@
 	.ico-wrap{
 		margin-top:0px;
 		height: 38px;
+		padding-top: 8px;
+        padding-left: 0px;
+	}
+	.ico-wrap .heart-detail{
+		color: rgba(17, 17, 17, 0.55);
+	}
+	.ico-wrap .icon-yanjing1{
+		position: relative;
+	    top: -1px;	
+	}
+	.ico-wrap:before{
+		top: 29%;
 	}
 	#fh5co-board .item{
 		margin:10px 0px 27px 0px;
