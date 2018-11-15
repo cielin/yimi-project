@@ -473,6 +473,12 @@
 		margin-top: -9px;
 		font-size: 10px;
 	}
+	.designer dl, .designer dl dt, .designer dl dd{
+		height: 100%;
+	}
+	#fh5co-board .item{
+		margin:10px 10px 27px 0px;
+	}
 }
 @media (max-width: 425px) {
 	.checkAllBrand{
