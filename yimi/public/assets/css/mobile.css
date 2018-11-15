@@ -454,6 +454,12 @@
     	padding-left: 5px!important;
         padding-right: 0px!important;
 	}
+	.designer, .designer.buyer, .designer.goods{
+		left: 0px;
+	}
+	.tab-content.buyerWrap{
+		padding: 0px!important;
+	}
 	.item,#fh5co-board .item img{
 		width: 100%;
 	}
