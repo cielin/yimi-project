@@ -107,6 +107,9 @@
 	.litteBanner li{
 		overflow: hidden;
 	}
+	.indexTitle img{
+	  width: 4.866953rem;
+	}
 	.footer-nav{
 		height: 83px;
 		bottom: -1px;
