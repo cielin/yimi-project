@@ -137,8 +137,8 @@
 		padding-left: 0px;
 	}
 	.swiper-pagination-bullet{
-		width: 0.15625rem;
-		height: 0.15625rem;
+		width: 0.15625rem!important;
+		height: 0.15625rem!important;
 	}
 	/*内页*/
 	.index-content{
@@ -349,7 +349,7 @@
 		background-size: 0.196581rem 0.025641rem;
 	}
 	.litteBanner li{
-		margin-bottom: 23px;
+		/*margin-bottom: 23px;*/
 	}
 	.index-content{
 		min-width: 100%;
