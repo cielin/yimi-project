@@ -345,10 +345,7 @@
 		margin-bottom: 0px;
 		position: relative;
     	top: -2px;
-	}
-	.side-sub li{
-		float: left;
-		padding-right: 10px;
+    	height: 0.9375rem;
 	}
 	.side-sub{
 		width: 100%;
@@ -357,6 +354,13 @@
 	    font-size: 12px;
 	    text-align: center;
 	    padding: 0px;
+	    height:46px;
+        overflow-x:scroll;
+        overflow-y:hidden;
+	}
+	.side-sub li{
+		float: left;
+		padding-right: 10px;
 	}
 	.side-sub li.active{
 		background: #fff;
