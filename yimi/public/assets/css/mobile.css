@@ -429,6 +429,16 @@
 	.brandList{
 		margin-top:0.3125rem;
 	}
+	.designer dl dd img{
+	  width: 100%;
+      height: auto;
+	}
+	.designer dl,
+	.designer dl dt,
+	.designer dl dd{
+	  width: 100%;
+	  height: 100%;
+	}
 }
 
 @media (max-width: 500px) {
