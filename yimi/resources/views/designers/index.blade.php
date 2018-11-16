@@ -22,10 +22,10 @@
     <div class="row designer-item">
         <div class="col-md-6 col-sm-12">
             <div class="designer-bg clearfix">
-                <div class="designer-user col-md-5 col-sm-1 col-xs-2">
+                <div class="designer-user col-md-5 col-sm-1 col-xs-3">
                     <a href="{{ URL::to('/designers/' . $designer->slug) }}"><img src="{{ asset('public/thumbs/designers/thumb_' . $designer->avatar) }}"></a>
                 </div>
-                <div class="designer-text col-md-7 col-sm-11 col-xs-10">
+                <div class="designer-text col-md-7 col-sm-11 col-xs-9">
                     <h5><a href="{{ URL::to('/designers/' . $designer->slug) }}"><span>{{ $designer->name }}</span></a></h5>
                     <p><a href="{{ URL::to('/designers/' . $designer->slug) }}">{{ mb_substr(strip_tags($designer->description), 0, 90) }}</a></p>
                     <div class="more"><a href="{{ URL::to('/designers/' . $designer->slug) }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
