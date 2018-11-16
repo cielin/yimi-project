@@ -410,6 +410,25 @@
 	.good-list-top-bg div.all .active, .checkAllBrand.active{
 		display: none;
 	}
+	.gray-box{
+		height: 0.9375rem;
+		overflow: hidden;
+		padding: 0.3125rem;
+		line-height: 1.0rem;
+	}
+	.check-words{
+		padding: 0.0rem;
+		height: 46px;
+	    overflow-x: scroll;
+	    overflow-y: hidden;
+	}
+	.check-words li{
+		width: 20px;
+		padding:0.0rem;
+	}
+	.brandList{
+		margin-top:0.3125rem;
+	}
 }
 
 @media (max-width: 500px) {
