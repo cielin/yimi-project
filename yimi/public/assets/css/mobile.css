@@ -394,12 +394,12 @@
 		margin-top: 0.3125rem;
 	}
 	.designer_list .designer-img:nth-child(n),
-	.brandList li a:nth-child(n){
+	.brandList li:nth-child(n) a{
     	padding-left: 0!important;
     	padding-right: 5px!important;
 	}
 	.designer_list .designer-img:nth-child(2n),
-	.brandList li a:nth-child(2n){
+	.brandList li:nth-child(2n) a{
 		padding-left: 5px!important;
     	padding-right: 0px!important;
 	}
