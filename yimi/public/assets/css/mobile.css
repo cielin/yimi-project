@@ -169,6 +169,7 @@
 	}
 	.sidebarWrap{
 		background: #f6f6f6;
+		margin-bottom: 0.3125rem;
 	}
 	.sidebarWrap{
 		padding: 0px 0.375rem;
@@ -358,7 +359,8 @@
 	}
 	.side-sub li.active{
 		background: #fff;
-	    padding:0px 5px;
+	    padding:5px;
+	    top: 5px;
 	}
 /*重置10像素*/
 	.designer-bg, .article-bg{
