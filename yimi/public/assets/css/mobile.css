@@ -59,9 +59,6 @@
 .footer-nav li{
 	width: 16.6%;
 }
-.footer-nav .overlay ul li.current a{
-	color: #d9221e;
-}
 .footer-nav .overlay ul li a {
 	padding:0.25rem 0px;
 }
@@ -117,7 +114,8 @@
 	.footer-nav li, .footer-nav .overlay ul li a{
 		font-size: 18px;
 	}
-	.footer-nav .overlay ul li a.active{
+	.footer-nav .overlay ul li a.active,
+	.footer-nav .overlay ul li.current a{
 		color: #cca76f;
 	}
 	.footer-nav li a span{
