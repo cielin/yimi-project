@@ -358,15 +358,18 @@
         overflow-x:scroll;
         overflow-y:hidden;
 	}
-	.side-sub li{
+	.side-sub li,.side-one{
 		float: left;
 		padding-right: 10px;
 	}
-	.side-sub li.active{
+	.side-sub li.active,.side-one.active{
 		background: #fff;
 	    padding:5px;
 	    top: 5px;
 	    margin-right: 5px;
+	}
+	.top-option{
+		margin-bottom: 0.0rem;
 	}
 /*重置10像素*/
 	.designer-bg, .article-bg{
