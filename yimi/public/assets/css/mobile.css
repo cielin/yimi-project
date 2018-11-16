@@ -180,7 +180,7 @@
 	.side-one{
 		text-align: center;
 		font-weight: normal;
-		line-height: 38px;
+		line-height: 32px;
 		color: #898989;
 		font-size: 0.375rem;
 	}
@@ -406,6 +406,9 @@
 	}
 	.designer-bg .designer-text.col-md-7 .more{
 		margin-top: -3px;
+	}
+	.good-list-top-bg div.all .active, .checkAllBrand.active{
+		display: none;
 	}
 }
 
