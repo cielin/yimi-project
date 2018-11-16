@@ -368,7 +368,14 @@
 	    margin-right: 5px;
 	}
 	.top-option{
-		margin-bottom: 0.0rem;
+		margin-bottom: 0.3125rem;
+		padding-bottom: 1.46875rem;
+	}
+	.model-select-box{
+		margin:0px;
+	}
+	.container-fluid.noPadding,.container.noPadding{
+	  padding: 0px!important;
 	}
 /*重置10像素*/
 	.designer-bg, .article-bg{
