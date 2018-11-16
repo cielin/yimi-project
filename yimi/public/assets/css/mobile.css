@@ -348,6 +348,7 @@
 	}
 	.side-sub li{
 		float: left;
+		padding-right: 10px;
 	}
 	.side-sub{
 		width: 100%;
@@ -355,12 +356,13 @@
 	    margin: 0px;
 	    font-size: 12px;
 	    text-align: center;
-	    padding: 0px 10px;
+	    padding: 0px;
 	}
 	.side-sub li.active{
 		background: #fff;
 	    padding:5px;
 	    top: 5px;
+	    margin-right: 5px;
 	}
 /*重置10像素*/
 	.designer-bg, .article-bg{
