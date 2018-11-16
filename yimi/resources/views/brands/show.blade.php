@@ -33,7 +33,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-3 sidebarWrap">
+        <div class="col-md-3 col-sm-3 col-xs-3 sidebarWrap brandsSideBar">
             <div class=" sidebar" style="padding-right:30px;">
                 <div class="brandBigImg">
                     <a href="#"><img src="{{ asset('public/images/brands/' . $brand->logo) }}">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class=" col-md-9 col-sm-8 col-xs-8  main">
+        <div class=" col-md-9 col-sm-8 col-xs-12  main">
             <div class="top-option clearfix">
                 <i class="glyphicon glyphicon-th"></i>
                 <div class="goods-order">
@@ -92,7 +92,7 @@
                 @endforeach
             </div> -->
             <!--瀑布流开始 -->
-		<div class="container-fluid">
+		<div class="container-fluid noPadding">
 		  <div class="container ">
 			  <div id="fh5co-main" class="waterfallNew">
 				<div class="container1">
