@@ -409,6 +409,12 @@
 		padding-left: 5px!important;
     	padding-right: 10px!important;
 	}
+	.brandList li a{
+		height: 4.53125rem;
+	}
+	.brandList li{
+		height: 4.84375rem;
+	}
 	.designer-text h5 span{
 		font-size: 0.4375rem;
 	}
