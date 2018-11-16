@@ -180,20 +180,6 @@
 		font-weight: normal;
 		line-height: 38px;
 	}
-	.side-sub{
-	    padding: 0px;
-	    margin: 0px;
-	    font-size: 12px;
-	    text-align: center;
-	}
-	.side-sub li.active{
-		background: #fff;
-	    padding: 5px;
-	    right: -11px;
-	    top:0px;
-	    width: 113%;
-	    left: -5px;
-	}
 	.sidebar-box{
 		margin-right:0px;
 	}
@@ -351,6 +337,30 @@
 	#fh5co-board .item{
 		margin:10px 0px 27px 0px;
 	}
+	.brandsSideBar{
+		display: none;
+	}
+	.s-content{
+		overflow: hidden;
+		margin-bottom: 0px;
+	}
+	.side-sub{
+		width: 100%;
+	}
+	.side-sub li{
+		float: left;
+	}
+	.side-sub{
+	    padding: 0px;
+	    margin: 0px;
+	    font-size: 12px;
+	    text-align: center;
+	}
+	.side-sub li.active{
+		background: #fff;
+	    padding: 5px;
+	}
+
 }
 
 @media (max-width: 500px) {
@@ -515,9 +525,6 @@
 		display: none;
 	}
 	.sidebar .sidebar-title{
-		display: none;
-	}
-	.brandsSideBar{
 		display: none;
 	}
 
