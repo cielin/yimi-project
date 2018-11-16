@@ -517,6 +517,9 @@
 	.sidebar .sidebar-title{
 		display: none;
 	}
+	.brandsSideBar{
+		display: none;
+	}
 
 }
 @media (max-width: 425px) {
