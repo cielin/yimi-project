@@ -104,7 +104,7 @@
 	.litteBanner li{
 		overflow: hidden;
 	}
-	.indexTitle img{
+	.indexTitle img,.titWater img{
 	  width: 4.6875rem;
 	}
 	.footer-nav{
@@ -456,7 +456,7 @@
 	  height: 100%;
 	}
 	.designer a{
-
+	 margin-bottom: 0.1875rem;
 	}
 	.designer a:nth-child(n){
     	padding-left: 0!important;
@@ -557,7 +557,8 @@
 		margin-bottom: 0px;
 	}
 	.designer.buyer dl div{
-		bottom: 8px;
+		bottom: 0.3125rem;
+		line-height:0.875rem;
 	}
 	.designer dl{
 		/*width: o;*/
