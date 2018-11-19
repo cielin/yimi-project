@@ -507,6 +507,7 @@
 	    margin-top: 18px;
 	    float: right;
 	    width: 69px;
+	    text-align: right;
 	}
 	.subTitles .more i{
 		display: none;
