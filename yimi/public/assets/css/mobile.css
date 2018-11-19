@@ -470,16 +470,16 @@
     	padding-right: 0px!important;
 	}
 	/*瀑布流*/
-	#fh5co-board .item:nth-child(n){
+	#fh5co-board .item{
 		padding-left: 0!important;
-		padding-right: 8px!important;
-		overflow: hidden;
-	}
-	#fh5co-board .item:nth-child(2n){
-		padding-left: 8px!important;
 		padding-right: 0px!important;
 		overflow: hidden;
 	}
+/*	#fh5co-board .item:nth-child(2n){
+		padding-left: 8px!important;
+		padding-right: 0px!important;
+		overflow: hidden;
+	}*/
 	.column{
 	  column-count: 2;
       column-gap: 0;
