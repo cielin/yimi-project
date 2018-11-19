@@ -508,6 +508,9 @@
 	    float: right;
 	    width: 69px;
 	}
+	.subTitles .more i{
+		display: none;
+	}
 /*	.topSearch .top-search{
 		width: 90%;
 		margin-right: 1%;
