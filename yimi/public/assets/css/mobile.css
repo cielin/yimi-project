@@ -564,6 +564,12 @@
 		/*width: o;*/
 		margin: 0px;
 	}
+	.waterfalls{
+		margin-top:0px;
+	}
+	.waterfalls h3{
+		padding: 10px 0px;
+	}
 	.designer.buyer dl{
 		margin-left:0px;
 	}
