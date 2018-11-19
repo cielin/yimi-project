@@ -98,8 +98,8 @@
 		padding-right:0px!important;
 	}
 	.litteBanner{
-		margin-bottom: 0.3125rem;
-		margin-top:0.3125rem;
+		margin-bottom: 0.46875rem;
+		margin-top:0.46875rem;
 	}
 	.litteBanner li{
 		overflow: hidden;
@@ -557,7 +557,7 @@
 		margin-bottom: 0px;
 	}
 	.designer.buyer dl div{
-		bottom: -2px;
+		bottom: -3px;
 	}
 	.designer dl{
 		/*width: o;*/
@@ -572,6 +572,7 @@
 	}
 	.designer.buyer dl dt, .designer.buyer dl dd{
 		width: 100%;
+		margin-bottom: 30px;
 	}
 	.designer.buyer dl dd img{
 		width: 100%;
