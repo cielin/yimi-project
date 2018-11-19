@@ -239,6 +239,9 @@
 		width: 1.803419rem;
 		text-align: left;
 	}
+	.index-title-ul li.more a, span.more a, .more a, .designer-bg .designer-text .more a{
+		font-size: 10px;
+	}
 	.designer.buyer dl div{
 		bottom: -29px;
 	}
@@ -255,7 +258,7 @@
     	right: 0px;
 	}
 	.designers-mobile .overHide.subTitles .more{
-		top:-2px;
+		top:-4px;
 	}
 	.overHide.subTitles{
 		padding-right: 0px!important;
@@ -501,7 +504,7 @@
 	}
 	.subTitles .more{
 		margin-right: 0px;
-	    margin-top: 0px;
+	    margin-top: 18px;
 	    float: right;
 	    width: 69px;
 	}
