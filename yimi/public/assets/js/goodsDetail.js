@@ -45,7 +45,7 @@ $(function () {
          });
 
 
-     var swiper2 = new Swiper('#mobileWraper', {
+     var swiper2 = new Swiper('.swiper-container', {
       pagination: {
         el: '.swiper-pagination',
       },
