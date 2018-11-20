@@ -515,7 +515,7 @@
 	.swiper-wraper{
 		width: 100%;
 	}
-	.swiper-container.gallery-top img{
+	.swiper-container.gallery-top img,.gallery-top{
 		width: 100%!important;
 		height: 100%!important;
 	}
