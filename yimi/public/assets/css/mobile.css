@@ -470,9 +470,16 @@
     	padding-right: 0px!important;
 	}
 	/*瀑布流*/
-	#fh5co-board .item{
+	#fh5co-board .item:nth-of-type(odd){
 		padding-left: 0!important;
 		padding-right: 0px!important;
+		margin-right: 10px!important;
+		overflow: hidden;
+	}
+	#fh5co-board .item:nth-of-type(even){
+		padding-left: 0!important;
+		padding-right: 0px!important;
+		margin-left: 10px!important;
 		overflow: hidden;
 	}
 /*	#fh5co-board .item:nth-child(2n){
