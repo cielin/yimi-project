@@ -40,7 +40,7 @@
     <!--面包屑-->
     <!--商品轮播图-->
     <div class="row">
-        <div class="swiper-wraper">
+        <div class="swiper-wraper webSw">
             <div class="swiper-container gallery-top">
                 <div class="swiper-wrapper">
                     @foreach ($product->images as $image)
@@ -72,16 +72,11 @@
         <div class="sowingMap">
         <div class="swiper-container swiperPro">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
-              <div class="swiper-slide">Slide 10</div>
+              @foreach ($product->images as $image)
+                <div class="swiper-slide">
+                    <img src="{{ asset('public/images/products/' . $image->path) }}">
+                </div>
+                @endforeach
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>

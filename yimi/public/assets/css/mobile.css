@@ -522,6 +522,9 @@
 	.gallery-thumbs{
 		display: none;
 	}*/
+	.webSw{
+		display: none;
+	}
 }
 
 @media (max-width: 500px) {
