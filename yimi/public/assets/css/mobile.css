@@ -519,6 +519,9 @@
 		width: 100%!important;
 		height: 100%!important;
 	}
+	.swiper-container{
+		display: none;
+	}
 }
 
 @media (max-width: 500px) {
