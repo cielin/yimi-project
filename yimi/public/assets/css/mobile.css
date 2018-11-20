@@ -470,6 +470,9 @@
     	padding-right: 0px!important;
 	}
 	/*瀑布流*/
+	.column{
+		width: 103%;
+	}
 	#fh5co-board .item{
 		padding-left: 0!important;
 		padding-right: 10px!important;
@@ -481,6 +484,10 @@
 		width: 100%;
      	padding: 10px;
         background: #fff;
+	}
+	#fh5co-board .item img{
+	  border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
 	}
 	.column{
 	  column-count: 2;
