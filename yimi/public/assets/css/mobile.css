@@ -470,23 +470,18 @@
     	padding-right: 0px!important;
 	}
 	/*瀑布流*/
-	#fh5co-board .item:nth-of-type(odd){
+	#fh5co-board .item{
 		padding-left: 0!important;
-		padding-right: 0px!important;
-		margin-right: 10px!important;
+		padding-right: 10px!important;
+		margin-bottom: 10px!important;
+    	background: none;
 		overflow: hidden;
 	}
-	#fh5co-board .item:nth-of-type(even){
-		padding-left: 0!important;
-		padding-right: 0px!important;
-		margin-left: 10px!important;
-		overflow: hidden;
+	#fh5co-board .item .fh5co-desc{
+		width: 100%;
+     	padding: 10px;
+        background: #fff;
 	}
-/*	#fh5co-board .item:nth-child(2n){
-		padding-left: 8px!important;
-		padding-right: 0px!important;
-		overflow: hidden;
-	}*/
 	.column{
 	  column-count: 2;
       column-gap: 0;
