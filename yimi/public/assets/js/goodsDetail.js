@@ -1,7 +1,7 @@
 $(function () {
 
 // 带预览效果的轮播 start
-     var galleryTop = new Swiper('.gallery-top', {
+   var galleryTop = new Swiper('.gallery-top', {
       spaceBetween: 10,
       loop:true,
       loopedSlides: 5, //looped slides should be the same
@@ -43,5 +43,12 @@ $(function () {
              prevEl: '.swiper-button-prev',
            },
          });
+
+
+     var swiper2 = new Swiper('#mobileWraper', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
  
 	})

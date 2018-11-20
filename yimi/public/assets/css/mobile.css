@@ -512,7 +512,7 @@
 	.side-sub li.active a{
 		font-size:12px;
 	}
-	.swiper-wraper{
+	/*.swiper-wraper{
 		width: 100%;
 	}
 	.swiper-container.gallery-top img,.gallery-top{
@@ -521,7 +521,7 @@
 	}
 	.gallery-thumbs{
 		display: none;
-	}
+	}*/
 }
 
 @media (max-width: 500px) {
