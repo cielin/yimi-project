@@ -45,10 +45,33 @@ $(function () {
          });
 
 
-     var swiper2 = new Swiper('.swiper-container', {
+     
+  var swiper = new Swiper('.swiper1', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      // paginationClickable: true,
+      loop: true,
+      speed: 1000,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: '.swiper-pagination',
+        clickable: true,
       },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on: {
+      slideChange: function () {
+        var imgWidth = 1920;
+        var boxWidth = this.width;
+        var left = (-(imgWidth-boxWidth)/2)+"px";
+        
+      },
+    }
     });
  
 	})
