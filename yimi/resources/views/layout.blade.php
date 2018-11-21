@@ -210,7 +210,7 @@
             <div class="container footer-middle">
                 <div class="row">
                     <div class="f-left col-md-5 col-sm-4 col-xs-4">
-                        <img src="{{ URL::asset('assets/img/foot/f-logo.png') }}" class="flogo" style="width: 178px;"/>
+                        <img src="{{ URL::asset('assets/img/foot/f-logo.png') }}" class="flogo"/>
                         <h4>微信公众号</h4>
                         <img class="eWm" src="{{ URL::asset('assets/img/foot/f-ma.jpg') }}" />
                     </div>
