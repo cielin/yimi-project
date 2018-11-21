@@ -634,6 +634,16 @@
 	.footer-bottom .text-right{
 		text-align: center!important;
 	}
+	.itemHover .ico-wrap{
+	   height: 50px;
+	   left: 5%;
+	}
+	.itemHover .ico-wrap:before{
+		top: 38%;
+	}
+	.itemHover .ico-wrap span{
+		line-height: 1.1875rem;
+	}
 }
 
 @media (max-width: 500px) {
