@@ -34,7 +34,7 @@
 
         </div>
         <div class="col-sm-8 col-md-9 col-xs-12 main main-min">
-            <div class="gray-box allA">
+            <div class="gray-box allA mLetter">
                 <a id="checkAllBrand" class="checkAllBrand @if (!isset($first)) active @endif" href="{{ route('brands.index') }}">全部</a>
                 <ul class="check-words clearfix">
                     @for ($i = 0; $i < 26; ++$i)
