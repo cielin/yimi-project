@@ -115,7 +115,7 @@
                         @else
                         <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
                         @endif
-                        <a href="/articles/shopping-tips"><span class="icon iconfont icon-question" style="margin-left:54px;"></span></a>
+                        <a href="/articles/shopping-tips"><span class="icon iconfont icon-question"></span></a>
                     </p>
                 </div>
             </div>
