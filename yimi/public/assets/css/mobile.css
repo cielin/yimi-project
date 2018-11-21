@@ -583,6 +583,20 @@
 	.brandList li a, .brandBigImg{
 		border: 10px solid #f6f6f6!important;
 	}
+	.footer-top{
+	    min-height: inherit;
+    	line-height: inherit;
+	}
+	.footer-middle{
+		padding-top:15px!important;
+	}
+	.f-left h4{
+	  margin-top: 15px;
+      margin-bottom: 15px;
+	}
+	.f-right{
+		margin-top: 63px;
+	}
 }
 
 @media (max-width: 500px) {

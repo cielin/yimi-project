@@ -209,12 +209,12 @@
         <div class="container-fluid bg-black-21">
             <div class="container footer-middle">
                 <div class="row">
-                    <div class="f-left col-md-5 col-sm-4">
+                    <div class="f-left col-md-5 col-sm-4 col-xs-4">
                         <img src="{{ URL::asset('assets/img/foot/f-logo.png') }}" style="width: 178px;"/>
                         <h4>微信公众号</h4>
                         <img src="{{ URL::asset('assets/img/foot/f-ma.jpg') }}" />
                     </div>
-                    <div class="f-right col-md-6 col-sm-8">
+                    <div class="f-right col-md-6 col-sm-8 col-xs-8">
                         <dl>
                           <dt>会员服务</dt>
                           <dd>
