@@ -525,6 +525,26 @@
 	.webSw{
 		display: none;
 	}
+	.swiperPro.swiper-container{
+		overflow: initial;
+	}
+	.swiperPro > .swiper-container-horizontal > .swiper-pagination-bullets{
+	  bottom: -24px;
+	}
+	.detais-content-tit{
+		margin-top: 26px;
+		min-height: 100%;
+    	padding: 10px;
+	}
+	.details-tit {
+	    font-size: 14px;
+	}
+	.hui-tit{
+		margin-bottom: 0px!important;
+	}
+	.detailText{
+	
+	}
 }
 
 @media (max-width: 500px) {

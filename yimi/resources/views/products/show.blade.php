@@ -97,17 +97,19 @@
                 <div class="detais-content-tit">
                     <h1 class="details-tit">{{ $product->name }}</h1>
                     <div class="hui-tit">{{ $product->brand->name }}</div>
+                    <div class="detailText">
                     @foreach ($product->product_attributes as $product_attribute)
                     @if ($product_attribute->product_attr_key->is_package_attr == 0 && $product_attribute->product_attr_key->is_sale_attr == 0 && $product_attribute->product_attr_value->value !== "")
                     <p>{{ $product_attribute->product_attr_key->name }}：{{ $product_attribute->product_attr_value->value }}</p>
                     @endif
                     @endforeach
+                    </div>
                     <!-- <div class="details-bord"></div> -->
                 </div>
                 <!--swiper end -->
                 <div>
 
-                    <p class="ico-wraps">
+                    <p class="mobileIco ico-wraps">
                         @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
                         <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
                         @else
