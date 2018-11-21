@@ -528,8 +528,8 @@
 	.swiperPro.swiper-container{
 		overflow: initial;
 	}
-	.swiperPro > .swiper-container-horizontal > .swiper-pagination-bullets{
-	  bottom: -24px;
+	.swiperPro>.swiper-container-horizontal > .swiper-pagination-bullets{
+	  bottom: -24px!important;
 	}
 	.detais-content-tit{
 		margin-top: 26px;
