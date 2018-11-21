@@ -82,7 +82,8 @@
         </li>
         <li>
             <a href="{{ url('signout') }}">
-                <!-- <span class="glyphicon glyphicon-eye-open"></span> -->
+                <span class="icon iconfont icon-weibiaoti2fuzhi12">
+          </span>
                 退出
             </a>
         </li>
