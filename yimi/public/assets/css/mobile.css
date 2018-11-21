@@ -836,6 +836,14 @@
 	.login-btn{
 		width: 100%;
 	}
+	.myModalImg .modal-dialog{
+		width: 300px;
+	}
+	.myModalImg .close{
+		width: 26px;
+        height: 26px;
+        top: 2px;
+	}
 
 }
 @media (max-width: 425px) {
