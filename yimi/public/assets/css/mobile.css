@@ -643,6 +643,10 @@
 	.itemHover .ico-wrap span{
 		line-height: 1.1875rem;
 	}
+	.f-right dl.help dd a{
+		position: relative;
+    	left: -23px;
+	}
 }
 
 @media (max-width: 500px) {
