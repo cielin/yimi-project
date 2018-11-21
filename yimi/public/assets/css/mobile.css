@@ -628,7 +628,8 @@
 		padding: 0px!important;
 	}
 	.footer-bottom a{
-		clear: both!important;
+	  float: inherit!important;
+      margin: 0px 10px!important;
 	}
 	.footer-bottom .text-right{
 		text-align: center!important;
