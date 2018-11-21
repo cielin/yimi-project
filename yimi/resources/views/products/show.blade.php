@@ -145,7 +145,7 @@
             </div>
         </span>
     </div>
-    <div class="row">
+    <div class="row mTextBody">
         <ul class="col-md-3 details-tab" role="tablist">
             <li role="presentation" class="active">
                 <a href="#goodsDetails" aria-controls="home" role="tab" data-toggle="tab">
