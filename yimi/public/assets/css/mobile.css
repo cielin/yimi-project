@@ -543,7 +543,16 @@
 		margin-bottom: 0px!important;
 	}
 	.detailText{
-	
+		clear: both;
+	    display: table;
+	    content: "";
+	}
+	.detailText p {
+	    float: left;
+	    margin-right: 20px;
+	}
+	.ditails-tab-box .tab-pane.active{
+		padding-right: 0px!important;
 	}
 	.swiperPro .swiper-pagination-bullet{
 	  background: #999!important;
@@ -553,6 +562,9 @@
 	}
 	.mTextBody{
 		padding:0px 10px;
+	}
+	.mTextBody img {
+	    width: 100%;
 	}
 }
 
