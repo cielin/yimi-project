@@ -610,6 +610,10 @@
 	  width: 68px;
       margin-left: -3px;
 	}
+	.f-left img.flogo{
+		width: 140px;
+        margin-bottom: 14px;
+	}
 	.f-right{
 		margin-top: 63px!important;
 	}
@@ -619,6 +623,15 @@
 	.other-goods{
 	  padding: 15px 10px!important;
       margin-top: 15px!important;
+	}
+	.footer-bottom p{
+		padding: 0px!important;
+	}
+	.footer-bottom a{
+		clear: both!important;
+	}
+	.footer-bottom .text-right{
+		text-align: center!important;
 	}
 }
 

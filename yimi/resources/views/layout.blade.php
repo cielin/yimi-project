@@ -239,12 +239,13 @@
                     </div>
                 </div>
                 <div class="row footer-bottom">
-                    <p class="col-md-6 col-sm-6 col-xs-12">沪ICP备18025160号-2 匠意国际贸易（上海）有限公司©2018</p>
                     <div class="col-md-6 col-sm-6 col-xs-12 text-right">
                         <a href="{{ url('articles/shopping-tips') }}">购物须知</a>
                         <a href="{{ url('my/orders') }}">配送信息</a>
                         <a href="{{ url('articles/aboutus') }}">关于我们</a>
                     </div>
+                    <p class="col-md-6 col-sm-6 col-xs-12">沪ICP备18025160号-2 匠意国际贸易（上海）有限公司©2018</p>
+                    
                 </div>
             </div>
         </div>
