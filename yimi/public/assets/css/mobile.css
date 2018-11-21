@@ -104,7 +104,7 @@
 	.litteBanner li{
 		overflow: hidden;
 	}
-	.indexTitle img,.titWater img{
+	.indexTitle img,.titWater img,.other-goods img{
 	  width: 4.6875rem;
 	}
 	.footer-nav{
@@ -547,6 +547,7 @@
 	.details-tit {
 	    font-size: 14px;
 	}
+
 	.hui-tit{
 		margin-bottom: 0px!important;
 	}
@@ -605,7 +606,7 @@
       margin-bottom: 15px;
 	}
 	.f-right{
-		margin-top: 63px;
+		margin-top: 63px!important;
 	}
 	.f-right dl{
 	  width: 50%;
