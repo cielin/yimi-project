@@ -604,6 +604,11 @@
 	.f-left h4{
 	  margin-top: 15px;
       margin-bottom: 15px;
+      font-size: 12px!important;
+	}
+	.f-left img{
+	  width: 68px;
+      margin-left: -3px;
 	}
 	.f-right{
 		margin-top: 63px!important;
