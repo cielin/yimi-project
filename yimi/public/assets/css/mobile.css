@@ -827,6 +827,15 @@
 	.sidebar .sidebar-title{
 		display: none;
 	}
+	.login .modal-dialog{
+		width: 300px!important;
+	}
+	.login-tit li{
+		width: 105px!important;
+	}
+	.login-btn{
+		width: 100%;
+	}
 
 }
 @media (max-width: 425px) {
