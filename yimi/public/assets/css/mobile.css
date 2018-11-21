@@ -528,7 +528,7 @@
 	.swiperPro.swiper-container{
 		overflow: initial;
 	}
-	.swiperPro>.swiper-container-horizontal > .swiper-pagination-bullets{
+	.swiper-container-horizontal > .swiper-pagination-bullets{
 	  bottom: -24px!important;
 	}
 	.detais-content-tit{
