@@ -566,6 +566,16 @@
 	.mTextBody img {
 	    width: 100%;
 	}
+	.mobileIco.ico-wraps{
+		height: 1.25rem;
+		margin:0.0rem;
+	}
+	.mobileIco.ico-wraps:before{
+	  left: 50%;
+	}
+	.mobileIco.ico-wraps span, .mobileIco.ico-wraps img{
+	  margin-left: 82px;
+	}
 }
 
 @media (max-width: 500px) {
