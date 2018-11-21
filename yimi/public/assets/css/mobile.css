@@ -629,14 +629,13 @@
 	}
 	.footer-bottom a{
 	  float: inherit!important;
-      margin: 0px 10px!important;
 	}
 	.footer-bottom .text-right{
 		text-align: center!important;
 	}
 	.itemHover .ico-wrap{
 	   height: 50px;
-	   left: 5%;
+	   left: 4%;
 	}
 	.itemHover .ico-wrap:before{
 		top: 38%;
