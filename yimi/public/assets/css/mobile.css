@@ -611,6 +611,10 @@
 	.f-right dl{
 	  width: 50%;
 	}
+	.other-goods{
+	  padding: 15px 0 15px 0!important;
+      margin-top: 15px!important;
+	}
 }
 
 @media (max-width: 500px) {
