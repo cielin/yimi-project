@@ -744,7 +744,9 @@
 	}
 	.designer.buyer dl dt, .designer.buyer dl dd{
 		width: 100%;
-		margin-bottom: 35px;
+		height: 100%;
+	    max-height: 204px;
+	    margin-bottom: 35px;
 	}
 	.designer.buyer dl dd img{
 		width: 100%;
