@@ -92,6 +92,7 @@
         <a href="#" title="登录" class="hui-eee" data-toggle="modal" data-target="#myAuthModal">
           <!-- <span class="icon iconfont icon-weibiaoti2fuzhi12">
           </span> -->
+          
           我的
         </a>
       </li>
