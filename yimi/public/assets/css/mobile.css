@@ -535,13 +535,14 @@
 		margin-top: 3px;
 		min-height: 100%!important;
     	padding: 10px;
-    	border-bottom: none;
-    	margin-left: 10px;
-        margin-right: 10px;
+    	border-bottom: none!important;
+    	
 	}
 	.details-share{
 		/*border-top:none;*/
-		border-bottom: none;
+		border-bottom: none!important;
+		margin-left: 10px;
+        margin-right: 10px;
 	}
 	.details-tit {
 	    font-size: 14px;
@@ -556,7 +557,7 @@
 	}
 	.detailText p {
 	    float: left;
-	    min-width: 42%;
+	    min-width: 36%;
         overflow: hidden;
 	    margin-right: 10px;
 	}
