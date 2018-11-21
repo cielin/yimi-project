@@ -525,16 +525,23 @@
 	.webSw{
 		display: none;
 	}
-	.swiperPro.swiper-container{
+	/*.swiperPro.swiper-container{
 		overflow: initial;
 	}
 	.swiper-container-horizontal > .swiper-pagination-bullets{
 	  bottom: -24px!important;
-	}
+	}*/
 	.detais-content-tit{
-		margin-top: 26px;
+		margin-top: 3px;
 		min-height: 100%!important;
     	padding: 10px;
+    	border-bottom: none;
+    	margin-left: 10px;
+        margin-right: 10px;
+	}
+	.details-share{
+		/*border-top:none;*/
+		border-bottom: none;
 	}
 	.details-tit {
 	    font-size: 14px;
@@ -549,17 +556,19 @@
 	}
 	.detailText p {
 	    float: left;
-	    margin-right: 20px;
+	    min-width: 42%;
+        overflow: hidden;
+	    margin-right: 10px;
 	}
 	.ditails-tab-box .tab-pane.active{
 		padding-right: 0px!important;
 	}
-	.swiperPro .swiper-pagination-bullet{
+	/*.swiperPro .swiper-pagination-bullet{
 	  background: #999!important;
 	}
 	.swiperPro .swiper-pagination-bullet-active{
 		background: #c8a165!important;
-	}
+	}*/
 	.mTextBody{
 		padding:0px 10px;
 	}
@@ -596,6 +605,9 @@
 	}
 	.f-right{
 		margin-top: 63px;
+	}
+	.f-right dl{
+	  width: 50%;
 	}
 }
 
