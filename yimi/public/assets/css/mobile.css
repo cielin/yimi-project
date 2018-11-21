@@ -548,6 +548,9 @@
 	.swiperPro .swiper-pagination-bullet{
 	  background: #999!important;
 	}
+	.swiperPro .swiper-pagination-bullet-active{
+		background: #c8a165!important;
+	}
 	.mTextBody{
 		padding:0px 10px;
 	}
