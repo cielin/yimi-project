@@ -606,9 +606,14 @@
 	.mobileIco.ico-wraps span.icon-question {
 	    margin-left: 45px;
 	}
+	.mLetterWrap{
+		overflow: hidden;
+	}
 	.mLetter{
 	  margin-left: -10px;
       margin-right: -10px;
+      height: 50px;
+      overflow-x: scroll!important;
 	}
 	.brandList li a, .brandBigImg{
 		border: 10px solid #f6f6f6!important;
