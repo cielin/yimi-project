@@ -537,6 +537,9 @@
 	.webSw,.s-contentWeb{
 		display: none;
 	}
+	.s-contentMobile{
+		display: block;
+	}
 	/*.swiperPro.swiper-container{
 		overflow: initial;
 	}
