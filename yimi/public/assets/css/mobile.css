@@ -404,7 +404,8 @@
 		margin-bottom: 0.3125rem;
 	}
 	.designer_list{
-		margin-top: 0.625rem;
+		margin-bottom: 0.625rem;
+        margin-top: 0px;
 	}
 	.designer_list .designer-img:nth-child(n){
     	padding-left: 0!important;
