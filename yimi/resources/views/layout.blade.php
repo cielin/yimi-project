@@ -92,7 +92,7 @@
         <a href="#" title="登录" class="hui-eee" data-toggle="modal" data-target="#myAuthModal">
           <!-- <span class="icon iconfont icon-weibiaoti2fuzhi12">
           </span> -->
-          
+
           我的
         </a>
       </li>
@@ -231,7 +231,7 @@
                         <dl class="help">
                           <dt>帮助中心</dt>
                           <dd>
-                           <span>Hotline：400-632-1878</span>
+                           <span>Hotline：<i>400-632-1878</i></span>
                            <span>Open/Close： 09:00/21:00</span>
                            <span>Mail： <a href="mailto:sales@homeyimi.com">sales@homeyimi.com</a></span>
                           </dd>
