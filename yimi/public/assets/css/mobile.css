@@ -534,7 +534,7 @@
 	.gallery-thumbs{
 		display: none;
 	}*/
-	.webSw{
+	.webSw,.s-contentWeb{
 		display: none;
 	}
 	/*.swiperPro.swiper-container{

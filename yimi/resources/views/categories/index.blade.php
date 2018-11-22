@@ -56,7 +56,8 @@
                 @endif
                 </div>
                 <!-- web end  -->
-                <!-- web start -->
+                
+                <!-- mobile start -->
                 <div class="s-content s-contentMobile">
                 @if (isset($categories))
                 @foreach ($categories as $category)
@@ -78,7 +79,7 @@
                 @endforeach
                 @endif
                 </div>
-                <!-- web end  -->
+            <!-- mobile end  -->
                 @if (isset($materials) && sizeof($materials) > 0)
                 <?php $count = 1; ?>
                 <div class="sidebar-title mt11">
