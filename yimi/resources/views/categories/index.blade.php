@@ -33,7 +33,8 @@
                 <div class="sidebar-title">
                 	<img src="{{ URL::asset('assets/img/title1.jpg') }}" />
                 </div>
-                <div class="s-content">
+                <!-- web start -->
+                <div class="s-content s-contentWeb">
                 @if (isset($categories))
         		@foreach ($categories as $category)
         		<a class="side-one" href="/categories/{{ $category->slug }}">
@@ -54,7 +55,30 @@
         		@endforeach
                 @endif
                 </div>
-
+                <!-- web end  -->
+                <!-- web start -->
+                <div class="s-content s-contentMobile">
+                @if (isset($categories))
+                @foreach ($categories as $category)
+                <a class="side-one" href="/categories/{{ $category->slug }}">
+                    {{ $category->name }}
+                </a>
+                @if (isset($selected_parent_category) && null !== $selected_parent_category && $category->slug == $selected_parent_category->slug)
+                @if (isset($category->children) && sizeof($category->children) > 0)
+                <ul class="side-sub collapse in nav-new" id="{{ $category->slug }}">
+                    @foreach ($category->children as $s_category)
+                    <li @if ((null !== $selected_category) && ($s_category->slug == $selected_category->slug)) class="active" @endif>
+                        <span class="icon iconfont  icon-arrow-right"></span>
+                        <a href="/categories/{{ $s_category->slug }}">{{ $s_category->name }}</a>
+                    </li>
+                    @endforeach
+                </ul>
+                @endif
+                @endif
+                @endforeach
+                @endif
+                </div>
+                <!-- web end  -->
                 @if (isset($materials) && sizeof($materials) > 0)
                 <?php $count = 1; ?>
                 <div class="sidebar-title mt11">
