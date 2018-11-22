@@ -452,9 +452,10 @@
 		height: 46px;
 	    overflow-x: scroll;
 	    overflow-y: hidden;
+	    width: 400px;
 	}
 	.check-words li{
-		width: 20px;
+		width: 38px;
 		padding:0.0rem;
 	}
 	.brandList{
