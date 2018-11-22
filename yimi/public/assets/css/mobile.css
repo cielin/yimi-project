@@ -378,8 +378,9 @@
 	.side-sub li.active,.side-one.active{
 		background: #fff;
 	    padding:0px 8px!important;;
-	    top: 0px;
+	    top: 4px;
 	    margin-right: 30px;
+	    line-height: 36px!important;
 	}
 
 	.top-option{
