@@ -665,6 +665,7 @@
 	}
 	.footer-bottom .text-right{
 		text-align: center!important;
+		padding-bottom: 8px;
 	}
 	.itemHover .ico-wrap{
 	   height: 50px;
@@ -677,14 +678,19 @@
 		line-height: 1.1875rem;
 	}
 	.f-right dl.help dd a{
-		position: relative;
-    	left: -23px;
+	  word-break: break-all;
 	}
 	.model-select-text{
 		display: none;
 	}
+	.footer-bottom{
+		padding-top: 8px!important;
+	}
 	.help span i{
-		display: block;
+/*		display: block;
+		position: relative;
+    	left: 15px;*/
+    	word-break: break-all;
 	}
 	#fh5co-main{
 		overflow: hidden;
