@@ -452,7 +452,7 @@
 		height: 46px;
 	    overflow-x: scroll;
 	    overflow-y: hidden;
-	    width: 400px;
+	    width: 1000px;
 	}
 	.check-words li{
 		width: 38px;
@@ -608,12 +608,16 @@
 	}
 	.mLetterWrap{
 		overflow: hidden;
+		height: 35px;
+		margin-left: -10px;
+        margin-right: -10px;
 	}
 	.mLetter{
-	  margin-left: -10px;
-      margin-right: -10px;
-      height: 50px;
+      height: 55px;
       overflow-x: scroll!important;
+	}
+	.checkAllBrand{
+		display: none;
 	}
 	.brandList li a, .brandBigImg{
 		border: 10px solid #f6f6f6!important;
