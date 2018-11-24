@@ -61,11 +61,7 @@
                 @endforeach
                 @endif
             </div>
-            <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
         </div>
     </div>
     <div class="index-content">
@@ -96,22 +92,23 @@
                 </div>
             </article>
             <div class="container overHide mb40 subTitles">
-                <span><img style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}"></span>
-                <div class="more" style="display: inline-block; margin-top: 21px; float: right;">
-                    <i style="padding-right: 30px;color: #999;font-weight: 100;font-size: 10px;">|</i>
-                    <a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
-                </div>
+        		<span class="indexTitle">
+                    <img style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}">
+                </span>
                 @if (isset($categories) && sizeof($categories) > 0)
-                <ul id="myTabs" class="index-title-ul" role="tablist">
+                <ul id="myTabs" class="index-title-ul col-md-6 col-sm-6 col-xs-6 litteBannerUl" style="list-style: none;padding: 0;" role="tablist">
                     @foreach ($categories as $category)
                     <li role="presentation">
                         <a href="#{{ $category->slug }}" aria-controls="{{ $category->slug }}" role="tab" data-toggle="tab">{{ $category->name }}</a>
                     </li>
                     @endforeach
+                    <li class="more"><i>|</i>
+                        <a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
+                    </li> 
                 </ul>
                 @endif
             </div>
-            <div class="container overHide tab-content">
+            <div class="container overHide tab-content buyerWrap">
                 
                 @if (isset($categories) && sizeof($categories) > 0)
                     <?php $active_tab = 1; ?>
@@ -151,18 +148,18 @@
         </div>
         @if (isset($designers))
         <!--设计师-->
-        <div class="container">
+        <div class="container designers-mobile">
             <div class="container overHide mb40  subTitles">
-                <span>
+                <span  class="indexTitle">
         			<img style="padding: 0px;" src="{{ URL::asset('assets/img/foot/designers.png') }}">
                 </span>
                 <span class="more"><a href="{{ url('designers') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a></span>
 
             </div>
-            <div class="container overHide" style="padding-bottom:14px;">
+            <div class="container overHide desWrap" style="padding-bottom:14px;">
                 <div class="designer designer-new-hover">
                     @foreach ($designers as $designer)
-                    <a href="{{ url('designers/' . $designer->slug) }}">
+                    <a href="{{ url('designers/' . $designer->slug) }}"  class="col-md-3 col-sm-3 col-xs-6">
                         <dl>
                             <dt>
                                 <p>{{ $designer->name }}</p><br/>

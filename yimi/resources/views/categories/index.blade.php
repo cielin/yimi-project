@@ -30,35 +30,61 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-3 col-md-3 col-xs-3 sidebarWrap">
+        <div class="col-sm-3 col-md-3 col-xs-12 sidebarWrap">
             <div class=" sidebar">
                 <div class="sidebar-title">
                 	<img src="{{ URL::asset('assets/img/title1.jpg') }}" />
                 </div>
-                <div class="s-content">
-                <a class="side-one" href="/categories/new">
-        	  		新品
-        		</a>
-                @if (isset($categories))
-        		@foreach ($categories as $category)
-        		<a class="side-one" href="/categories/{{ $category->slug }}">
-        	  		{{ $category->name }}
-        		</a>
-                @if (isset($selected_parent_category) && null !== $selected_parent_category && $category->slug == $selected_parent_category->slug)
-        		@if (isset($category->children) && sizeof($category->children) > 0)
-        		<ul class="side-sub collapse in nav-new" id="{{ $category->slug }}">
-        			@foreach ($category->children as $s_category)
-        			<li @if ((null !== $selected_category) && ($s_category->slug == $selected_category->slug)) class="active" @endif>
-                        <span class="icon iconfont  icon-arrow-right"></span>
-                        <a href="/categories/{{ $s_category->slug }}">{{ $s_category->name }}</a>
-                    </li>
-        			@endforeach
-        		</ul>
-        		@endif
-                @endif
-        		@endforeach
-                @endif
+                <!-- web start -->
+                <div class="s-content s-contentWeb">
+                    <a class="side-one" href="/categories/new">
+                        新品
+                    </a>
+                    @if (isset($categories))
+                    @foreach ($categories as $category)
+                    <a class="side-one" href="/categories/{{ $category->slug }}">
+                        {{ $category->name }}
+                    </a>
+                    @if (isset($selected_parent_category) && null !== $selected_parent_category && $category->slug == $selected_parent_category->slug)
+                    @if (isset($category->children) && sizeof($category->children) > 0)
+                    <ul class="side-sub collapse in nav-new" id="{{ $category->slug }}">
+                        @foreach ($category->children as $s_category)
+                        <li @if ((null !== $selected_category) && ($s_category->slug == $selected_category->slug)) class="active" @endif>
+                            <span class="icon iconfont  icon-arrow-right"></span>
+                            <a href="/categories/{{ $s_category->slug }}">{{ $s_category->name }}</a>
+                        </li>
+                        @endforeach
+                    </ul>
+                    @endif
+                    @endif
+                    @endforeach
+                    @endif
                 </div>
+                <!-- web end  -->
+                
+                <!-- mobile start -->
+                <div class="s-content s-contentMobile">
+                    @if (isset($categories))
+                    @foreach ($categories as $category)
+                    <a class="side-one" href="/categories/{{ $category->slug }}">
+                        {{ $category->name }}
+                    </a>
+                    @if (isset($selected_parent_category) && null !== $selected_parent_category && $category->slug == $selected_parent_category->slug)
+                    @if (isset($category->children) && sizeof($category->children) > 0)
+                    <ul class="side-sub collapse in nav-new" id="{{ $category->slug }}">
+                        @foreach ($category->children as $s_category)
+                        <li @if ((null !== $selected_category) && ($s_category->slug == $selected_category->slug)) class="active" @endif>
+                            <span class="icon iconfont  icon-arrow-right"></span>
+                            <a href="/categories/{{ $s_category->slug }}">{{ $s_category->name }}</a>
+                        </li>
+                        @endforeach
+                    </ul>
+                    @endif
+                    @endif
+                    @endforeach
+                    @endif
+                </div>
+                <!-- mobile end  -->
 
                 @if (isset($locations) && sizeof($locations) > 0)
                 <?php 
@@ -109,7 +135,7 @@
                 @endif
             </div>
         </div>
-        <div class="col-sm-9 col-md-9 col-xs-9 main">
+        <div class="col-sm-9 col-md-9 col-xs-12 main">
             @if (isset($selected_category) && $selected_category->depth === 1)
             @if (isset($selected_category->children) && sizeof($selected_category->children) > 0)
             <div class="good-list-top-bg">
@@ -139,24 +165,12 @@
             @endif
             <div class="top-option clearfix">
                 <i class="glyphicon glyphicon-th"></i>
-                <!-- <div class="goods-order">
-                    <span class="pull-left">排列方式</span>
-                    <div class="model-select-box" style="width:130px; margin-right:10px;">
-                      <div class="model-select-text" data-value="">默认</div>
-                      <i class="sanjiao glyphicon glyphicon-triangle-bottom" style="left:83%!important;"></i>
-                      <ul class="model-select-option">
-                        <li data-option="a">默认</li>
-                        <li data-option="b">发布时间升序</li>
-                        <li data-option="c">发布时间倒序</li>
-                      </ul>
-                    </div>
-                </div> -->
             </div>
 
             @if (isset($products) && sizeof($products) > 0)
             <!--瀑布流开始 -->
-            <div class="container-fluid">
-                <div class="container ">
+            <div class="container-fluid noPadding">
+                <div class="container noPadding">
                     <div id="fh5co-main" class="waterfallNew">
                         <div class="container">
                             <div class="row">
@@ -194,10 +208,6 @@
                 </div>
             </div>
             <!--瀑布流end -->
-
-            <!-- <nav class="clearfix" aria-label="page navigation">
-                <?php //echo $products->links(); ?>
-            </nav> -->
             
             @else
             <div class="no-data">暂无数据</div>

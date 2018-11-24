@@ -52,7 +52,7 @@
             {!! html_entity_decode($designer->description, ENT_QUOTES, 'UTF-8') !!}
         </div>
     </div>
-    <div class="d-detail-img" id="littleImg">
+    <div class="d-detail-img container" id="littleImg">
         @foreach ($designer->portfolios as $portfolio)
         <div>
             <img src="{{ asset('public/thumbs/portfolios/thumb_' . $portfolio->image) }}" alt="" data-toggle="modal" data-target=".myModalImg">

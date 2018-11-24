@@ -40,7 +40,7 @@
     <!--面包屑-->
     <!--商品轮播图-->
     <div class="row">
-        <div class="swiper-wraper">
+        <div class="swiper-wraper webSw">
             <div class="swiper-container gallery-top">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -79,8 +79,23 @@
 
             </div>
         </div>
-        <div class="goods-detail-text">
-            <div class="detais-content">
+        <div class="sowingMap">
+        <div class="swiper-container swiperPro">
+            <div class="swiper-wrapper">
+              @foreach ($product->images as $image)
+                <div class="swiper-slide">
+                    <img src="{{ asset('public/images/products/' . $image->path) }}">
+                </div>
+                @endforeach
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+        </div>
+    </div>
+   
     <!--                     <h5 class="back-tit">
     <div class="back-page"><a href="goodsList.html">< 返回上一页</div>
     <div class="nextIcon">
@@ -91,24 +106,28 @@
                 <!--swiper-->
                 <div class="detais-content-tit">
                     <h1 class="details-tit">{{ $product->name }}</h1>
-                    <div class="hui-tit"><a href="{{ url('brands/' . $product->brand->slug) }}">{{ $product->brand->name }}</a></div>
+                    <div class="hui-tit">
+                        <a href="{{ url('brands/' . $product->brand->slug) }}">{{ $product->brand->name }}</a>
+                    </div>
+                    <div class="detailText">
                     @foreach ($product->product_attributes as $product_attribute)
                     @if ($product_attribute->product_attr_key->is_package_attr == 0 && $product_attribute->product_attr_key->is_sale_attr == 0 && $product_attribute->product_attr_value->value !== "")
                     <p>{{ $product_attribute->product_attr_key->name }}：{{ $product_attribute->product_attr_value->value }}</p>
                     @endif
                     @endforeach
+                    </div>
                     <!-- <div class="details-bord"></div> -->
                 </div>
                 <!--swiper end -->
                 <div>
 
-                    <p class="ico-wraps">
+                    <p class="mobileIco ico-wraps">
                         @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $product->id, 1))
                         <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
                         @else
                         <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $product->id }}" data-type="1"></span>
                         @endif
-                        <a href="/articles/shopping-tips"><span class="icon iconfont icon-question" style="margin-left:54px;"></span></a>
+                        <a href="/articles/shopping-tips"><span class="icon iconfont icon-question"></span></a>
                     </p>
                 </div>
             </div>
@@ -138,7 +157,7 @@
             </div>
         </span>
     </div>
-    <div class="row">
+    <div class="row mTextBody">
         <ul class="col-md-3 details-tab" role="tablist">
             <li role="presentation" class="active">
                 <a href="#goodsDetails" aria-controls="home" role="tab" data-toggle="tab">

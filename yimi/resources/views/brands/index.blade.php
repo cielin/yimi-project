@@ -17,7 +17,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-4 col-md-3 col-xs-3 sidebarWrap">
+        <div class="col-sm-4 col-md-3 col-xs-12 sidebarWrap brandsSideBar">
             <div class="sidebar">
                 <div class="sidebar-title">
                     <img src="{{ URL::asset('assets/img/title1.jpg') }}" />
@@ -33,8 +33,9 @@
             </div>
 
         </div>
-        <div class="col-sm-8 col-md-9 col-xs-9 main main-min">
-            <div class="gray-box allA">
+        <div class="col-sm-8 col-md-9 col-xs-12 main main-min">
+            <div class="mLetterWrap">
+            <div class="gray-box allA mLetter">
                 <a id="checkAllBrand" class="checkAllBrand @if (!isset($first)) active @endif" href="{{ route('brands.index') }}">全部</a>
                 <ul class="check-words clearfix">
                     @for ($i = 0; $i < 26; ++$i)
@@ -44,10 +45,11 @@
                     @endfor
                 </ul>
             </div>
+           </div>
             @if (isset($brands) && sizeof($brands) > 0)
             <ul class="brandList clearfix row">
                 @foreach ($brands as $brand)
-                <li class="col-md-4">
+                <li class="col-md-4 col-sm-6 col-xs-6">
                     <a href="/brands/{{ $brand->slug }}">
                         <img src="{{ asset('public/thumbs/brands/thumb_' . $brand->logo) }}" />
                     </a>

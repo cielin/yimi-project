@@ -18,7 +18,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-3 col-md-3 col-xs-3 sidebarWrap">
+        <div class="col-sm-3 col-md-3 col-xs-12 sidebarNewWrap">
             <div class=" sidebar">
                 <div class="sidebar-title">
                     <img src="{{ URL::asset('assets/img/userCenterTitle.jpg') }}" />
@@ -36,10 +36,10 @@
             </div>
 
         </div>
-        <div class="col-sm-9 col-md-9 col-xs-9 main">
+        <div class="col-sm-9 col-md-9 col-xs-12 main mainNew">
             <div class="address-text">
                 {{ Form::open(array('route' => 'addresses.save', 'id' => 'commentForm', 'role' => 'form')) }}
-                    <div class="form-group" style="width:70%;">
+                    <div class="form-group addressOne">
                         <label for="addressInfo" style="display: block;">地址信息<i>*</i>
                         </label>
                         <select name="province" id="province" class="citySelect" required>

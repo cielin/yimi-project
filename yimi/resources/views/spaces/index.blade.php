@@ -30,7 +30,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-3 col-md-3 col-xs-3 sidebarWrap">
+        <div class="col-sm-3 col-md-3 col-xs-12 sidebarWrap">
             <div class=" sidebar">
                 <div class="sidebar-title">
                 	<img src="{{ URL::asset('assets/img/title1.jpg') }}" />
@@ -53,29 +53,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-9 col-md-9 col-xs-9 main">
+        <div class="col-sm-9 col-md-9 col-xs-12 main">
             <div class="top-option clearfix">
                 <i class="glyphicon glyphicon-th"></i>
-                <!--
-                <div class="goods-order">
-                    <span class="pull-left">排列方式</span>
-                    <div class="model-select-box" style="width:130px; margin-right:10px;">
-                      <div class="model-select-text" data-value="">默认</div>
-                      <i class="sanjiao glyphicon glyphicon-triangle-bottom" style="left:83%!important;"></i>
-                      <ul class="model-select-option">
-                        <li data-option="a">默认</li>
-                        <li data-option="b">发布时间升序</li>
-                        <li data-option="c">发布时间倒序</li>
-                      </ul>
-                    </div>
-		</div>
-                -->
             </div>
 
             @if (isset($products) && sizeof($products) > 0)
             <!--瀑布流开始 -->
-            <div class="container-fluid">
-                <div class="container ">
+            <div class="container-fluid noPadding">
+                <div class="container noPadding">
                     <div id="fh5co-main" class="waterfallNew">
                         <div class="container1">
                             <div class="row">
@@ -115,10 +101,6 @@
                 </div>
             </div>
             <!--瀑布流end -->
-
-            <!-- <nav class="clearfix" aria-label="page navigation">
-                <?php // echo $products->links(); ?>
-            </nav> -->
             @else
             <div class="no-data">暂无数据</div>
             @endif

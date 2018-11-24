@@ -23,6 +23,7 @@
     <link href="{{ URL::asset('assets/css/992px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/1200px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/rem.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ URL::asset('assets/css/mobile.css') }}" type="text/css" rel="stylesheet">
     @yield('css')
 </head>
 
@@ -32,7 +33,7 @@
 
   <div class="overlay">
     <ul class="">
-      <li @if (isset($active) && $active == 'home') class="current" @endif >
+        <li @if (isset($active) && $active == 'home') class="current" @endif >
             <a href="/" title="首页">首页</a>
         </li>
         <li>
@@ -51,20 +52,21 @@
         @if (Auth::check())
         <li>
             <a class="user" href="{{ url('my/info') }}">
-                <span class="glyphicon glyphicon-eye-open"></span>
+            <span class="icon iconfont icon-weibiaoti2fuzhi12">
+          </span>
             </a>
         </li>
         <li>
             <a href="{{ url('signout') }}">
-                <span class="glyphicon glyphicon-eye-open"></span>
+                <span class="icon iconfont icon-weibiaoti2fuzhi12">
+          </span>
                 退出
             </a>
         </li>
         @else
         <li>
         <a href="#" title="登录" class="hui-eee" data-toggle="modal" data-target="#myAuthModal">
-          <span class="glyphicon glyphicon-eye-open"></span>
-          登录
+          我的
         </a>
       </li>
         @endif
@@ -185,12 +187,12 @@
         <div class="container-fluid bg-black-21">
             <div class="container footer-middle">
                 <div class="row">
-                    <div class="f-left col-md-5 col-sm-4">
-                        <img src="{{ URL::asset('assets/img/foot/f-logo.png') }}" style="width: 178px;"/>
+                    <div class="f-left col-md-5 col-sm-4 col-xs-4">
+                        <img src="{{ URL::asset('assets/img/foot/f-logo.png') }}" class="flogo"/>
                         <h4>微信公众号</h4>
-                        <img src="{{ URL::asset('assets/img/foot/f-ma.jpg') }}" />
+                        <img class="eWm" src="{{ URL::asset('assets/img/foot/f-ma.jpg') }}" />
                     </div>
-                    <div class="f-right col-md-6 col-sm-8">
+                    <div class="f-right col-md-6 col-sm-8 col-xs-8">
                         <dl>
                           <dt>会员服务</dt>
                           <dd>
@@ -205,7 +207,7 @@
                         <dl class="help">
                           <dt>帮助中心</dt>
                           <dd>
-                           <span>Hotline：400-632-1878</span>
+                           <span>Hotline：<i>400-632-1878</i></span>
                            <span>Open/Close： 09:00/21:00</span>
                            <span>Mail： <a href="mailto:sales@homeyimi.com">sales@homeyimi.com</a></span>
                           </dd>
@@ -215,12 +217,13 @@
                     </div>
                 </div>
                 <div class="row footer-bottom">
-                    <p class="col-md-6 col-xs-6">沪ICP备18025160号-2 匠意国际贸易（上海）有限公司©2018</p>
-                    <div class="col-md-6 col-xs-6 text-right">
+                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
                         <a href="{{ url('articles/shopping-tips') }}">购物须知</a>
                         <a href="{{ url('my/orders') }}">配送信息</a>
                         <a href="{{ url('articles/aboutus') }}">关于我们</a>
                     </div>
+                    <p class="col-md-6 col-sm-6 col-xs-12">沪ICP备18025160号-2 匠意国际贸易（上海）有限公司©2018</p>
+                    
                 </div>
             </div>
         </div>

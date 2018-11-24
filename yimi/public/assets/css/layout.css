@@ -121,6 +121,8 @@ ul.nav{
 	/*margin:30px auto;*/
 	margin-top: 30px;
     margin-bottom: 30px;
+    max-height: 4.854701rem;
+    overflow: hidden;
 }
 .litteBanner li{
 	margin-bottom: 32px;
@@ -245,7 +247,7 @@ ul.nav{
 	font-size:12px;
 }
 .footer-bottom a{
-	display: inline-block;
+	/* display: inline-block; */
 	color:#898989;
 	font-size:12px;
 	margin: 0 0% 0 11%;
@@ -558,4 +560,7 @@ button.close-btn{
 }
 .navbar-custom .navbar-nav>li>a.hui-eee{
 	color:#ccc!important;
+}
+.flogo{
+	width: 178px;
 }
