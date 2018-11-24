@@ -20,7 +20,7 @@
         </div>
         <!--面包屑-->
         <div class="row">
-            <div class="col-sm-4 col-md-3">
+            <div class="col-sm-4 col-md-12 sidebarNewWrap">
                 <div class="sidebar">
                     <div class="sidebar-title"><img src="{{ URL::asset('assets/img/userCenterTitle.jpg') }}" /></div>
                     <div class="user-center-left">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8 col-md-9">
+            <div class="col-sm-8 col-md-12">
                 <!--start-->
                 <div class="order-detail clearfix">
 

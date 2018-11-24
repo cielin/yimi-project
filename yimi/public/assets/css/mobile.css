@@ -701,6 +701,25 @@
 	#fh5co-main .item:nth-child(1){
 		margin-top: 0.3125rem!important;
 	}
+	/*登录后*/
+	.sidebarNewWrap{
+		overflow: hidden;
+	    height: 40px;
+	    background: #e1e1e1;
+	}
+	.sidebarNewWrap .sidebar{
+
+	    height: 66px;
+	    padding-bottom: 2px!important;
+	    margin-bottom: 0px!important;
+	}
+	.sidebarNewWrap .user-center-left{
+		width: 626px;
+	}
+	.sidebarNewWrap .user-center-left a{
+	    margin-right: 20px;
+	    margin-top: 9px;
+	}
 }
 
 @media (max-width: 500px) {

@@ -18,7 +18,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-4 col-md-3 col-xs-3 sidebarWrap">
+        <div class="col-sm-4 col-md-3 col-xs-12 sidebarNewWrap">
             <div class="sidebar">
                 <div class="sidebar-title">
                     <img src="{{ URL::asset('assets/img/userCenterTitle.jpg') }}" />
@@ -36,7 +36,7 @@
             </div>
 
         </div>
-        <div class="col-sm-8 col-md-9 col-xs-9 main">
+        <div class="col-sm-8 col-md-9 col-xs-12 main">
             <div class="address-text userInfoWrap">
                 <div class="form-group">
                     <label for="curentPassword">当前密码<i>*</i>

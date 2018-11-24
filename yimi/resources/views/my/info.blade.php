@@ -18,7 +18,7 @@
     </div>
     <!--面包屑-->
     <div class="row">
-        <div class="col-sm-4 col-md-3">
+        <div class="col-sm-4 col-md-12 sidebarNewWrap">
             <div class="sidebar">
                 <div class="sidebar-title">
                     <img src="{{ URL::asset('assets/img/userCenterTitle.jpg') }}" />
@@ -36,7 +36,7 @@
             </div>
 
         </div>
-        <div class="col-sm-8 col-md-9 main">
+        <div class="col-sm-8 col-md-12 main">
             <div class="address-text userInfoWrap">
                 {{ Form::open(array('route' => 'info.save', 'role' => 'form', 'id' => 'commentForm')) }}
                 {{ Form::hidden('uid', $user->id) }}
