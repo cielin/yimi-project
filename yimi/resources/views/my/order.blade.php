@@ -36,7 +36,7 @@
                 </div>
 
             </div>
-            <div class="col-sm-8 col-md-9 col-xs-12 main">
+            <div class="col-sm-8 col-md-9 col-xs-12 main mainNew">
                 <div class="searchText">
                     <div class="order-menu col-md-6">
                         <a href="#" class="active">所有订单</a>
