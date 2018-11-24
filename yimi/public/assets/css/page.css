@@ -126,6 +126,7 @@
 .index-title-ul{
 	float: right;
 	margin-top: 23px;
+	max-width: 600px;
 }
 .index-title-ul li{
 	width: 100px;

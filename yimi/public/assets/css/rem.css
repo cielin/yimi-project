@@ -31,6 +31,9 @@ html{
 	padding-right:0.25641rem;
 	padding-top: 0.615385rem;
 }
+.designer{
+	min-height: 200px;
+}
 .designer dl,
 .designer dl dt,
 .designer dl dd,
