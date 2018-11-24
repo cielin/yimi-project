@@ -127,8 +127,8 @@ ul.nav{
 .litteBanner li{
 	margin-bottom: 32px;
 }
-.litteBanner img {
-    width: 12%;
+.litteBannerImg img {
+    width: 102%;
 }
 .myMsg{
 	position:relative;
@@ -247,7 +247,7 @@ ul.nav{
 	font-size:12px;
 }
 .footer-bottom a{
-	display: inline-block;
+	/* display: inline-block; */
 	color:#898989;
 	font-size:12px;
 	margin: 0 0% 0 11%;

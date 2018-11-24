@@ -9,7 +9,7 @@ var menuData = [
 	{"id":"2","title":"廉政风险点","dataName":"lzfxd"}
 ];
 
-console.log("data外面");
-$(function(){
-	console.log("data");
-}) 
+// console.log("data外面");
+// $(function(){
+// 	console.log("data");
+// }) 

@@ -29,7 +29,7 @@
                     <a href="{{ url('my/collections') }}">我的收藏</a>
                     <a href="{{ url('my/comments') }}">我的评论</a>
                     <a href="{{ url('my/messages') }}">我的消息</a>
-                    <a href="{{ url('my/union') }}">账号绑定</a>
+                    <!--<a href="{{ url('my/union') }}">账号绑定</a>-->
                     <a href="{{ url('my/changepassword') }}">修改密码</a>
                     <a href="{{ url('my/addresses') }}" class="active">收货地址</a>
                 </div>

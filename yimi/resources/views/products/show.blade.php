@@ -43,10 +43,15 @@
         <div class="swiper-wraper webSw">
             <div class="swiper-container gallery-top">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{{ asset('public/images/products/' . $product->featured_image) }}">
+                    </div>
                     @foreach ($product->images as $image)
+                    @if (strcasecmp($product->featured_image, $image->path) !== 0)
                     <div class="swiper-slide">
                         <img src="{{ asset('public/images/products/' . $image->path) }}">
                     </div>
+                    @endif
                     @endforeach
                 </div>
                 <!-- Add Arrows -->
@@ -55,10 +60,15 @@
             </div>
             <div class="swiper-container gallery-thumbs">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{{ asset('public/thumbs/products/thumb_' . $product->featured_image) }}">
+                    </div>
                     @foreach ($product->images as $image)
+                    @if (strcasecmp($product->featured_image, $image->path) !== 0)
                     <div class="swiper-slide">
                         <img src="{{ asset('public/thumbs/products/thumb_' . $image->path) }}">
                     </div>
+                    @endif
                     @endforeach
                 </div>
                 <!-- Add Pagination -->
@@ -96,7 +106,9 @@
                 <!--swiper-->
                 <div class="detais-content-tit">
                     <h1 class="details-tit">{{ $product->name }}</h1>
-                    <div class="hui-tit">{{ $product->brand->name }}</div>
+                    <div class="hui-tit">
+                        <a href="{{ url('brands/' . $product->brand->slug) }}">{{ $product->brand->name }}</a>
+                    </div>
                     <div class="detailText">
                     @foreach ($product->product_attributes as $product_attribute)
                     @if ($product_attribute->product_attr_key->is_package_attr == 0 && $product_attribute->product_attr_key->is_sale_attr == 0 && $product_attribute->product_attr_value->value !== "")

@@ -32,12 +32,6 @@ class HomeController extends Controller
             ->orderBy('updated_at', 'desc')
             ->first();
 
-        $featured_products = Product::where('is_featured', 1)
-            ->where('state', 'active')
-    		->orderBy('updated_at', 'desc')
-    		->limit(8)
-    		->get();
-
         $waterfalled_products = Product::where('is_waterfalled', 1)
             ->where('state', 'active')
     		->orderBy('updated_at', 'desc')
@@ -49,9 +43,35 @@ class HomeController extends Controller
             ->get();
 
         $categories = ProductCategory::where('depth', 0)
-            ->orderBy('name', 'asc')
+            ->orderBy('updated_at', 'desc')
             ->limit(6)
             ->get();
+
+        $featured_products = array();  
+        foreach ($categories as $c) {
+            $cs = array();
+            $pc = ProductCategory::find($c->id);
+            if (isset($pc->children) && sizeof($pc->children) > 0) {
+                foreach ($pc->children as $f_child) {
+                    array_push($cs, $f_child->id);
+                    if (isset($f_child->children) && sizeof($f_child->children) > 0) {
+                        foreach ($f_child->children as $s_child) {
+                            array_push($cs, $s_child->id);
+                        }
+                    }
+                }
+            }
+            array_push($cs, $c->id);
+
+            $fp = Product::where('is_featured', 1)
+                ->where('state', 'active')
+                ->whereIn('category_id', $cs)
+                ->orderBy('updated_at', 'desc')
+                ->limit(8)
+                ->get();
+
+            $featured_products[$c->slug] = $fp;
+        }
 
         $spotlights = Spotlight::orderBy('updated_at', 'desc')
             ->limit(250)

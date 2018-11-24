@@ -29,7 +29,8 @@
 			onClearQueue:null,//清空上传队列后的回调函数，在调用cancel并传入参数*时触发
 			onDestroy:null,//在调用destroy方法时触发
 			onSelect:null,//选择文件后的回调函数，可传入参数file
-			onQueueComplete:null//队列中的所有文件上传完成后触发
+			onQueueComplete:null,//队列中的所有文件上传完成后触发
+			token: ''
 		}
 			
 		var option = $.extend(defaults,opts);
@@ -361,6 +362,9 @@
 							// 开始上传
 							xhr.open(option.method, option.uploader, true);
 							xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+							if (option.token !== '') {
+								xhr.setRequestHeader("Authorization", "Bearer " + option.token);
+							}
 							var fd = new FormData();
 							fd.append(option.fileObjName,file);
 							if(option.formData){

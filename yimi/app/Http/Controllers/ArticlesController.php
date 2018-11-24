@@ -10,7 +10,8 @@ class ArticlesController extends Controller
 {
     public function index()
     {
-    	$articles = Article::where('status', 'published')
+		$articles = Article::where('status', 'published')
+			->whereNull('deleted_at')
     		->orderBy('created_at', 'desc')
     		->paginate(10);
 

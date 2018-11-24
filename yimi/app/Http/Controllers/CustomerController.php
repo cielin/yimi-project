@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Customer;
 use App\ProductCollection;
+use App\CustomerComment;
 
 class CustomerController extends Controller
 {
@@ -80,6 +81,21 @@ class CustomerController extends Controller
             ->first();
 
         if ($collect !== null) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public static function isReviewed($uid, $oid, $pid)
+    {
+        $review = CustomerComment::where('customer_id', $uid)
+            ->where('order_id', $oid)
+            ->where('product_id', $pid)
+            ->first();
+
+        if ($review !== null) {
             return true;
         }
         else {

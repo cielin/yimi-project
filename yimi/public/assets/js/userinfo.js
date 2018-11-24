@@ -55,7 +55,6 @@ function uploadInit(domName,domPic,domForm){
 			if (Data.errcode == 0){
 				$("#" + domPic).attr("src", "/public/thumbs/avatars/thumb_" + Data.path);
 				$("#" + domForm).val(Data.path);
-				param.uploadsuccess(Data.path);
 			} else{
 				jQuery.longhz.alert(Data.message);
 			}

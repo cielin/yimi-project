@@ -29,7 +29,7 @@ class BrandsController extends Controller
 		$products = Product::where('brand_id', $brand->id)
 			->where('state', 'active')
     		->orderBy('updated_at', 'desc')
-    		->paginate(12);
+    		->get();
 
     	return View::make('brands.show')
     		->with('active', 'brands')
@@ -42,12 +42,17 @@ class BrandsController extends Controller
     	if (strlen($first) === 1 && ord(strtoupper($first)) > 64 && ord(strtoupper($first)) < 91) {
     		$brands = Brand::where('name', 'LIKE', $first . '%')
     			->orderBy('name', 'asc')
-    			->paginate(15);
+				->paginate(15);
+
+			$all_brands = Brand::where('name', 'LIKE', $first . '%')
+				->orderBy('name', 'asc')
+				->get();
 
     		return View::make('brands.index')
     			->with('active', 'brands')
 				->with('brands', $brands)
-				->with('first', $first);
+				->with('first', $first)
+				->with('all_brands', $all_brands);
     	}
     	else {
     		return redirect()->route('brands.index');

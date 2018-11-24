@@ -29,14 +29,33 @@
                         <a href="{{ url('my/collections') }}">我的收藏</a>
                         <a href="{{ url('my/comments') }}">我的评论</a>
                         <a href="{{ url('my/messages') }}">我的消息</a>
-                        <a href="{{ url('my/union') }}">账号绑定</a>
+                        <!--<a href="{{ url('my/union') }}">账号绑定</a>-->
                         <a href="{{ url('my/changepassword') }}">修改密码</a>
                         <a href="{{ url('my/addresses') }}">收货地址</a>
                     </div>
                 </div>
 
             </div>
-            <div class="col-sm-8 col-md-9 col-xs-12 main mainNew">
+            <div class="col-sm-8 col-md-9 col-xs-9 main mainNew">
+                @if (session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="searchText">
                     <div class="order-menu col-md-6">
                         <a href="#" class="active">所有订单</a>
@@ -66,7 +85,7 @@
                                         <img src="{{ asset('public/images/products/' . $item->featured_image) }}" alt="{{ $item->name }}">
                                     </td>
                                     <td class="order-text">
-                                        {{ $item->name }}
+                                        <a href="{{ url('/products/' . $item->product->slug) }}">{{ $item->name }}</a>
                                     </td>
                                     <td class="order-price">
                                         {{ $item->price }}
@@ -84,10 +103,18 @@
                                         <div class="order-status">{{ $ORDER_STATUS_ENUM[$order->status] }}</div>
                                         <a href="{{ url('my/orders/' . $order->order_code) }}" class="order-detial">订单详情</a>
                                         @endif
+                                        @if (Auth::check() && App\Http\Controllers\CustomerController::isReviewed(Auth::user()->id, $item->order_id, $item->product_id))
+                                        <span>已评价</span>
+                                        @else
                                         <a href="javascript:void(0)" class="evaluate">评价</a>
                                         <!--提交的表单 start-->
                                         <div class="orderEvaluate showInput clearfix">
-                                            {{ Form::open(array('role' => 'form', 'class' => 'frm_order_review')) }}
+                                            {{ Form::open(array('route' => 'orders.savecomment', 'role' => 'form', 'class' => 'frm_order_review')) }}
+                                            {{ Form::hidden('customer_id', Auth::user()->id) }}
+                                            {{ Form::hidden('order_id', $item->order_id) }}
+                                            {{ Form::hidden('product_id', $item->product_id) }}
+                                            {{ Form::hidden('product_name', $item->name) }}
+                                            {{ Form::hidden('images', '') }}
                                             <div class="f-textarea">
                                                 <textarea name="content" placeholder="分享体验心得，给万千想买的人一个参考~"></textarea>
                                                 <div class="textarea-ext">
@@ -97,28 +124,20 @@
                                                 </div>
                                             </div>
                                             <div class="upload-img-wrap">
-                                                <div class="img-wrap">
-                                                    <div class="img-item">
-                                                        <img src="../assets/img/dd-2.jpg">
-                                                        <i class="closeImg"></i>
-                                                    </div>
-                                                    <div class="img-item">
-                                                        <img src="../assets/img/dd-2.jpg">
-                                                        <i class="closeImg"></i>
-                                                    </div>
-                                                </div>
+                                                <div class="img-wrap"></div>
                                                 <div class="fileidImg">
                                                     <i class="icon iconfont icon-xiangji"></i>
                                                     <span class="fileText">上传照片</span>
                                                 </div>
                                             </div>
                                             <div class="btns">
-                                                <button class="btn btn-sm btn-default btn_order_submit">确定</button>
-                                                <button class="btn btn-sm btn-default">取消</button>
+                                                <button class="btn btn-sm btn-default btn_comment_submit">确定</button>
+                                                <button class="btn btn-sm btn-default btn_comment_cancel">取消</button>
                                             </div>
                                             {{ Form::close() }}
                                         </div>
                                         <!--提交的表单 end-->
+                                        @endif
                                     </td>
                                 </tr>
                                 <?php $i = $i + 1; ?>
@@ -397,45 +416,97 @@
                     
                 </div>
                 <!--订单 end-->
-
-
             </div>
         </div>
-        <!--评论表单提交 start-->
-        <form id="commentForm" method="post" action="" style="display: none">
-            <input name="time" value="">
-            <input name="text" value="">
-            <input name="imgList" value="">
-            <input name="imgClose" value="">
-        </form>
-        <!--评论表单提交 end-->
-        <!--删除评论 start-->
-        <form id="delDiscuss" method="post" action="" style="display: none">
-            <input name="delDiscussItem" value="">
-        </form>
-        <!--删除评论 end-->
     </div>
 @stop
 
 @section('js')
-<script type="text/javascript" src="{{ URL::asset('assets/js/order.js') }}"></script>
 <script>
-    $(document).ready(function() {
-        $('.btn_order_submit').on('click', function(e) {
-            e.preventDefault();
+$(function () {
+	$(".evaluate").click(function(){
+		let $Order = $(this).siblings(".orderEvaluate");
+		let $orderBtn = $Order.find(".btn_comment_submit");//提交按钮
+		let $cancelBtn = $Order.find(".btn_comment_cancel");
+		let textarea = $Order.find("textarea");//表单文本
+		let showTime = $Order.find(".time");//显示的时间
+		let showText = $Order.find(".text");//显示的文本
+		let showimgList = $Order.find(".discuss-img-list");
+		let imgWrap = $Order.find(".img-wrap");
+		let fileidImg = $Order.find(".fileidImg");
+        let closeImg = $Order.find(".closeImg");
+        let commentForm = $Order.find("form");
+        let frmImages = $Order.find("input[name=images]");
+		$Order.show();
 
-            var form = $(this).parent().parent();
-            $.ajax({
-                type: 'post',
-                url: '{{ route("orders.savecomment") }}',
-                data: $(form).serialize(),
-                cache: false,
-                dataType: 'json',
-                success: function(data) {
-                    console.log(data);
-                }
-            })
-        })
+		//调用公共方法
+		uploadInit(fileidImg,imgWrap);
+		$orderBtn.click(function(e){
+            e.preventDefault();
+			if(textarea.val().length<10){
+                alert("请输入最少10个字");
+                return;
+			}else if(textarea.val().length>500){
+                alert("评价不超过500个字");
+                return;
+			}else{
+				showText.text(textarea.val());//显示文本;
+				$("input[name=text]").attr("value",textarea.val());
+			}
+			var srchtml = "";
+			var srcListhtml = [];
+			$.each(imgWrap.find(".img-item"),function(index,item){
+				let thisSrc = $(item).find("img").attr("src");
+				srchtml+='<li><img src="'+thisSrc+'"></li>';
+				srcListhtml.push(thisSrc);
+			})
+			showimgList.html(srchtml);
+			$(frmImages).attr("value",srcListhtml);
+			$(commentForm).submit();	
+		})
+		$cancelBtn.click(function(e){
+            e.preventDefault();
+			$Order.hide();
+		})
+
+	})
+
+    $(document).on('click', '.closeImg', function(){
+        $(this).parent().remove();
     })
+
+	function uploadInit(domName,domPic){
+		var uploadurl = "/api/upload_comment_image";//后台的api
+		domName.Huploadify({
+			auto:true,
+			fileTypeExts:'*.*',
+			multi:false,
+			fileObjName:'cpimg',
+			fileSizeLimit:99999999999,
+			showUploadedPercent:false,
+			buttonText:'',
+            uploader:uploadurl,
+            @if (Auth::check())
+            token:"{{ Auth::user()->api_token }}",
+            @endif
+			onUploadSuccess:function(file,data){
+				var Data=JSON.parse(data);
+				if(Data.errcode == 0){
+					 var html = '<div class="img-item">'
+						+'<img src="/public/thumbs/comments/thumb_' + Data.path+'">'
+						+'<i class="closeImg"></i>'
+					    +'</div>';
+						domPic.append(html);
+					}else{
+					 jQuery.longhz.alert(Data.resultDes);
+
+					}
+			},
+			onUploadError:function(file,response){
+				alert("上传失败!");
+			}
+		});
+	}
+})
 </script>
 @stop

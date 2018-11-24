@@ -81,7 +81,12 @@ class MyController extends Controller
 
     public function showComments()
     {
-    	return View::make('my.comments');
+        $user = Auth::user();
+        $reviews = CustomerComment::where('customer_id', $user->id)
+            ->orderBy('updated_at', 'desc')
+            ->paginate(10);
+
+    	return View::make('my.comments')->with('reviews', $reviews);
     }
 
     public function showMessages()
@@ -173,7 +178,7 @@ class MyController extends Controller
     public function uploadImages(Request $request)
     {
         $errcode = 0;
-        $message = "success";
+        $message = "上传成功";
         $path = "";
 
         if ($request->ajax()) {
@@ -235,16 +240,73 @@ class MyController extends Controller
         return response()->json(array('errcode' => $errcode, 'message' => $message, 'path' => $path));
     }
 
-    public function saveComment(Request $request)
+    public function uploadCommentImages(Request $request)
     {
         $errcode = 0;
-        $msg = "success";
+        $message = "上传成功";
+        $path = "";
 
-        return response()->json([
-            'errcode' => 0,
-            'msg' => 'success'
-        ]);
-        
+        if ($request->ajax()) {
+            $validator = Validator::make($request->all(), [
+                'cpimg' => 'required'
+            ]);
+            if ($validator->fails()) {
+                $errcode = 1;
+                $message = $validator->errors()->first();
+            } else {
+                if ($request->hasFile('cpimg')) {
+                    if ($request->file('cpimg')->isValid()) {
+                        $cpimg = $request->file('cpimg');
+                        $filename = $cpimg->getClientOriginalName();
+                        $filename = pathinfo($filename, PATHINFO_FILENAME);
+                        $len = Str::length($filename) > 5 ? 5 : Str::length($filename);
+                        $filename = Str::substr($filename, 0, $len);
+
+                        $fullname = Str::slug(Str::random(12) . '-' . $filename) . '.' . $cpimg->getClientOriginalExtension();
+                        $uploaded_path = $cpimg->storeAs('images/comments', $fullname);
+
+                        $image_width = Image::make(storage_path('app/public/' . $uploaded_path))->width();
+                        $image_height = Image::make(storage_path('app/public/' . $uploaded_path))->height();
+
+                        if ($image_width > $image_height) {
+                            $image = Image::make(storage_path('app/public/' . $uploaded_path))
+                                ->resize(null, 64, function ($constraint) {
+                                    $constraint->aspectRatio();
+                                });
+                            Storage::put('thumbs/comments/thumb_' . $fullname, $image->stream()->__toString());
+                        } else {
+                            $image = Image::make(storage_path('app/public/' . $uploaded_path))
+                                ->resize(64, null, function ($constraint) {
+                                    $constraint->aspectRatio();
+                                });
+                            Storage::put('thumbs/comments/thumb_' . $fullname, $image->stream()->__toString());
+                        }
+
+                        if ($uploaded_path) {
+                            $path = $fullname;
+                        } else {
+                            $errcode = 4;
+                            $message = "文件上传失败。";
+                        }
+                    } else {
+                        $errcode = 3;
+                        $message = "无效的文件。";
+                    }
+                } else {
+                    $errcode = 2;
+                    $message = "请求参数中未找到图像文件。";
+                }
+            }
+        } else {
+            $errcode = 5;
+            $message = "错误的请求。";
+        }
+
+        return response()->json(array('errcode' => $errcode, 'message' => $message, 'path' => $path));
+    }
+
+    public function saveComment(Request $request)
+    {
         if (Auth::check()) {
             $validator = Validator::make($request->all(), [
                 'content' => 'required|string|min:10|max:500'
@@ -256,29 +318,37 @@ class MyController extends Controller
                     ->withInput();
             }
 
+            if (Auth::user()->id != $request->input('customer_id')) {
+                return redirect()->back()->with("error", "用户登录信息错误，请重新登录。");
+            }
+
+            $images = $request->input('images');
+            $images = preg_replace('/(http.*?)?\/public\/thumbs\/comments\/thumb_/i', '', $images);
+            $product_name = $request->input('product_name');
+
             try {
-                $comment = new CustomerComment();
-                $comment->product_id = $product_id;
-                $comment->content = $content;
+                if ($request->has('review_id') && "" !== $request->input('review_id')) {
+                    $comment = CustomerComment::find($request->input('review_id'));
+                    $comment->content = trim($request->input('content'));
+                    $comment->images = $images;
+                    $comment->save();
+                }
+                else {
+                    $comment = new CustomerComment();
+                    $comment->order_id = $request->input('order_id');
+                    $comment->product_id = $request->input('product_id');
+                    $comment->content = trim($request->input('content'));
+                    $comment->images = $images;
+                    $customer = Customer::find(Auth::user()->id);
+                    $customer->reviews()->save($comment);
+                }
 
-                $customer = Customer::find(Auth::user()->id);
-                $customer->reviews()->save($comment);
-
-                return response()->json([
-                    'errcode' => 0,
-                    'msg' => 'success'
-                ]);
+                return redirect()->back()->with("success", "您对商品 " . $product_name . " 的评价提交成功。");
             } catch (\Exception $e) {
-                return response()->json([
-                    'errcode' => 1,
-                    'msg' => $e->getMessage()
-                ]);
+                return redirect()->back()->with("error", $e->getMessage());
             }
         } else {
-            return response()->json([
-                'errcode' => 2,
-                'msg' => 'unauthorized'
-            ]);
+            return redirect()->back()->with("error", "用户未登录，请登录后重试。");
         }
     }
 
@@ -295,14 +365,16 @@ class MyController extends Controller
             $customer->nickname = $nickname;
             $customer->sex = $sex;
             $customer->birthday = $birthday;
-            $customer->avatar = $avatar;
+            if ($avatar !== "" && $avatar !== null) {
+                $customer->avatar = $avatar;
+            } 
 
             $customer->save();
 
-            return View::make('my.info')->with('user', $customer);
+            return redirect()->back()->with("success", "个人信息修改成功。");
         }
         else {
-            return Redirect::back()->withInput();
+            return redirect()->back()->with("error", "用户登录信息错误，请重新登录。");
         } 
     }
 }

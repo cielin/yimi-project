@@ -178,9 +178,6 @@ span.more{
 .goods dl{
 	width: 32.4%;
 }
-.goods .ico-wrap{
-
-}
 .top-option{
 	position: relative;
 	height: 45px;
@@ -383,9 +380,6 @@ span.more{
 .designer-item{
 	margin-bottom: 30px;
 }
-.designer-item.articles-item{
-	/*min-height:500px;*/
-}
 .designer-bg,.article-bg{
 	background: #f7f7f7;
 	height: 100%;
@@ -548,16 +542,16 @@ span.more{
 	width: 86px;
 	height: 86px;
 	display: inline-block;
-	background: url("../img/userCircle.png");
 	position: relative;
+	border: solid 2px rgba(0,0,0,0.2);
+    border-radius: 100%;
+    overflow: hidden;
 }
 .infoImg img{
-	width: 51px;
-	height: 63px;
-	border-radius: 20px;
+	width: 100%;
+	height: auto;
+	min-height:100%;
 	position: absolute;
-	left:21%;
-	bottom:3px;
 }
 .userImgWrap{
 	width: 95px;
@@ -880,11 +874,6 @@ span.more{
 .order-padd5{
 	padding:24px 20px 14px 20px;
 }
-.order-menu{
-	/*float:left;
-	width:50%;*/
-}
-
 .order-menu a{display: inline-block; margin:0 5% 0 0px;}
 .searchText .order-menu a{
 	margin:0 6% 0 0px;

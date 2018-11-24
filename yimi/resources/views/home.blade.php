@@ -61,127 +61,89 @@
                 @endforeach
                 @endif
             </div>
-            <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
         </div>
     </div>
     <div class="index-content">
         <div class="container">
-            <article class="row litteBanner">
-                <div class="litteBannerImg col-md-6 col-sm-6 col-xs-6">
+            <article class="row litteBanner" style="padding-left:0; padding-right:0;">
+                <div class="litteBigImg col-md-6 col-sm-6 col-xs-3">
                     @if (isset($sl_banner))
-                    <img src="{{ asset('public/images/banners/' . $sl_banner->image) }}" width="100%">
+                        <img src="{{ asset('public/images/banners/' . $sl_banner->image) }}">
                     @endif
                 </div>
-                <ul class="col-md-6 col-sm-6 col-xs-6 litteBannerUl" style="list-style: none;padding: 0;">
+                <div class="col-md-6 col-sm-6 col-xs-3 img218">
+                    <div class="row clearfix" style="padding: 0 15px;">
                     @if (isset($srt_banners))
-                    @foreach ($srt_banners as $srt_banner)
-                    <li class="col-md-6 col-sm-6 col-xs-6 img2018_01"><img src="{{ asset('public/images/banners/' . $srt_banner->image) }}" width="100%"></li>
-                    @endforeach
+                        @foreach ($srt_banners as $srt_banner)
+                        <div class="col-md-6 col-sm-6 col-xs-6 img218_01" style="padding: 0;">
+                            <img src="{{ asset('public/images/banners/' . $srt_banner->image) }}" style="width: 100%; max-height: 285px;">
+                        </div>
+                        @endforeach
                     @endif
+                    </div>
                     @if (isset($srb_banner))
-                    <li class="col-md-12 col-sm-12 col-xs-12  img2018_03"><img src="{{ asset('public/images/banners/' . $srb_banner->image) }}" width="100%"></li>
+                    <div class="row clearfix litteBtmImg">
+                        <div class="col-md-12 col-sm-12 col-xs-12 img218_03">
+                            <img src="{{ asset('public/images/banners/' . $srb_banner->image) }}" style="width: 100%; max-height: 285px;">
+                        </div>
+                    </div>
                     @endif
-                </ul>
-                
+                </div>
             </article>
             <div class="container overHide mb40 subTitles">
-        		<span class="indexTitle"><img style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}"></span>
+        		<span class="indexTitle">
+                    <img style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}">
+                </span>
                 @if (isset($categories) && sizeof($categories) > 0)
-                 <ul class="index-title-ul" role="tablist">
-                    <!-- @foreach ($categories as $category)
-                    <li role="presentation" class="active">
-                        <a href="{{ url('/categories/' . $category->slug) }}"  href="#home"  aria-controls="home" role="tab" data-toggle="tab">{{ $category->name }}</a>
+                <ul id="myTabs" class="index-title-ul col-md-6 col-sm-6 col-xs-6 litteBannerUl" style="list-style: none;padding: 0;" role="tablist">
+                    @foreach ($categories as $category)
+                    <li role="presentation">
+                        <a href="#{{ $category->slug }}" aria-controls="{{ $category->slug }}" role="tab" data-toggle="tab">{{ $category->name }}</a>
                     </li>
-                    @endforeach -->
-                     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-                    <li class="more"><i>|</i><a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
+                    @endforeach
+                    <li class="more"><i>|</i>
+                        <a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
                     </li> 
                 </ul>
                 @endif
             </div>
             <div class="container overHide tab-content buyerWrap">
-                <div  role="tabpanel" class="designer buyer tab-pane active row" id="home">
-                	@if (isset($featured_products))
-                	@foreach ($featured_products as $featured_product)
-                        
-                        <dl class="col-md-3 col-sm-3 col-xs-6">
-                            <dt>
-                                <p class="ico-wrap">
-                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $featured_product->id))
-                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $featured_product->id }}"></span>
-                                    @else
-                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $featured_product->id }}"></span>
-                                    @endif
-                                    <a href="/products/{{ $featured_product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
-                                </p>
-                            </dt>
-                            <dd>
-                            	<img src="{{ asset('public/images/products/' . $featured_product->featured_image) }}">
-                            </dd>
-                            <div class="buyer-text">
-                                <a href="/products/{{ $featured_product->slug }}"><span>{{ $featured_product->name }}</span></a>
+                
+                @if (isset($categories) && sizeof($categories) > 0)
+                    <?php $active_tab = 1; ?>
+                    @foreach ($categories as $category)
+                        @if (sizeof($featured_products[$category->slug]) > 0)
+                            <div role="tabpanel" class="designer buyer tab-pane @if ($active_tab == 1) active @endif" id="{{ $category->slug }}">
+                            @foreach ($featured_products[$category->slug] as $featured_product)        
+                                <dl>
+                                    <dt>
+                                        <p class="ico-wrap">
+                                            @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $featured_product->id, 1))
+                                            <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $featured_product->id }}"></span>
+                                            @else
+                                            <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $featured_product->id }}"></span>
+                                            @endif
+                                            <a href="/products/{{ $featured_product->slug }}"><span class="icon iconfont icon-yanjing1"></span></a>
+                                        </p>
+                                    </dt>
+                                    <dd>
+                                        <img src="{{ asset('public/images/products/' . $featured_product->featured_image) }}">
+                                    </dd>
+                                    <div class="buyer-text">
+                                        <a href="/products/{{ $featured_product->slug }}"><span>{{ $featured_product->name }}</span></a>
+                                    </div>
+                                </dl>
+                                @endforeach
                             </div>
-                        </dl>
-                    
+                        @else
+                            <div role="tabpanel" class="designer buyer tab-pane @if ($active_tab == 1) active @endif" id="{{ $category->slug }}" style="text-align: center; padding: 15px 0;">
+                            {{ $category->name }} 品类中暂无推荐商品
+                            </div>
+                        @endif
+                        <?php $active_tab = $active_tab + 1; ?>
                     @endforeach
-                    @endif
-                </div>
-                <div role="tabpanel" class="designer buyer tab-pane" id="profile">
-                <a href="#">
-                    <dl>
-                      <dt>
-                        <p class="ico-wrap">
-                            <span class="glyphicon glyphicon-heart-empty"></span>
-                            <span class="glyphicon glyphicon-eye-open"></span>
-                        </p>
-                      </dt>
-                      <dd>
-                       <img src="../assets/img/picture/img04.jpg">
-                      </dd>
-                      <div class="buyer-text"><span>profile</span></div>
-                    </dl>
-                  </a>
-                </div>
-                <div role="tabpanel" class="designer buyer tab-pane" id="messages">
-                  <a href="#">
-                    <dl>
-                      <dt>
-                        <p class="ico-wrap">
-                            <span class="glyphicon glyphicon-heart-empty"></span>
-                            <span class="glyphicon glyphicon-eye-open"></span>
-                        </p>
-                      </dt>
-                      <dd>
-                       <img src="../assets/img/picture/img04.jpg">
-                      </dd>
-                      <div class="buyer-text"><span>messages</span></div>
-                    </dl>
-                  </a>
-
-                </div>
-                <div role="tabpanel" class="designer buyer tab-pane" id="settings">
-                    <a href="#">
-                    <dl>
-                      <dt>
-                        <p class="ico-wrap">
-                            <span class="glyphicon glyphicon-heart-empty"></span>
-                            <span class="glyphicon glyphicon-eye-open"></span>
-                        </p>
-                      </dt>
-                      <dd>
-                       <img src="../assets/img/picture/img04.jpg">
-                      </dd>
-                      <div class="buyer-text"><span>settings</span></div>
-                    </dl>
-                  </a>
-                </div>
+                @endif
             </div>
         </div>
         @if (isset($designers))
@@ -237,7 +199,7 @@
                         @foreach ($spotlights as $spotlight)
                         <div class="item">
                             <div class="animate-box">
-                                @if ($spotlight['type'] == 'product')
+                                @if ($spotlight['type'] == 1)
                                 <img src="{{ asset('public/images/products/' . $spotlight['image']) }}" alt="{{ $spotlight['title'] }}">
                                 @else
                                 <img src="{{ asset('public/images/spotlights/' . $spotlight['image']) }}" alt="{{ $spotlight['title'] }}">
@@ -248,15 +210,19 @@
                             </div>
                             <div class="itemHover">
                                 <p class="ico-wrap">
-                                @if ($spotlight['type'] == 'product')
-                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $spotlight['id']))
-                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $spotlight['id'] }}"></span>
+                                @if ($spotlight['type'] == 1)
+                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $spotlight['id'], $spotlight['type']))
+                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $spotlight['id'] }}" data-type="1"></span>
                                     @else
-                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $spotlight['id'] }}"></span>
+                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $spotlight['id'] }}" data-type="1"></span>
                                     @endif
                                     <a href="/products/{{ $spotlight['link'] }}"><span class="icon iconfont icon-yanjing1"></span></a>
                                 @else
-                                    <span class="glyphicon glyphicon-heart-empty" data-id="{{ $spotlight['id'] }}"></span>
+                                    @if (Auth::check() && App\Http\Controllers\CustomerController::isCollected(Auth::user()->id, $spotlight['id'], $spotlight['type']))
+                                    <span class="glyphicon glyphicon-heart heart-detail" data-id="{{ $spotlight['id'] }}" data-type="2"></span>
+                                    @else
+                                    <span class="glyphicon glyphicon-heart-empty heart-detail" data-id="{{ $spotlight['id'] }}" data-type="2"></span>
+                                    @endif
                                     <span class="icon iconfont icon-sousuo clickico"  data-toggle="modal" data-target=".myModalImg"  data-src="{{ asset('public/images/spotlights/' . $spotlight['image']) }}" data-alt="{{ $spotlight['title'] }}"></span>
                                 @endif
                                 </p>
@@ -277,7 +243,7 @@
 <div class="modal fade myModalImg" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/img/close.png"></button>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="{{ URL::asset('assets/img/close.png') }}"></button>
       <div class="modal-body">
         <img id="bigImg"/>
       </div>
@@ -290,16 +256,23 @@
 
 @section('js')
 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#myTabs a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    })
+</script>
 <script type="text/javascript" src="{{ URL::asset('assets/js/index.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('assets/js/custom.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('assets/js/global.js') }}"></script>
 <!-- Waypoints -->
-<script type="text/javascript" src="../plugin/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="{{ URL::asset('plugin/jquery.waypoints.min.js') }}"></script>
 <!-- Magnific Popup -->
 <script type="text/javascript" src="{{ URL::asset('plugin/jquery.magnific-popup.min.js') }}"></script>
 <!-- Salvattore -->
 <script type="text/javascript" src="{{ URL::asset('plugin/salvattore.min.js') }}"></script>
 <!-- Main JS -->
 <script type="text/javascript" src="{{ URL::asset('plugin/main.js') }}"></script>
-
 @stop
