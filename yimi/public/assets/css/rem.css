@@ -67,7 +67,7 @@ html{
 .designer,
 .designer.buyer,
 .designer.goods{
-	/*display: block;*/
+	display: block;
 	width: 104%;
     position: relative;
     left: -0.25641rem;
@@ -214,7 +214,7 @@ html{
 	width: 0.760684rem;
 	height: 1.068376rem;
 	position: relative;
-    right: -16px;
+    right: -10px;
 }
 .detais-content{
 	padding-right: 0.068376rem;
@@ -223,9 +223,9 @@ html{
 	margin-bottom: 20px;
 }
 /*tab页面*/
-/* .designer.buyer{
+.designer.buyer{
 	display: none;
-} */
+}
 .designer.buyer.active{
 	display: block;
 }

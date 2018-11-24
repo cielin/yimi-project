@@ -160,7 +160,7 @@ function getKey(key){
 }
 
 
-console.log("common外面");
+// console.log("common外面");
 function itemHover(){
     $("#fh5co-board").find(".item").mouseover(function(){
       $(this).find(".itemHover").show();
@@ -170,40 +170,62 @@ function itemHover(){
     })
   }
 $(function(){
-  itemHover();
-//首页导航input框
-  $(".search-input").mouseover(function() {
-      $(this).animate({
-        "width" : "245px",
-        "height" : "34px"
-      })
-      //$(this).focus();
-      $(this).css("background-color","rgba(46,46,45,.9)")
-    }).focus(function(){
+    itemHover();
+    //首页导航input框
+    $(".search-input").mouseover(function () {
+        $(this).animate({
+            "width": "245px",
+            "height": "34px"
+        })
+        //$(this).focus();
+        $(this).css("background-color", "rgba(46,46,45,.9)")
+        $('#query_list').hide()
+    }).focus(function () {
         //鼠标停留到焦点时 显示固定宽度
-      $(this).css({"background-color":"rgba(46,46,45,.9)","width":"250px"});
-
-    }).blur(function(){
-      $(this).animate({
-        "width" : "40px",
-        "height" : "34px"
-      })
-      $(this).val("");
-      $(this).css({"background-color":"rgba(46,46,45,.0)"});
-    }).keyup(function(event){
-      if(event.keyCode==13){
-        $(this).val("");
-        $(this).blur();
-        $(this).css({"background-color":"rgba(46,46,45,.0)"});
-      }
-    }).mouseout(function(){
-       $(this).animate({
-        "width" : "40px",
-        "height" : "34px"
-      })
-       $(this).val('');
-      $(this).css({"background-color":"rgba(89,89,89,1)"});
-      $(this).blur();
+        $(this).css({ "background-color": "rgba(46,46,45,.9)", "width": "250px" });
+        $('#query_list').show()
+    })
+        .blur(function () {
+            $(this).animate({
+                "width": "40px",
+                "height": "34px"
+            })
+            $(this).val("");
+            $(this).css({ "background-color": "rgba(46,46,45,.0)" });
+            $('#query_list').hide()
+        })
+        .keyup(function (event) {
+            if (event.keyCode == 13) {
+                $(this).val("");
+                // $(this).blur();
+                $(this).animate({
+                    "width": "40px",
+                    "height": "34px"
+                })
+                $(this).val("");
+                // $(this).css({"background-color":"rgba(46,46,45,.0)"});
+                $('#query_list').hide()
+                $(this).css({ "background-color": "rgba(46,46,45,.0)" });
+            }
+        })
+        .mouseout(function () {
+            $(this).animate({
+                "width": "245px",
+                "height": "34px"
+            })
+            //$(this).focus();
+            $(this).css("background-color", "rgba(46,46,45,.9)")
+            $('#query_list').show()
+        })
+    $('.top-search-group').mouseout(function () {
+        $('.search-input').animate({
+            "width": "40px",
+            "height": "34px"
+        })
+        $('.search-input').val('');
+        $('.search-input').css({ "background-color": "rgba(89,89,89,1)" });
+        $('#query_list').hide()
+        // $(this).blur();
     });
 
 

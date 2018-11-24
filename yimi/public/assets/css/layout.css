@@ -121,13 +121,12 @@ ul.nav{
 	/*margin:30px auto;*/
 	margin-top: 30px;
     margin-bottom: 30px;
-    max-height: 4.854701rem;
 }
 .litteBanner li{
 	margin-bottom: 32px;
 }
-.litteBanner img {
-    width: 12%;
+.litteBannerImg img {
+    width: 102%;
 }
 .myMsg{
 	position:relative;

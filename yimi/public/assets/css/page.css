@@ -540,16 +540,16 @@ span.more{
 	width: 86px;
 	height: 86px;
 	display: inline-block;
-	background: url("../img/userCircle.png");
 	position: relative;
+	border: solid 2px rgba(0,0,0,0.2);
+    border-radius: 100%;
+    overflow: hidden;
 }
 .infoImg img{
-	width: 51px;
-	height: 63px;
-	border-radius: 20px;
+	width: 100%;
+	height: auto;
+	min-height:100%;
 	position: absolute;
-	left:21%;
-	bottom:3px;
 }
 .userImgWrap{
 	width: 95px;
@@ -1184,15 +1184,4 @@ span.more{
 
 .waterfallNew #fh5co-board .item{
 	border-radius:0px;
-	box-shadow:none;
-	-webkit-box-shadow:none;
-}
-.ditails-tab-box img{
-	width: 750px;
-}
-.goods-detail-text .heart-detail{
-	font-size: 18px;
-}
-.topSearch{
-	display: none
 }

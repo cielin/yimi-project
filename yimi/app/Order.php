@@ -48,4 +48,9 @@ class Order extends Model
 	{
 		return $this->hasMany('App\OrderStatusHistories', 'order_id');
 	}
+
+	public function reviews()
+	{
+		return $this->hasMany('App\CustomerComment', 'order_id');
+	}
 }

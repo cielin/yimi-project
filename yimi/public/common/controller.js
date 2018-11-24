@@ -1,6 +1,6 @@
-console.log("controller外面");
+// console.log("controller外面");
 $(function(){
-  console.log("controller");
+// console.log("controller");
   //分享
     $('#weixin').click(function(){
       $(this).next().show()

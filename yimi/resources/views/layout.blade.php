@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
-    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
-    <META HTTP-EQUIV="expires" CONTENT="0">
     <title>@yield('title')_薏米家</title>
     <link href="{{ URL::asset('assets/img/favicon.ico') }}" rel="icon">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('plugin/swiper/css/swiper.css') }}" />
@@ -25,50 +22,30 @@
     <link href="{{ URL::asset('assets/css/768px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/992px.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/1200px.css') }}" type="text/css" rel="stylesheet">
-    <!-- <link href="{{ URL::asset('assets/css/mobile.css') }}" type="text/css" rel="stylesheet"> -->
     <link href="{{ URL::asset('assets/css/rem.css') }}" type="text/css" rel="stylesheet">
-
     @yield('css')
 </head>
 
 <body>
-    <!-- LAYOUT-->
-<div class="topSearch">
-  <a class="logo" href="/"><img src="{{ URL::asset('assets/img/favicon.ico') }}" alt=""></a>
-  <div class="top-search">
-    <input class="sinput"/>
-    <!-- <button id="top-search-btn" class="glyphicon glyphicon-search"></button> -->
-  </div>
-</div>
+
 <div class="layout footer-nav" id="layout">
 
   <div class="overlay">
     <ul class="">
       <li @if (isset($active) && $active == 'home') class="current" @endif >
-            <a href="/" title="首页"><span class="glyphicon glyphicon-eye-open"></span>
-                首页
-            </a>
+            <a href="/" title="首页">首页</a>
         </li>
         <li>
-            <a href="/spaces" title="空间"><span class="glyphicon glyphicon-eye-open"></span>
-                空间
-            </a>
+            <a href="/spaces" title="空间">空间</a>
         </li>
         <li @if (isset($active) && $active == 'categories') class="current" @endif >
-            <a href="/categories" title="商品"><span class="glyphicon glyphicon-eye-open"></span>
-                商品
-            </a>
+            <a href="/categories" title="商品">商品</a>
         </li>
         <li @if (isset($active) && $active == 'brands') class="current" @endif >
-            <a href="/brands" title="品牌"><span class="glyphicon glyphicon-eye-open"></span>
-                品牌
-            </a>
+            <a href="/brands" title="品牌">品牌</a>
         </li>
         <li @if (isset($active) && $active == 'designers') class="current" @endif >
-            <a href="/designers" title="设计师">
-                <span class="glyphicon glyphicon-eye-open"></span>
-                设计师
-            </a>
+            <a href="/designers" title="设计师">设计师</a>
         </li>
   
         @if (Auth::check())
@@ -135,7 +112,7 @@
                     <li @if (isset($active) && $active == 'home') class="current" @endif >
                         <a href="/" title="首页">首页</a>
                     </li>
-                    <li>
+                    <li @if (isset($active) && $active == 'spaces') class="current" @endif >
                         <a href="/spaces" title="空间">空间</a>
                     </li>
                     <li @if (isset($active) && $active == 'categories') class="current" @endif >
@@ -148,7 +125,7 @@
                         <a href="/designers" title="设计师">设计师</a>
                     </li>
                     <li class="leftLine">
-                        <a href="/articles/shopping-tips" title="如何选购">如何选购</a>
+                        <a href="/articles/sales-process" title="如何选购">如何选购</a>
                     </li>
                     <li class="rightLine  @if (isset($active) && $active == 'articles') current @endif ">
                         <a href="/articles" title="最近文章">最近文章</a>
@@ -156,7 +133,10 @@
                     <li style="position: relative; width: 50px;">
                         {{ Form::open(array('route' => 'categories.search', 'role' => 'form')) }}
                         <div class="top-search-group">
-                            <input class="search-input" name="query" />
+                            <input class="search-input" name="query" list="query-list"  autocomplete="off" disableautocomplete />
+                            <datalist id="query_list">
+                                <option  value="" />
+                            </datalist>
                         </div>
                         {{ Form::close() }}
                     </li>
@@ -178,27 +158,27 @@
                         <a class="fav_facebook" rel="nofollow" href="javascript:window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(document.location.href)+'&t='+encodeURIComponent(document.title));void(0)">
                             <span class="icon iconfont icon-facebook"></span>
                         </a>
-                        <a href="http://v.t.sina.com.cn/share/share.php?url=http://www.jb51.net&title='分享内容'" target="_blank">
+                        <a href="javascript:window.open('http://v.t.sina.com.cn/share/share.php?url='+encodeURIComponent(document.location.href)+'&title='+encodeURIComponent(document.title));void(0)" target="_blank">
                             <span class="icon iconfont icon-weibo"></span>
                         </a>
-                        <a href="http://connect.qq.com/widget/shareqq/index.html?title=qqhaoyou&url=http://www.jb51.net&desc=还不错哦&pics=&site=优酷" target="_blank">
+                        <a href="javascript:window.open('http://connect.qq.com/widget/shareqq/index.html?url='+encodeURIComponent(document.location.href)+'&title='+encodeURIComponent(document.title));void(0)" target="_blank">
                             <span class="icon iconfont icon-qq"></span>
                         </a>
                         <span id="weixin" class="icon iconfont icon-weixin"></span>
                         <div class="weixin">
                             <span class="close close1">X</span>
                             <div>
-                                <img src="{{ URL::asset('assets/img/foot/weixinCode.png') }}" />
+                                {!! QrCode::size(160)->generate(Request::url()); !!}
                                 <p>扫码分享</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="f-email col-md-7 col-sm-8">
+                    <!-- <div class="f-email col-md-7 col-sm-8">
                         <span style="border:none;">SUBCRIBLE  NEWSLETTER</span>
                         <input type="text" name="" placeholder="Enter your email address" />
                         <span class="icon iconfont icon-youjian"></span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -331,166 +311,175 @@
     <script type="text/javascript" src="{{ URL::asset('plugin/jsencrypt.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('plugin/md5.js') }}"></script>
     <script type="text/javascript">
- /*********************收藏变实心**********************************/
-      /*
- * 生成签名
- * @params  待签名的json数据
- * @secret  密钥字符串
- */
-function makeSign(params, secret){
-    var ksort = Object.keys(params).sort();
-    var str = '';
-    for(var ki in ksort){ 
-    str += ksort[ki] + '=' + params[ksort[ki]] + '&'; 
-    }
-
-    str += 'secret=' + secret;
-    var token = hex_md5(str).toUpperCase();
-    return rsa_sign(token);
-}
-
-/*
- * rsa加密token
- */
-function rsa_sign(token){
-    var pubkey='-----BEGIN PUBLIC KEY-----';
-    pubkey+='MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDSS/B+VvzgF66yWJUN5wmBSl22';
-    pubkey+='WdbBHrAiAgg1Jk0WqeWo3ZswH/hIGGUQC3WvKFdbYE50G/Zaoe368O358ueFKtfL';
-    pubkey+='FSDyXzKMLDTXTxdX7dqwRuTe+SAMQE4KSazTM0yl6uHTrue2iDRCZI6OMd1oZCTo';
-    pubkey+='hKgMxEUSti/kHlMcEQIDAQAB';
-    pubkey+='-----END PUBLIC KEY-----';
-    // 利用公钥加密
-    var encrypt = new JSEncrypt();
-    encrypt.setPublicKey(pubkey);
-    return encrypt.encrypt(token);
-}
-
-/*
- * 获取时间戳
- */
-function get_time(){
-    var d = new Date();
-    var time = d.getTime()/1000;
-    return parseInt(time);
-}
-
-//secret密钥
-var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
-
-   $('.heart-detail').click(function(){
-    var params = {};
-    params.id = $(this).data('id');
-    params.type = $(this).data('type');
-    params.timestamp = get_time();
-    params.sign = makeSign(params, secret);
-    var token = "";
-    @if (Auth::check())
-    token = "{{ Auth::user()->api_token }}";
-    @endif
-    $.ajax({
-        url : "http://127.0.0.1:8000/api/collect_product",
-        data : params,
-        headers: {
-            'Authorization':'Bearer ' + token,
-        },
-        type : 'post',
-        context : this,
-        success:function(data){
-          if(JSON.parse(data).message == 'success'){
-            if(JSON.parse(data).action == 'removed'){
-                $(this).removeClass('glyphicon-heart').addClass('glyphicon-heart-empty')
-            } else {
-                $(this).removeClass('glyphicon-heart-empty').addClass('glyphicon-heart')
+        /*********************收藏变实心**********************************/
+            /*
+        * 生成签名
+        * @params  待签名的json数据
+        * @secret  密钥字符串
+        */
+        function makeSign(params, secret){
+            var ksort = Object.keys(params).sort();
+            var str = '';
+            for(var ki in ksort){ 
+            str += ksort[ki] + '=' + params[ksort[ki]] + '&'; 
             }
-          } else {
-             console.log('success 401')
-             $(this).attr('data-toggle','modal')
-             $(this).attr('data-target','#myModal')
-          }
-        },
-        error: function(jqXHR){
-            if(jqXHR.status == 401) {
-                console.log('error 401')
 
-                $(this).attr('data-toggle','modal')
-                $(this).attr('data-target','#myAuthModal')
-            } else {
-                console.log('其它')
-            }
-        },
-        async:false
-      })
-    })
-/*********************收藏变实心**********************************/
-
-/******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开******/ 
-    $('.noLogin').click(function(){
-        str = $("#userStatus").val();
-        if(str == '0'){//未登录
-            $(this).attr('data-toggle','modal');
-            $(this).attr('data-target','#myAuthModal');
-            $(this).attr("href","javascript:void(0)");
-        }else if(str == '1'){//已登录
-            window.location.href=$(this).attr("data-href");
-            //$(this).attr("href",$(this).attr("data-href"));
+            str += 'secret=' + secret;
+            var token = hex_md5(str).toUpperCase();
+            return rsa_sign(token);
         }
-    })
-/******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开end******/
 
-//表单验证验证
-$().ready(function() {
-    $("#form1").validate({
-       rules:{
-          email:{
-             required:true,
-          },          
-          password:{
-            required:true,
-          }                  
-       },
-       messages:{
-          email:{
-            required: "请输入邮箱地址",
-          },
-          password:{
-               required: "请输入密码",
-           }                                 
-       }  
-    });
-    $("#form2").validate({
-       rules:{
-          nickname:{
-               required:true,
-           },
-           email:{
-               required:true,
-               email:true
-           },            
-          password:{
-               required:true,
-           },
-          password_confirmation:{
-               equalTo:"#password"    //新密码的id选择器
-           }                    
-       },
-       messages:{
-          nickname:{
-               required: "请输入昵称",
-           },
-           email:{
-               required: "请输入邮箱地址",
-               email:"请输入正确的邮箱，例如:example@qq.com",
-           },
-          password:{
-               required: "请输入密码",
-           },
-          password_confirmation:{
-               required: "请确认密码",
-               equalTo:"两次密码输入不一致"
-           }                                    
-       }  
-    });
-});
+        /*
+        * rsa加密token
+        */
+        function rsa_sign(token){
+            var pubkey='-----BEGIN PUBLIC KEY-----';
+            pubkey+='MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDSS/B+VvzgF66yWJUN5wmBSl22';
+            pubkey+='WdbBHrAiAgg1Jk0WqeWo3ZswH/hIGGUQC3WvKFdbYE50G/Zaoe368O358ueFKtfL';
+            pubkey+='FSDyXzKMLDTXTxdX7dqwRuTe+SAMQE4KSazTM0yl6uHTrue2iDRCZI6OMd1oZCTo';
+            pubkey+='hKgMxEUSti/kHlMcEQIDAQAB';
+            pubkey+='-----END PUBLIC KEY-----';
+            // 利用公钥加密
+            var encrypt = new JSEncrypt();
+            encrypt.setPublicKey(pubkey);
+            return encrypt.encrypt(token);
+        }
+
+        /*
+        * 获取时间戳
+        */
+        function get_time(){
+            var d = new Date();
+            var time = d.getTime()/1000;
+            return parseInt(time);
+        }
+
+        //secret密钥
+        var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
+
+        $('.heart-detail').click(function(){
+            var params = {};
+            params.id = $(this).data('id');
+            params.type = $(this).data('type');
+            params.timestamp = get_time();
+            params.sign = makeSign(params, secret);
+            var token = "";
+            @if (Auth::check())
+            token = "{{ Auth::user()->api_token }}";
+            @endif
+            $.ajax({
+                url : "http://127.0.0.1:8000/api/collect_product",
+                data : params,
+                headers: {
+                    'Authorization':'Bearer ' + token,
+                },
+                type : 'post',
+                context : this,
+                success:function(data){
+                if(JSON.parse(data).message == 'success'){
+                    if(JSON.parse(data).action == 'removed'){
+                        $(this).removeClass('glyphicon-heart').addClass('glyphicon-heart-empty')
+                    } else {
+                        $(this).removeClass('glyphicon-heart-empty').addClass('glyphicon-heart')
+                    }
+                } else {
+                    // console.log('success 401')
+                    $(this).attr('data-toggle','modal')
+                    $(this).attr('data-target','#myModal')
+                }
+                },
+                error: function(jqXHR){
+                    if(jqXHR.status == 401) {
+                        // console.log('error 401')
+
+                        $(this).attr('data-toggle','modal')
+                        $(this).attr('data-target','#myAuthModal')
+                    } else {
+                        // console.log('其它')
+                    }
+                },
+                async:false
+            })
+            })
+        /*********************收藏变实心**********************************/
+
+        /******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开******/ 
+            $('.noLogin').click(function(){
+                str = $("#userStatus").val();
+                if(str == '0'){//未登录
+                    $(this).attr('data-toggle','modal');
+                    $(this).attr('data-target','#myAuthModal');
+                    $(this).attr("href","javascript:void(0)");
+                }else if(str == '1'){//已登录
+                    window.location.href=$(this).attr("data-href");
+                    //$(this).attr("href",$(this).attr("data-href"));
+                }
+            })
+        /******点击头部，我的订单，我的收藏，我的消息时，没有登录弹出登录框，否则打开end******/
+
+        //表单验证验证
+        $().ready(function() {
+            $("#form1").validate({
+            rules:{
+                email:{
+                    required:true,
+                },          
+                password:{
+                    required:true,
+                }                  
+            },
+            messages:{
+                email:{
+                    required: "请输入邮箱地址",
+                },
+                password:{
+                    required: "请输入密码",
+                }                                 
+            }  
+            });
+            $("#form2").validate({
+            rules:{
+                nickname:{
+                    required:true,
+                },
+                email:{
+                    required:true,
+                    email:true
+                },            
+                password:{
+                    required:true,
+                },
+                password_confirmation:{
+                    equalTo:"#password"    //新密码的id选择器
+                }                    
+            },
+            messages:{
+                nickname:{
+                    required: "请输入昵称",
+                },
+                email:{
+                    required: "请输入邮箱地址",
+                    email:"请输入正确的邮箱，例如:example@qq.com",
+                },
+                password:{
+                    required: "请输入密码",
+                },
+                password_confirmation:{
+                    required: "请确认密码",
+                    equalTo:"两次密码输入不一致"
+                }                                    
+            }  
+            });
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-49983183-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-49983183-7');
     </script>
     @yield('js')
 </body>

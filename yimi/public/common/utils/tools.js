@@ -1,7 +1,7 @@
-console.log("tool外面");
-$(function(){
-	console.log("tool");
-})
+// console.log("tool外面");
+// $(function(){
+// 	console.log("tool");
+// })
 var F = {
 	strConvert: function(literal) {
 		//console.log("literal",literal);

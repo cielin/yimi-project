@@ -23,6 +23,7 @@ class ProductsController extends Controller
     	$product = Product::where('slug', $slug)->first();
         $featured_products = Product::where('is_featured', 1)
             ->where('id', '<>', $product->id)
+            ->where('state', 'active')
             ->orderBy('updated_at', 'desc')
             ->limit(8)
             ->get();
