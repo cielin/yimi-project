@@ -39,7 +39,7 @@
         <div class="col-sm-9 col-md-9 col-xs-12 main">
             <div class="address-text">
                 {{ Form::open(array('route' => 'addresses.save', 'id' => 'commentForm', 'role' => 'form')) }}
-                    <div class="form-group addressOne" style="width:70%;">
+                    <div class="form-group addressOne">
                         <label for="addressInfo" style="display: block;">地址信息<i>*</i>
                         </label>
                         <select name="province" id="province" class="citySelect" required>
