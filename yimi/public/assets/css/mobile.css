@@ -755,6 +755,12 @@
 	.bind-tip{
 		width: 100%;
 	}
+	.discuss-order .pro-img,
+	.discuss-order .pro-img img{
+
+		width: 100%!important;
+		height: 100%!important;
+	}
 
 }
 
