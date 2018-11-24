@@ -748,8 +748,12 @@
 	.discuss-item{
 		margin-bottom: 15px!important;
 	}
-	.discuss-img-list li{
-
+	.bind-account-box{
+		padding: 30px;
+		text-align: center;
+	}
+	.bind-tip{
+		width: 100%;
 	}
 
 }
