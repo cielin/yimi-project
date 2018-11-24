@@ -734,6 +734,9 @@
 	.address-text{
 		margin-top: 15px;
 	}
+	.address-text .form-group{
+		width: 100%!important;
+	}
 	.address-btn{
 		margin: 0px auto;
        display: block;
