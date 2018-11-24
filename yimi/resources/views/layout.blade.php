@@ -77,7 +77,8 @@
         @if (Auth::check())
         <li>
             <a class="user" href="{{ url('my/info') }}">
-                <!-- <span class="glyphicon glyphicon-eye-open"></span> -->
+            <span class="icon iconfont icon-weibiaoti2fuzhi12">
+          </span>
             </a>
         </li>
         <li>
