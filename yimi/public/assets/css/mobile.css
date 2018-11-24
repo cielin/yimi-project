@@ -705,7 +705,7 @@
 	.sidebarNewWrap{
 		overflow: hidden;
 	    height: 40px;
-	    background: #e1e1e1;
+	    background: #f6f6f6;
 	}
 	.sidebarNewWrap .sidebar{
 
@@ -717,6 +717,7 @@
 		width: 626px;
 	}
 	.sidebarNewWrap .user-center-left a{
+		float: left;
 	    margin-right: 20px;
 	    margin-top: 9px;
 	}
