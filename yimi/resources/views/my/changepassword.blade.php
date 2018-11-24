@@ -36,7 +36,7 @@
             </div>
 
         </div>
-        <div class="col-sm-8 col-md-12 main">
+        <div class="col-sm-8 col-md-12 main mainNew">
             @if (session('error'))
                 <div class="alert alert-danger">
                     {{ session('error') }}

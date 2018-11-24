@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class=" col-md-9 col-sm-9 col-xs-12 main">
+        <div class=" col-md-9 col-sm-9 col-xs-12 main mainNew">
 
             <div class="searchText">
                 <a href="#" id="seachAllPro">所有商品</a>

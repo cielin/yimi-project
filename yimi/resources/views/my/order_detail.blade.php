@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8 col-md-12">
+            <div class="col-sm-8 col-md-12 mainNew">
                 <!--start-->
                 <div class="order-detail clearfix">
 

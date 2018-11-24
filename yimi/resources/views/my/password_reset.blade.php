@@ -36,7 +36,7 @@
             </div>
 
         </div>
-        <div class="col-sm-8 col-md-9 col-xs-12 main">
+        <div class="col-sm-8 col-md-9 col-xs-12 main mainNew">
             <div class="address-text userInfoWrap">
                 <div class="form-group">
                     <label for="curentPassword">当前密码<i>*</i>

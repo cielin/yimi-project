@@ -36,7 +36,7 @@
                 </div>
 
             </div>
-            <div class="col-sm-8 col-md-9 col-xs-12 main">
+            <div class="col-sm-8 col-md-9 col-xs-12 main mainNew">
                 <div class="discuss-box">
                     <!--一条评论 start-->
                     <div class="row discuss-item">

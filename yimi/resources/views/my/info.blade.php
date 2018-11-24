@@ -36,7 +36,7 @@
             </div>
 
         </div>
-        <div class="col-sm-8 col-md-12 main">
+        <div class="col-sm-8 col-md-12 main mainNew">
             <div class="address-text userInfoWrap">
                 {{ Form::open(array('route' => 'info.save', 'role' => 'form', 'id' => 'commentForm')) }}
                 {{ Form::hidden('uid', $user->id) }}
