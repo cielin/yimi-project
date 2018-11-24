@@ -36,7 +36,7 @@
                 </div>
 
             </div>
-            <div class="col-sm-8 col-md-9 col-xs-9 main mainNew">
+            <div class="col-sm-8 col-md-9 col-xs-12 main mainNew">
                 @if (session('error'))
                     <div class="alert alert-danger">
                         {{ session('error') }}
@@ -57,7 +57,7 @@
                     </div>
                 @endif
                 <div class="searchText">
-                    <div class="order-menu col-md-6">
+                    <div class="order-menu col-md-6 col-xs-12">
                         <a href="#" class="active">所有订单</a>
                         <a href="#">待付款</a>
                         <a href="#">待发货</a>

@@ -66,30 +66,22 @@
     </div>
     <div class="index-content">
         <div class="container">
-            <article class="row litteBanner" style="padding-left:0; padding-right:0;">
-                <div class="litteBigImg col-md-6 col-sm-6 col-xs-3">
+            <article class="row litteBanner">
+                <div class="litteBannerImg col-md-6 col-sm-6 col-xs-6">
                     @if (isset($sl_banner))
-                        <img src="{{ asset('public/images/banners/' . $sl_banner->image) }}">
+                        <img src="{{ asset('public/images/banners/' . $sl_banner->image) }}" width="100%">
                     @endif
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-3 img218">
-                    <div class="row clearfix" style="padding: 0 15px;">
+                <ul class="col-md-6 col-sm-6 col-xs-6 litteBannerUl" style="list-style: none;padding: 0;">
                     @if (isset($srt_banners))
                         @foreach ($srt_banners as $srt_banner)
-                        <div class="col-md-6 col-sm-6 col-xs-6 img218_01" style="padding: 0;">
-                            <img src="{{ asset('public/images/banners/' . $srt_banner->image) }}" style="width: 100%; max-height: 285px;">
-                        </div>
+                        <li class="col-md-6 col-sm-6 col-xs-6 img2018_01"><img src="{{ asset('public/images/banners/' . $srt_banner->image) }}" width="100%"></li>
                         @endforeach
                     @endif
-                    </div>
                     @if (isset($srb_banner))
-                    <div class="row clearfix litteBtmImg">
-                        <div class="col-md-12 col-sm-12 col-xs-12 img218_03">
-                            <img src="{{ asset('public/images/banners/' . $srb_banner->image) }}" style="width: 100%; max-height: 285px;">
-                        </div>
-                    </div>
+                    <li class="col-md-12 col-sm-12 col-xs-12  img2018_03"><img src="{{ asset('public/images/banners/' . $srb_banner->image) }}" width="100%"></li>
                     @endif
-                </div>
+                </ul>
             </article>
             <div class="container overHide mb40 subTitles">
         		<span class="indexTitle">

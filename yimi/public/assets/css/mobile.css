@@ -119,8 +119,8 @@
 		color: #cca76f;
 	}
 	.footer-nav li a span{
-		font-size: 30px;
-    	margin-bottom: -6px;
+		 margin-bottom: 0px!important;
+         margin-top: -9px!important;
 	}
 	.footer-nav .overlay ul li a{
 		padding: 0px;
@@ -211,6 +211,9 @@
 	}
 	.searchText, .good-list-top{
 		margin-bottom: 18px;
+	}
+	.searchText{
+		margin-top: 10px;
 	}
 	.center-num select, .goods-order select{
 		width: 58px;
@@ -761,6 +764,9 @@
 		width: 100%!important;
 		height: 100%!important;
 	}
+	#myTabs .more{
+		margin-right: 10px!important;
+	}
 
 }
 
@@ -959,7 +965,14 @@
         height: 26px;
         top: 2px;
 	}
-
+	.order-menu{
+		padding: 0px!important;
+        margin-bottom: 10px;
+	}
+	.cllectionSearch{
+		clear: both!important;
+		float: none!important;
+	}
 }
 @media (max-width: 425px) {
 	.checkAllBrand{
