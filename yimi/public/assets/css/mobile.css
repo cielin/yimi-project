@@ -1039,10 +1039,13 @@
 	}
 	.index-title-ul{
 		width: 100%;
-        margin-left: 0px;
+        margin-left: -12px;
 	}
 	.index-title-ul li.more{
 		margin-right: 0px;
+	}
+	.index-title-ul li{
+		width: 67px;
 	}
 }
 @media (max-width: 375px) {
