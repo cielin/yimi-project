@@ -555,6 +555,9 @@
 	.order-price,.order-total-price{
 		display: none;
 	}
+	.swiper-wraper{
+		margin-right: 20px;
+	}
 	/*.swiper-wraper{
 		width: 100%;
 	}

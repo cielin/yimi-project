@@ -88,7 +88,7 @@
                     <img style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}">
                 </span>
                 @if (isset($categories) && sizeof($categories) > 0)
-                <ul id="myTabs" class="index-title-ul col-md-6 col-sm-6 col-xs-6 litteUl" style="list-style: none;padding: 0;" role="tablist">
+                <ul id="myTabs" class="index-title-ul col-md-7 col-sm-6 col-xs-6 litteUl" style="list-style: none;padding: 0;" role="tablist">
                     @foreach ($categories as $category)
                     <li role="presentation">
                         <a href="#{{ $category->slug }}" aria-controls="{{ $category->slug }}" role="tab" data-toggle="tab">{{ $category->name }}</a>
