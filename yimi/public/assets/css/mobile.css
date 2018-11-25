@@ -610,6 +610,7 @@
 	}
 	.mobileIco.ico-wraps:before{
 	  left: 50%;
+	  display: none;
 	}
 	.mobileIco.ico-wraps span, .mobileIco.ico-wraps img{
 	  margin-left: 82px;
