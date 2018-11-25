@@ -766,7 +766,7 @@
 		height: 100%!important;
 	}
 	#myTabs .more{
-		margin-right: 10px!important;
+		margin-right: -10px!important;
 	}
 
 }
@@ -896,7 +896,7 @@
 		min-height: 125px;
 	}
 	.nodata{
-		line-height: 125px;
+		line-height: 110px;
 	}
 	.item,#fh5co-board .item img{
 		width: 100%;
