@@ -79,7 +79,7 @@
 
             </div>
         </div>
-        <div class="sowingMap">
+        <div class="sowingMap  mobileMap">
         <div class="swiper-container swiperPro">
             <div class="swiper-wrapper">
               @foreach ($product->images as $image)
