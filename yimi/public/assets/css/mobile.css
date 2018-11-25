@@ -404,6 +404,9 @@
 		width: 100%;
 		height: 100%;
 	}
+	.designer-user.col-xs-3{
+		width: 22%;
+	}
 	.designer-item{
 		margin-bottom: 0.3125rem;
 	}
