@@ -1084,4 +1084,7 @@
 	.index-title-ul li.more{
 		margin-right: 20px;
 	}
+	.index-title-ul li{
+		width: 60px!important;
+	}
 }
