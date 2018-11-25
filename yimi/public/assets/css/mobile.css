@@ -1056,6 +1056,9 @@
 	.index-title-ul li{
 		width: 67px;
 	}
+	.mobileIco.ico-wraps:before{
+		left: 43%;
+	}
 
 }
 @media (max-width: 375px) {
@@ -1096,5 +1099,8 @@
 	}
 	.index-title-ul li{
 		width: 60px!important;
+	}
+	.mobileIco.ico-wraps:before{
+	  left: 50%;
 	}
 }
