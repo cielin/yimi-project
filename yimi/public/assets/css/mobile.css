@@ -1026,6 +1026,9 @@
 	.img2018_03 img{
 		width: 100%;
 	}
+	.litteBannerImg img{
+		width: 100%;
+	}
 
 }
 @media (max-width: 375px) {
