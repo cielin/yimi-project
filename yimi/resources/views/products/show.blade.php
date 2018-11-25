@@ -133,7 +133,7 @@
             </div>
         </div>
     </div>
-    <div class="details-share">
+    <div class="details-share container">
         <a href="javascript:window.open('http://twitter.com/home?status='+encodeURIComponent(document.location.href)+' '+encodeURIComponent(document.title));void(0)">
             <span class="icon iconfont icon-twitter"></span>
         </a>
@@ -157,7 +157,7 @@
             </div>
         </span>
     </div>
-    <div class="row mTextBody">
+    <div class="row mTextBody container">
         <ul class="col-md-3 details-tab" role="tablist">
             <li role="presentation" class="active">
                 <a href="#goodsDetails" aria-controls="home" role="tab" data-toggle="tab">
