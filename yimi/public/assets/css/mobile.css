@@ -527,6 +527,9 @@
      margin:0px!important;
      margin-bottom: 10px!important;
 	}
+	#fh5co-board .column:first-child{
+		margin-top: 10px!important;
+	}
 	.side-sub li.active a{
 		font-size:12px;
 	}
@@ -543,7 +546,7 @@
 	.webSw,.s-contentWeb{
 		display: none;
 	}
-	.s-contentMobile{
+	.mobileMap,.s-contentMobile{
 		display: block;
 	}
 	/*.swiperPro.swiper-container{
@@ -744,6 +747,7 @@
 	}
 	.form-group label{
 		margin-bottom: 10px;
+		font-size: 12px;
 	}
 	.gender{
 		margin-top: 0px;
@@ -994,6 +998,7 @@
         height: 26px;
         top: 2px;
 	}
+
 	.order-menu{
 		padding: 0px!important;
         margin-bottom: 10px;

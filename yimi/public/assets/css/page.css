@@ -551,6 +551,9 @@ span.more{
 .infohead{
 	margin-top: 20px;
 }
+.mobileMap{
+	display: none;
+}
 .infoImg img{
 	width: 100%;
 	height: auto;
