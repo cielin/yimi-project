@@ -472,6 +472,7 @@
 	.brandList{
 		margin-top:0.3125rem;
 	}
+
 	.designer dl dd img{
 	  width: 100%;
       height: auto;
@@ -735,6 +736,11 @@
 		margin-top: 0.3125rem!important;
 	}*/
 	/*登录后*/
+	.order-item .table tr td.order-option{
+		font-size: 12px;
+		min-width: 48px;
+        line-height: 20px;
+	}
 	.sidebarNewWrap{
 		overflow: hidden;
 	    height: 40px;
