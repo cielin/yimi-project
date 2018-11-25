@@ -1015,9 +1015,17 @@
 	.designerNew a.col-xs-3{
 		width: 25%;
 	}
+	.topSearch .top-search{
+		width: 9.875rem;
+		margin-left: 0.3125rem;
+	}
 
 }
 @media (max-width: 375px) {
+	.topSearch .top-search{
+		width: 8.125rem;
+		margin-left: 0.3125rem;
+	}
 	.designerNew dl dt p.ico-wrap{
 		position: relative;
 		height: 22%;
