@@ -66,7 +66,7 @@
         </li>
         <li>
             <a href="{{ url('signout') }}">
-                <span class="icon iconfont icon-weibiaoti2fuzhi12">
+                我的
           </span>
                 退出
             </a>

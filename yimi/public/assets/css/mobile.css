@@ -253,6 +253,7 @@
 	}
 	.index-title-ul{
 		width: 100%;
+		float: none!important;
 		position: relative;
 		margin-top: 0.3125rem;
 	}
