@@ -12,6 +12,9 @@
 	width: 0.78125rem;
 	height: 0.78125rem;
 }
+.glyphicon-heart-empty:before{
+	color: #7c7c7c;
+}
 /*.topSearch .top-search,
 .topSearch .logo{
 	float: left;
