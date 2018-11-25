@@ -1023,6 +1023,9 @@
 		padding-right:0px!important;
 		padding-left:0px!important;
 	}
+	.img2018_03 img{
+		width: 100%;
+	}
 
 }
 @media (max-width: 375px) {
