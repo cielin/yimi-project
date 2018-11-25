@@ -742,6 +742,9 @@
 		width: 100%!important;
 		margin-bottom: 20px;
 	}
+	.form-group label{
+		margin-bottom: 10px;
+	}
 	.infohead{
 		margin-top: 10px;
 	}
