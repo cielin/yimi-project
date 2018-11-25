@@ -139,9 +139,9 @@
 	.topSearch{
 		display: block;
 	}
-	.suspension{
+	/*.suspension{
 		display: none;
-	}
+	}*/
 	.container.overHide{
 		padding-left: 0px;
 		margin-bottom: 0.3125rem;
