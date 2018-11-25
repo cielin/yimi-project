@@ -768,6 +768,18 @@
 	#myTabs .more{
 		margin-right: -10px!important;
 	}
+	.userImg{
+		display: block;
+	}
+	.infoImg{
+		display: block;
+		margin: 0px auto;
+	}
+	.userImgWrap{
+	  display: block;
+      margin: 0px auto;
+      margin-top:10px;
+	}
 
 }
 
