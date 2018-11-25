@@ -1023,13 +1023,20 @@
 		padding-right:0px!important;
 		padding-left:0px!important;
 	}
+	
+	.img2018_01 img,
+	.img2018_02 img,
 	.img2018_03 img{
-		width: 100%;
+		width: 100%!important;
 	}
 	.litteBannerImg img{
 		width: 100%;
 	}
-
+	.img2018_01,
+	.img2018_02,
+	.img2018_03{
+		padding-right: 0px!important;
+	}
 }
 @media (max-width: 375px) {
 	.topSearch .top-search{
