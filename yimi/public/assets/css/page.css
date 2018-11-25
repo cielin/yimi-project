@@ -160,6 +160,9 @@
 	color: #cca76f;
 	font-weight: bold;
 }
+.details-share,.mTextBody{
+	margin: 20px auto!important;
+}
 span.more{
 	float: right;
 	margin-top: 20px;
