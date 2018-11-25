@@ -163,6 +163,9 @@
 .details-share,.mTextBody{
 	margin: 20px auto!important;
 }
+.webSw{
+	margin-right: 20px;
+}
 span.more{
 	float: right;
 	margin-top: 20px;
