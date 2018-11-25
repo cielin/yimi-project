@@ -1104,4 +1104,7 @@
 	.mobileIco.ico-wraps:before{
 	  left: 50%;
 	}
+	.designer-user.col-xs-3{
+		width: 25%;
+	}
 }
