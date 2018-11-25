@@ -62,7 +62,7 @@
                 <div class="form-group">
                     <label for="userImg" style="display: block;">当前头像<i>*</i>
                     </label>
-                    <div class="clearfix" style="margin-top: 20px;">
+                    <div class="clearfix infohead">
                         <div class="infoImg">
                             @if (isset($user->avatar) && $user->avatar !== "")
                             <img src="/public/thumbs/avatars/thumb_{{ $user->avatar }}" id="imgid">

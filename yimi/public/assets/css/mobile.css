@@ -742,6 +742,9 @@
 		width: 100%!important;
 		margin-bottom: 20px;
 	}
+	.infohead{
+		margin-top: 10px;
+	}
 	.address-btn{
 		margin: 0px auto;
        display: block;

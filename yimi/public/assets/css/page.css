@@ -546,7 +546,10 @@ span.more{
 	border: solid 2px rgba(0,0,0,0.2);
     border-radius: 100%;
     overflow: hidden;
-    background:url("../img/userImg.jpg");
+    background:url("../img/userImg.jpg") top center;
+}
+.infohead{
+	margin-top: 20px;
 }
 .infoImg img{
 	width: 100%;
