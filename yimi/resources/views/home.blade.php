@@ -130,7 +130,9 @@
                             </div>
                         @else
                             <div role="tabpanel" class="designer buyer tab-pane @if ($active_tab == 1) active @endif" id="{{ $category->slug }}" style="text-align: center; padding: 15px 0;">
-                            {{ $category->name }} 品类中暂无推荐商品
+                            <p class="nodata">
+                                {{ $category->name }} 品类中暂无推荐商品
+                            </p>
                             </div>
                         @endif
                         <?php $active_tab = $active_tab + 1; ?>

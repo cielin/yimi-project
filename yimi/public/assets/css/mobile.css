@@ -893,7 +893,10 @@
 	}
 	.tab-content.buyerWrap{
 		padding: 0px!important;
-		min-height: 300px;
+		min-height: 125px;
+	}
+	.nodata{
+		line-height: 125px;
 	}
 	.item,#fh5co-board .item img{
 		width: 100%;
