@@ -178,7 +178,7 @@
         </div>
     </div>
     <!--相关商品-->
-    <div class="container other-goods">
+  <!--   <div class="container other-goods">
         <img src="../assets/img/index_title.jpg" alt="">
 
     </div>
@@ -198,7 +198,7 @@
 
         @endforeach
         @endif
-    </div>
+    </div> -->
 	
 <!--瀑布流开始 -->
 <!-- 		<div class="container-fluid">
