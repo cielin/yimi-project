@@ -201,7 +201,7 @@
     </div> -->
 	
 <!--瀑布流开始 -->
-		<div class="container-fluid">
+<!-- 		<div class="container-fluid">
 		  <div class="container ">
 			  <div id="fh5co-main" class="waterfallNew">
 				<div class="container1">
@@ -230,7 +230,7 @@
 		       </div>
 			</div>
 		  </div>
-	    </div>
+	    </div> -->
 </div>
 <!--瀑布流end -->
 

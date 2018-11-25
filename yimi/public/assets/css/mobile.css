@@ -545,6 +545,16 @@
 	.side-sub li.active a{
 		font-size:12px;
 	}
+	.searchText .order-menu a{
+		margin: 0 5% 0 0px;
+		font-size: 12px;
+	}
+	.order-title, .order-item .table thead td{
+		font-size: 12px;
+	}
+	.order-price,.order-total-price{
+		display: none;
+	}
 	/*.swiper-wraper{
 		width: 100%;
 	}
@@ -1019,6 +1029,11 @@
 	.cllectionSearch{
 		clear: both!important;
 		float: none!important;
+		width: 300px;
+		background: url(../img/userSearch.png) 264px center no-repeat #fff;
+	}
+	.searchText .order-menu a{
+
 	}
 }
 @media (max-width: 425px) {
