@@ -780,9 +780,9 @@
 		width: 100%!important;
 		height: 100%!important;
 	}
-	#myTabs .more{
+	/*#myTabs .more{
 		margin-right: -10px!important;
-	}
+	}*/
 	.userImg{
 		display: block;
 	}
