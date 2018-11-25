@@ -1037,6 +1037,13 @@
 	.img2018_03{
 		padding-right: 0px!important;
 	}
+	.index-title-ul{
+		width: 100%;
+        margin-left: 0px;
+	}
+	.index-title-ul li.more{
+		margin-right: 0px;
+	}
 }
 @media (max-width: 375px) {
 	.topSearch .top-search{
@@ -1066,5 +1073,12 @@
 	}
 	.litteBanner li.img2018_03{
 		padding-right:0px!important;
+	}
+	.index-title-ul{
+		width: 330px;
+        margin-left: -10px;
+	}
+	.index-title-ul li.more{
+		margin-right: 20px;
 	}
 }
