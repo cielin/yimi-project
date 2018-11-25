@@ -1025,7 +1025,8 @@
 	}
 	
 	.img2018_01 img,
-	.img2018_02 img{
+	.img2018_02 img,
+	.litteBannerImg img{
 		width: 100%!important;
 		height: 100%!important;
 	}
@@ -1035,9 +1036,7 @@
 	.litteBanner{
 		max-height: 168px;
 	}
-	.litteBannerImg img{
-		width: 100%;
-	}
+
 	.img2018_01,
 	.img2018_02,
 	.img2018_03{
