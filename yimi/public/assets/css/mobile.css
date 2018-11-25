@@ -536,6 +536,12 @@
 	#fh5co-board .column .item:first-child{
 		margin-top: 10px!important;
 	}
+	#fh5co-board .column .item:first-child{
+		margin-top: 10px!important;
+	}
+	#fh5co-board.waterfallNew .column .item:first-child{
+		margin-top: 0px!important;
+	}
 	.side-sub li.active a{
 		font-size:12px;
 	}
