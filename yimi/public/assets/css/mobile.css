@@ -780,7 +780,8 @@
 		top:0px;
 	}
 	.index-title-ul li {
-	    width: 75px;
+	    width: 62px;
+        text-align: center;
 	}
 	.subTitles .more{
 		margin-right: 0px;
@@ -892,6 +893,7 @@
 	}
 	.tab-content.buyerWrap{
 		padding: 0px!important;
+		min-height: 300px;
 	}
 	.item,#fh5co-board .item img{
 		width: 100%;
