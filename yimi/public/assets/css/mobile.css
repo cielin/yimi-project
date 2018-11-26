@@ -827,7 +827,9 @@
       margin: 0px auto;
       margin-top:10px;
 	}
-
+	.designer.buyer.goods{
+		display: block;
+	}
 }
 
 @media (max-width: 500px) {
