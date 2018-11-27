@@ -36,7 +36,7 @@
                 </div>
 
             </div>
-            <div class="col-sm-8 col-md-9 col-xs-9 main mainNew">
+            <div class="col-sm-8 col-md-9 col-xs-12 main mainNew">
                 @if (session('error'))
                     <div class="alert alert-danger">
                         {{ session('error') }}
@@ -69,7 +69,7 @@
                             </p>
                         </div>
                         <div class="discuss-order clearfix">
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-sm-3 col-xs-3">
                                 <div class="pro-img">
                                     <img src="{{ asset('public/images/products/' . $review->product->featured_image) }}">
                                 </div>
@@ -77,7 +77,7 @@
                                     <a href="{{ url('/products/' . $review->product->slug) }}">{{ $review->product->name }}</a>
                                 </div>
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-9  col-sm-9 col-xs-9">
                                 <!--展示文本 start-->
                                 <div class="showText">
                                     <p class="time">{{ $review->created_at }}</p>

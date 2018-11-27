@@ -6,7 +6,7 @@
     width: 100%;
     padding:0.3125rem;
     top:0px;
-    background: #fff;
+    background: rgba(89,89,89,1);
 }
 .topSearch .logo img{
 	width: 0.78125rem;
@@ -75,6 +75,10 @@
 }
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
+	.discuss-order .pro-text{
+		font-size: 10px;
+		line-height: 15px;
+	}
 	.row{
 		margin-right: -0.3125rem!important;
     	margin-left: -0.3125rem!important;
@@ -1042,6 +1046,7 @@
 		clear: both!important;
 		float: none!important;
 		width: 300px;
+		border-radius: 20px;
 		background: url(../img/userSearch.png) 264px center no-repeat #fff;
 	}
 	.searchText .order-menu a{
