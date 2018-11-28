@@ -30,7 +30,7 @@
 <body>
 <!-- LAYOUT-->
 <div class="topSearch">
-  <a class="logo" href="/"><img src="{{ URL::asset('assets/img/favicon.ico') }}" alt=""></a>
+  <a class="logo" href="/"><img src="{{ URL::asset('assets/img/mobileLogo.png') }}" alt=""></a>
   <div class="top-search">
     <input class="sinput"/>
     <!-- <button id="top-search-btn" class="glyphicon glyphicon-search"></button> -->
