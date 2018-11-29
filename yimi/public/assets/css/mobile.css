@@ -6,7 +6,7 @@
     width: 100%;
     padding:0.3125rem;
     top:0px;
-    background: rgba(89,89,89,1);
+    background: rgba(89,89,89,0.8);
 }
 .topSearch .logo img{
 	width: 0.78125rem;
@@ -76,6 +76,24 @@
 }
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
+	.suspension .a{
+	  width: 30px;
+      height: 30px;
+	}
+	.suspension .a-top .i{
+		background-position: -138px -6px;
+	}
+	.suspension .a .i{
+		width: 30px;
+        height: 35px;
+	}
+	.suspension .a i{
+		font-size: 17px;
+	}
+	.icon-qq:before,
+	.icon-weixin:before{
+		font-size: 18px;
+	}
 	.discuss-order .pro-text{
 		font-size: 10px;
 		line-height: 15px;
