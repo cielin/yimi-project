@@ -170,9 +170,9 @@
             @if (isset($products) && sizeof($products) > 0)
             <!--瀑布流开始 -->
             <div class="container-fluid noPadding">
-                <div class="container1 noPadding">
+                <div class="container noPadding">
                     <div id="fh5co-main" class="waterfallNew">
-                        <div class="container1">
+                        <div class="container">
                             <div class="row">
                                 <div id="fh5co-board" data-columns class="categories">
                                     @foreach ($products as $product)
