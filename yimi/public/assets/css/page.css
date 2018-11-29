@@ -28,6 +28,9 @@
 	display: inline-block;
 	color: #333333;
 }
+.categories .item{
+	width: 6.25rem;
+}
 /*index end*/
 /*买手推荐*/
 .buyer a{

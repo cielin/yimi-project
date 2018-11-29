@@ -174,7 +174,7 @@
                     <div id="fh5co-main" class="waterfallNew">
                         <div class="container">
                             <div class="row">
-                                <div id="fh5co-board" data-columns>
+                                <div id="fh5co-board" data-columns class="categories">
                                     @foreach ($products as $product)
                                     <div class="item">
                                         <div class="animate-box">

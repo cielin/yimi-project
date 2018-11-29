@@ -94,6 +94,21 @@
 	.icon-weixin:before{
 		font-size: 18px;
 	}
+	.suspension .d-service-phone{
+		top: 14px;
+	}
+	.suspension .d{
+		right: 38px;
+	}
+	.suspension .d-service{
+		top: 47px;
+	}
+	.suspension .d-qrcode{
+		top: 84px;
+	}
+	.suspension .d-service-item .text .number{
+		color: #fff;
+	}
 	.discuss-order .pro-text{
 		font-size: 10px;
 		line-height: 15px;
