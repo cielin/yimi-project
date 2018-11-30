@@ -31,6 +31,9 @@
 .categories{
 	width: 100%;
 }
+.col-md-12.noPadding{
+	padding:0px!important;
+}
 /*index end*/
 /*买手推荐*/
 .buyer a{
