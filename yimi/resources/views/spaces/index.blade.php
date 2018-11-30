@@ -60,10 +60,10 @@
 
             @if (isset($products) && sizeof($products) > 0)
             <!--瀑布流开始 -->
-            <div class="container-fluid noPadding">
-                <div class="container noPadding">
+            <div class="col-md-12 noPadding">
+                <div class="col-md-12 noPadding">
                     <div id="fh5co-main" class="waterfallNew">
-                        <div class="container1">
+                        <div class="col-md-12">
                             <div class="row">
                                 <div id="fh5co-board" data-columns>
                                     @foreach ($products as $product)
