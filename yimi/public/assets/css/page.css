@@ -1225,3 +1225,6 @@ span.more{
 	width: 70%;
 }
 /*.size3 .size-1of4 { width: 33.333%!important; }*/
+.litteBannerImg.col-md-6{
+	width: 47%!important;
+}
