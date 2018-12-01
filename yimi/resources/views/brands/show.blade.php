@@ -50,7 +50,7 @@
             
             <div class="col-md-12 noPadding">
                 <div class="col-md-12 ">
-                    <div id="fh5co-main" class="waterfallNew">
+                    <div id="fh5co-main" class="waterfallNew size3">
                         <div class="col-md-12">
                             <div class="row">
                                 <div id="fh5co-board" data-columns>
