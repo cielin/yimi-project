@@ -1235,3 +1235,7 @@ span.more{
 .litteBanner{
 	max-height: 538px;
 }
+.size3 .ico-wrap span{
+	margin-right: 36px!important;
+    margin-left: 20px!important;
+}
