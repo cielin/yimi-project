@@ -30,4 +30,9 @@
 
 @media screen and (min-width: 851px) {
 #fh5co-board[data-columns]::before { content: '4 .column.size-1of4'; }
+.size3 #fh5co-board[data-columns]::before { content: '3 .column.size-1of3'; }
+.size3 #fh5co-board .item img{
+	width: 100%!important;
+}
+
 }
