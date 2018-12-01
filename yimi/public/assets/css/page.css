@@ -1228,3 +1228,7 @@ span.more{
 .litteBannerImg.col-md-6{
 	width: 47%!important;
 }
+.litteBannerUl.col-md-6,
+.img2018_01.col-md-6 {
+  width: 48.5%!important;
+}
