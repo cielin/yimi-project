@@ -1225,10 +1225,13 @@ span.more{
 	width: 70%;
 }
 /*.size3 .size-1of4 { width: 33.333%!important; }*/
-.litteBannerImg.col-md-6{
-	width: 47%!important;
+.litteBannerImg img,.img2018_03 img{
+	width: 100%!important;
 }
-.litteBannerUl.col-md-6,
-.img2018_01.col-md-6 {
-  width: 48.5%!important;
+.img2018_01 img, .img2018_02 img{
+	width: 100%!important;
+	height: 100%!important;
+}
+.litteBanner{
+	max-height: 572px;
 }
