@@ -98,7 +98,7 @@
                             <td>{{ $address->postcode }}</td>
                             <td>{{ $address->mobile }}</td>
                             <td>
-                                <a href="javascript:void(0);" class="btn btn-primary btn-sm addr-edit" role="button" data-id="{{ $address->id }}">编辑</a>
+                                <!-- <a href="javascript:void(0);" class="btn btn-primary btn-sm addr-edit" role="button" data-id="{{ $address->id }}">编辑</a> -->
                                 <a class="btn btn-danger btn-sm remove-record" href="javascript:void(0);" data-toggle="modal" data-url="{{ route('addresses.destroy', $address) }}" data-id="{{ $address->id }}" data-target="#custom-width-modal">删除</a>
                             </td>
                         </tr>
