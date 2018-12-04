@@ -1276,3 +1276,21 @@ span.more{
 .designer dl dt{
 	padding-top: 64px!important;
 }
+.indexP{
+   padding-right: 35px;
+   padding-left: 15px;
+}
+.tabTitleOver{
+	float: right;
+    position: relative;
+}
+.index-title-ul{
+	float: none!important;
+	width: 535px;
+    margin-right: 84px;
+}
+div.more{
+	position: absolute;
+    right: 0px;
+    top: 20px;
+}

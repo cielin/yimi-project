@@ -190,7 +190,7 @@
             <div id="fh5co-main">
                 <div class="container">
                   <div class="row">
-                     <div id="fh5co-board" data-columns>
+                     <div id="fh5co-board" class="indexP" data-columns>
                         @if (isset($spotlights))
                         @foreach ($spotlights as $spotlight)
                         <div class="item">
