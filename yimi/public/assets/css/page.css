@@ -1239,3 +1239,18 @@ span.more{
 	margin-right: 36px!important;
     margin-left: 20px!important;
 }
+/*单独写的样式补丁*/
+#fh5co-board .item img{
+	width: 100%!important;
+}
+.designer.designer-new-hover,
+.designer.designer-new-hover dl dd img{
+	width: 100%!important;
+	height: 100%!important;
+}
+.designer.designer-new-hover .col-md-3{
+	padding: 0px!important;
+}
+.designer dl{
+	margin-left: 0px!important;
+}
