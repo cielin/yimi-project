@@ -1264,3 +1264,9 @@ span.more{
 	width: 212px!important;
     height: 300px!important;
 }
+.designer.buyer dl div{
+	bottom: -36px;
+}
+.designer.buyer dl, .designer.buyer dl dt, .designer.buyer dl dd{
+	margin-bottom: 52px!important;
+}
