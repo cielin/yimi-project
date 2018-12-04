@@ -95,11 +95,11 @@
                         <a href="#{{ $category->slug }}" aria-controls="{{ $category->slug }}" role="tab" data-toggle="tab">{{ $category->name }}</a>
                     </li>
                     @endforeach
-                    <li class="more"><i>|</i>
-                        <a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
-                    </li> 
                 </ul>
                 @endif
+                 <div class="more"><i>|</i>
+                    <a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
+                </div>
                 </div>
             </div>
             <div class="container overHide tab-content buyerWrap">
