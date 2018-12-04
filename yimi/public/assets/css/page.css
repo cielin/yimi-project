@@ -1248,7 +1248,7 @@ span.more{
 	width: 100%!important;
 	height: 100%!important;
 }
-.designer.designer-new-hover .col-md-3{
+.designer.designer-new-hover a.col-md-3{
 	padding: 0px!important;
 }
 .designer dl{
