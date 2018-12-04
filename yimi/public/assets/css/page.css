@@ -1270,3 +1270,6 @@ span.more{
 .designer.buyer dl, .designer.buyer dl dt, .designer.buyer dl dd{
 	margin-bottom: 52px!important;
 }
+.designer dl dt{
+	padding-top: 64px!important;
+}
