@@ -248,5 +248,16 @@
 	<!-- Salvattore -->
 	<script src="{{ URL::asset('plugin/salvattore.min.js') }}"></script>
     <script src="{{ URL::asset('assets/js/goodsDetail.js') }}"></script>
+    <!-- Statistics -->
+    <script>
+        gtag('event', 'view_item', {
+            "items": [{
+                "id": "{{ $product->slug }}",
+                "name": "{{ $product->name }}",
+                "brand": "{{ $product->brand->name }}",
+                "category": "{{ $product->category->name }}"
+            }]
+        });
+    </script>
 
     @stop
