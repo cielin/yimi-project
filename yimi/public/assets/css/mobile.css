@@ -76,6 +76,15 @@
 }
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
+	.tabTitleOver{
+		overflow: hidden;
+		height:30px;
+	}
+	.index-title-ul{
+		width: 500px!important;
+		overflow: scroll;
+		height: 40px;
+	}
 	.suspension .a{
 	  width: 30px;
       height: 30px;

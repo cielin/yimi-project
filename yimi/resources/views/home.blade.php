@@ -87,6 +87,7 @@
         		<span class="indexTitle">
                     <img style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}">
                 </span>
+                <div class="tabTitleOver">
                 @if (isset($categories) && sizeof($categories) > 0)
                 <ul id="myTabs" class="index-title-ul col-md-7 col-sm-6 col-xs-6 litteUl" style="list-style: none;padding: 0;" role="tablist">
                     @foreach ($categories as $category)
@@ -99,6 +100,7 @@
                     </li> 
                 </ul>
                 @endif
+                </div>
             </div>
             <div class="container overHide tab-content buyerWrap">
                 
