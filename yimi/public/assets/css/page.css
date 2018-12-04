@@ -1254,3 +1254,13 @@ span.more{
 .designer dl{
 	margin-left: 0px!important;
 }
+.designer.buyer dl {
+    margin-left: 0.25641rem!important;
+}
+.designer.buyer dl,
+.designer.buyer dl dt,
+.designer.buyer dl dd, 
+.designer.buyer dl dd img{
+	width: 212px;
+    height: 300px;
+}
