@@ -1244,12 +1244,15 @@ span.more{
 	width: 100%!important;
 }
 .designer.designer-new-hover,
-.designer.designer-new-hover dl dd img{
+.designer.designer-new-hover dl dd img,
+.designer.designer-new-hover dl dd,
+.designer.designer-new-hover dl{
 	width: 100%!important;
 	height: 100%!important;
 }
 .designer.designer-new-hover a.col-md-3{
-	padding: 0px!important;
+	padding-right: 0!important;
+    padding-left: 30px!important;
 }
 .designer dl{
 	margin-left: 0px!important;
@@ -1261,8 +1264,8 @@ span.more{
 .designer.buyer dl dt,
 .designer.buyer dl dd, 
 .designer.buyer dl dd img{
-	width: 212px!important;
-    height: 300px!important;
+	width: 270px!important;
+    height: 322px!important;
 }
 .designer.buyer dl div{
 	bottom: -36px;
