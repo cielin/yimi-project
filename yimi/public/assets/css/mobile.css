@@ -91,6 +91,10 @@
 		width: 100%!important;
         height: 100%!important;
 	}
+	.designer.designer-new-hover dt{
+		padding-top: 10px!important;
+		font-size: 12px!important;
+	}
 	.indexP{
 		padding-right: 0px!important;
         padding-left: 0px!important;
@@ -923,7 +927,7 @@
 	}
 	.subTitles .more{
 		margin-right: 0px;
-	    margin-top: 18px;
+	    margin-top: -20px;
 	    float: right;
 	    width: 69px;
 	    text-align: right;
