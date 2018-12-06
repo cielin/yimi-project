@@ -1007,13 +1007,16 @@
 		width: 50%!important;
 		height: auto!important;
 	}
-	.designer.buyer dl,
+	
 	.designer.buyer dl dt,
 	.designer.buyer dl dd{
 		width: 100%!important;
 		height: 100%!important;
 	    max-height: 204px!important;
 	    margin-bottom: 35px!important;
+	}
+	.designer.buyer dl{
+		margin-bottom: 35px!important;
 	}
 	.designer.buyer dl dd img{
 		width: 100%!important;
