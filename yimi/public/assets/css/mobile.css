@@ -96,13 +96,15 @@
         padding-left: 0px!important;
 	}
 	.tabTitleOver{
-		overflow: hidden;
-		height:30px;
+		float: none!important;
+	}
+	.tabTitleInner{
+		overflow-y: hidden;
+        overflow-x: scroll;
+		height:45px;
 	}
 	.index-title-ul{
 		width: 500px!important;
-		overflow: scroll;
-		height: 40px;
 	}
 	.suspension .a{
 	  width: 30px;
@@ -994,8 +996,8 @@
 		margin-left:0px;
 	}
 	.designer.buyer dl{
-		width: 47%;
-		height: auto;
+		width: 47%!important;
+		height: auto!important;
 	}
 	.designer.buyer dl dt, .designer.buyer dl dd{
 		width: 100%;
