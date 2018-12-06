@@ -1247,7 +1247,7 @@ span.more{
 .designer.designer-new-hover dl dd img,
 .designer.designer-new-hover dl dd,
 .designer.designer-new-hover dl{
-	width: 100%!important;
+	width: 1010%!important;
 	height: 100%!important;
 }
 .designer.designer-new-hover a.col-md-3{
@@ -1277,7 +1277,7 @@ span.more{
 	padding-top: 64px!important;
 }
 .indexP{
-   padding-right: 35px;
+   padding-right: 15px;
    padding-left: 15px;
 }
 .tabTitleOver{
