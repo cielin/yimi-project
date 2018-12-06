@@ -97,11 +97,12 @@
 	}
 	.tabTitleOver{
 		float: none!important;
+		height: 36px;
 	}
 	.tabTitleInner{
 		overflow-y: hidden;
         overflow-x: scroll;
-		height:45px;
+		height:56px;
 	}
 	.index-title-ul{
 		width: 500px!important;
@@ -330,11 +331,10 @@
 		position: relative;
 		margin-top: 0.3125rem;
 	}
-	.subTitles .more{
+	.tabTitleOver .more{
 		position: absolute;
-		top:-20px;
+		top:-23px;
 		width: 2.15625rem;
-		top: -51px;
     	right: 0px;
 	}
 	.designers-mobile .overHide.subTitles .more{
@@ -996,7 +996,7 @@
 		margin-left:0px;
 	}
 	.designer.buyer dl{
-		width: 47%!important;
+		width: 50%!important;
 		height: auto!important;
 	}
 	.designer.buyer dl dt, .designer.buyer dl dd{
@@ -1007,7 +1007,7 @@
 	}
 	.designer.buyer dl dd img{
 		width: 100%!important;
-		height: auto!important;
+		height: 6.375rem!important;
 	}
 	.designer.buyer.active{
 		width: 100%;
