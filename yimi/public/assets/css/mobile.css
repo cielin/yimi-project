@@ -76,6 +76,25 @@
 }
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
+	.designer.designer-new-hover a.col-md-3{
+		padding-right: 0!important;
+       padding-left: 10px!important;
+	}
+	.designer.designer-new-hover,
+	
+	.designer.designer-new-hover dl dd,
+	.designer.designer-new-hover dl{
+	  width: 103%!important;
+      height: 100%!important;
+	}
+	.designer.designer-new-hover dl dd img{
+		width: 102%!important;
+        height: 100%!important;
+	}
+	.indexP{
+		padding-right: 0px!important;
+        padding-left: 0px!important;
+	}
 	.tabTitleOver{
 		overflow: hidden;
 		height:30px;
@@ -975,7 +994,7 @@
 		margin-left:0px;
 	}
 	.designer.buyer dl{
-		width: 50%;
+		width: 47%;
 		height: auto;
 	}
 	.designer.buyer dl dt, .designer.buyer dl dd{
@@ -985,8 +1004,8 @@
 	    margin-bottom: 35px;
 	}
 	.designer.buyer dl dd img{
-		width: 100%;
-		height: auto;
+		width: 100%!important;
+		height: auto!important;
 	}
 	.designer.buyer.active{
 		width: 100%;
@@ -1205,6 +1224,6 @@
 		width: 25%;
 	}
 	.litteBanner,.litteBannerImg img{
-		max-height: 160px!important;
+		max-height: 141px!important;
 	}
 }
