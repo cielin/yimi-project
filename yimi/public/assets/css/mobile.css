@@ -1003,7 +1003,9 @@
 		width: 50%!important;
 		height: auto!important;
 	}
-	.designer.buyer dl dt, .designer.buyer dl dd{
+	.designer.buyer dl,
+	.designer.buyer dl dt,
+	.designer.buyer dl dd{
 		width: 100%!important;
 		height: 100%!important;
 	    max-height: 204px!important;
