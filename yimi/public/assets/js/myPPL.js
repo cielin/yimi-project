@@ -67,7 +67,7 @@ var projectDom = $(".sidebar-content").length;
     var oCheckBtn = $(".sidebar-content").find(".magic-checkbox:checked");
     var locationArr = [];
     $.each(oCheckBtn,function(index,item){
-      locationArr.push($(item).val();
+      locationArr.push($(item).val());
     })
     var obj = {
       "page":page,
