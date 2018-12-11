@@ -194,7 +194,7 @@
                 <div class="container">
                   <div class="row">
                      <div id="fh5co-board" class="indexP" data-columns>
-                        @if (isset($spotlights))
+                        <!-- @if (isset($spotlights))
                         @foreach ($spotlights as $spotlight)
                         <div class="item">
                             <div class="animate-box">
@@ -228,7 +228,7 @@
                             </div>
                         </div>
                         @endforeach
-                        @endif
+                        @endif -->
                      </div>
                      <div class="lodeNext">LOAD MORE ..<i class="icon iconfont icon-shuangjiantou"></i></div>
                   </div>

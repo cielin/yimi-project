@@ -175,7 +175,7 @@
                         <div class="col-md-12">
                             <div class="row">
                                 <div id="fh5co-board" data-columns class="categories">
-                                    @foreach ($products as $product)
+                                   <!--  @foreach ($products as $product)
                                     <div class="item">
                                         <div class="animate-box">
                                             @if ($product->poster !== null && $product->poster !== "")
@@ -200,8 +200,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @endforeach
+                                    @endforeach -->
                                 </div>
+                                <div class="lodeNext">LOAD MORE ..<i class="icon iconfont icon-shuangjiantou"></i></div>
                             </div>
                         </div>
                     </div>
