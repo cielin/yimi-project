@@ -22,6 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => ['auth:api']], function () {
     Route::post('collect_product', 'ProductsController@collect');
+    Route::post('upload_image', 'MyController@uploadImages');
+    Route::post('upload_comment_image', 'MyController@uploadCommentImages');
 });
 
-Route::any('upload_image', 'MyController@uploadImages');
+Route::get('get_items', 'UtilController@getItems');
