@@ -230,6 +230,7 @@
                         @endforeach
                         @endif
                      </div>
+                     <div class="lodeNext">LOAD MORE ..<i class="icon iconfont icon-shuangjiantou"></i></div>
                   </div>
                 </div>
             </div>
@@ -250,7 +251,6 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<!--展示瀑布流大图位置 end-->
     @stop
 
 @section('js')
@@ -274,4 +274,5 @@
 <script type="text/javascript" src="{{ URL::asset('plugin/salvattore.min.js') }}"></script>
 <!-- Main JS -->
 <script type="text/javascript" src="{{ URL::asset('plugin/main.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('assets/js/myPPL.js') }}"></script>
 @stop
