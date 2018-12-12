@@ -1,4 +1,12 @@
-
+var proDatas = [];
+var isTrue = false;
+var minHeight = 0;
+var flagNum = 8;//页面自动加载到第几页
+var newPage = flagNum; //按钮可点的页码初始值
+var totalPage = 0; //总页数
+var pageCount = 10;
+var url = window.location.href.split("/");
+var projectDom = $(".sidebar-content").length;
  $(".lodeNext").hide();
  (function initPPl(){
     var page = 1;
@@ -61,7 +69,7 @@
     $.each(oCheckBtn,function(index,item){
       locationArr.push($(item).val());
     })
-    console.log("url",url);
+    console.log("url",url)
     var obj = {
       "page":page,
       "pageCount":pageCount,
@@ -119,7 +127,7 @@
   }
 
  function itemHover(){
-$("#fh5co-board").find(".item").mouseover(function(){
+    $("#fh5co-board").find(".item").mouseover(function(){
       $(this).find(".itemHover").show();
     })
     $("#fh5co-board").find(".item").mouseout(function(){
@@ -127,14 +135,6 @@ $("#fh5co-board").find(".item").mouseover(function(){
     })
   }
   $(function(){
-    var proDatas = [];
-    var isTrue = false;
-    var minHeight = 0;
-    var flagNum = 8;//页面自动加载到第几页
-    var newPage = flagNum; //按钮可点的页码初始值
-    var totalPage = 0; //总页数
-    var pageCount = 10;
-    var url = window.location.href.split("/");
-    var projectDom = $(".sidebar-content").length;
+     
      loadMore(newPage,pageCount,url,projectDom);
   });
