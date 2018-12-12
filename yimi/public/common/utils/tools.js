@@ -83,7 +83,30 @@ var ajax = {
 				alert(sError,1);
 		   	}
 		});
-	} 
+	},
+	get: function(url,successCallback,error){
+		var postUrl = url || webInfo;
+		// var dataJson = JSON.stringify(dataObj);
+		$.ajax({
+			contentType: "application/json; charset=utf-8",  
+		   	url: postUrl,
+		   	type :"GET",
+		   	dataType : "json",
+		   	async:false,
+		    success:function(data){
+				if(data.length == 0){
+		   			successCallback();
+		   		}else{
+		   			successCallback(data);
+		   		}
+		   	},
+		   	error:function(error){
+		   		var sError = "系统故障,请联系管理员";
+				sError = error || sError;
+				alert(sError,1);
+		   	}
+		});
+	}
 }
 
 

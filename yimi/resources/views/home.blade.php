@@ -88,6 +88,7 @@
                     <img style="padding: 0px;" src="{{ URL::asset('assets/img/index_title.jpg') }}">
                 </span>
                 <div class="tabTitleOver">
+                    <div class="tabTitleInner">
                 @if (isset($categories) && sizeof($categories) > 0)
                 <ul id="myTabs" class="index-title-ul col-md-7 col-sm-6 col-xs-6 litteUl" style="list-style: none;padding: 0;" role="tablist">
                     @foreach ($categories as $category)
@@ -97,9 +98,11 @@
                     @endforeach
                 </ul>
                 @endif
+                 </div>
                  <div class="more"><i>|</i>
                     <a href="{{ url('categories') }}">MORE <i class="icon iconfont icon-shuangjiantou"></i></a>
                 </div>
+
                 </div>
             </div>
             <div class="container overHide tab-content buyerWrap">
@@ -191,7 +194,7 @@
                 <div class="container">
                   <div class="row">
                      <div id="fh5co-board" class="indexP" data-columns>
-                        @if (isset($spotlights))
+                        <!-- @if (isset($spotlights))
                         @foreach ($spotlights as $spotlight)
                         <div class="item">
                             <div class="animate-box">
@@ -225,8 +228,9 @@
                             </div>
                         </div>
                         @endforeach
-                        @endif
+                        @endif -->
                      </div>
+                     <div class="lodeNext">LOAD MORE ..<i class="icon iconfont icon-shuangjiantou"></i></div>
                   </div>
                 </div>
             </div>
@@ -247,7 +251,6 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<!--展示瀑布流大图位置 end-->
     @stop
 
 @section('js')
@@ -271,4 +274,5 @@
 <script type="text/javascript" src="{{ URL::asset('plugin/salvattore.min.js') }}"></script>
 <!-- Main JS -->
 <script type="text/javascript" src="{{ URL::asset('plugin/main.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('assets/js/myPPL.js') }}"></script>
 @stop

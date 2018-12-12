@@ -161,16 +161,9 @@ function getKey(key){
 
 
 // console.log("common外面");
-function itemHover(){
-    $("#fh5co-board").find(".item").mouseover(function(){
-      $(this).find(".itemHover").show();
-    })
-    $("#fh5co-board").find(".item").mouseout(function(){
-      $(this).find(".itemHover").hide();
-    })
-  }
+
 $(function(){
-    itemHover();
+    
     //首页导航input框
     $(".search-input").mouseover(function () {
         $(this).animate({

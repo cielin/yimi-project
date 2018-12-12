@@ -66,7 +66,7 @@
                         <div class="col-md-12">
                             <div class="row">
                                 <div id="fh5co-board" data-columns>
-                                    @foreach ($products as $product)
+                                   <!--  @foreach ($products as $product)
                                     <div class="item">
                                         <div class="animate-box">
                                             @if ($product->poster !== null && $product->poster !== "")
@@ -93,8 +93,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @endforeach
+                                    @endforeach -->
                                 </div>
+                                <div class="lodeNext">LOAD MORE ..<i class="icon iconfont icon-shuangjiantou"></i></div>
                             </div>
                         </div>
                     </div>
@@ -117,4 +118,5 @@
 <script type="text/javascript" src="{{ URL::asset('../plugin/jquery.magnific-popup.min.js') }}"></script>
 <!-- Salvattore -->
 <script type="text/javascript" src="{{ URL::asset('../plugin/salvattore.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('assets/js/myPPL.js') }}"></script>
 @stop

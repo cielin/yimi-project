@@ -1,4 +1,16 @@
 /*************index*****************/
+.lodeNext{
+	text-align: center;
+    background: #f7f7f7;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.nodata{
+	text-align: center;
+    padding-bottom: 50px;
+    font-size: 16px;
+}
 .wrapper-page{
 	margin-bottom: 100px;
 }
@@ -1247,7 +1259,7 @@ span.more{
 .designer.designer-new-hover dl dd img,
 .designer.designer-new-hover dl dd,
 .designer.designer-new-hover dl{
-	width: 100%!important;
+	width: 101%!important;
 	height: 100%!important;
 }
 .designer.designer-new-hover a.col-md-3{
@@ -1265,7 +1277,7 @@ span.more{
 .designer.buyer dl dd, 
 .designer.buyer dl dd img{
 	width: 270px!important;
-    height: 322px!important;
+    height: 380px!important;
 }
 .designer.buyer dl div{
 	bottom: -36px;
@@ -1277,7 +1289,7 @@ span.more{
 	padding-top: 64px!important;
 }
 .indexP{
-   padding-right: 35px;
+   padding-right: 15px;
    padding-left: 15px;
 }
 .tabTitleOver{
@@ -1286,7 +1298,7 @@ span.more{
 }
 .index-title-ul{
 	float: none!important;
-	width: 535px;
+	width: 720px;
     margin-right: 84px;
 }
 div.more{
