@@ -70,6 +70,14 @@
         locationArr.push($(item).val());
       })
       console.log("url",url)
+      var type = url[3];
+      if(type == "categories"){
+        type = "category";
+      } else if(type == "spaces"){
+        type = "space";
+      } else if(type == "brands"){
+        type = "brand";
+      }
       var obj = {
         "page":page,
         "pageCount":pageCount,
