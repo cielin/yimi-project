@@ -73,9 +73,9 @@
       var obj = {
         "page":page,
         "pageCount":pageCount,
-        "type":url[1],
+        "type":url[2],
         // "type":"category",
-        "basket":url[2],
+        "basket":url[3],
         "location": projectDom != 0 ? locationArr.toString() : "" 
       }
       var type = "type="+obj.type;
