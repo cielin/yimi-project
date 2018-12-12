@@ -1,4 +1,8 @@
 /*************index*****************/
+#fh5co-board{
+	overflow: hidden;
+	clear: both;
+}
 .lodeNext{
 	text-align: center;
     background: #f7f7f7;
