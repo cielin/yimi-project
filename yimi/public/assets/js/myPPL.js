@@ -1,7 +1,7 @@
 
  (function initPPl(){
   var minHeight = 0;
-  var flagNum = 8;//页面自动加载到第几页
+  var flagNum = 5;//页面自动加载到第几页
   var newPage = flagNum; //按钮可点的页码初始值
   var totalPage = 0; //总页数
   var pageCount = 10;
