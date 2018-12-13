@@ -914,6 +914,7 @@
 }
 
 @media (max-width: 500px) {
+
 	.checkAllBrand{
 		left: 27px;
     	top: 3px;
@@ -1134,6 +1135,10 @@
 	}
 	.searchText .order-menu a{
 
+	}
+	.litteBannerImg img{
+		width: 193px!important;
+		height: 193px!important;
 	}
 }
 @media (max-width: 425px) {
