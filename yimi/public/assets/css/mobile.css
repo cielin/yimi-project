@@ -1140,6 +1140,12 @@
 		width: 193px!important;
 		height: 193px!important;
 	}
+	.img2018_03{
+		margin-top: 5px!important;
+	}
+	.img2018_03 img{
+		height: 87px!important;
+	}
 }
 @media (max-width: 425px) {
 	.checkAllBrand{
