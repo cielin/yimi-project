@@ -1138,13 +1138,17 @@
 	}
 	.litteBannerImg img{
 		width: 193px!important;
-		height: 193px!important;
+		height: 188px!important;
 	}
 	.img2018_03{
-		margin-top: 5px!important;
+		margin-top: 12px!important;
 	}
 	.img2018_03 img{
 		height: 87px!important;
+	}
+	.img2018_01 img, .img2018_02 img{
+	   width: 80px!important;
+       height: 80px!important;
 	}
 }
 @media (max-width: 425px) {
