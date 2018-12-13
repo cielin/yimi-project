@@ -77,6 +77,8 @@
         type = "space";
       } else if(type == "brands"){
         type = "brand";
+      }else if(type == ""){
+        type = "home";
       }
       var obj = {
         "page":page,
@@ -121,7 +123,7 @@
               +'<div class="itemHover">'
           +'<p class="ico-wrap">'
             +'<span class="glyphicon glyphicon-heart-empty heart-detail" data-id='+proId+' data-type='+proId+'></span>'
-            +'<a href="http://www.cyrial.com/products/'+proSlug+'"><span class="icon iconfont icon-yanjing1"></span></a>'
+             +'<span class="icon iconfont icon-sousuo clickico"  data-toggle="modal" data-target=".myModalImg"  data-src="/public/images/spotlights/'+proImgUrl+'" data-alt="'+proName+'"></span>'
           +'</p>'
               +'</div>'
               +'</div>'
@@ -130,9 +132,18 @@
           item.outerHTML = html;
         }
         itemHover();
+        clickIco();
       })
 
     }
+    function clickIco(){
+    $(".clickico").click(function() {
+      $("#bigImg").attr("src",$(this).attr("data-src"));
+      $("#bigImg").attr("alt",$(this).attr("data-alt"))
+    })
+   }
+   
+   
     function itemHover(){
       $("#fh5co-board").find(".item").mouseover(function(){
         $(this).find(".itemHover").show();
