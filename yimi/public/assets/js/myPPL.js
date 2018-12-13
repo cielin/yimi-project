@@ -137,11 +137,11 @@
 
     }
     function clickIco(){
-    $(".clickico").click(function() {
-      $("#bigImg").attr("src",$(this).attr("data-src"));
-      $("#bigImg").attr("alt",$(this).attr("data-alt"))
-    })
-   }
+      $(".clickico").click(function() {
+        $("#bigImg").attr("src",$(this).attr("data-src"));
+        $("#bigImg").attr("alt",$(this).attr("data-alt"))
+      })
+     }
    
    
     function itemHover(){
