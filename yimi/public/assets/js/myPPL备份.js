@@ -1,4 +1,3 @@
-
  (function initPPl(){
   var minHeight = 0;
   var flagNum = 5;//页面自动加载到第几页
@@ -69,7 +68,7 @@
       $.each(oCheckBtn,function(index,item){
         locationArr.push($(item).val());
       })
-      // console.log("url",url)
+      console.log("url",url)
       var type = url[3];
       if(type == "categories"){
         type = "category";
@@ -77,8 +76,8 @@
         type = "space";
       } else if(type == "brands"){
         type = "brand";
-      } else if(type == ""){
-  type = "home";
+      }else if(type == ""){
+        type = "home";
       }
       var obj = {
         "page":page,
@@ -99,10 +98,9 @@
 
     function showFh5co(param,obj){
       
-      $.ajax("/api/get_items?"+param).done(function(data){
-        // console.log("data",data);
+      ajax.get("http://www.cyrial.com/api/get_items?"+param,function(data){
+        console.log("data",data);
         var html = "";
-        data = JSON.parse(data);
         var products = data.products;
         totalPage = parseInt(data.total)%parseInt(obj.pageCount);
         isTrue = true;
@@ -110,7 +108,7 @@
           html = "<div class='nodata'>暂无数据</div>";
           return false;
         }
-        // console.log("products.length",products.length);
+        console.log("products.length",products.length);
         var grid = document.querySelector('#fh5co-board');
         var item = document.createElement('div');
         for(var i=0;i<products.length;i++){
@@ -118,85 +116,34 @@
           var proImgUrl = products[i].hasOwnProperty("featured_image") ? products[i].featured_image:"a.jpg";
           var proName = products[i].hasOwnProperty("name") ? products[i].name:"";
           var proSlug = products[i].hasOwnProperty("slug") ? products[i].slug:"";
-    var proType = products[i].hasOwnProperty("type") ? products[i].type:"";
-    var proLink = products[i].hasOwnProperty("link") ? products[i].link:"";
-    if (proType == "" || proType == "1") {
-            html+='<div class="item">'
-                +'<div class="animate-box">'
-                  +'<img src="/public/images/products/'+proImgUrl+'" alt='+proName+'>'
-                  +'<div class="fh5co-desc">'+proName+'</div>'
-                +'<div class="itemHover">'
-            +'<p class="ico-wrap">'
-              +'<span class="glyphicon glyphicon-heart-empty heart-detail" data-id='+proId+' data-type='+proId+'></span>'
-              +'<a href="/products/'+proSlug+'"><span class="icon iconfont icon-yanjing1"></span></a>'
-            +'</p>'
-                +'</div>'
-                +'</div>'
-              +'</div>';
-    } else if (proType == "2") {
-            html+='<div class="item">'
-                +'<div class="animate-box">'
-                  +'<img src="/public/images/spotlights/'+proImgUrl+'" alt='+proName+'>'
-                  +'<div class="fh5co-desc">'+proName+'</div>'
-                +'<div class="itemHover">'
-            +'<p class="ico-wrap">'
-              +'<span class="glyphicon glyphicon-heart-empty heart-detail" data-id='+proId+' data-type='+proId+'></span>'
-              +'<span class="icon iconfont icon-sousuo clickico"  data-toggle="modal" data-target=".myModalImg"  data-src="/public/images/spotlights/'+proImgUrl+'" data-alt="'+proName+'"></span>'
-            +'</p>'
-                +'</div>'
-                +'</div>'
-              +'</div>';
-    }
-    salvattore.appendElements(grid, [item]);
-    item.outerHTML = html;
+          html+='<div class="item">'
+              +'<div class="animate-box">'
+                +'<img src="http://www.cyrial.com/public/images/products/'+proImgUrl+'" alt='+proName+'>'
+                +'<div class="fh5co-desc">'+proName+'</div>'
+              +'<div class="itemHover">'
+          +'<p class="ico-wrap">'
+            +'<span class="glyphicon glyphicon-heart-empty heart-detail" data-id='+proId+' data-type='+proId+'></span>'
+             +'<span class="icon iconfont icon-sousuo clickico"  data-toggle="modal" data-target=".myModalImg"  data-src="/public/images/spotlights/'+proImgUrl+'" data-alt="'+proName+'"></span>'
+          +'</p>'
+              +'</div>'
+              +'</div>'
+            +'</div>';
+          salvattore.appendElements(grid, [item]);
+          item.outerHTML = html;
         }
-  clickIco();
         itemHover();
+        clickIco();
       })
-      // ajax.get("http://www.cyrial.com/api/get_items?"+param,function(data){
-      //   console.log("data",data);
-      //   var products = data.products;
-      //   totalPage = parseInt(data.total)%parseInt(obj.pageCount);
-      //   isTrue = true;
-      //   if(products.length == 0){
-      //     html = "<div class='nodata'>暂无数据</div>";
-      //     return false;
-      //   }
-      //   console.log("products.length",products.length);
-      //   var grid = document.querySelector('#fh5co-board');
-      //   var item = document.createElement('div');
-      //   for(var i=0;i<products.length;i++){
-      //     var proId = products[i].hasOwnProperty("id") ? products[i].id:"";
-      //     var proImgUrl = products[i].hasOwnProperty("featured_image") ? products[i].featured_image:"a.jpg";
-      //     var proName = products[i].hasOwnProperty("name") ? products[i].name:"";
-      //     var proSlug = products[i].hasOwnProperty("slug") ? products[i].slug:"";
-      //     html+='<div class="item">'
-      //         +'<div class="animate-box">'
-      //           +'<img src="http://www.cyrial.com/public/images/products/'+proImgUrl+'" alt='+proName+'>'
-      //           +'<div class="fh5co-desc">'+proName+'</div>'
-      //         +'<div class="itemHover">'
-      //     +'<p class="ico-wrap">'
-      //       +'<span class="glyphicon glyphicon-heart-empty heart-detail" data-id='+proId+' data-type='+proId+'></span>'
-      //       +'<a href="http://www.cyrial.com/products/'+proSlug+'"><span class="icon iconfont icon-yanjing1"></span></a>'
-      //     +'</p>'
-      //         +'</div>'
-      //         +'</div>'
-      //       +'</div>';
-      //     salvattore.appendElements(grid, [item]);
-      //     item.outerHTML = html;
-      //   }
-      //   itemHover();
-      // })
 
     }
     function clickIco(){
-      $.each($(".clickico"), function(index, item){
-  $(item).click(function(){
-    $("#bigImg").attr("src", $(this).attr("data-src"));
-          $("#bigImg").attr("alt", $(this).attr("data-alt"));
-        })
+      $(".clickico").click(function() {
+        $("#bigImg").attr("src",$(this).attr("data-src"));
+        $("#bigImg").attr("alt",$(this).attr("data-alt"))
       })
-    }
+     }
+   
+   
     function itemHover(){
       $("#fh5co-board").find(".item").mouseover(function(){
         $(this).find(".itemHover").show();
@@ -209,4 +156,6 @@
     loadMore(newPage,pageCount,url,projectDom);
     
   })();
+ 
+
  
