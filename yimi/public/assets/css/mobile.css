@@ -84,7 +84,7 @@
 	
 	.designer.designer-new-hover dl dd,
 	.designer.designer-new-hover dl{
-	  width: 103%!important;
+	  width: auto!important;
       height: 100%!important;
 	}
 	.designer.designer-new-hover dl dd img{
@@ -914,6 +914,7 @@
 }
 
 @media (max-width: 500px) {
+
 	.checkAllBrand{
 		left: 27px;
     	top: 3px;
@@ -1012,15 +1013,15 @@
 	.designer.buyer dl dd{
 		width: 100%!important;
 		height: 100%!important;
-	    max-height: 204px!important;
+	    max-height: 243px!important;
 	    margin-bottom: 35px!important;
 	}
 	.designer.buyer dl{
-		margin-bottom: 35px!important;
+		margin-bottom: 6px!important;
 	}
 	.designer.buyer dl dd img{
 		width: 100%!important;
-		height: 6.375rem!important;
+		height: 278px!important;
 	}
 	.designer.buyer.active{
 		width: 100%;
@@ -1135,8 +1136,25 @@
 	.searchText .order-menu a{
 
 	}
+	.litteBannerImg img{
+		width: 193px!important;
+		height: 188px!important;
+	}
+	.img2018_03{
+		margin-top: 12px!important;
+	}
+	.img2018_03 img{
+		height: 87px!important;
+	}
+	.img2018_01 img, .img2018_02 img{
+	   width: 80px!important;
+       height: 80px!important;
+	}
 }
 @media (max-width: 425px) {
+	.img2018_03{
+		margin-top: 0px!important;
+	}
 	.checkAllBrand{
 		left: 19px;
 	}
@@ -1152,14 +1170,19 @@
 		padding-left:0px!important;
 	}
 	
-	.img2018_01 img,
-	.img2018_02 img,
+	
 	.litteBannerImg img{
-		width: 100%!important;
-		height: 100%!important;
+		width: 168px!important;
+		height: 168px!important;
+	}
+	.img2018_01 img,
+	.img2018_02 img{
+		width: 2.625rem!important;
+		height: 2.625rem!important;
 	}
 	.img2018_03 img{
 		width: 100%!important;
+		height: 84px!important;
 	}
 	.litteBanner{
 		max-height: 168px;
@@ -1189,6 +1212,10 @@
 	}
 	.d-detail-img div{
 	  margin: 32px 5.4% 0px 0;
+	}
+	.designer.buyer dl dd img{
+		width: 100%!important;
+		height: 243px!important;
 	}
 
 }
@@ -1240,5 +1267,13 @@
 	}
 	.litteBanner,.litteBannerImg img{
 		max-height: 141px!important;
+	}
+	.litteBannerImg img{
+		width: 141px!important;
+		height: 141px!important;
+	}
+	.designer.buyer dl dd img{
+		width: 100%!important;
+		height: 6.375rem!important;
 	}
 }
