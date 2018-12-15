@@ -304,7 +304,8 @@
     </div>
 
     <input type="hidden" id="userStatus" value="<?php if (Auth::check()) { echo '1'; } else { echo '0'; } ?>"><!--判断是否登录的隐藏域,value的值来判断是否登录，标识1为已经登录，标识0为未登录-->
-    
+    <input type="hidden" id="userId" value="<?php if (Auth::check()) { echo Auth::user()->id; } else { echo ''; } ?>">
+
     <script type="text/javascript" src="{{ URL::asset('plugin/jquery-3.3.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('plugin/jquery-migrate-3.0.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('plugin/bootstrap-3.3.7-dist/js/bootstrap.min.js') }}"></script>
@@ -368,7 +369,7 @@
         //secret密钥
         var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
 
-        $('.heart-detail').click(function(){
+        $(document).on('click', '.heart-detail', function(){
             var params = {};
             params.id = $(this).data('id');
             params.type = $(this).data('type');
@@ -486,13 +487,13 @@
 
     @yield('js')
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-49983183-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-49983183-6"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'UA-49983183-1');
+        gtag('config', 'UA-49983183-6');
     </script>
 </body>
 </html>
