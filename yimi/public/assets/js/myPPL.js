@@ -1,5 +1,6 @@
 
 (function initPPl() {
+  var homeI = 0;
   var minHeight = 0;
   var flagNum = 5;//页面自动加载到第几页
   var newPage = flagNum; //按钮可点的页码初始值
@@ -92,6 +93,15 @@
     $.ajax("/api/get_items?" + param + "&userId=" + userId).done(function (data) {
       data = JSON.parse(data);
       var products = data.products;
+
+      if(param.type=="home" && param.page>1){
+        console.log("homeI",homeI);
+        products = [];
+        for(var i = homeI; i<data.products.length;i++){
+          products.push(data.products[i]);
+        }
+        console.log("products",products);
+      }
       totalPage = Math.ceil(parseInt(data.total) / parseInt(obj.pageCount));
       isTrue = true;
       if (products.length == 0) {
@@ -101,7 +111,8 @@
       var grid = document.querySelector('#fh5co-board');
       var item = document.createElement('div');
       for (var i = 0; i < products.length; i++) {
-        console.log("products[i]",products[i]);
+        homeI++
+        // console.log("products[i]",products[i]);
         var proId = products[i].hasOwnProperty("id") ? products[i].id : "";
         var proImgUrl = products[i].hasOwnProperty("featured_image") ? products[i].featured_image : "a.jpg";
         var proName = products[i].hasOwnProperty("name") ? products[i].name : "";
