@@ -94,7 +94,7 @@
       data = JSON.parse(data);
       var products = data.products;
 
-      if(param.type=="home" && param.page>1){
+      if(param.type=="home"){
         console.log("homeI",homeI);
         products = [];
         for(var i = homeI; i<data.products.length;i++){
