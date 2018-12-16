@@ -94,17 +94,17 @@
       data = JSON.parse(data);
       var products = data.products;
       if(obj.type=="home"){
-        console.log("homeI",homeI);
-        console.log("data.products",data.products);
+        // console.log("homeI",homeI);
+        // console.log("data.products",data.products);
         products = [];
         for(homeI in data.products){
-          console.log("data.products[i]",data.products[homeI]);
+          // console.log("data.products[i]",data.products[homeI]);
           products.push(data.products[homeI]);
         }
-        console.log("products",products);
       }
       totalPage = Math.ceil(parseInt(data.total) / parseInt(obj.pageCount));
       isTrue = true;
+      console.log("products",products);
       if (products.length == 0) {
         html = "<div class='nodata'>暂无数据</div>";
         return false;
