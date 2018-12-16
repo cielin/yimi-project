@@ -93,7 +93,8 @@
     $.ajax("/api/get_items?" + param + "&userId=" + userId).done(function (data) {
       data = JSON.parse(data);
       var products = data.products;
-
+      console.log("param.type",param.type);
+      console.log('param.type=="home"',param.type=="home");
       if(param.type=="home"){
         console.log("homeI",homeI);
         products = [];
