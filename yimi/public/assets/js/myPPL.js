@@ -100,6 +100,7 @@
         console.log("data.products",data.products[homeI]);
         products = [];
         for(var i = homeI; i<data.products.length;i++){
+          console.log("data.products[i]",data.products[i]);
           products.push(data.products[i]);
         }
         console.log("products",products);
