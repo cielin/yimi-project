@@ -97,9 +97,9 @@
         console.log("homeI",homeI);
         console.log("data.products",data.products);
         products = [];
-        for(homeI in data){
-          console.log("data.products[i]",data.products[i]);
-          products.push(data.products[i]);
+        for(homeI in data.products){
+          console.log("data.products[i]",data.products[homeI]);
+          products.push(data.products[homeI]);
         }
         console.log("products",products);
       }
