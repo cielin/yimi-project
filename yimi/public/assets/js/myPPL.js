@@ -97,6 +97,7 @@
       console.log('param.type=="home"',obj.type=="home");
       if(obj.type=="home"){
         console.log("homeI",homeI);
+        console.log("data.products",data.products[homeI]);
         products = [];
         for(var i = homeI; i<data.products.length;i++){
           products.push(data.products[i]);
