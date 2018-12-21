@@ -185,11 +185,6 @@
 	.litteBannerImg{
 		overflow: hidden;
 	}
-	.litteBannerUl{
-		margin-left: -0.3125rem;
-		margin-right: -0.3125rem;
-		padding-right:0px!important;
-	}
 
 	.indexTitle img,.titWater img,.other-goods img{
 	  width: 4.6875rem;
@@ -353,9 +348,7 @@
     	right: 0px;
     	margin-top: 0px!important;
 	}
-	.designer.buyer.tab-pane dl{
 
-	}
 	.designers-mobile .overHide.subTitles .more{
 		top:-2px;
 	}
@@ -926,7 +919,7 @@
 
 @media (max-width: 500px) {
 	/**********2018*********************/
-	.litteBannerImg img {
+	/* .litteBannerImg img {
 		width: 193px!important;
 	}
 	.litteBanner,.litteBannerImg img {
@@ -941,7 +934,7 @@
 	.img2018_01 img, .img2018_02 img{
 	   width: 80px!important;
        height: 80px!important;
-	}
+	} */
 	/******************************************/
 	.topSearch .top-search{
 		width: 11.4375rem;
@@ -1174,18 +1167,26 @@
 }
 @media (max-width: 425px) {
 	/**********2018****************/
-	.img2018_03{
-		margin-top: 0px!important;
-	}
-	.litteBannerUl{
+	/* .litteBannerUl{
 		padding-right:0px!important;
 		padding-left:0px!important;
 	}
 	.litteBanner,.litteBannerImg img{
-		width: 168px!important;
 		height: 168px!important;
 		max-height: 168px!important;
 	}
+	.litteBannerImg img{
+		width: 168px!important;
+	}
+	.img2018_01,
+	.img2018_02,
+	.img2018_03{
+		padding-right: 0px!important;
+	}
+	.img2018_03{
+		margin-top: 0px!important;
+	}
+	.,
 	.img2018_01 img,
 	.img2018_02 img{
 		width: 2.625rem!important;
@@ -1194,17 +1195,8 @@
 	.img2018_03 img{
 		width: 100%!important;
 		height: 84px!important;
-	}
-	.litteBanner{
-		max-height: 168px;
-	}
+	} */
 
-	.img2018_01,
-	.img2018_02,
-	.img2018_03{
-		padding-right: 0px!important;
-	}
-	
 	/***************************/
 	.checkAllBrand{
 		left: 19px;
@@ -1245,7 +1237,7 @@
 }
 @media (max-width: 375px) {
 	/*************2018*****************/
-	.litteBannerUl{
+	/* .litteBannerUl{
 		padding-right:0px!important;
 	}
 	.litteBanner li.img2018_03{
@@ -1265,7 +1257,7 @@
 	.img2018_01 img, .img2018_02 img {
 	    width: 67px!important;
 	    height: 67px!important;
-	}
+	} */
 	/**********************************/
 	.topSearch .top-search{
 		width: 8.125rem;
