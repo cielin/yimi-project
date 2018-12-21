@@ -352,7 +352,7 @@
 	.tabTitleOver .more{
 		position: absolute;
 		top:-23px;
-		width: 2.15625rem;
+		width: 62px!important;
     	right: 0px;
     	margin-top: 0px!important;
 	}
