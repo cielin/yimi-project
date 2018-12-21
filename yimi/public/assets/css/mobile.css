@@ -926,8 +926,10 @@
 
 @media (max-width: 500px) {
 	/**********2018*********************/
-	.litteBanner,.litteBannerImg img {
+	.litteBannerImg img {
 		width: 193px!important;
+	}
+	.litteBanner,.litteBannerImg img {
         height: 188px!important;
 	}
 	.img2018_03{
