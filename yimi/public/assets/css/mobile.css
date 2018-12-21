@@ -76,14 +76,23 @@
 }
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
+	/*********2018* 其它三个图比例1:1;底部长图比例570/270=2.1/1*****************/
 	.litteBanner,.litteBannerImg img {
-		height: 538px!important;
-	    max-height: 538px;
+		height: 354px!important;
+	    max-height: 354px;
 	}
 	.litteBannerUl {
 	    padding-right: 0px!important;
 	    padding-left: 0px!important;
 	}
+	.litteBanner{
+		margin-bottom: 0.46875rem;
+		margin-top:0.46875rem;
+	}
+	.litteBanner li{
+		overflow: hidden;
+	}
+	/*********2018******************/
 	.designer.designer-new-hover a.col-md-3{
 		padding-right: 0!important;
        padding-left: 10px!important;
@@ -181,13 +190,7 @@
 		margin-right: -0.3125rem;
 		padding-right:0px!important;
 	}
-	.litteBanner{
-		margin-bottom: 0.46875rem;
-		margin-top:0.46875rem;
-	}
-	.litteBanner li{
-		overflow: hidden;
-	}
+
 	.indexTitle img,.titWater img,.other-goods img{
 	  width: 4.6875rem;
 	}
@@ -922,6 +925,22 @@
 }
 
 @media (max-width: 500px) {
+	/**********2018*********************/
+	.litteBanner,.litteBannerImg img {
+		width: 193px!important;
+        height: 188px!important;
+	}
+	.img2018_03{
+		margin-top: 12px!important;
+	}
+	.img2018_03 img{
+		height: 87px!important;
+	}
+	.img2018_01 img, .img2018_02 img{
+	   width: 80px!important;
+       height: 80px!important;
+	}
+	/******************************************/
 	.topSearch .top-search{
 		width: 11.4375rem;
 	}
@@ -1149,44 +1168,21 @@
 	.searchText .order-menu a{
 
 	}
-	.litteBannerImg img{
-		width: 193px!important;
-		height: 188px!important;
-	}
-	.img2018_03{
-		margin-top: 12px!important;
-	}
-	.img2018_03 img{
-		height: 87px!important;
-	}
-	.img2018_01 img, .img2018_02 img{
-	   width: 80px!important;
-       height: 80px!important;
-	}
+	
 }
 @media (max-width: 425px) {
+	/**********2018****************/
 	.img2018_03{
 		margin-top: 0px!important;
-	}
-	.checkAllBrand{
-		left: 19px;
-	}
-	.designerNew a.col-xs-3{
-		width: 25%;
-	}
-	.topSearch .top-search{
-		width: 9.875rem;
-		margin-left: 0.3125rem;
 	}
 	.litteBannerUl{
 		padding-right:0px!important;
 		padding-left:0px!important;
 	}
-	
-	
-	.litteBannerImg img{
+	.litteBanner,.litteBannerImg img{
 		width: 168px!important;
 		height: 168px!important;
+		max-height: 168px!important;
 	}
 	.img2018_01 img,
 	.img2018_02 img{
@@ -1206,7 +1202,22 @@
 	.img2018_03{
 		padding-right: 0px!important;
 	}
-
+	
+	/***************************/
+	.checkAllBrand{
+		left: 19px;
+	}
+	.designerNew a.col-xs-3{
+		width: 25%;
+	}
+	.topSearch .top-search{
+		width: 9.875rem;
+		margin-left: 0.3125rem;
+	}
+	
+	
+	
+	
 	.index-title-ul{
 		width: 100%;
         margin-left: -12px;
@@ -1220,9 +1231,7 @@
 	.mobileIco.ico-wraps:before{
 		left: 43%;
 	}
-	.litteBanner,.litteBannerImg img{
-		max-height: 168px!important;
-	}
+	
 	.d-detail-img div{
 	  margin: 32px 5.4% 0px 0;
 	}
@@ -1233,6 +1242,29 @@
 
 }
 @media (max-width: 375px) {
+	/*************2018*****************/
+	.litteBannerUl{
+		padding-right:0px!important;
+	}
+	.litteBanner li.img2018_03{
+		padding-right:0px!important;
+	}
+	.litteBanner,.litteBannerImg img{
+		max-height: 141px!important;
+	}
+	.litteBannerImg img{
+		width: 141px!important;
+		height: 141px!important;
+	}
+	.img2018_03 img {
+	    width: 100%!important;
+	    height: 70px!important;
+	}
+	.img2018_01 img, .img2018_02 img {
+	    width: 67px!important;
+	    height: 67px!important;
+	}
+	/**********************************/
 	.topSearch .top-search{
 		width: 8.125rem;
 		margin-left: 0.3125rem;
@@ -1256,12 +1288,7 @@
 		width: 100%;
 		height: 100%;
 	}
-	.litteBannerUl{
-		padding-right:0px!important;
-	}
-	.litteBanner li.img2018_03{
-		padding-right:0px!important;
-	}
+	
 	.index-title-ul{
 		/*width: 330px;*/
         margin-left: -10px;
@@ -1278,13 +1305,7 @@
 	.designer-user.col-xs-3{
 		width: 25%;
 	}
-	.litteBanner,.litteBannerImg img{
-		max-height: 141px!important;
-	}
-	.litteBannerImg img{
-		width: 141px!important;
-		height: 141px!important;
-	}
+	
 	.designer.buyer dl dd img{
 		width: 100%!important;
 		height: 6.375rem!important;
