@@ -81,9 +81,19 @@
 		height: 354px!important;
 	    max-height: 354px;
 	}
-	.litteBannerUl {
+	.litteBanner .litteBannerUl {
 	    padding-right: 0px!important;
 	    padding-left: 0px!important;
+	}
+	.litteBanner li.img2018_01{
+		width: 177px!important;
+		height: 177px!important;
+	}
+	.litteBanner li.img2018_01:first-child{
+
+	}
+	.litteBanner li.img2018_03 img{
+		height: 165px!important;
 	}
 	.litteBanner{
 		margin-bottom: 0.46875rem;
@@ -91,6 +101,7 @@
 	}
 	.litteBanner li{
 		overflow: hidden;
+		padding-left: 0px!important;
 	}
 	/*********2018******************/
 	.designer.designer-new-hover a.col-md-3{
