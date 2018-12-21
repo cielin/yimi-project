@@ -86,14 +86,11 @@
 	    padding-left: 0px!important;
 	}
 	.litteBanner li.img2018_01{
-		width: 177px!important;
-		height: 177px!important;
-	}
-	.litteBanner li.img2018_01:first-child{
-
+		width: 192px!important;
+		height: 192px!important;
 	}
 	.litteBanner li.img2018_03 img{
-		height: 165px!important;
+		height: 150px!important;
 	}
 	.litteBanner{
 		margin-bottom: 0.46875rem;
