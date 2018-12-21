@@ -85,7 +85,10 @@
 	    padding-right: 0px!important;
 	    padding-left: 0px!important;
 	}
-	.litteBanner li.img2018_01,
+	.litteBanner li.img2018_01{
+		width: 192px!important;
+		height: 192px!important;
+	}
 	.litteBanner li.img2018_01 img{
 		width: 192px!important;
 		height: 192px!important;
