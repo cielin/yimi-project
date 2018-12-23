@@ -38,27 +38,18 @@
             </div>
             <div class="col-sm-8 col-md-9 col-xs-12 main mainNew">
                 <div class="msg-box">
+					@foreach ($reviews as $review)
                     <!--一条消息 start-->
                     <div class="msg-item row">
                         <div class="col-md-3">
-                            2018-02-19 19:44:00
+                            {{ $review->created_at }}
                         </div>
                         <div class="col-md-9">
                             <h5>订单状态变化</h5>
-                            <p>整体做工可以，没什么异味，上门安装的师傅也很迅速安装的很快，就是中间有个螺丝打偏了，联系客服给补件，也没有推脱，服务不错，顺便提点意见，补件第一次补错零件，然后补第二次，希望发货前检查一下</p>
+                            <p>{{ $review->content }}</p>
                         </div>
                     </div>
-                    <!--一条消息 end-->
-                    <!--一条消息 start-->
-                    <div class="msg-item row">
-                        <div class="col-md-3">
-                            2018-02-19 19:44:00
-                        </div>
-                        <div class="col-md-9">
-                            <h5>订单状态变化</h5>
-                            <p>整体做工可以，没什么异味，上门安装的师傅也很迅速安装的很快，就是中间有个螺丝打偏了，联系客服给补件，也没有推脱，服务不错，顺便提点意见，补件第一次补错零件，然后补第二次，希望发货前检查一下</p>
-                        </div>
-                    </div>
+					@endforeach
                     <!--一条消息 end-->
                 </div>
 

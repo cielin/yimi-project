@@ -100,7 +100,7 @@
                     @endif
                     <a class="myOrder noLogin" href="javascript:void(0)" data-href="{{ url('my/orders') }}">我的订单</a>
                      |
-                    <a class="myMsg noLogin" href="javascript:void(0)" data-href="{{ url('my/messages') }}">我的消息</a> |
+                    <a class="noLogin" id="message" href="javascript:void(0)" data-href="{{ url('my/messages') }}">我的消息</a> |
                     <a class="myCollect noLogin" href="{{ url('my/collections') }}">我的收藏</a>
                 </div>
             </div>
@@ -368,7 +368,20 @@
 
         //secret密钥
         var secret = 'f0842b09ad765c3daee190fd90a6e6ef';
-
+		@if (Auth::check())
+		$.ajax({
+			url : "/my/msgcount",
+			type : 'get',
+			context : this,
+			success:function(data){
+				if (data.count > 0 ) {
+					$('#message').addClass('myMsg');
+				} else {
+					$('#message').removeClass('myMsg');
+				}
+			}
+		});
+		@endif
         $(document).on('click', '.heart-detail', function(){
             var params = {};
             params.id = $(this).data('id');

@@ -15,6 +15,7 @@ use App\CustomerAddress;
 use App\Customer;
 use App\CustomerComment;
 use App\Order;
+use App\Notify;
 use Hash;
 
 class MyController extends Controller
@@ -91,7 +92,12 @@ class MyController extends Controller
 
     public function showMessages()
     {
-    	return View::make('my.messages');
+		$user = Auth::user();
+		$reviews = Notify::where('customer_id', $user->id)
+            ->orderBy('updated_at', 'desc')
+            ->paginate(10);
+		Notify::where('customer_id', $user->id)->update(['status'=>1]);
+    	return View::make('my.messages')->with('reviews', $reviews);;
     }
 
     public function showAddresses()
@@ -175,6 +181,12 @@ class MyController extends Controller
         return redirect('my/addresses');
     }
 
+	public function showMsgCount(Request $request) {
+		$user = Auth::user();
+		$msg = Notify::where(['customer_id'=>$user->id, 'status'=>0])->count();
+		return response()->json(array('errcode' => 0, 'message' => 'success', 'count' => $msg));
+	}
+	
     public function uploadImages(Request $request)
     {
         $errcode = 0;

@@ -40,6 +40,7 @@ Route::get('login', 'HomeController@index')->name('login');
 Route::middleware(['auth'])->group(function() {
 	Route::get('my/info', 'MyController@showInfo');
 	Route::get('my/orders', 'MyController@showOrders');
+	Route::get('my/msgcount', 'MyController@showMsgCount');
 	Route::get('my/orders/{code}', 'MyController@showOrderDetail');
 	Route::get('my/collections', 'MyController@showCollections');
 	Route::get('my/comments', 'MyController@showComments');
