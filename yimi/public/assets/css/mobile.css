@@ -78,8 +78,8 @@
 @media only screen and (max-width: 768px) {
 	/*********2018* 其它三个图比例1:1;底部长图比例570/270=2.1/1*****************/
 	.litteBanner,.litteBannerImg img {
-		height: 354px!important;
-	    max-height: 354px;
+		height: 364px!important;
+	    max-height: 364px;
 	}
 	.litteBanner .litteBannerUl {
 	    padding-right: 0px!important;
@@ -94,7 +94,7 @@
 		height: 176px!important;
 	}
 	.litteBanner li.img2018_03 img{
-		height: 150px!important;
+		height: 175px!important;
 	}
 	.litteBanner{
 		margin-bottom: 0.46875rem;
@@ -103,6 +103,7 @@
 	.litteBanner li{
 		overflow: hidden;
 		padding-left: 0px!important;
+		margin-bottom: 15px!important;
 	}
 	/*********2018******************/
 	.designer.designer-new-hover a.col-md-3{
