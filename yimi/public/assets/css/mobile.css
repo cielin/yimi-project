@@ -106,6 +106,9 @@
 		margin-bottom: 15px!important;
 	}
 	/*********2018******************/
+	.topSearch .top-search{
+		width: 680px;
+	}
 	.designer.designer-new-hover a.col-md-3{
 		padding-right: 0!important;
        padding-left: 10px!important;
@@ -953,7 +956,7 @@
 
 	/******************************************/
 	.topSearch .top-search{
-		width: 11.4375rem;
+		width: 365px;
 	}
 	.modal{
 	  left:13%;
@@ -1199,7 +1202,12 @@
 		height: 84px!important;
 	}
 	/******************************************/
-
+	.topSearch .top-search{
+		width: 315px;
+	}
+	.modal{
+		left:9%;
+	  }
 	.checkAllBrand{
 		left: 19px;
 	}
@@ -1210,10 +1218,6 @@
 		width: 9.875rem;
 		margin-left: 0.3125rem;
 	}
-	
-	
-	
-	
 	.index-title-ul{
 		width: 100%;
         margin-left: -12px;
@@ -1255,32 +1259,12 @@
 		height: 71px!important;
 	}
 	/******************************************/
-	/*************2018*****************/
-	/* .litteBannerUl{
-		padding-right:0px!important;
-	}
-	.litteBanner li.img2018_03{
-		padding-right:0px!important;
-	}
-	.litteBanner,.litteBannerImg img{
-		max-height: 141px!important;
-	}
-	.litteBannerImg img{
-		width: 141px!important;
-		height: 141px!important;
-	}
-	.img2018_03 img {
-	    width: 100%!important;
-	    height: 70px!important;
-	}
-	.img2018_01 img, .img2018_02 img {
-	    width: 67px!important;
-	    height: 67px!important;
-	} */
-	/**********************************/
+
 	.topSearch .top-search{
-		width: 8.125rem;
-		margin-left: 0.3125rem;
+		width: 260px;
+	}
+	.modal{
+		left:0%;
 	}
 	.designerNew dl dt p.ico-wrap{
 		position: relative;
