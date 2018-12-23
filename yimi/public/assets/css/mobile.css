@@ -1240,19 +1240,19 @@
 @media (max-width: 375px) {
 	/**********2018*********************/
 	.litteBanner,.litteBannerImg img {
-		height: 141px!important;
-	    max-height: 141px;
+		height: 150px!important;
+	    max-height: 150px;
 	}
 	.litteBanner li.img2018_01{
-		width: 70px!important;
-		height: 67px!important;
+		width: 80px!important;
+		height: 70px!important;
 	}
 	.litteBanner li.img2018_01 img{
-		width: 67px!important;
-		height: 67px!important;
+		width: 70px!important;
+		height: 70px!important;
 	}
 	.litteBanner li.img2018_03 img{
-		height: 67px!important;
+		height: 71px!important;
 	}
 	/******************************************/
 	/*************2018*****************/
