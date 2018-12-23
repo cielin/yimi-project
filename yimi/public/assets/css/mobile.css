@@ -936,42 +936,31 @@
 		height: 193px!important;
 	    max-height: 193px;
 	}
-	.litteBanner .litteBannerUl {
+	/* .litteBanner .litteBannerUl {
 	    padding-right: 0px!important;
 	    padding-left: 0px!important;
+	} */
+	.litteBanner li.img2018_01{
+		width: 192px!important;
+		height: 176px!important;
 	}
-	.litteBanner li.img2018_01,
 	.litteBanner li.img2018_01 img{
 		width: 106px!important;
 		height: 106px!important;
 	}
 	.litteBanner li.img2018_03 img{
-		height: 150px!important;
+		height: 175px!important;
 	}
-	.litteBanner{
+	/* .litteBanner{
 		margin-bottom: 0.46875rem;
 		margin-top:0.46875rem;
-	}
-	.litteBanner li{
-		overflow: hidden;
-		padding-left: 0px!important;
-	}
-	/* .litteBannerImg img {
-		width: 193px!important;
-	}
-	.litteBanner,.litteBannerImg img {
-        height: 188px!important;
-	}
-	.img2018_03{
-		margin-top: 12px!important;
-	}
-	.img2018_03 img{
-		height: 87px!important;
-	}
-	.img2018_01 img, .img2018_02 img{
-	   width: 80px!important;
-       height: 80px!important;
 	} */
+	.litteBanner li{
+		/* overflow: hidden;
+		padding-left: 0px!important; */
+		margin-bottom: 10px!important;
+	}
+
 	/******************************************/
 	.topSearch .top-search{
 		width: 11.4375rem;
