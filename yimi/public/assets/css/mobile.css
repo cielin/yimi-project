@@ -1184,19 +1184,19 @@
 @media (max-width: 425px) {
 	/**********2018*********************/
 	.litteBanner,.litteBannerImg img {
-		height: 168px!important;
-	    max-height: 168px;
+		height: 172px!important;
+	    max-height: 172px;
 	}
 	.litteBanner li.img2018_01{
-		width: 106px!important;
-		height: 84px!important;
+		width: 93px!important;
+		height: 834px!important;
 	}
 	.litteBanner li.img2018_01 img{
-		width: 84px!important;
-		height: 84px!important;
+		width: 83px!important;
+		height: 83px!important;
 	}
 	.litteBanner li.img2018_03 img{
-		height: 97px!important;
+		height: 84px!important;
 	}
 	/* .litteBanner li{
 		margin-bottom: 10px!important;
