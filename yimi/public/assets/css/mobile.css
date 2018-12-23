@@ -76,6 +76,39 @@
 }
 /* 小屏幕（平板，大于等于 768px） */
 @media only screen and (max-width: 768px) {
+	/*********2018* 其它三个图比例1:1;底部长图比例570/270=2.1/1*****************/
+	.litteBanner,.litteBannerImg img {
+		height: 364px!important;
+	    max-height: 364px;
+	}
+	.litteBanner .litteBannerUl {
+	    padding-right: 0px!important;
+	    padding-left: 0px!important;
+	}
+	.litteBanner li.img2018_01{
+		width: 192px!important;
+		height: 176px!important;
+	}
+	.litteBanner li.img2018_01 img{
+		width: 176px!important;
+		height: 176px!important;
+	}
+	.litteBanner li.img2018_03 img{
+		height: 175px!important;
+	}
+	.litteBanner{
+		margin-bottom: 0.46875rem;
+		margin-top:0.46875rem;
+	}
+	.litteBanner li{
+		overflow: hidden;
+		padding-left: 0px!important;
+		margin-bottom: 15px!important;
+	}
+	/*********2018******************/
+	.topSearch .top-search{
+		width: 680px;
+	}
 	.designer.designer-new-hover a.col-md-3{
 		padding-right: 0!important;
        padding-left: 10px!important;
@@ -168,18 +201,7 @@
 	.litteBannerImg{
 		overflow: hidden;
 	}
-	.litteBannerUl{
-		margin-left: -0.3125rem;
-		margin-right: -0.3125rem;
-		padding-right:0px!important;
-	}
-	.litteBanner{
-		margin-bottom: 0.46875rem;
-		margin-top:0.46875rem;
-	}
-	.litteBanner li{
-		overflow: hidden;
-	}
+
 	.indexTitle img,.titWater img,.other-goods img{
 	  width: 4.6875rem;
 	}
@@ -338,13 +360,11 @@
 	.tabTitleOver .more{
 		position: absolute;
 		top:-23px;
-		width: 2.15625rem;
+		width: 62px!important;
     	right: 0px;
     	margin-top: 0px!important;
 	}
-	.designer.buyer.tab-pane dl{
 
-	}
 	.designers-mobile .overHide.subTitles .more{
 		top:-2px;
 	}
@@ -581,7 +601,7 @@
 	}
 	#fh5co-board .item{
 		padding-left: 0!important;
-		padding-right: 10px!important;
+		padding-right: 12px!important;
 		margin:0px!important;
 		margin-bottom: 10px!important;
     	background: none!important;
@@ -914,7 +934,33 @@
 }
 
 @media (max-width: 500px) {
+	/**********2018*********************/
+	.litteBanner,.litteBannerImg img {
+		height: 201px!important;
+	    max-height: 201px;
+	}
+	.litteBanner li.img2018_01{
+		width: 106px!important;
+		height: 96px!important;
+	}
+	.litteBanner li.img2018_01 img{
+		width: 96px!important;
+		height: 96px!important;
+	}
+	.litteBanner li.img2018_03 img{
+		height: 97px!important;
+	}
+	.litteBanner li{
+		margin-bottom: 10px!important;
+	}
 
+	/******************************************/
+	.topSearch .top-search{
+		width: 365px;
+	}
+	.modal{
+	  left:13%;
+	}
 	.checkAllBrand{
 		left: 27px;
     	top: 3px;
@@ -1136,25 +1182,32 @@
 	.searchText .order-menu a{
 
 	}
-	.litteBannerImg img{
-		width: 193px!important;
-		height: 188px!important;
-	}
-	.img2018_03{
-		margin-top: 12px!important;
-	}
-	.img2018_03 img{
-		height: 87px!important;
-	}
-	.img2018_01 img, .img2018_02 img{
-	   width: 80px!important;
-       height: 80px!important;
-	}
+	
 }
 @media (max-width: 425px) {
-	.img2018_03{
-		margin-top: 0px!important;
+	/**********2018*********************/
+	.litteBanner,.litteBannerImg img {
+		height: 172px!important;
+	    max-height: 172px;
 	}
+	.litteBanner li.img2018_01{
+		width: 93px!important;
+		height: 83px!important;
+	}
+	.litteBanner li.img2018_01 img{
+		width: 83px!important;
+		height: 83px!important;
+	}
+	.litteBanner li.img2018_03 img{
+		height: 84px!important;
+	}
+	/******************************************/
+	.topSearch .top-search{
+		width: 315px;
+	}
+	.modal{
+		left:9%;
+	  }
 	.checkAllBrand{
 		left: 19px;
 	}
@@ -1165,35 +1218,6 @@
 		width: 9.875rem;
 		margin-left: 0.3125rem;
 	}
-	.litteBannerUl{
-		padding-right:0px!important;
-		padding-left:0px!important;
-	}
-	
-	
-	.litteBannerImg img{
-		width: 168px!important;
-		height: 168px!important;
-	}
-	.img2018_01 img,
-	.img2018_02 img{
-		width: 2.625rem!important;
-		height: 2.625rem!important;
-	}
-	.img2018_03 img{
-		width: 100%!important;
-		height: 84px!important;
-	}
-	.litteBanner{
-		max-height: 168px;
-	}
-
-	.img2018_01,
-	.img2018_02,
-	.img2018_03{
-		padding-right: 0px!important;
-	}
-
 	.index-title-ul{
 		width: 100%;
         margin-left: -12px;
@@ -1207,9 +1231,7 @@
 	.mobileIco.ico-wraps:before{
 		left: 43%;
 	}
-	.litteBanner,.litteBannerImg img{
-		max-height: 168px!important;
-	}
+	
 	.d-detail-img div{
 	  margin: 32px 5.4% 0px 0;
 	}
@@ -1220,9 +1242,29 @@
 
 }
 @media (max-width: 375px) {
+	/**********2018*********************/
+	.litteBanner,.litteBannerImg img {
+		height: 150px!important;
+	    max-height: 150px;
+	}
+	.litteBanner li.img2018_01{
+		width: 80px!important;
+		height: 70px!important;
+	}
+	.litteBanner li.img2018_01 img{
+		width: 70px!important;
+		height: 70px!important;
+	}
+	.litteBanner li.img2018_03 img{
+		height: 71px!important;
+	}
+	/******************************************/
+
 	.topSearch .top-search{
-		width: 8.125rem;
-		margin-left: 0.3125rem;
+		width: 260px;
+	}
+	.modal{
+		left:0%;
 	}
 	.designerNew dl dt p.ico-wrap{
 		position: relative;
@@ -1243,12 +1285,7 @@
 		width: 100%;
 		height: 100%;
 	}
-	.litteBannerUl{
-		padding-right:0px!important;
-	}
-	.litteBanner li.img2018_03{
-		padding-right:0px!important;
-	}
+	
 	.index-title-ul{
 		/*width: 330px;*/
         margin-left: -10px;
@@ -1265,13 +1302,7 @@
 	.designer-user.col-xs-3{
 		width: 25%;
 	}
-	.litteBanner,.litteBannerImg img{
-		max-height: 141px!important;
-	}
-	.litteBannerImg img{
-		width: 141px!important;
-		height: 141px!important;
-	}
+	
 	.designer.buyer dl dd img{
 		width: 100%!important;
 		height: 6.375rem!important;
