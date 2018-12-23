@@ -1198,10 +1198,6 @@
 	.litteBanner li.img2018_03 img{
 		height: 84px!important;
 	}
-	/* .litteBanner li{
-		margin-bottom: 10px!important;
-	} */
-
 	/******************************************/
 
 	.checkAllBrand{
@@ -1242,6 +1238,23 @@
 
 }
 @media (max-width: 375px) {
+	/**********2018*********************/
+	.litteBanner,.litteBannerImg img {
+		height: 141px!important;
+	    max-height: 141px;
+	}
+	.litteBanner li.img2018_01{
+		width: 70px!important;
+		height: 67px!important;
+	}
+	.litteBanner li.img2018_01 img{
+		width: 67px!important;
+		height: 67px!important;
+	}
+	.litteBanner li.img2018_03 img{
+		height: 67px!important;
+	}
+	/******************************************/
 	/*************2018*****************/
 	/* .litteBannerUl{
 		padding-right:0px!important;
