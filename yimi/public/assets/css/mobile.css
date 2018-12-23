@@ -933,31 +933,21 @@
 @media (max-width: 500px) {
 	/**********2018*********************/
 	.litteBanner,.litteBannerImg img {
-		height: 193px!important;
-	    max-height: 193px;
+		height: 201px!important;
+	    max-height: 201px;
 	}
-	/* .litteBanner .litteBannerUl {
-	    padding-right: 0px!important;
-	    padding-left: 0px!important;
-	} */
 	.litteBanner li.img2018_01{
-		width: 192px!important;
-		height: 176px!important;
+		width: 106px!important;
+		height: 96px!important;
 	}
 	.litteBanner li.img2018_01 img{
-		width: 106px!important;
-		height: 106px!important;
+		width: 96px!important;
+		height: 96px!important;
 	}
 	.litteBanner li.img2018_03 img{
-		height: 175px!important;
+		height: 97px!important;
 	}
-	/* .litteBanner{
-		margin-bottom: 0.46875rem;
-		margin-top:0.46875rem;
-	} */
 	.litteBanner li{
-		/* overflow: hidden;
-		padding-left: 0px!important; */
 		margin-bottom: 10px!important;
 	}
 
