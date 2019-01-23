@@ -192,7 +192,7 @@ html{
 	line-height:28px;
 }
 .designer-bg .designer-text.col-md-7 .more{
-	margin-top:19px;
+	margin-top:-19px;
 }
 .swiper-wraper{
 	width: 3.649573rem;

@@ -65,6 +65,7 @@
     var type = url[3];
     if (type == "categories") {
       type = "category";
+      pageCount = 9;
     } else if (type == "spaces") {
       type = "space";
     } else if (type == "brands") {
