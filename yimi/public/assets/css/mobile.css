@@ -726,7 +726,8 @@
 		padding:0px 10px;
 	}
 	.mTextBody img {
-	    width: 100%;
+		width: 100%;
+		height:100%;
 	}
 	.mobileIco.ico-wraps{
 		height: 1.25rem;
