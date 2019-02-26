@@ -22,7 +22,7 @@
 .topSearch .top-search,
 .topSearch .top-search input{
 	height: 0.78125rem; /*98px*/
-	color: #fff;
+	color: #999;
 	/*background-color:rgba(89,89,89,0.1);*/
 	border: none;
 	width: 100%;
@@ -31,6 +31,7 @@
 }
 .topSearch .top-search input{
 	padding: 0px 0.128205rem 0px 0.34188rem;
+	color: #999;
 	background: url("../img/searchW.png") no-repeat 0.196581rem 0.196581rem;
 }
 .topSearch .top-search{
@@ -75,7 +76,26 @@
 	top:12px;
 }
 /* 小屏幕（平板，大于等于 768px） */
+
 @media only screen and (max-width: 768px) {
+	.top-search{
+		position: relative;
+	}
+	#top-search-btn{
+		position: absolute;
+		border: none;
+		right: 10px;
+		top: 4px;
+		font-size: 0.58rem;
+		/* background: rgba(89,89,89,0.8); */
+		background: transparent;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	#top-search-btn.glyphicon-search:before{
+		color: #999999;
+	}
 	/*********2018* 其它三个图比例1:1;底部长图比例570/270=2.1/1*****************/
 	.litteBanner,.litteBannerImg img {
 		height: 364px!important;

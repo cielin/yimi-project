@@ -31,10 +31,12 @@
 <!-- LAYOUT-->
 <div class="topSearch">
   <a class="logo" href="/"><img src="{{ URL::asset('assets/img/mobileLogo.png') }}" alt=""></a>
+  {{ Form::open(array('route' => 'categories.search', 'role' => 'form')) }}
   <div class="top-search">
     <input class="sinput"/>
-    <!-- <button id="top-search-btn" class="glyphicon glyphicon-search"></button> -->
+    <button id="top-search-btn" class="glyphicon glyphicon-search"></button>
   </div>
+  {{ Form::close() }}
 </div>
 
 <div class="layout footer-nav" id="layout">
