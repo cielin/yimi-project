@@ -30,6 +30,7 @@
 	background-color:#fff;
 }
 .topSearch .top-search input{
+	width: 99%;
 	padding: 0px 0.128205rem 0px 0.34188rem;
 	color: #999;
 	background: url("../img/searchW.png") no-repeat 0.196581rem 0.196581rem;
@@ -1008,6 +1009,7 @@
 		margin-right: 1%;
 	}*/
 	.topSearch .top-search input{
+		width: 99%;
 		background-size: 0.196581rem 0.025641rem;
 	}
 
