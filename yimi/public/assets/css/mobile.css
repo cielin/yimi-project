@@ -953,6 +953,13 @@
 	.designer.buyer.goods{
 		display: block;
 	}
+	.topSearch .logo{		
+	    float: left;
+	    width: 3%;
+	    height: 24px;
+	    margin-right: 2%;
+	    display: block;
+	}
 }
 
 @media (max-width: 500px) {
@@ -969,6 +976,16 @@
 		width: 96px!important;
 		height: 96px!important;
 	}
+	/**cyh**/
+	.litteBanner li.img2018_011{
+		width: 50%!important;
+		height: 70px!important;
+	}
+	.litteBanner li.img2018_011 img{
+		width: 100%!important;
+		height: 79px!important;
+	}
+	/*cyh end*/
 	.litteBanner li.img2018_03 img{
 		height: 97px!important;
 	}
@@ -1205,6 +1222,13 @@
 	.searchText .order-menu a{
 
 	}
+	.topSearch .logo{		
+	    float: left;
+	    width: 8%;
+	    height: 24px;
+	    margin-right: 2%;
+	    display: block;
+	}
 	
 }
 @media (max-width: 425px) {
@@ -1221,6 +1245,16 @@
 		width: 83px!important;
 		height: 83px!important;
 	}
+	/**cyh**/
+	.litteBanner li.img2018_011{
+		width: 50%!important;
+		height: 70px!important;
+	}
+	.litteBanner li.img2018_011 img{
+		width: 100%!important;
+		height: 79px!important;
+	}
+	/*cyh end*/
 	.litteBanner li.img2018_03 img{
 		height: 84px!important;
 	}
@@ -1262,6 +1296,13 @@
 		width: 100%!important;
 		height: 243px!important;
 	}
+	.topSearch .logo{		
+	    float: left;
+	    width: 8%;
+	    height: 24px;
+	    margin-right: 2%;
+	    display: block;
+	}
 
 }
 @media (max-width: 375px) {
@@ -1274,10 +1315,21 @@
 		width: 80px!important;
 		height: 70px!important;
 	}
+	
 	.litteBanner li.img2018_01 img{
 		width: 70px!important;
 		height: 70px!important;
 	}
+	/**cyh**/
+	.litteBanner li.img2018_011{
+		width: 50%!important;
+		height: 70px!important;
+	}
+	.litteBanner li.img2018_011 img{
+		width: 100%!important;
+		height: 79px!important;
+	}
+	/*cyh end*/
 	.litteBanner li.img2018_03 img{
 		height: 71px!important;
 	}
@@ -1329,5 +1381,12 @@
 	.designer.buyer dl dd img{
 		width: 100%!important;
 		height: 6.375rem!important;
+	}
+	.topSearch .logo{		
+	    float: left;
+	    width: 8%;
+	    height: 24px;
+	    margin-right: 2%;
+	    display: block;
 	}
 }
