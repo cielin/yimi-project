@@ -75,7 +75,7 @@
                 <ul class="col-md-6 col-sm-6 col-xs-6 litteBannerUl" style="list-style: none;padding: 0px;">
                     @if (isset($srt_banners))
                         @foreach ($srt_banners as $srt_banner)
-                        <li class="col-md-6 col-sm-6 col-xs-6 img2018_01"><img src="{{ asset('public/images/banners/' . $srt_banner->image) }}" width="100%"></li>
+                        <li class="col-md-6 col-sm-6 col-xs-6 img2018_01 img2018_011"><img src="{{ asset('public/images/banners/' . $srt_banner->image) }}" width="100%"></li>
                         @endforeach
                     @endif
                     @if (isset($srb_banner))
