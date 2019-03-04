@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    @if (isset($active) && $active == 'home')
+    <title>薏米家|打造云端生活</title>
+    @else
     <title>@yield('title')_薏米家</title>
+    @endif
     <link href="{{ URL::asset('assets/img/favicon.ico') }}" rel="icon">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('plugin/swiper/css/swiper.css') }}" />
     <link href="{{ URL::asset('plugin/bootstrap-3.3.7-dist/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
@@ -33,7 +37,7 @@
   <a class="logo" href="/"><img src="{{ URL::asset('assets/img/mobileLogo.png') }}" alt=""></a>
   {{ Form::open(array('route' => 'categories.search', 'role' => 'form')) }}
   <div class="top-search">
-    <input class="sinput"/>
+    <input class="sinput" name="query"/>
     <button id="top-search-btn" class="glyphicon glyphicon-search"></button>
   </div>
   {{ Form::close() }}

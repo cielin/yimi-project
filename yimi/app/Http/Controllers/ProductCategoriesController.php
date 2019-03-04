@@ -223,7 +223,6 @@ class ProductCategoriesController extends Controller
             $selected_category = null;
             $selected_parent_category = null;
 
-
             if (sizeof($products) > 0) {
                 foreach ($products as $product) {
                     $selected_category = $product->category;
