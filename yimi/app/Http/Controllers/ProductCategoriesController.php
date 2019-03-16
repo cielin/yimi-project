@@ -219,7 +219,7 @@ class ProductCategoriesController extends Controller
             $products = Product::where('name', 'LIKE', '%' . $query . '%')
                 ->where('state', 'active')
                 ->orderBy('updated_at', 'desc')
-                ->paginate(15);
+                ->get();
             $selected_category = null;
             $selected_parent_category = null;
 
